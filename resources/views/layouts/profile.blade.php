@@ -9,7 +9,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-  <title>Assistant Mo | Dashboard</title>
+  <title>Online Store Ko | Dashboard</title>
 
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="{{ asset('adminlte/plugins/fontawesome-free/css/all.min.css') }}">
@@ -57,10 +57,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="index3.html" class="brand-link">
-      <img src="{{asset('adminlte/img/AMLogo.png')}}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+    <a href="index3.html" class="brand-link">osk_logo_full
+      <img src="{{asset('adminlte/img/osk_logo_full.png')}}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
            style="opacity: .8">
-      <span class="brand-text font-weight-light"><span>assistant</span><span style="color: #F9BF3B;"><b>mo</b></span></span>
+      <!-- span class="brand-text font-weight-light"><span>assistant</span><span style="color: #F9BF3B;"><b>mo</b></span></span -->
     </a>
 
     <!-- Sidebar -->
