@@ -37628,7 +37628,7 @@ var staticRenderFns = [
             _c("div", { staticClass: "card-header" }, [
               _c("div", { staticClass: "row" }, [
                 _c("div", { staticClass: "col-6" }, [
-                  _c("h3", [_vm._v("Basic Info")])
+                  _c("h3", [_vm._v("Account Info")])
                 ]),
                 _vm._v(" "),
                 _c("div", { staticClass: "col-6" }, [
@@ -54462,8 +54462,8 @@ var routes = [{
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! D:\assistantmo\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! D:\assistantmo\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! D:\onlinestoreko\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! D:\onlinestoreko\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
