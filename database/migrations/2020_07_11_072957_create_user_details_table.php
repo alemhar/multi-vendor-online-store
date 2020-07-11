@@ -30,7 +30,7 @@ class CreateUserDetailsTable extends Migration
             $table->int('user_rating');
             $table->int('platform_rating');
             $table->string('platform_rank');
-            $table->string('public_address');
+            $table->string('public_id');
             $table->string('user_type')->default('free');
             $table->boolean('is_active')->default(1);
             $table->timestamps();

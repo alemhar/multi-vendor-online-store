@@ -19,7 +19,7 @@ class CreateProductsTable extends Migration
             $table->string('product_name');
             $table->string('product_model_no');
             $table->text('product_description');
-            $table->decimal('product_price').
+            $table->decimal('product_price');
             $table->string('brand');
             $table->string('category_id');
             $table->boolean('in_stock')->default(1);
