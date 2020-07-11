@@ -71,7 +71,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
           <img src="{{asset('adminlte/img/user2-160x160.jpg')}}" class="img-circle elevation-2" alt="User Image">
         </div -->
         <div class="info" style="margin: auto;">
-          {{ Auth::user()->name }}
+          <a href="#" class="d-block">{{ Auth::user()->name }}</a>
         </div>
       </div>
 
