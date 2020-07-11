@@ -58,9 +58,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <aside class="main-sidebar sidebar-dark-primary elevation-4" style="background-color: #6c757d !important;">
     <!-- Brand Logo -->
     <a href="#" class="brand-link">
-      <img src="{{asset('adminlte/img/osk_logo_full.png')}}" alt="Online Store Ko Logo" class="brand-image"
+      <img src="{{asset('adminlte/img/osk_logo_full_white.png')}}" alt="Online Store Ko Logo" class="brand-image"
            style="opacity: .8">
-      <span class="brand-text font-weight-light">OSK</span>
+      <span class="brand-text font-weight-light"></span>
     </a>
 
     <!-- Sidebar -->
