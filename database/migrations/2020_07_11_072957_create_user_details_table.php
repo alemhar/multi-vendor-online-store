@@ -27,8 +27,8 @@ class CreateUserDetailsTable extends Migration
             $table->string('user_facebook');
             $table->string('user_twitter');
             $table->string('user_instagram');
-            $table->int('user_rating');
-            $table->int('platform_rating');
+            $table->integer('user_rating');
+            $table->integer('platform_rating');
             $table->string('platform_rank');
             $table->string('public_id');
             $table->string('user_type')->default('free');
