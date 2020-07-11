@@ -60,7 +60,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <a href="index3.html" class="brand-link">
       <img src="{{asset('adminlte/img/osk_logo_full.png')}}" alt="Online Store Ko Logo" class="brand-image elevation-3"
            style="opacity: .8">
-      <!-- span class="brand-text font-weight-light"><span>assistant</span><span style="color: #F9BF3B;"><b>mo</b></span></span -->
+      <span class="brand-text font-weight-light">OSK</span>
     </a>
 
     <!-- Sidebar -->
