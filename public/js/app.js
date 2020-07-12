@@ -2115,7 +2115,7 @@ __webpack_require__.r(__webpack_exports__);
     loadInfo: function loadInfo(id) {
       var _this = this;
 
-      axios.get("api/user" + id).then(function (_ref) {
+      axios.get("api/user" + this.user_id).then(function (_ref) {
         var data = _ref.data;
         return _this.user_info = data;
       });
@@ -2123,9 +2123,8 @@ __webpack_require__.r(__webpack_exports__);
     }
   },
   created: function created() {
-    this.loadInfo(); //console.log('Component created.');
-
     this.user_id = document.querySelector('meta[name="user-id"]').getAttribute('content');
+    this.loadInfo(); //console.log('Component created.');
   },
   mounted: function mounted() {
     console.log('Component mounted.');

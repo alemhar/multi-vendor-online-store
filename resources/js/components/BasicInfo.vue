@@ -208,14 +208,15 @@
                 });
             },
             loadInfo(id){
-                axios.get("api/user"+id).then(({data}) => (this.user_info = data ));
+                axios.get("api/user"+this.user_id).then(({data}) => (this.user_info = data ));
                 console.log(this.user_info);
             }
         },
         created() {
+            this.user_id = document.querySelector('meta[name="user-id"]').getAttribute('content');
             this.loadInfo();
             //console.log('Component created.');
-            this.user_id = document.querySelector('meta[name="user-id"]').getAttribute('content');
+            
 
         },    
         mounted() {
