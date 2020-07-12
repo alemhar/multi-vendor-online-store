@@ -28,7 +28,7 @@
                                 <div class="form-group col-md-7">
                                     <label for="inputURLAddress">URL Address</label>
                                     <div class="input-group">
-                                    <input v-model="form.public_id"  type="text" name="public_id" class="form-control" id="inputURLAddress" :class="{ 'is-invalid': form.errors.has('public_id') }" readonly>
+                                    <input v-model="public_address"  type="text" name="public_id" class="form-control" id="inputURLAddress" :class="{ 'is-invalid': form.errors.has('public_id') }" readonly>
                                     <div class="input-group-append">
                                         <span @click="copyToClipboard('inputURLAddress')" class="input-group-text" data-toggle="tooltip"  data-placement="top"  title="Copy">Copy</span>
                                     </div>
@@ -171,7 +171,8 @@
                     user_type: '',
                 }),
                 user_info: {},
-                user_id:''
+                user_id:'',
+                public_address: ''
                 
                 
             }
@@ -221,6 +222,7 @@
         created() {
             this.user_id = document.querySelector('meta[name="user-id"]').getAttribute('content');
             this.loadInfo();
+            this.public_address = window.location.href+this.form.public_id; 
             //console.log('Component created.');
             
 

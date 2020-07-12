@@ -2079,7 +2079,8 @@ __webpack_require__.r(__webpack_exports__);
         user_type: ''
       }),
       user_info: {},
-      user_id: ''
+      user_id: '',
+      public_address: ''
     };
   },
   methods: {
@@ -2123,7 +2124,8 @@ __webpack_require__.r(__webpack_exports__);
   },
   created: function created() {
     this.user_id = document.querySelector('meta[name="user-id"]').getAttribute('content');
-    this.loadInfo(); //console.log('Component created.');
+    this.loadInfo();
+    this.public_address = window.location.href + this.form.public_id; //console.log('Component created.');
   },
   mounted: function mounted() {
     console.log('Component mounted.');
@@ -39507,8 +39509,8 @@ var render = function() {
                             {
                               name: "model",
                               rawName: "v-model",
-                              value: _vm.form.public_id,
-                              expression: "form.public_id"
+                              value: _vm.public_address,
+                              expression: "public_address"
                             }
                           ],
                           staticClass: "form-control",
@@ -39521,17 +39523,13 @@ var render = function() {
                             id: "inputURLAddress",
                             readonly: ""
                           },
-                          domProps: { value: _vm.form.public_id },
+                          domProps: { value: _vm.public_address },
                           on: {
                             input: function($event) {
                               if ($event.target.composing) {
                                 return
                               }
-                              _vm.$set(
-                                _vm.form,
-                                "public_id",
-                                $event.target.value
-                              )
+                              _vm.public_address = $event.target.value
                             }
                           }
                         }),

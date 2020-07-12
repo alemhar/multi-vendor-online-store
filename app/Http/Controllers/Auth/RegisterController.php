@@ -78,8 +78,9 @@ class RegisterController extends Controller
             'password' => Hash::make($data['password']),
         ]);
 
-        $username = strstr($user->email, '@', true);
-        $public_id = str_replace(array('.','_'), '',$username) . rand(1050,9999);
+        //$username = strstr($user->email, '@', true);
+        //$public_id = str_replace(array('.','_'), '',$username) . rand(1050,9999);
+        $public_id = str_replace(array('.','_','\'',',','"','&','/','\\'), '',$user->name) . rand(1050,9999);
         UserDetail::create([
             'user_id' => $user->id,
             'first_name' => '',
