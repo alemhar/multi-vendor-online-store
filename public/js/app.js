@@ -56332,13 +56332,11 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 
 
- //window.Vue = require('vue');
 
-vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]); //Vue.use(Vuex);
-
+vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]);
+vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vuex__WEBPACK_IMPORTED_MODULE_2__["default"]);
 window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
-window.Form = vform__WEBPACK_IMPORTED_MODULE_4__["Form"]; //Vue.component(Form)
-
+window.Form = vform__WEBPACK_IMPORTED_MODULE_4__["Form"];
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.component(vform__WEBPACK_IMPORTED_MODULE_4__["HasError"].name, vform__WEBPACK_IMPORTED_MODULE_4__["HasError"]);
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.component(vform__WEBPACK_IMPORTED_MODULE_4__["AlertError"].name, vform__WEBPACK_IMPORTED_MODULE_4__["AlertError"]);
 var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
