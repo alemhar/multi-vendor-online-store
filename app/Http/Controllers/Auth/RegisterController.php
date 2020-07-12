@@ -82,8 +82,21 @@ class RegisterController extends Controller
         $public_id = str_replace(array('.','_'), '',$username) . rand(1050,9999);
         UserDetail::create([
             'user_id' => $user->id,
-            'public_id' => $public_id,
-            'user_type' => 'free'
+            'first_name' => '',
+            'middle_name' => '',
+            'last_name' => '',
+            'user_address1' => '',
+            'user_address2' => '',
+            'user_city' => '',
+            'user_mobile' => '',
+            'user_tel' => '',
+            'user_facebook' => '',
+            'user_twitter' => '',
+            'user_instagram' => '',
+            'user_rating' => 0,
+            'platform_rating' => 0,
+            'platform_rank' => '',
+            'public_id' => $public_id
         ]);
 
         return $user;
