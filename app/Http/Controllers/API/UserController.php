@@ -40,8 +40,25 @@ class UserController extends Controller
     {
         //return ['message' => 'Show: ' . $id];
         $user = User::find($id);
+        $userInfo = [
+            'id' => $user->id,
+            'store_name'  => $user->name,
+            'email' => $user->email,
+            'first_name' => $user->detail->first_name,
+            'middle_name' => $user->detail->middle_name,
+            'last_name' => $user->detail->last_name,
+            'user_address1' => $user->detail->user_address1,
+            'user_address2' =>  $user->detail->user_address2,
+            'user_city' =>  $user->detail->user_city,
+            'user_mobile' =>  $user->detail->user_mobile,
+            'user_tel' =>  $user->detail->user_tel,
+            'public_id' =>  $user->detail->public_id,
+            'user_type' =>  $user->detail->user_type,
+            'created_at' =>  $user->created_at
+
+        ];
         
-        return $user->detail;
+        return $userInfo;
     }
 
     /**
