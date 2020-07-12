@@ -41,7 +41,7 @@ class UserController extends Controller
         //return ['message' => 'Show: ' . $id];
 
         $user = User::find($id);
-        return $user;
+        return $user->name;
     }
 
     /**
