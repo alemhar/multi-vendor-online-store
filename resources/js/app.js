@@ -4,16 +4,17 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 import Vuex from 'vuex';
 import {routes} from './routes'; 
+import {Form, HasError, AlertError} from 'vform';
+
 //window.Vue = require('vue');
 Vue.use(VueRouter);
 Vue.use(Vuex);
 
 window.Vue = require('vue');
-import {Form, HasError, AlertError} from 'vform';
 
-//window.Form = Form;
+window.Form = Form;
 
-Vue.component(Form)
+//Vue.component(Form)
 
 Vue.component(HasError.name, HasError)
 Vue.component(AlertError.name, AlertError)
