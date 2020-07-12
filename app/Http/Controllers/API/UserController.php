@@ -70,7 +70,17 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        return ['message' => 'Item updated!'];
+        //$user = User::find($id);
+
+        //$user->name = $request->store_name;
+        //$user->save();
+
+
+        //$userInfo = UserDetail::
+
+        return ['message' => 'Item updated!', 'store_name' => $request->store_name];
+        
+
     }
 
     /**
