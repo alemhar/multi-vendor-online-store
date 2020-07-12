@@ -205,14 +205,15 @@
                     //this.$Progress.fail();
                 });
             },
-            loadInfo(){
-                axios.get("api/user").then(({data}) => (this.user_info = data ));
+            loadInfo(id){
+                axios.get("api/user"+id).then(({data}) => (this.user_info = data ));
                 console.log(this.user_info);
             }
         },
         created() {
             this.loadInfo();
-            console.log('Component created.');
+            //console.log('Component created.');
+            console.log(window.user);
         },    
         mounted() {
             console.log('Component mounted.');
