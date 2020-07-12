@@ -181,7 +181,8 @@
             },
             saveInfo(){
 
-                this.form.post('api/user/'+this.user_id)
+                //this.form.put('api/user/'+this.user_id)
+                axios.put('api/user/'+this.user_id)
                 .then(() => {
                     /*
                     swal.fire(
@@ -195,7 +196,7 @@
                     //VueListen.$emit('RefreshItemTable');
                 })
                 .catch(() => {
-                    this.form.errors = response;
+                    //this.form.errors = response;
                     //this.$Progress.fail();
                 });
             },
