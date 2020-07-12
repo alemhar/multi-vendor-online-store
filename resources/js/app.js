@@ -13,7 +13,7 @@ Vue.use(Vuex);
 
 window.Vue = require('vue');
 
-window.Form = Form;
+window.vform = Form;
 
 Vue.component(HasError.name, HasError)
 Vue.component(AlertError.name, AlertError)

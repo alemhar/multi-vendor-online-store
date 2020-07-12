@@ -144,7 +144,7 @@
     export default {
         data() {
             return {
-                form: new $form({
+                form: new vform({
                     id:'',
                     store_name: '',
                     email: '',
