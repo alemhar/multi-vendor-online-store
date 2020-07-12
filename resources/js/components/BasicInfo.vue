@@ -80,13 +80,13 @@
                                 </div>
                                 <div class="form-group col-md-4">
                                     <label for="inputEmail">Email</label>
-                                    <input v-model="form.email" name="email" type="email" class="form-control" id="inputEmail" placeholder="juan.delacruz@email.com">
+                                    <input v-model="form.email" name="email" type="email" class="form-control" id="inputEmail" readonly>
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="form-group col-md-3">
                                     <label for="user_type">Account Type</label>
-                                    <input v-model="form.user_type" name="user_type" type="text" class="form-control" id="user_type">
+                                    <input v-model="form.user_type" name="user_type" type="text" class="form-control" id="user_type" readonly>
                                 </div>
 
                                 <!-- div class="form-group col-md-7">
@@ -98,7 +98,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-12">
-                                    <button type="submit" class="btn btn-primary float-right">Save</button>
+                                    <button type="submit" @click="saveInfo" class="btn btn-primary float-right">Save</button>
 
                                 </div>
                             </div>

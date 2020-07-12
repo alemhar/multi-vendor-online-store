@@ -39805,7 +39805,7 @@ var render = function() {
                         name: "email",
                         type: "email",
                         id: "inputEmail",
-                        placeholder: "juan.delacruz@email.com"
+                        readonly: ""
                       },
                       domProps: { value: _vm.form.email },
                       on: {
@@ -39839,7 +39839,8 @@ var render = function() {
                       attrs: {
                         name: "user_type",
                         type: "text",
-                        id: "user_type"
+                        id: "user_type",
+                        readonly: ""
                       },
                       domProps: { value: _vm.form.user_type },
                       on: {
@@ -39854,7 +39855,19 @@ var render = function() {
                   ])
                 ]),
                 _vm._v(" "),
-                _vm._m(1)
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-12" }, [
+                    _c(
+                      "button",
+                      {
+                        staticClass: "btn btn-primary float-right",
+                        attrs: { type: "submit" },
+                        on: { click: _vm.saveInfo }
+                      },
+                      [_vm._v("Save")]
+                    )
+                  ])
+                ])
               ]
             )
           ])
@@ -39884,23 +39897,6 @@ var staticRenderFns = [
             [_vm._v("Save")]
           )
         ])
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "row" }, [
-      _c("div", { staticClass: "col-12" }, [
-        _c(
-          "button",
-          {
-            staticClass: "btn btn-primary float-right",
-            attrs: { type: "submit" }
-          },
-          [_vm._v("Save")]
-        )
       ])
     ])
   }
