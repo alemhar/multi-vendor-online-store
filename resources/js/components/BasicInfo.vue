@@ -157,7 +157,7 @@
                     user_mobile: '',
                     user_tel: '',
                     public_id: '',
-                    user_type: '',
+                    user_type: ''
                 }),
                 user_info: {},
                 user_id:'',
