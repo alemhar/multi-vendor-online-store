@@ -191,7 +191,7 @@
                 //alert("Copied the text: " + copyText.value);
             },
             saveInfo(){
-                this.form.put('api/user/'+'1')
+                this.form.put('api/user/'+this.user_id)
                 .then(() => {
                     /*
                     swal.fire(
@@ -212,6 +212,7 @@
                 axios.get("api/user/"+this.user_id)
                 .then((data)=>{
                   this.form = data.data;
+                  this.public_address = window.location.hostname +'/main/' + this.form.public_id; 
                 })
                 .catch(()=>{
                   //
@@ -222,7 +223,7 @@
         created() {
             this.user_id = document.querySelector('meta[name="user-id"]').getAttribute('content');
             this.loadInfo();
-            this.public_address = window.location.hostname +'/main/' + this.form.public_id; 
+            
             //console.log('Component created.');
             
 

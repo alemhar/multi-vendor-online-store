@@ -2100,7 +2100,7 @@ __webpack_require__.r(__webpack_exports__);
       //alert("Copied the text: " + copyText.value);
     },
     saveInfo: function saveInfo() {
-      this.form.put('api/user/' + '1').then(function () {
+      this.form.put('api/user/' + this.user_id).then(function () {
         /*
         swal.fire(
             'Updated!',
@@ -2118,14 +2118,14 @@ __webpack_require__.r(__webpack_exports__);
 
       axios.get("api/user/" + this.user_id).then(function (data) {
         _this.form = data.data;
+        _this.public_address = window.location.hostname + '/main/' + _this.form.public_id;
       })["catch"](function () {//
       }); //console.log(this.user_info);
     }
   },
   created: function created() {
     this.user_id = document.querySelector('meta[name="user-id"]').getAttribute('content');
-    this.loadInfo();
-    this.public_address = window.location.hostname + '/main/' + this.form.public_id; //console.log('Component created.');
+    this.loadInfo(); //console.log('Component created.');
   },
   mounted: function mounted() {
     console.log('Component mounted.');
