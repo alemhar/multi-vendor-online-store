@@ -210,7 +210,7 @@
             }
         },
         created() {
-            this.loadPayees();
+            this.loadInfo();
         },    
         mounted() {
             console.log('Component mounted.')
