@@ -28,6 +28,9 @@
                                 <div class="form-group col-md-2">
                                     <label for="inputURLAddress">URL Address</label>
                                     <input v-model="form.public_id"  type="text" name="public_id" class="form-control" id="inputURLAddress" :class="{ 'is-invalid': form.errors.has('public_id') }">
+                                    <div class="input-group-append">
+                                        <span class="input-group-text">@example.com</span>
+                                    </div>
                                     <has-error :form="form" field="public_id"></has-error>
                                 </div>
                             </div>
