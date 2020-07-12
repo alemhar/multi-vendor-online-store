@@ -87,16 +87,18 @@
                                 </div>
                             </div>
                             <div class="form-row">
-                                <div class="form-group col-md-4">
-                                    <label for="inputMobile">Public URL</label>
-                                    <input v-model="form.public_id" name="public_id" type="text" class="form-control" id="inputMobile" :class="{ 'is-invalid': form.errors.has('public_id') }">
-                                    <has-error :form="form" field="public_id"></has-error>
-                                </div>
-                                <div class="form-group col-md-4">
+                                <div class="form-group col-md-3">
                                     <label for="inputLandline">Account Type</label>
                                     <input v-model="form.user_type" name="user_type" type="text" class="form-control" id="inputLandline" :class="{ 'is-invalid': form.errors.has('user_type') }">
                                     <has-error :form="form" field="user_type"></has-error>
                                 </div>
+                                <div class="form-group col-md-9">
+                                    <label for="inputMobile">Public URL</label>
+                                    <input v-model="form.public_id" name="public_id" type="text" class="form-control" id="inputMobile" :class="{ 'is-invalid': form.errors.has('public_id') }">
+                                    <has-error :form="form" field="public_id"></has-error>
+                                </div>
+
+                                
                                 
                             </div>
                             <div class="row">
