@@ -212,7 +212,8 @@
                 axios.get("api/user/"+this.user_id)
                 .then((data)=>{
                   this.form = data.data;
-                  this.public_address = window.location.hostname +'/main/' + this.form.public_id; 
+                  this.public_address = window.location.hostname + '/main/' + this.form.public_id; 
+                  console.log(this.form.public_id);
                 })
                 .catch(()=>{
                   //
@@ -229,7 +230,7 @@
 
         },    
         mounted() {
-            console.log('Component mounted.');
+            //console.log('Component mounted.');
         }
     }
 

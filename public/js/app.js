@@ -2119,6 +2119,7 @@ __webpack_require__.r(__webpack_exports__);
       axios.get("api/user/" + this.user_id).then(function (data) {
         _this.form = data.data;
         _this.public_address = window.location.hostname + '/main/' + _this.form.public_id;
+        console.log(_this.form.public_id);
       })["catch"](function () {//
       }); //console.log(this.user_info);
     }
@@ -2127,8 +2128,7 @@ __webpack_require__.r(__webpack_exports__);
     this.user_id = document.querySelector('meta[name="user-id"]').getAttribute('content');
     this.loadInfo(); //console.log('Component created.');
   },
-  mounted: function mounted() {
-    console.log('Component mounted.');
+  mounted: function mounted() {//console.log('Component mounted.');
   }
 });
 $(document).ready(function () {
