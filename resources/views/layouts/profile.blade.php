@@ -84,7 +84,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item">
-            <router-link to="/basic-info" class="nav-link">
+            <router-link to="/account" class="nav-link">
            
               <i class="nav-icon fas fa-id-card"></i>
               <p>

@@ -1,6 +1,6 @@
 export const routes = [
     {
-        path: '/basic-info',
+        path: '/account',
         component: require('./components/BasicInfo.vue').default 
     },
     {
