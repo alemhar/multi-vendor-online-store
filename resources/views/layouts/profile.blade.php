@@ -143,9 +143,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
           </li -->
           <li class="nav-item">
             
-                <a class="dropdown-item" href="{{ route('logout') }}"
+                <a class="nav-link" href="{{ route('logout') }}"
                     onclick="event.preventDefault();
-                                  document.getElementById('logout-form').submit();">
+                                  document.getElementById('logout-form').submit();" >
                     <i class="nav-icon fas fa-sign-out-alt"></i>
                     {{ __('Logout') }}
                 </a>
