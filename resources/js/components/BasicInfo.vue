@@ -28,12 +28,10 @@
                                 <div class="form-group col-md-7">
                                     <label for="inputURLAddress">URL Address</label>
                                     <div class="input-group">
-                                    <input v-model="public_address"  type="text" name="public_id" class="form-control" id="inputURLAddress" :class="{ 'is-invalid': form.errors.has('public_id') }" readonly>
+                                    <input v-model="public_address"  type="text" name="public_id" class="form-control" id="inputURLAddress" readonly>
                                     <div class="input-group-append">
                                         <span @click="copyToClipboard('inputURLAddress')" class="input-group-text" data-toggle="tooltip"  data-placement="top"  title="Copy">Copy</span>
                                     </div>
-
-                                    <has-error :form="form" field="public_id"></has-error>
                                     </div>
                                 </div>
                             </div>

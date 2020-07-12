@@ -2058,8 +2058,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -39500,66 +39498,54 @@ var render = function() {
                       _vm._v("URL Address")
                     ]),
                     _vm._v(" "),
-                    _c(
-                      "div",
-                      { staticClass: "input-group" },
-                      [
-                        _c("input", {
-                          directives: [
-                            {
-                              name: "model",
-                              rawName: "v-model",
-                              value: _vm.public_address,
-                              expression: "public_address"
-                            }
-                          ],
-                          staticClass: "form-control",
-                          class: {
-                            "is-invalid": _vm.form.errors.has("public_id")
-                          },
-                          attrs: {
-                            type: "text",
-                            name: "public_id",
-                            id: "inputURLAddress",
-                            readonly: ""
-                          },
-                          domProps: { value: _vm.public_address },
-                          on: {
-                            input: function($event) {
-                              if ($event.target.composing) {
-                                return
-                              }
-                              _vm.public_address = $event.target.value
-                            }
+                    _c("div", { staticClass: "input-group" }, [
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.public_address,
+                            expression: "public_address"
                           }
-                        }),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "input-group-append" }, [
-                          _c(
-                            "span",
-                            {
-                              staticClass: "input-group-text",
-                              attrs: {
-                                "data-toggle": "tooltip",
-                                "data-placement": "top",
-                                title: "Copy"
-                              },
-                              on: {
-                                click: function($event) {
-                                  return _vm.copyToClipboard("inputURLAddress")
-                                }
-                              }
+                        ],
+                        staticClass: "form-control",
+                        attrs: {
+                          type: "text",
+                          name: "public_id",
+                          id: "inputURLAddress",
+                          readonly: ""
+                        },
+                        domProps: { value: _vm.public_address },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.public_address = $event.target.value
+                          }
+                        }
+                      }),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "input-group-append" }, [
+                        _c(
+                          "span",
+                          {
+                            staticClass: "input-group-text",
+                            attrs: {
+                              "data-toggle": "tooltip",
+                              "data-placement": "top",
+                              title: "Copy"
                             },
-                            [_vm._v("Copy")]
-                          )
-                        ]),
-                        _vm._v(" "),
-                        _c("has-error", {
-                          attrs: { form: _vm.form, field: "public_id" }
-                        })
-                      ],
-                      1
-                    )
+                            on: {
+                              click: function($event) {
+                                return _vm.copyToClipboard("inputURLAddress")
+                              }
+                            }
+                          },
+                          [_vm._v("Copy")]
+                        )
+                      ])
+                    ])
                   ])
                 ]),
                 _vm._v(" "),
