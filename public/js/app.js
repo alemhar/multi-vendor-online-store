@@ -2060,17 +2060,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -6632,7 +6621,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.tooltip {\n  position: relative;\n  display: inline-block;\n}\n.tooltip .tooltiptext {\n  visibility: hidden;\n  width: 140px;\n  background-color: #555;\n  color: #fff;\n  text-align: center;\n  border-radius: 6px;\n  padding: 5px;\n  position: absolute;\n  z-index: 1;\n  bottom: 150%;\n  left: 50%;\n  margin-left: -75px;\n  opacity: 0;\n  transition: opacity 0.3s;\n}\n.tooltip .tooltiptext::after {\n  content: \"\";\n  position: absolute;\n  top: 100%;\n  left: 50%;\n  margin-left: -5px;\n  border-width: 5px;\n  border-style: solid;\n  border-color: #555 transparent transparent transparent;\n}\n.tooltip:hover .tooltiptext {\n  visibility: visible;\n  opacity: 1;\n}\n", ""]);
+exports.push([module.i, "\n.tooltip {\n  position: relative;\n  display: inline-block;\n  border-bottom: 1px dotted gray;\n}\n.tooltip .tooltiptext {\n  visibility: hidden;\n  width: 120px;\n  background-color: gray;\n  color: #fff;\n  text-align: center;\n  border-radius: 6px;\n  padding: 5px 0;\n  \n  /* Position the tooltip */\n  position: absolute;\n  z-index: 1;\n  bottom: 100%;\n  left: 50%;\n  margin-left: -60px;\n}\n.tooltip:hover .tooltiptext {\n  visibility: visible;\n}\n", ""]);
 
 // exports
 
@@ -39497,6 +39486,7 @@ var render = function() {
                           {
                             staticClass: "input-group-text tooltiptext",
                             staticStyle: { cursor: "pointer" },
+                            attrs: { tooltip: "Copy to clipboard" },
                             on: {
                               click: function($event) {
                                 return _vm.copyToClipboard("inputURLAddress")
