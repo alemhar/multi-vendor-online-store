@@ -2050,14 +2050,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -39444,54 +39436,38 @@ var render = function() {
               },
               [
                 _c("div", { staticClass: "form-row" }, [
-                  _c(
-                    "div",
-                    { staticClass: "form-group col-md-4" },
-                    [
-                      _c("label", { attrs: { for: "inputStoreName" } }, [
-                        _vm._v("Store Name")
-                      ]),
-                      _vm._v(" "),
-                      _c("input", {
-                        directives: [
-                          {
-                            name: "model",
-                            rawName: "v-model",
-                            value: _vm.form.store_name,
-                            expression: "form.store_name"
-                          }
-                        ],
-                        staticClass: "form-control",
-                        class: {
-                          "is-invalid": _vm.form.errors.hass("store_name")
-                        },
-                        attrs: {
-                          type: "text",
-                          name: "store_name",
-                          id: "inputStoreName",
-                          placeholder: "Store Name"
-                        },
-                        domProps: { value: _vm.form.store_name },
-                        on: {
-                          input: function($event) {
-                            if ($event.target.composing) {
-                              return
-                            }
-                            _vm.$set(
-                              _vm.form,
-                              "store_name",
-                              $event.target.value
-                            )
-                          }
+                  _c("div", { staticClass: "form-group col-md-4" }, [
+                    _c("label", { attrs: { for: "inputStoreName" } }, [
+                      _vm._v("Store Name")
+                    ]),
+                    _vm._v(" "),
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.form.store_name,
+                          expression: "form.store_name"
                         }
-                      }),
-                      _vm._v(" "),
-                      _c("has-error", {
-                        attrs: { form: _vm.form, field: "store_name" }
-                      })
-                    ],
-                    1
-                  ),
+                      ],
+                      staticClass: "form-control",
+                      attrs: {
+                        type: "text",
+                        name: "store_name",
+                        id: "inputStoreName",
+                        placeholder: "Store Name"
+                      },
+                      domProps: { value: _vm.form.store_name },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(_vm.form, "store_name", $event.target.value)
+                        }
+                      }
+                    })
+                  ]),
                   _vm._v(" "),
                   _c("div", { staticClass: "form-group col-md-7" }, [
                     _c("label", { attrs: { for: "inputURLAddress" } }, [
@@ -39550,156 +39526,9 @@ var render = function() {
                 ]),
                 _vm._v(" "),
                 _c("div", { staticClass: "form-row" }, [
-                  _c(
-                    "div",
-                    { staticClass: "form-group col-md-5" },
-                    [
-                      _c("label", { attrs: { for: "inputName" } }, [
-                        _vm._v("Name")
-                      ]),
-                      _vm._v(" "),
-                      _c("input", {
-                        directives: [
-                          {
-                            name: "model",
-                            rawName: "v-model",
-                            value: _vm.form.first_name,
-                            expression: "form.first_name"
-                          }
-                        ],
-                        staticClass: "form-control",
-                        class: {
-                          "is-invalid": _vm.form.errors.has("first_name")
-                        },
-                        attrs: {
-                          name: "first_name",
-                          type: "text",
-                          id: "inputName",
-                          placeholder: "Name"
-                        },
-                        domProps: { value: _vm.form.first_name },
-                        on: {
-                          input: function($event) {
-                            if ($event.target.composing) {
-                              return
-                            }
-                            _vm.$set(
-                              _vm.form,
-                              "first_name",
-                              $event.target.value
-                            )
-                          }
-                        }
-                      }),
-                      _vm._v(" "),
-                      _c("has-error", {
-                        attrs: { form: _vm.form, field: "first_name" }
-                      })
-                    ],
-                    1
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    { staticClass: "form-group col-md-2" },
-                    [
-                      _c("label", { attrs: { for: "inputMI" } }, [
-                        _vm._v("MI")
-                      ]),
-                      _vm._v(" "),
-                      _c("input", {
-                        directives: [
-                          {
-                            name: "model",
-                            rawName: "v-model",
-                            value: _vm.form.middle_name,
-                            expression: "form.middle_name"
-                          }
-                        ],
-                        staticClass: "form-control",
-                        class: {
-                          "is-invalid": _vm.form.errors.has("middle_name")
-                        },
-                        attrs: {
-                          name: "middle_name",
-                          type: "text",
-                          id: "inputMI",
-                          placeholder: ""
-                        },
-                        domProps: { value: _vm.form.middle_name },
-                        on: {
-                          input: function($event) {
-                            if ($event.target.composing) {
-                              return
-                            }
-                            _vm.$set(
-                              _vm.form,
-                              "middle_name",
-                              $event.target.value
-                            )
-                          }
-                        }
-                      }),
-                      _vm._v(" "),
-                      _c("has-error", {
-                        attrs: { form: _vm.form, field: "middle_name" }
-                      })
-                    ],
-                    1
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    { staticClass: "form-group col-md-5" },
-                    [
-                      _c("label", { attrs: { for: "inputSurname" } }, [
-                        _vm._v("Surname")
-                      ]),
-                      _vm._v(" "),
-                      _c("input", {
-                        directives: [
-                          {
-                            name: "model",
-                            rawName: "v-model",
-                            value: _vm.form.last_name,
-                            expression: "form.last_name"
-                          }
-                        ],
-                        staticClass: "form-control",
-                        class: {
-                          "is-invalid": _vm.form.errors.has("last_name")
-                        },
-                        attrs: {
-                          name: "last_name",
-                          type: "text",
-                          id: "inputSurname",
-                          placeholder: "Surname"
-                        },
-                        domProps: { value: _vm.form.last_name },
-                        on: {
-                          input: function($event) {
-                            if ($event.target.composing) {
-                              return
-                            }
-                            _vm.$set(_vm.form, "last_name", $event.target.value)
-                          }
-                        }
-                      }),
-                      _vm._v(" "),
-                      _c("has-error", {
-                        attrs: { form: _vm.form, field: "last_name" }
-                      })
-                    ],
-                    1
-                  )
-                ]),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  { staticClass: "form-group" },
-                  [
-                    _c("label", { attrs: { for: "inputAddress1" } }, [
-                      _vm._v("Address")
+                  _c("div", { staticClass: "form-group col-md-5" }, [
+                    _c("label", { attrs: { for: "inputName" } }, [
+                      _vm._v("Name")
                     ]),
                     _vm._v(" "),
                     _c("input", {
@@ -39707,317 +39536,322 @@ var render = function() {
                         {
                           name: "model",
                           rawName: "v-model",
-                          value: _vm.form.user_address1,
-                          expression: "form.user_address1"
+                          value: _vm.form.first_name,
+                          expression: "form.first_name"
                         }
                       ],
                       staticClass: "form-control",
-                      class: {
-                        "is-invalid": _vm.form.errors.has("user_address1")
-                      },
                       attrs: {
-                        name: "user_address1",
+                        name: "first_name",
                         type: "text",
-                        id: "inputAddress1",
-                        placeholder: "Apartment, studio, or floor"
+                        id: "inputName",
+                        placeholder: "Name"
                       },
-                      domProps: { value: _vm.form.user_address1 },
+                      domProps: { value: _vm.form.first_name },
                       on: {
                         input: function($event) {
                           if ($event.target.composing) {
                             return
                           }
-                          _vm.$set(
-                            _vm.form,
-                            "user_address1",
-                            $event.target.value
-                          )
+                          _vm.$set(_vm.form, "first_name", $event.target.value)
                         }
                       }
-                    }),
-                    _vm._v(" "),
-                    _c("has-error", {
-                      attrs: { form: _vm.form, field: "user_address1" }
                     })
-                  ],
-                  1
-                ),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  { staticClass: "form-group" },
-                  [
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "form-group col-md-2" }, [
+                    _c("label", { attrs: { for: "inputMI" } }, [_vm._v("MI")]),
+                    _vm._v(" "),
                     _c("input", {
                       directives: [
                         {
                           name: "model",
                           rawName: "v-model",
-                          value: _vm.form.user_address2,
-                          expression: "form.user_address2"
+                          value: _vm.form.middle_name,
+                          expression: "form.middle_name"
                         }
                       ],
                       staticClass: "form-control",
-                      class: {
-                        "is-invalid": _vm.form.errors.has("user_address2")
-                      },
                       attrs: {
-                        name: "user_address2",
+                        name: "middle_name",
                         type: "text",
-                        id: "inputAddress2",
-                        placeholder: "1234 Main St"
+                        id: "inputMI"
                       },
-                      domProps: { value: _vm.form.user_address2 },
+                      domProps: { value: _vm.form.middle_name },
                       on: {
                         input: function($event) {
                           if ($event.target.composing) {
                             return
                           }
-                          _vm.$set(
-                            _vm.form,
-                            "user_address2",
-                            $event.target.value
-                          )
+                          _vm.$set(_vm.form, "middle_name", $event.target.value)
                         }
                       }
-                    }),
-                    _vm._v(" "),
-                    _c("has-error", {
-                      attrs: { form: _vm.form, field: "user_address2" }
                     })
-                  ],
-                  1
-                ),
-                _vm._v(" "),
-                _c("div", { staticClass: "form-row" }, [
-                  _c(
-                    "div",
-                    { staticClass: "form-group col-md-6" },
-                    [
-                      _c("label", { attrs: { for: "inputCity" } }, [
-                        _vm._v("City")
-                      ]),
-                      _vm._v(" "),
-                      _c("input", {
-                        directives: [
-                          {
-                            name: "model",
-                            rawName: "v-model",
-                            value: _vm.form.user_city,
-                            expression: "form.user_city"
-                          }
-                        ],
-                        staticClass: "form-control",
-                        class: {
-                          "is-invalid": _vm.form.errors.has("user_city")
-                        },
-                        attrs: {
-                          name: "user_city",
-                          type: "text",
-                          id: "inputCity"
-                        },
-                        domProps: { value: _vm.form.user_city },
-                        on: {
-                          input: function($event) {
-                            if ($event.target.composing) {
-                              return
-                            }
-                            _vm.$set(_vm.form, "user_city", $event.target.value)
-                          }
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "form-group col-md-5" }, [
+                    _c("label", { attrs: { for: "inputSurname" } }, [
+                      _vm._v("Surname")
+                    ]),
+                    _vm._v(" "),
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.form.last_name,
+                          expression: "form.last_name"
                         }
-                      }),
-                      _vm._v(" "),
-                      _c("has-error", {
-                        attrs: { form: _vm.form, field: "user_city" }
-                      })
+                      ],
+                      staticClass: "form-control",
+                      attrs: {
+                        name: "last_name",
+                        type: "text",
+                        id: "inputSurname",
+                        placeholder: "Surname"
+                      },
+                      domProps: { value: _vm.form.last_name },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(_vm.form, "last_name", $event.target.value)
+                        }
+                      }
+                    })
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "form-group" }, [
+                  _c("label", { attrs: { for: "inputAddress1" } }, [
+                    _vm._v("Address")
+                  ]),
+                  _vm._v(" "),
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.form.user_address1,
+                        expression: "form.user_address1"
+                      }
                     ],
-                    1
-                  )
+                    staticClass: "form-control",
+                    attrs: {
+                      name: "user_address1",
+                      type: "text",
+                      id: "inputAddress1",
+                      placeholder: "Apartment, studio, or floor"
+                    },
+                    domProps: { value: _vm.form.user_address1 },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.$set(_vm.form, "user_address1", $event.target.value)
+                      }
+                    }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "form-group" }, [
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.form.user_address2,
+                        expression: "form.user_address2"
+                      }
+                    ],
+                    staticClass: "form-control",
+                    attrs: {
+                      name: "user_address2",
+                      type: "text",
+                      id: "inputAddress2",
+                      placeholder: "1234 Main St"
+                    },
+                    domProps: { value: _vm.form.user_address2 },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.$set(_vm.form, "user_address2", $event.target.value)
+                      }
+                    }
+                  })
                 ]),
                 _vm._v(" "),
                 _c("div", { staticClass: "form-row" }, [
-                  _c(
-                    "div",
-                    { staticClass: "form-group col-md-4" },
-                    [
-                      _c("label", { attrs: { for: "inputMobile" } }, [
-                        _vm._v("Mobile #")
-                      ]),
-                      _vm._v(" "),
-                      _c("input", {
-                        directives: [
-                          {
-                            name: "model",
-                            rawName: "v-model",
-                            value: _vm.form.user_mobile,
-                            expression: "form.user_mobile"
-                          }
-                        ],
-                        staticClass: "form-control",
-                        class: {
-                          "is-invalid": _vm.form.errors.has("user_mobile")
-                        },
-                        attrs: {
-                          name: "user_mobile",
-                          type: "text",
-                          id: "inputMobile",
-                          placeholder: "09123456789"
-                        },
-                        domProps: { value: _vm.form.user_mobile },
-                        on: {
-                          input: function($event) {
-                            if ($event.target.composing) {
-                              return
-                            }
-                            _vm.$set(
-                              _vm.form,
-                              "user_mobile",
-                              $event.target.value
-                            )
-                          }
+                  _c("div", { staticClass: "form-group col-md-6" }, [
+                    _c("label", { attrs: { for: "inputCity" } }, [
+                      _vm._v("City")
+                    ]),
+                    _vm._v(" "),
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.form.user_city,
+                          expression: "form.user_city"
                         }
-                      }),
-                      _vm._v(" "),
-                      _c("has-error", {
-                        attrs: { form: _vm.form, field: "user_mobile" }
-                      })
-                    ],
-                    1
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    { staticClass: "form-group col-md-4" },
-                    [
-                      _c("label", { attrs: { for: "inputLandline" } }, [
-                        _vm._v("Landline #")
-                      ]),
-                      _vm._v(" "),
-                      _c("input", {
-                        directives: [
-                          {
-                            name: "model",
-                            rawName: "v-model",
-                            value: _vm.form.user_tel,
-                            expression: "form.user_tel"
+                      ],
+                      staticClass: "form-control",
+                      attrs: {
+                        name: "user_city",
+                        type: "text",
+                        id: "inputCity"
+                      },
+                      domProps: { value: _vm.form.user_city },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
                           }
-                        ],
-                        staticClass: "form-control",
-                        class: {
-                          "is-invalid": _vm.form.errors.has("user_tel")
-                        },
-                        attrs: {
-                          name: "user_tel",
-                          type: "text",
-                          id: "inputLandline",
-                          placeholder: "(082) 123-4567"
-                        },
-                        domProps: { value: _vm.form.user_tel },
-                        on: {
-                          input: function($event) {
-                            if ($event.target.composing) {
-                              return
-                            }
-                            _vm.$set(_vm.form, "user_tel", $event.target.value)
-                          }
+                          _vm.$set(_vm.form, "user_city", $event.target.value)
                         }
-                      }),
-                      _vm._v(" "),
-                      _c("has-error", {
-                        attrs: { form: _vm.form, field: "user_tel" }
-                      })
-                    ],
-                    1
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    { staticClass: "form-group col-md-4" },
-                    [
-                      _c("label", { attrs: { for: "inputEmail" } }, [
-                        _vm._v("Email")
-                      ]),
-                      _vm._v(" "),
-                      _c("input", {
-                        directives: [
-                          {
-                            name: "model",
-                            rawName: "v-model",
-                            value: _vm.form.email,
-                            expression: "form.email"
-                          }
-                        ],
-                        staticClass: "form-control",
-                        class: { "is-invalid": _vm.form.errors.has("email") },
-                        attrs: {
-                          name: "email",
-                          type: "email",
-                          id: "inputEmail",
-                          placeholder: "juan.delacruz@email.com"
-                        },
-                        domProps: { value: _vm.form.email },
-                        on: {
-                          input: function($event) {
-                            if ($event.target.composing) {
-                              return
-                            }
-                            _vm.$set(_vm.form, "email", $event.target.value)
-                          }
-                        }
-                      }),
-                      _vm._v(" "),
-                      _c("has-error", {
-                        attrs: { form: _vm.form, field: "email" }
-                      })
-                    ],
-                    1
-                  )
+                      }
+                    })
+                  ])
                 ]),
                 _vm._v(" "),
                 _c("div", { staticClass: "form-row" }, [
-                  _c(
-                    "div",
-                    { staticClass: "form-group col-md-3" },
-                    [
-                      _c("label", { attrs: { for: "user_type" } }, [
-                        _vm._v("Account Type")
-                      ]),
-                      _vm._v(" "),
-                      _c("input", {
-                        directives: [
-                          {
-                            name: "model",
-                            rawName: "v-model",
-                            value: _vm.form.user_type,
-                            expression: "form.user_type"
-                          }
-                        ],
-                        staticClass: "form-control",
-                        class: {
-                          "is-invalid": _vm.form.errors.has("user_type")
-                        },
-                        attrs: {
-                          name: "user_type",
-                          type: "text",
-                          id: "user_type",
-                          readonly: ""
-                        },
-                        domProps: { value: _vm.form.user_type },
-                        on: {
-                          input: function($event) {
-                            if ($event.target.composing) {
-                              return
-                            }
-                            _vm.$set(_vm.form, "user_type", $event.target.value)
-                          }
+                  _c("div", { staticClass: "form-group col-md-4" }, [
+                    _c("label", { attrs: { for: "inputMobile" } }, [
+                      _vm._v("Mobile #")
+                    ]),
+                    _vm._v(" "),
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.form.user_mobile,
+                          expression: "form.user_mobile"
                         }
-                      }),
-                      _vm._v(" "),
-                      _c("has-error", {
-                        attrs: { form: _vm.form, field: "user_type" }
-                      })
-                    ],
-                    1
-                  )
+                      ],
+                      staticClass: "form-control",
+                      attrs: {
+                        name: "user_mobile",
+                        type: "text",
+                        id: "inputMobile",
+                        placeholder: "09123456789"
+                      },
+                      domProps: { value: _vm.form.user_mobile },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(_vm.form, "user_mobile", $event.target.value)
+                        }
+                      }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "form-group col-md-4" }, [
+                    _c("label", { attrs: { for: "inputLandline" } }, [
+                      _vm._v("Landline #")
+                    ]),
+                    _vm._v(" "),
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.form.user_tel,
+                          expression: "form.user_tel"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: {
+                        name: "user_tel",
+                        type: "text",
+                        id: "inputLandline",
+                        placeholder: "(082) 123-4567"
+                      },
+                      domProps: { value: _vm.form.user_tel },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(_vm.form, "user_tel", $event.target.value)
+                        }
+                      }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "form-group col-md-4" }, [
+                    _c("label", { attrs: { for: "inputEmail" } }, [
+                      _vm._v("Email")
+                    ]),
+                    _vm._v(" "),
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.form.email,
+                          expression: "form.email"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: {
+                        name: "email",
+                        type: "email",
+                        id: "inputEmail",
+                        placeholder: "juan.delacruz@email.com"
+                      },
+                      domProps: { value: _vm.form.email },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(_vm.form, "email", $event.target.value)
+                        }
+                      }
+                    })
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "form-row" }, [
+                  _c("div", { staticClass: "form-group col-md-3" }, [
+                    _c("label", { attrs: { for: "user_type" } }, [
+                      _vm._v("Account Type")
+                    ]),
+                    _vm._v(" "),
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.form.user_type,
+                          expression: "form.user_type"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: {
+                        name: "user_type",
+                        type: "text",
+                        id: "user_type"
+                      },
+                      domProps: { value: _vm.form.user_type },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(_vm.form, "user_type", $event.target.value)
+                        }
+                      }
+                    })
+                  ])
                 ]),
                 _vm._v(" "),
                 _vm._m(1)

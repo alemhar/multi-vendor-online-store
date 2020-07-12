@@ -22,8 +22,10 @@
                             <div class="form-row">
                                 <div class="form-group col-md-4">
                                     <label for="inputStoreName">Store Name</label>
-                                    <input v-model="form.store_name"  type="text" name="store_name" class="form-control" id="inputStoreName" placeholder="Store Name" :class="{ 'is-invalid': form.errors.hass('store_name') }">
-                                    <has-error :form="form" field="store_name"></has-error>
+                                    <input v-model="form.store_name"  type="text" name="store_name" class="form-control" id="inputStoreName" placeholder="Store Name">
+                                    <!-- :class="
+                                    { 'is-invalid': form.errors.has('store_name') }">
+                                    <has-error :form="form" field="store_name"></has-error -->
                                 </div>
                                 <div class="form-group col-md-7">
                                     <label for="inputURLAddress">URL Address</label>
@@ -39,28 +41,23 @@
                             <div class="form-row">
                                 <div class="form-group col-md-5">
                                     <label for="inputName">Name</label>
-                                    <input v-model="form.first_name" name="first_name" type="text" class="form-control" id="inputName" placeholder="Name" :class="{ 'is-invalid': form.errors.has('first_name') }">
-                                    <has-error :form="form" field="first_name"></has-error>
+                                    <input v-model="form.first_name" name="first_name" type="text" class="form-control" id="inputName" placeholder="Name">
                                 </div>
                                 <div class="form-group col-md-2">
                                     <label for="inputMI">MI</label>
-                                    <input v-model="form.middle_name" name="middle_name"  type="text" class="form-control" id="inputMI" placeholder="" :class="{ 'is-invalid': form.errors.has('middle_name') }">
-                                    <has-error :form="form" field="middle_name"></has-error>
+                                    <input v-model="form.middle_name" name="middle_name"  type="text" class="form-control" id="inputMI">
                                 </div>
                                 <div class="form-group col-md-5">
                                     <label for="inputSurname">Surname</label>
-                                    <input v-model="form.last_name" name="last_name" type="text" class="form-control" id="inputSurname" placeholder="Surname" :class="{ 'is-invalid': form.errors.has('last_name') }">
-                                    <has-error :form="form" field="last_name"></has-error>
+                                    <input v-model="form.last_name" name="last_name" type="text" class="form-control" id="inputSurname" placeholder="Surname">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="inputAddress1">Address</label>
-                                <input v-model="form.user_address1" name="user_address1" type="text" class="form-control" id="inputAddress1" placeholder="Apartment, studio, or floor" :class="{ 'is-invalid': form.errors.has('user_address1') }">
-                                    <has-error :form="form" field="user_address1"></has-error>
+                                <input v-model="form.user_address1" name="user_address1" type="text" class="form-control" id="inputAddress1" placeholder="Apartment, studio, or floor">
                             </div>
                             <div class="form-group">
-                                <input v-model="form.user_address2" name="user_address2" type="text" class="form-control" id="inputAddress2" placeholder="1234 Main St" :class="{ 'is-invalid': form.errors.has('user_address2') }">
-                                    <has-error :form="form" field="user_address2"></has-error>
+                                <input v-model="form.user_address2" name="user_address2" type="text" class="form-control" id="inputAddress2" placeholder="1234 Main St">
                             </div>
                             <div class="form-row">
                                 <!-- div class="form-group col-md-6">
@@ -69,32 +66,27 @@
                                 </div -->
                                 <div class="form-group col-md-6">
                                 <label for="inputCity">City</label>
-                                <input v-model="form.user_city" name="user_city" type="text" class="form-control" id="inputCity" :class="{ 'is-invalid': form.errors.has('user_city') }">
-                                    <has-error :form="form" field="user_city"></has-error>
+                                <input v-model="form.user_city" name="user_city" type="text" class="form-control" id="inputCity">
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="form-group col-md-4">
                                     <label for="inputMobile">Mobile #</label>
-                                    <input v-model="form.user_mobile" name="user_mobile" type="text" class="form-control" id="inputMobile" placeholder="09123456789" :class="{ 'is-invalid': form.errors.has('user_mobile') }">
-                                    <has-error :form="form" field="user_mobile"></has-error>
+                                    <input v-model="form.user_mobile" name="user_mobile" type="text" class="form-control" id="inputMobile" placeholder="09123456789">
                                 </div>
                                 <div class="form-group col-md-4">
                                     <label for="inputLandline">Landline #</label>
-                                    <input v-model="form.user_tel" name="user_tel" type="text" class="form-control" id="inputLandline" placeholder="(082) 123-4567" :class="{ 'is-invalid': form.errors.has('user_tel') }">
-                                    <has-error :form="form" field="user_tel"></has-error>
+                                    <input v-model="form.user_tel" name="user_tel" type="text" class="form-control" id="inputLandline" placeholder="(082) 123-4567">
                                 </div>
                                 <div class="form-group col-md-4">
                                     <label for="inputEmail">Email</label>
-                                    <input v-model="form.email" name="email" type="email" class="form-control" id="inputEmail" placeholder="juan.delacruz@email.com" :class="{ 'is-invalid': form.errors.has('email') }">
-                                    <has-error :form="form" field="email"></has-error>
+                                    <input v-model="form.email" name="email" type="email" class="form-control" id="inputEmail" placeholder="juan.delacruz@email.com">
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="form-group col-md-3">
                                     <label for="user_type">Account Type</label>
-                                    <input v-model="form.user_type" name="user_type" type="text" class="form-control" id="user_type" :class="{ 'is-invalid': form.errors.has('user_type') }" readonly>
-                                    <has-error :form="form" field="user_type"></has-error>
+                                    <input v-model="form.user_type" name="user_type" type="text" class="form-control" id="user_type">
                                 </div>
 
                                 <!-- div class="form-group col-md-7">
