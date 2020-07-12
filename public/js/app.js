@@ -2118,7 +2118,7 @@ __webpack_require__.r(__webpack_exports__);
         var data = _ref.data;
         return _this.user_info = data;
       });
-      console.log('Component mounted.');
+      console.log(data);
     }
   },
   created: function created() {
