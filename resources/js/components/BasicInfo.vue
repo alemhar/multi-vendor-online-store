@@ -207,10 +207,12 @@
             },
             loadInfo(){
                 axios.get("api/user").then(({data}) => (this.user_info = data ));
+                console.log('Component mounted.')
             }
         },
         created() {
             this.loadInfo();
+            console.log('Component created.')
         },    
         mounted() {
             console.log('Component mounted.')

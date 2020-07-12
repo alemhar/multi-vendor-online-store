@@ -2118,10 +2118,12 @@ __webpack_require__.r(__webpack_exports__);
         var data = _ref.data;
         return _this.user_info = data;
       });
+      console.log('Component mounted.');
     }
   },
   created: function created() {
     this.loadInfo();
+    console.log('Component created.');
   },
   mounted: function mounted() {
     console.log('Component mounted.');
