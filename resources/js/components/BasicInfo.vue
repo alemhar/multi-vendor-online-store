@@ -194,6 +194,7 @@
                     //VueListen.$emit('RefreshItemTable');
                 })
                 .catch(() => {
+                    this.form.errors = response;
                     //this.$Progress.fail();
                 });
             },
