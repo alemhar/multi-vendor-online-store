@@ -2057,6 +2057,24 @@ __webpack_require__.r(__webpack_exports__);
       user_info: {},
       user_id: '',
       public_address: ''
+      /*
+      {
+          id:'',
+          store_name: '',
+          email: '',
+          first_name: '',
+          middle_name: '',
+          last_name: '',
+          user_address1: '',
+          user_address2: '',
+          user_city: '',
+          user_mobile: '',
+          user_tel: '',
+          public_id: '',
+          user_type: ''
+      }
+      */
+
     };
   },
   methods: {
@@ -56322,8 +56340,9 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]);
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vuex__WEBPACK_IMPORTED_MODULE_2__["default"]);
 window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
+ //window.Form = Form;
 
-window.Form = vform__WEBPACK_IMPORTED_MODULE_4__["Form"];
+vue__WEBPACK_IMPORTED_MODULE_0___default.a.component(vform__WEBPACK_IMPORTED_MODULE_4__["Form"]);
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.component(vform__WEBPACK_IMPORTED_MODULE_4__["HasError"].name, vform__WEBPACK_IMPORTED_MODULE_4__["HasError"]);
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.component(vform__WEBPACK_IMPORTED_MODULE_4__["AlertError"].name, vform__WEBPACK_IMPORTED_MODULE_4__["AlertError"]);
 var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({

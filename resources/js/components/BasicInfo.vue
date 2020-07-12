@@ -148,7 +148,23 @@
                 user_info: {},
                 user_id:'',
                 public_address: ''
-                
+                /*
+                {
+                    id:'',
+                    store_name: '',
+                    email: '',
+                    first_name: '',
+                    middle_name: '',
+                    last_name: '',
+                    user_address1: '',
+                    user_address2: '',
+                    user_city: '',
+                    user_mobile: '',
+                    user_tel: '',
+                    public_id: '',
+                    user_type: ''
+                }
+                */
                 
             }
         },
