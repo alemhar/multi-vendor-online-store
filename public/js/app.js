@@ -2115,11 +2115,10 @@ __webpack_require__.r(__webpack_exports__);
     loadInfo: function loadInfo(id) {
       var _this = this;
 
-      axios.get("api/user/" + this.user_id).then(function (_ref) {
-        var data = _ref.data;
-        return _this.user_info = data;
-      });
-      console.log(this.user_info);
+      axios.get("api/user/" + this.user_id).then(function (data) {
+        _this.form = data.data;
+      })["catch"](function () {//
+      }); //console.log(this.user_info);
     }
   },
   created: function created() {
