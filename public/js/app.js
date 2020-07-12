@@ -2092,7 +2092,7 @@ __webpack_require__.r(__webpack_exports__);
     saveInfo: function saveInfo() {
       var _this = this;
 
-      this.form.put('api/user/' + this.user_id).then(function () {
+      this.form.post('api/user/' + this.user_id).then(function () {
         /*
         swal.fire(
             'Updated!',

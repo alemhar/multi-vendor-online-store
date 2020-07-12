@@ -180,7 +180,7 @@
                 //alert("Copied the text: " + copyText.value);
             },
             saveInfo(){
-                this.form.put('api/user/'+this.user_id)
+                this.form.post('api/user/'+this.user_id)
                 .then(() => {
                     /*
                     swal.fire(
