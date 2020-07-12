@@ -207,7 +207,7 @@
             },
             loadInfo(){
                 axios.get("api/user").then(({data}) => (this.user_info = data ));
-                console.log(data);
+                console.log(this.user_info);
             }
         },
         created() {
