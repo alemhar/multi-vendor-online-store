@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\API;
 
 use App\User;
+use App\UserDetail;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -73,9 +74,19 @@ class UserController extends Controller
         $user = User::find($id);
 
         $user->name = $request->input('store_name');
-        $user->detail->first_name = $request->input('first_name');
+        $first_name = $request->input('first_name');
         $user->save();
-
+        
+        $user = User::with('detail')->findOrFail($id);
+        if ($user->detail === null)
+        {
+            $detail = new UserDetail(['first_name' => $first_name]);
+            $user->detail()->save($detail);
+        }
+        else
+        {
+            $user->detail->update(['first_name' => $first_name]);
+        }
 
         //$userInfo = UserDetail::
 
