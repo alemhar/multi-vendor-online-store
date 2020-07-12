@@ -2033,8 +2033,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -38730,7 +38728,7 @@ var render = function() {
               _c("div", { staticClass: "form-row" }, [
                 _c(
                   "div",
-                  { staticClass: "form-group col-md-5" },
+                  { staticClass: "form-group col-md-4" },
                   [
                     _c("label", { attrs: { for: "inputStoreName" } }, [
                       _vm._v("Store Name")
@@ -38771,7 +38769,7 @@ var render = function() {
                   1
                 ),
                 _vm._v(" "),
-                _c("div", { staticClass: "form-group col-md-2" }, [
+                _c("div", { staticClass: "form-group col-md-8" }, [
                   _c("label", { attrs: { for: "inputURLAddress" } }, [
                     _vm._v("URL Address")
                   ]),
@@ -38809,7 +38807,20 @@ var render = function() {
                         }
                       }),
                       _vm._v(" "),
-                      _vm._m(1),
+                      _c("div", { staticClass: "input-group-append" }, [
+                        _c(
+                          "span",
+                          {
+                            staticClass: "input-group-text",
+                            on: {
+                              click: function($event) {
+                                return _vm.copyToClipboard("inputURLAddress")
+                              }
+                            }
+                          },
+                          [_vm._v("Copy")]
+                        )
+                      ]),
                       _vm._v(" "),
                       _c("has-error", {
                         attrs: { form: _vm.form, field: "public_id" }
@@ -39257,68 +39268,10 @@ var render = function() {
                     })
                   ],
                   1
-                ),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  { staticClass: "form-group col-md-7" },
-                  [
-                    _c("label", { attrs: { for: "inputMobile" } }, [
-                      _vm._v("Public URL")
-                    ]),
-                    _vm._v(" "),
-                    _c("input", {
-                      directives: [
-                        {
-                          name: "model",
-                          rawName: "v-model",
-                          value: _vm.form.public_id,
-                          expression: "form.public_id"
-                        }
-                      ],
-                      staticClass: "form-control",
-                      class: { "is-invalid": _vm.form.errors.has("public_id") },
-                      attrs: {
-                        name: "public_id",
-                        id: "public_id",
-                        type: "text"
-                      },
-                      domProps: { value: _vm.form.public_id },
-                      on: {
-                        input: function($event) {
-                          if ($event.target.composing) {
-                            return
-                          }
-                          _vm.$set(_vm.form, "public_id", $event.target.value)
-                        }
-                      }
-                    }),
-                    _vm._v(" "),
-                    _c("has-error", {
-                      attrs: { form: _vm.form, field: "public_id" }
-                    })
-                  ],
-                  1
-                ),
-                _vm._v(" "),
-                _c("div", { staticClass: "form-group col-md-2" }, [
-                  _c(
-                    "button",
-                    {
-                      staticClass: "btn btn-default float-right",
-                      attrs: { type: "submit" },
-                      on: {
-                        click: function($event) {
-                          return _vm.copyToClipboard("public_id")
-                        }
-                      }
-                    },
-                    [_vm._v("Copy URL")]
-                  )
-                ])
+                )
               ]),
               _vm._v(" "),
-              _vm._m(2)
+              _vm._m(1)
             ])
           ])
         ])
@@ -39348,14 +39301,6 @@ var staticRenderFns = [
           )
         ])
       ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "input-group-append" }, [
-      _c("span", { staticClass: "input-group-text" }, [_vm._v("@example.com")])
     ])
   },
   function() {

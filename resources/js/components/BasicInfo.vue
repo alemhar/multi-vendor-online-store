@@ -20,17 +20,17 @@
                         <form>
                             
                             <div class="form-row">
-                                <div class="form-group col-md-5">
+                                <div class="form-group col-md-4">
                                     <label for="inputStoreName">Store Name</label>
                                     <input v-model="form.store_name"  type="text" name="store_name" class="form-control" id="inputStoreName" placeholder="Store Name" :class="{ 'is-invalid': form.errors.has('username') }">
                                     <has-error :form="form" field="store_name"></has-error>
                                 </div>
-                                <div class="form-group col-md-2">
+                                <div class="form-group col-md-8">
                                     <label for="inputURLAddress">URL Address</label>
                                     <div class="input-group">
                                     <input v-model="form.public_id"  type="text" name="public_id" class="form-control" id="inputURLAddress" :class="{ 'is-invalid': form.errors.has('public_id') }">
                                     <div class="input-group-append">
-                                        <span class="input-group-text">@example.com</span>
+                                        <span @click="copyToClipboard('inputURLAddress')" class="input-group-text">Copy</span>
                                     </div>
 
                                     <has-error :form="form" field="public_id"></has-error>
@@ -99,14 +99,12 @@
                                     <has-error :form="form" field="user_type"></has-error>
                                 </div>
 
-                                <div class="form-group col-md-7">
+                                <!-- div class="form-group col-md-7">
                                     <label for="inputMobile">Public URL</label>
                                     <input v-model="form.public_id" name="public_id" id="public_id" type="text" class="form-control" :class="{ 'is-invalid': form.errors.has('public_id') }">
                                     <has-error :form="form" field="public_id"></has-error>
-                                </div>
-                                <div class="form-group col-md-2">
-                                <button type="submit" class="btn btn-default float-right" @click="copyToClipboard('public_id')">Copy URL</button>
-                                </div>  
+                                </div -->
+                                 
                             </div>
                             <div class="row">
                                 <div class="col-12">
