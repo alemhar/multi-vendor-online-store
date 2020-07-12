@@ -144,7 +144,7 @@
     export default {
         data() {
             return {
-                form: new Form({
+                form: this.$form({
                     id:'',
                     store_name: '',
                     email: '',

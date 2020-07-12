@@ -9,10 +9,11 @@ import {Form, HasError, AlertError} from 'vform';
 
 Vue.use(VueRouter);
 Vue.use(Vuex);
+Vue.use(Form, {components: true})
 
 window.Vue = require('vue');
 
-window.Form = Form;
+//window.Form = Form;
 
 Vue.component(HasError.name, HasError)
 Vue.component(AlertError.name, AlertError)
