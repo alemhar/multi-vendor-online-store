@@ -2053,7 +2053,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
-      form: this.$form({
+      form: this.form({
         id: '',
         store_name: '',
         email: '',
@@ -2089,30 +2089,31 @@ __webpack_require__.r(__webpack_exports__);
       /* Alert the copied text */
       //alert("Copied the text: " + copyText.value);
     },
-    saveInfo: function saveInfo() {
-      var _this = this;
+    saveInfo: function saveInfo() {//this.form.post('api/user/'+this.user_id)
+      //.then(() => {
 
-      this.form.post('api/user/' + this.user_id).then(function () {
-        /*
-        swal.fire(
-            'Updated!',
-            'Payee information has been updated.',
-            'success'
-        );
-        */
-        //this.$Progress.finish();
-        //VueListen.$emit('RefreshItemTable');
-      })["catch"](function () {
-        _this.form.errors = response; //this.$Progress.fail();
-      });
+      /*
+      swal.fire(
+          'Updated!',
+          'Payee information has been updated.',
+          'success'
+      );
+      */
+      //this.$Progress.finish();
+      //VueListen.$emit('RefreshItemTable');
+      //})
+      //.catch(() => {
+      //this.form.errors = response;
+      //this.$Progress.fail();
+      //});
     },
     loadInfo: function loadInfo(id) {
-      var _this2 = this;
+      var _this = this;
 
       axios.get("api/user/" + this.user_id).then(function (data) {
-        _this2.form = data.data;
-        _this2.public_address = window.location.hostname + '/main/' + _this2.form.public_id;
-        console.log(_this2.form.public_id);
+        _this.form = data.data;
+        _this.public_address = window.location.hostname + '/main/' + _this.form.public_id;
+        console.log(_this.form.public_id);
       })["catch"](function () {//
       }); //console.log(this.user_info);
     }
