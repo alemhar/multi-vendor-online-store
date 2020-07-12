@@ -29,8 +29,8 @@
                                     <label for="inputURLAddress">URL Address</label>
                                     <div class="input-group">
                                     <input v-model="form.public_id"  type="text" name="public_id" class="form-control" id="inputURLAddress" :class="{ 'is-invalid': form.errors.has('public_id') }" readonly>
-                                    <div class="input-group-append tooltip">
-                                        <span @click="copyToClipboard('inputURLAddress')" class="input-group-text tooltiptext" tooltip="Copy to clipboard" style="cursor: pointer;">Copy</span>
+                                    <div class="input-group-append">
+                                        <span @click="copyToClipboard('inputURLAddress')" class="input-group-text"  data-toggle="tooltip" title="Copy to clipboard">Copy</span>
                                     </div>
 
                                     <has-error :form="form" field="public_id"></has-error>

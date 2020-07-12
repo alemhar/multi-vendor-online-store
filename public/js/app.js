@@ -39480,13 +39480,15 @@ var render = function() {
                         }
                       }),
                       _vm._v(" "),
-                      _c("div", { staticClass: "input-group-append tooltip" }, [
+                      _c("div", { staticClass: "input-group-append" }, [
                         _c(
                           "span",
                           {
-                            staticClass: "input-group-text tooltiptext",
-                            staticStyle: { cursor: "pointer" },
-                            attrs: { tooltip: "Copy to clipboard" },
+                            staticClass: "input-group-text",
+                            attrs: {
+                              "data-toggle": "tooltip",
+                              title: "Copy to clipboard"
+                            },
                             on: {
                               click: function($event) {
                                 return _vm.copyToClipboard("inputURLAddress")
