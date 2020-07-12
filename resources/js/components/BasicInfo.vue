@@ -222,7 +222,7 @@
         created() {
             this.user_id = document.querySelector('meta[name="user-id"]').getAttribute('content');
             this.loadInfo();
-            this.public_address = window.location.href+this.form.public_id; 
+            this.public_address = window.location.hostname +'/main/' + this.form.public_id; 
             //console.log('Component created.');
             
 

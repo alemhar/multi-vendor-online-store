@@ -2125,7 +2125,7 @@ __webpack_require__.r(__webpack_exports__);
   created: function created() {
     this.user_id = document.querySelector('meta[name="user-id"]').getAttribute('content');
     this.loadInfo();
-    this.public_address = window.location.href + this.form.public_id; //console.log('Component created.');
+    this.public_address = window.location.hostname + '/main/' + this.form.public_id; //console.log('Component created.');
   },
   mounted: function mounted() {
     console.log('Component mounted.');
