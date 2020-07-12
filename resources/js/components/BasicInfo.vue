@@ -98,7 +98,9 @@
                                     <input v-model="form.public_id" name="public_id" id="public_id" type="text" class="form-control" :class="{ 'is-invalid': form.errors.has('public_id') }">
                                     <has-error :form="form" field="public_id"></has-error>
                                 </div>
-                                <button type="submit" class="btn btn-primary float-right" @click="copyToClipboard('public_id')">Copy URL</button>
+                                <div class="form-group col-md-2">
+                                <button type="submit" class="btn btn-default float-right" @click="copyToClipboard('public_id')">Copy URL</button>
+                                </div>  
                             </div>
                             <div class="row">
                                 <div class="col-12">
@@ -121,7 +123,7 @@
     export default {
         data() {
             return {
-                
+
                 form: new Form({
                     store_name: '',
                     email: '',

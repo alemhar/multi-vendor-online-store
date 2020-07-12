@@ -2027,6 +2027,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -39287,19 +39289,21 @@ var render = function() {
                   1
                 ),
                 _vm._v(" "),
-                _c(
-                  "button",
-                  {
-                    staticClass: "btn btn-primary float-right",
-                    attrs: { type: "submit" },
-                    on: {
-                      click: function($event) {
-                        return _vm.copyToClipboard("public_id")
+                _c("div", { staticClass: "form-group col-md-2" }, [
+                  _c(
+                    "button",
+                    {
+                      staticClass: "btn btn-default float-right",
+                      attrs: { type: "submit" },
+                      on: {
+                        click: function($event) {
+                          return _vm.copyToClipboard("public_id")
+                        }
                       }
-                    }
-                  },
-                  [_vm._v("Copy URL")]
-                )
+                    },
+                    [_vm._v("Copy URL")]
+                  )
+                ])
               ]),
               _vm._v(" "),
               _vm._m(1)
