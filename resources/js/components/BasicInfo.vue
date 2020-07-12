@@ -17,7 +17,7 @@
                     </div>
                     
                     <div class="card-body">
-                        <form>
+                        <form @submit.prevent="saveInfo">
                             
                             <div class="form-row">
                                 <div class="form-group col-md-4">
@@ -30,7 +30,7 @@
                                     <div class="input-group">
                                     <input v-model="form.public_id"  type="text" name="public_id" class="form-control" id="inputURLAddress" :class="{ 'is-invalid': form.errors.has('public_id') }" readonly>
                                     <div class="input-group-append">
-                                        <span @click="copyToClipboard('inputURLAddress')" class="input-group-text" data-toggle="tooltip"  data-placement="top"  title="Copy to Clipboard">Copy</span>
+                                        <span @click="copyToClipboard('inputURLAddress')" class="input-group-text" data-toggle="tooltip"  data-placement="top"  title="Copy">Copy</span>
                                     </div>
 
                                     <has-error :form="form" field="public_id"></has-error>
@@ -156,6 +156,7 @@
             return {
 
                 form: new Form({
+                    id:'',
                     store_name: '',
                     email: '',
                     first_name: '',
@@ -169,9 +170,8 @@
                     public_id: 'TEST',
                     user_type: '',
                 }),
-                user_info: {
-                    registered_date: ''
-                }
+                user_info: {}
+                
             }
         },
         methods: {
@@ -186,8 +186,32 @@
 
                 /* Alert the copied text */
                 //alert("Copied the text: " + copyText.value);
+            },
+            saveInfo(){
+                this.form.put('api/user/'+this.form.id)
+                .then(() => {
+                    /*
+                    swal.fire(
+                        'Updated!',
+                        'Payee information has been updated.',
+                        'success'
+                    );
+                    */
+
+                    //this.$Progress.finish();
+                    //VueListen.$emit('RefreshItemTable');
+                })
+                .catch(() => {
+                    //this.$Progress.fail();
+                });
+            },
+            loadInfo(){
+                axios.get("api/user").then(({data}) => (this.user_info = data ));
             }
         },
+        created() {
+            this.loadPayees();
+        },    
         mounted() {
             console.log('Component mounted.')
         }
@@ -201,7 +225,7 @@
             $('[data-toggle="tooltip"]').tooltip('show');
         });
         $('[data-toggle="tooltip"]').mouseout(function(){
-            $(this).attr('data-original-title', 'Copy to Clipboard.');
+            $(this).attr('data-original-title', 'Copy');
         });
     });
 </script>
