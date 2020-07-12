@@ -78,7 +78,7 @@ class UserController extends Controller
 
         //$userInfo = UserDetail::
 
-        return ['message' => 'Item updated!', 'store_name' => $request];
+        return ['message' => 'Item updated!', 'request' => $request->input('store_name')];
         
 
     }
