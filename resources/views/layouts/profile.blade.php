@@ -18,6 +18,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
   <link rel="stylesheet" href="{{asset('css/app.css')}}">
+  @if (Auth::check())
+    <meta name="user-id" content="{{ Auth::user()->id }}" />
+  @endif
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper" id="app">

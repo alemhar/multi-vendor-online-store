@@ -2078,7 +2078,8 @@ __webpack_require__.r(__webpack_exports__);
         public_id: 'TEST',
         user_type: ''
       }),
-      user_info: {}
+      user_info: {},
+      user_id: ''
     };
   },
   methods: {
@@ -2124,7 +2125,7 @@ __webpack_require__.r(__webpack_exports__);
   created: function created() {
     this.loadInfo(); //console.log('Component created.');
 
-    console.log(window.user);
+    this.user_id = document.querySelector('meta[name="user-id"]').getAttribute('content');
   },
   mounted: function mounted() {
     console.log('Component mounted.');

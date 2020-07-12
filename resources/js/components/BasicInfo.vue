@@ -170,7 +170,9 @@
                     public_id: 'TEST',
                     user_type: '',
                 }),
-                user_info: {}
+                user_info: {},
+                user_id:''
+                
                 
             }
         },
@@ -213,7 +215,8 @@
         created() {
             this.loadInfo();
             //console.log('Component created.');
-            console.log(window.user);
+            this.user_id = document.querySelector('meta[name="user-id"]').getAttribute('content');
+
         },    
         mounted() {
             console.log('Component mounted.');
