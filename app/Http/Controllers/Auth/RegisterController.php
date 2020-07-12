@@ -53,6 +53,7 @@ class RegisterController extends Controller
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
+
     }
 
     /**
@@ -63,10 +64,27 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        /*
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ]);
+        */    
+        $user = User::create([
+            'name' => $data['name'],
+            'email' => $data['email'],
+            'password' => Hash::make($data['password']),
+        ]);
+
+        $username = strstr($user->email, '@', true);
+        $public_id = str_replace(array('.','_'), '',$username) . rand(1050,9999);
+        UserDetail::create([
+            'user_id' => $user->id,
+            'public_id' => $public_id,
+            'user_type' => 'free'
+        ]);
+
+        return $user;
     }
 }
