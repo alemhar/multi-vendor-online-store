@@ -105,7 +105,7 @@
 
 <script>
     export default {
-        date() {
+        data() {
             return {
                 form: new Form({
                     store_name: '',
