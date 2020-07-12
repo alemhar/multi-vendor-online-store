@@ -72,13 +72,16 @@ class UserController extends Controller
     {
         //$user = User::find($id);
 
-        //$user->name = $request->store_name;
-        //$user->save();
+        $user->name = $request->input('store_name');
+        
+        
+        $user->save();
 
 
         //$userInfo = UserDetail::
 
-        return ['message' => 'Item updated!', 'request' => $request->input('store_name')];
+
+        return ['message' => 'Item updated!'];
         
 
     }
