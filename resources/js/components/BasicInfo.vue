@@ -223,5 +223,17 @@
         }
     }
 
+    $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip();
+        $('[data-toggle="tooltip"]').on('click', function() {
+            $('[data-toggle="tooltip"]').tooltip('hide');
+            $(this).attr('data-original-title', 'Copied to Clipboard!');
+            $('[data-toggle="tooltip"]').tooltip('show');
+        });
+        $('[data-toggle="tooltip"]').mouseout(function(){
+            $(this).attr('data-original-title', 'Copy');
+        });
+    });
+
     
 </script>
