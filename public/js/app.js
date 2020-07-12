@@ -39463,7 +39463,7 @@ var render = function() {
                         ],
                         staticClass: "form-control",
                         class: {
-                          "is-invalid": _vm.form.errors.has("username")
+                          "is-invalid": _vm.form.errors.hass("store_name")
                         },
                         attrs: {
                           type: "text",

@@ -22,7 +22,7 @@
                             <div class="form-row">
                                 <div class="form-group col-md-4">
                                     <label for="inputStoreName">Store Name</label>
-                                    <input v-model="form.store_name"  type="text" name="store_name" class="form-control" id="inputStoreName" placeholder="Store Name" :class="{ 'is-invalid': form.errors.has('username') }">
+                                    <input v-model="form.store_name"  type="text" name="store_name" class="form-control" id="inputStoreName" placeholder="Store Name" :class="{ 'is-invalid': form.errors.hass('store_name') }">
                                     <has-error :form="form" field="store_name"></has-error>
                                 </div>
                                 <div class="form-group col-md-7">
@@ -152,7 +152,6 @@
     export default {
         data() {
             return {
-
                 form: new Form({
                     id:'',
                     store_name: '',
