@@ -2106,6 +2106,7 @@ __webpack_require__.r(__webpack_exports__);
 $(document).ready(function () {
   $('[data-toggle="tooltip"]').tooltip('manual');
   $('[data-toggle="tooltip"]').on('click', function () {
+    $('[data-toggle="tooltip"]').tooltip('hide');
     $(this).attr('data-original-title', 'Copied to Clipboard!');
     $('[data-toggle="tooltip"]').tooltip('show');
   });
