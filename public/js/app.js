@@ -2053,7 +2053,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
-      form: this.form({
+      form: new $form({
         id: '',
         store_name: '',
         email: '',
