@@ -8,7 +8,7 @@ import {Form, HasError, AlertError} from 'vform';
 
 //window.Vue = require('vue');
 Vue.use(VueRouter);
-Vue.use(Vuex);
+//Vue.use(Vuex);
 
 window.Vue = require('vue');
 
