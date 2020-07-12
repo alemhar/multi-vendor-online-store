@@ -167,7 +167,7 @@
                     user_city: '',
                     user_mobile: '',
                     user_tel: '',
-                    public_id: 'TEST',
+                    public_id: '',
                     user_type: '',
                 }),
                 user_info: {},
