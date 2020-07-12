@@ -30,7 +30,7 @@
                                     <div class="input-group">
                                     <input v-model="form.public_id"  type="text" name="public_id" class="form-control" id="inputURLAddress" :class="{ 'is-invalid': form.errors.has('public_id') }" readonly>
                                     <div class="input-group-append">
-                                        <span @click="copyToClipboard('inputURLAddress')" class="input-group-text" data-toggle="tooltip"  data-placement="top"  title="Copy to clipboard">Copy</span>
+                                        <span @click="copyToClipboard('inputURLAddress')" class="input-group-text" data-toggle="tooltip"  data-placement="top"  title="Copy to Clipboard">Copy</span>
                                     </div>
 
                                     <has-error :form="form" field="public_id"></has-error>
@@ -183,8 +183,9 @@
                 copyText.setSelectionRange(0, 99999); /*For mobile devices*/
                 /* Copy the text inside the text field */
                 document.execCommand("copy");
+
                 /* Alert the copied text */
-                alert("Copied the text: " + copyText.value);
+                //alert("Copied the text: " + copyText.value);
             }
         },
         mounted() {
@@ -196,6 +197,9 @@
         $('[data-toggle="tooltip"]').tooltip();
         $('[data-toggle="tooltip"]').on('click', function() {
             $(this).attr('data-original-title', 'Copied to Clipboard!')
+        });
+        $('[data-toggle="tooltip"]').mouseout(function(){
+            $(this).attr('data-original-title', 'Copy to Clipboard.')
         });
     });
 </script>

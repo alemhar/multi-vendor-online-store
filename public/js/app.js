@@ -2096,8 +2096,7 @@ __webpack_require__.r(__webpack_exports__);
 
       document.execCommand("copy");
       /* Alert the copied text */
-
-      alert("Copied the text: " + copyText.value);
+      //alert("Copied the text: " + copyText.value);
     }
   },
   mounted: function mounted() {
@@ -2108,6 +2107,9 @@ $(document).ready(function () {
   $('[data-toggle="tooltip"]').tooltip();
   $('[data-toggle="tooltip"]').on('click', function () {
     $(this).attr('data-original-title', 'Copied to Clipboard!');
+  });
+  $('[data-toggle="tooltip"]').mouseout(function () {
+    $(this).attr('data-original-title', 'Copy to Clipboard.');
   });
 });
 
@@ -39494,7 +39496,7 @@ var render = function() {
                             attrs: {
                               "data-toggle": "tooltip",
                               "data-placement": "top",
-                              title: "Copy to clipboard"
+                              title: "Copy to Clipboard"
                             },
                             on: {
                               click: function($event) {
