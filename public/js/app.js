@@ -2091,7 +2091,9 @@ __webpack_require__.r(__webpack_exports__);
     },
     saveInfo: function saveInfo() {
       //this.form.put('api/user/'+this.user_id)
-      axios.put('api/user/' + this.user_id).then(function () {
+      axios.put('api/user/' + this.user_id, {
+        store_name: this.form.store_name
+      }).then(function () {
         /*
         swal.fire(
             'Updated!',
