@@ -2027,7 +2027,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -2042,13 +2041,31 @@ __webpack_require__.r(__webpack_exports__);
         user_city: '',
         user_mobile: '',
         user_tel: '',
-        public_id: '',
+        public_id: 'TEST',
         user_type: ''
       }),
       user_info: {
         registered_date: ''
       }
     };
+  },
+  methods: {
+    copyToClipboard: function copyToClipboard(myInput) {
+      /* Get the text field */
+      var copyText = document.getElementById(myInput);
+      /* Select the text field */
+
+      copyText.select();
+      copyText.setSelectionRange(0, 99999);
+      /*For mobile devices*/
+
+      /* Copy the text inside the text field */
+
+      document.execCommand("copy");
+      /* Alert the copied text */
+
+      alert("Copied the text: " + copyText.value);
+    }
   },
   mounted: function mounted() {
     console.log('Component mounted.');
@@ -39190,7 +39207,7 @@ var render = function() {
                   "div",
                   { staticClass: "form-group col-md-3" },
                   [
-                    _c("label", { attrs: { for: "inputLandline" } }, [
+                    _c("label", { attrs: { for: "user_type" } }, [
                       _vm._v("Account Type")
                     ]),
                     _vm._v(" "),
@@ -39208,7 +39225,7 @@ var render = function() {
                       attrs: {
                         name: "user_type",
                         type: "text",
-                        id: "inputLandline"
+                        id: "user_type"
                       },
                       domProps: { value: _vm.form.user_type },
                       on: {
@@ -39230,7 +39247,7 @@ var render = function() {
                 _vm._v(" "),
                 _c(
                   "div",
-                  { staticClass: "form-group col-md-9" },
+                  { staticClass: "form-group col-md-7" },
                   [
                     _c("label", { attrs: { for: "inputMobile" } }, [
                       _vm._v("Public URL")
@@ -39249,8 +39266,8 @@ var render = function() {
                       class: { "is-invalid": _vm.form.errors.has("public_id") },
                       attrs: {
                         name: "public_id",
-                        type: "text",
-                        id: "inputMobile"
+                        id: "public_id",
+                        type: "text"
                       },
                       domProps: { value: _vm.form.public_id },
                       on: {
@@ -39268,6 +39285,20 @@ var render = function() {
                     })
                   ],
                   1
+                ),
+                _vm._v(" "),
+                _c(
+                  "button",
+                  {
+                    staticClass: "btn btn-primary float-right",
+                    attrs: { type: "submit" },
+                    on: {
+                      click: function($event) {
+                        return _vm.copyToClipboard("public_id")
+                      }
+                    }
+                  },
+                  [_vm._v("Copy URL")]
                 )
               ]),
               _vm._v(" "),

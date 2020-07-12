@@ -88,18 +88,17 @@
                             </div>
                             <div class="form-row">
                                 <div class="form-group col-md-3">
-                                    <label for="inputLandline">Account Type</label>
-                                    <input v-model="form.user_type" name="user_type" type="text" class="form-control" id="inputLandline" :class="{ 'is-invalid': form.errors.has('user_type') }">
+                                    <label for="user_type">Account Type</label>
+                                    <input v-model="form.user_type" name="user_type" type="text" class="form-control" id="user_type" :class="{ 'is-invalid': form.errors.has('user_type') }">
                                     <has-error :form="form" field="user_type"></has-error>
                                 </div>
-                                <div class="form-group col-md-9">
+
+                                <div class="form-group col-md-7">
                                     <label for="inputMobile">Public URL</label>
-                                    <input v-model="form.public_id" name="public_id" type="text" class="form-control" id="inputMobile" :class="{ 'is-invalid': form.errors.has('public_id') }">
+                                    <input v-model="form.public_id" name="public_id" id="public_id" type="text" class="form-control" :class="{ 'is-invalid': form.errors.has('public_id') }">
                                     <has-error :form="form" field="public_id"></has-error>
                                 </div>
-
-                                
-                                
+                                <button type="submit" class="btn btn-primary float-right" @click="copyToClipboard('public_id')">Copy URL</button>
                             </div>
                             <div class="row">
                                 <div class="col-12">
@@ -122,6 +121,7 @@
     export default {
         data() {
             return {
+                
                 form: new Form({
                     store_name: '',
                     email: '',
@@ -133,12 +133,28 @@
                     user_city: '',
                     user_mobile: '',
                     user_tel: '',
-                    public_id: '',
+                    public_id: 'TEST',
                     user_type: '',
                 }),
                 user_info: {
                     registered_date: ''
                 }
+            }
+        },
+        methods: {
+            copyToClipboard(myInput){
+                  /* Get the text field */
+                let copyText = document.getElementById(myInput);
+
+                /* Select the text field */
+                copyText.select();
+                copyText.setSelectionRange(0, 99999); /*For mobile devices*/
+
+                /* Copy the text inside the text field */
+                document.execCommand("copy");
+
+                /* Alert the copied text */
+                alert("Copied the text: " + copyText.value);
             }
         },
         mounted() {
