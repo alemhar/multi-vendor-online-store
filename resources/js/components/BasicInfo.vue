@@ -188,7 +188,7 @@
                 //alert("Copied the text: " + copyText.value);
             },
             saveInfo(){
-                this.form.put('api/user/'+this.form.id)
+                this.form.put('api/user/'+'1')
                 .then(() => {
                     /*
                     swal.fire(

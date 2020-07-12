@@ -2098,7 +2098,7 @@ __webpack_require__.r(__webpack_exports__);
       //alert("Copied the text: " + copyText.value);
     },
     saveInfo: function saveInfo() {
-      this.form.put('api/user/' + this.form.id).then(function () {
+      this.form.put('api/user/' + '1').then(function () {
         /*
         swal.fire(
             'Updated!',
