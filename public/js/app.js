@@ -38769,7 +38769,7 @@ var render = function() {
                   1
                 ),
                 _vm._v(" "),
-                _c("div", { staticClass: "form-group col-md-8" }, [
+                _c("div", { staticClass: "form-group col-md-7" }, [
                   _c("label", { attrs: { for: "inputURLAddress" } }, [
                     _vm._v("URL Address")
                   ]),
@@ -38812,6 +38812,7 @@ var render = function() {
                           "span",
                           {
                             staticClass: "input-group-text",
+                            staticStyle: { cursor: "pointer" },
                             on: {
                               click: function($event) {
                                 return _vm.copyToClipboard("inputURLAddress")
