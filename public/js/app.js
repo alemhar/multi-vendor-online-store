@@ -39491,11 +39491,11 @@ var render = function() {
                         }
                       }),
                       _vm._v(" "),
-                      _c("div", { staticClass: "input-group-append" }, [
+                      _c("div", { staticClass: "input-group-append tooltip" }, [
                         _c(
                           "span",
                           {
-                            staticClass: "input-group-text",
+                            staticClass: "input-group-text tooltiptext",
                             staticStyle: { cursor: "pointer" },
                             on: {
                               click: function($event) {
