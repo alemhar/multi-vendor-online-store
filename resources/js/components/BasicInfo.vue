@@ -181,8 +181,8 @@
             },
             saveInfo(){
 
-                //this.form.post('api/user/'+this.user_id)
-                //.then(() => {
+                this.form.post('api/user/'+this.user_id)
+                .then(() => {
                     /*
                     swal.fire(
                         'Updated!',
@@ -193,11 +193,11 @@
 
                     //this.$Progress.finish();
                     //VueListen.$emit('RefreshItemTable');
-                //})
-                //.catch(() => {
-                    //this.form.errors = response;
+                })
+                .catch(() => {
+                    this.form.errors = response;
                     //this.$Progress.fail();
-                //});
+                });
             },
             loadInfo(id){
                 axios.get("api/user/"+this.user_id)
