@@ -2107,6 +2107,9 @@ $(document).ready(function () {
   $('[data-toggle="tooltip"]').tooltip();
   $('[data-toggle="tooltip"]').on('click', function () {
     $(this).attr('data-original-title', 'Copied to Clipboard!');
+    $('[data-toggle="tooltip"]').tooltip({
+      trigger: 'click'
+    });
   });
   $('[data-toggle="tooltip"]').mouseout(function () {
     $(this).attr('data-original-title', 'Copy to Clipboard.');
