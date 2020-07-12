@@ -71,13 +71,13 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $user = User::find($id);
-
+        //$user = User::find($id);
+        $user = User::with('detail')->findOrFail($id);
+        
         $user->name = $request->input('store_name');
         $first_name = $request->input('first_name');
         $user->save();
-        
-        $user = User::with('detail')->findOrFail($id);
+
         if ($user->detail === null)
         {
             $detail = new UserDetail(['first_name' => $first_name]);
