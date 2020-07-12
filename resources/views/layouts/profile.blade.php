@@ -118,7 +118,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
               </p>
             </a>
           </li>  
-          <li class="nav-item has-treeview menu-open">
+          <!-- li class="nav-item has-treeview menu-open">
             <a href="#" class="nav-link active">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
@@ -140,9 +140,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 </a>
               </li>
             </ul>
-          </li>
+          </li -->
           <li class="nav-item">
-            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+            
                 <a class="dropdown-item" href="{{ route('logout') }}"
                     onclick="event.preventDefault();
                                   document.getElementById('logout-form').submit();">
@@ -151,7 +151,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                     @csrf
                 </form>
-            </div>
+            
           </li>
         </ul>
       </nav>
