@@ -194,10 +194,10 @@
     }
 
     $(document).ready(function(){
-        $('[data-toggle="tooltip"]').tooltip();
+        $('[data-toggle="tooltip"]').tooltip('manual');
         $('[data-toggle="tooltip"]').on('click', function() {
             $(this).attr('data-original-title', 'Copied to Clipboard!');
-            $('[data-toggle="tooltip"]').tooltip();
+            $('[data-toggle="tooltip"]').tooltip('show');
         });
         $('[data-toggle="tooltip"]').mouseout(function(){
             $(this).attr('data-original-title', 'Copy to Clipboard.');
