@@ -28,7 +28,7 @@
                                 <div class="form-group col-md-7">
                                     <label for="inputURLAddress">URL Address</label>
                                     <div class="input-group">
-                                    <input v-model="form.public_id"  type="text" name="public_id" class="form-control" id="inputURLAddress" :class="{ 'is-invalid': form.errors.has('public_id') }">
+                                    <input v-model="form.public_id"  type="text" name="public_id" class="form-control" id="inputURLAddress" :class="{ 'is-invalid': form.errors.has('public_id') }" readonly>
                                     <div class="input-group-append">
                                         <span @click="copyToClipboard('inputURLAddress')" class="input-group-text" style="cursor: pointer;">Copy</span>
                                     </div>
@@ -95,7 +95,7 @@
                             <div class="form-row">
                                 <div class="form-group col-md-3">
                                     <label for="user_type">Account Type</label>
-                                    <input v-model="form.user_type" name="user_type" type="text" class="form-control" id="user_type" :class="{ 'is-invalid': form.errors.has('user_type') }">
+                                    <input v-model="form.user_type" name="user_type" type="text" class="form-control" id="user_type" :class="{ 'is-invalid': form.errors.has('user_type') }" readonly>
                                     <has-error :form="form" field="user_type"></has-error>
                                 </div>
 

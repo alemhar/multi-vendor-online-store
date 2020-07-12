@@ -38794,7 +38794,8 @@ var render = function() {
                         attrs: {
                           type: "text",
                           name: "public_id",
-                          id: "inputURLAddress"
+                          id: "inputURLAddress",
+                          readonly: ""
                         },
                         domProps: { value: _vm.form.public_id },
                         on: {
@@ -39251,7 +39252,8 @@ var render = function() {
                       attrs: {
                         name: "user_type",
                         type: "text",
-                        id: "user_type"
+                        id: "user_type",
+                        readonly: ""
                       },
                       domProps: { value: _vm.form.user_type },
                       on: {
