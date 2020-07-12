@@ -2106,6 +2106,9 @@ __webpack_require__.r(__webpack_exports__);
 });
 $(document).ready(function () {
   $('[data-toggle="tooltip"]').tooltip();
+  $('[data-toggle="tooltip"]').on('click', function () {
+    $(this).attr('data-original-title', 'Copied to Clipboard!');
+  });
 });
 
 /***/ }),
