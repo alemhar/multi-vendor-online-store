@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\API;
 
+use App\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -15,6 +16,7 @@ class UserController extends Controller
     public function index()
     {
         //return ['message' => 'Item Listed!'];
+
     }
 
     /**
@@ -36,7 +38,7 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        //
+        return ['message' => 'Show: ' . $id];
     }
 
     /**
