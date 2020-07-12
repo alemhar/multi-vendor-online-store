@@ -144,12 +144,7 @@
     export default {
         data() {
             return {
-                form: new Form(),
-                user_info: {},
-                user_id:'',
-                public_address: ''
-                /*
-                {
+                form: new Form({
                     id:'',
                     store_name: '',
                     email: '',
@@ -163,8 +158,11 @@
                     user_tel: '',
                     public_id: '',
                     user_type: ''
-                }
-                */
+                }),
+                user_info: {},
+                user_id:'',
+                public_address: ''
+                
                 
             }
         },
