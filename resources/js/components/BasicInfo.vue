@@ -208,7 +208,7 @@
                 });
             },
             loadInfo(id){
-                axios.get("api/user"+this.user_id).then(({data}) => (this.user_info = data ));
+                axios.get("api/user/"+this.user_id).then(({data}) => (this.user_info = data ));
                 console.log(this.user_info);
             }
         },
