@@ -73,7 +73,7 @@ class UserController extends Controller
         $user = User::find($id);
 
         $user->name = $request->input('store_name');
-        
+        $user->detail->first_name = $request->input('first_name');
         $user->save();
 
 
