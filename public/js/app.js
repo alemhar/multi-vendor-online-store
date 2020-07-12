@@ -2104,6 +2104,9 @@ __webpack_require__.r(__webpack_exports__);
     console.log('Component mounted.');
   }
 });
+$(document).ready(function () {
+  $('[data-toggle="tooltip"]').tooltip();
+});
 
 /***/ }),
 
