@@ -2032,6 +2032,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -38768,49 +38771,53 @@ var render = function() {
                   1
                 ),
                 _vm._v(" "),
-                _c(
-                  "div",
-                  { staticClass: "form-group col-md-2" },
-                  [
-                    _c("label", { attrs: { for: "inputURLAddress" } }, [
-                      _vm._v("URL Address")
-                    ]),
-                    _vm._v(" "),
-                    _c("input", {
-                      directives: [
-                        {
-                          name: "model",
-                          rawName: "v-model",
-                          value: _vm.form.public_id,
-                          expression: "form.public_id"
-                        }
-                      ],
-                      staticClass: "form-control",
-                      class: { "is-invalid": _vm.form.errors.has("public_id") },
-                      attrs: {
-                        type: "text",
-                        name: "public_id",
-                        id: "inputURLAddress"
-                      },
-                      domProps: { value: _vm.form.public_id },
-                      on: {
-                        input: function($event) {
-                          if ($event.target.composing) {
-                            return
+                _c("div", { staticClass: "form-group col-md-2" }, [
+                  _c("label", { attrs: { for: "inputURLAddress" } }, [
+                    _vm._v("URL Address")
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    { staticClass: "input-group" },
+                    [
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.form.public_id,
+                            expression: "form.public_id"
                           }
-                          _vm.$set(_vm.form, "public_id", $event.target.value)
+                        ],
+                        staticClass: "form-control",
+                        class: {
+                          "is-invalid": _vm.form.errors.has("public_id")
+                        },
+                        attrs: {
+                          type: "text",
+                          name: "public_id",
+                          id: "inputURLAddress"
+                        },
+                        domProps: { value: _vm.form.public_id },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(_vm.form, "public_id", $event.target.value)
+                          }
                         }
-                      }
-                    }),
-                    _vm._v(" "),
-                    _vm._m(1),
-                    _vm._v(" "),
-                    _c("has-error", {
-                      attrs: { form: _vm.form, field: "public_id" }
-                    })
-                  ],
-                  1
-                )
+                      }),
+                      _vm._v(" "),
+                      _vm._m(1),
+                      _vm._v(" "),
+                      _c("has-error", {
+                        attrs: { form: _vm.form, field: "public_id" }
+                      })
+                    ],
+                    1
+                  )
+                ])
               ]),
               _vm._v(" "),
               _c("div", { staticClass: "form-row" }, [
