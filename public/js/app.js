@@ -39487,6 +39487,7 @@ var render = function() {
                             staticClass: "input-group-text",
                             attrs: {
                               "data-toggle": "tooltip",
+                              "data-placement": "top",
                               title: "Copy to clipboard"
                             },
                             on: {
