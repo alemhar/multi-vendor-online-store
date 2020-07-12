@@ -2093,7 +2093,14 @@ __webpack_require__.r(__webpack_exports__);
       //this.form.put('api/user/'+this.user_id)
       axios.put('api/user/' + this.user_id, {
         store_name: this.form.store_name,
-        first_name: this.form.first_name
+        first_name: this.form.first_name,
+        middle_name: this.form.middle_name,
+        last_name: this.form.last_name,
+        user_address1: this.form.user_address1,
+        user_address2: this.form.user_address2,
+        user_city: this.form.user_city,
+        user_mobile: this.form.user_mobile,
+        user_tel: this.form.user_tel
       }).then(function () {
         /*
         swal.fire(

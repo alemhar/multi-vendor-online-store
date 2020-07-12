@@ -76,16 +76,46 @@ class UserController extends Controller
         
         $user->name = $request->input('store_name');
         $first_name = $request->input('first_name');
+
+        $middle_name = $request->input('middle_name');
+        $last_name = $request->input('last_name');
+        $user_address1 = $request->input('user_address1');
+        $user_address2 = $request->input('user_address2');
+        $user_city = $request->input('user_city');
+        $user_mobile = $request->input('user_mobile');
+        $user_tel = $request->input('user_tel');
+
+
+
+
         $user->save();
 
         if ($user->detail === null)
         {
-            $detail = new UserDetail(['first_name' => $first_name]);
+            $detail = new UserDetail([
+                'first_name' => $first_name,
+                'middle_name' => $middle_name,
+                'last_name' => $last_name,
+                'user_address1' => $user_address1,
+                'user_address2' => $user_address2,
+                'user_city' => $user_city,
+                'user_mobile' => $user_mobile,
+                'user_tel' => $user_tel
+                ]);
             $user->detail()->save($detail);
         }
         else
         {
-            $user->detail->update(['first_name' => $first_name]);
+            $user->detail->update([
+                'first_name' => $first_name,
+                'middle_name' => $middle_name,
+                'last_name' => $last_name,
+                'user_address1' => $user_address1,
+                'user_address2' => $user_address2,
+                'user_city' => $user_city,
+                'user_mobile' => $user_mobile,
+                'user_tel' => $user_tel
+                ]);
         }
 
         //$userInfo = UserDetail::
