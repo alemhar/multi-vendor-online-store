@@ -28,7 +28,7 @@
                                 <div class="form-group col-md-7">
                                     <label for="inputURLAddress">URL Address</label>
                                     <div class="input-group">
-                                    <input v-model="public_address"  type="text" name="public_id" class="form-control" id="inputURLAddress" readonly>
+                                    <input v-model="public_address" type="text" name="public_address" class="form-control" id="inputURLAddress" readonly>
                                     <div class="input-group-append">
                                         <span @click="copyToClipboard('inputURLAddress')" class="input-group-text" data-toggle="tooltip"  data-placement="top"  title="Copy">Copy</span>
                                     </div>

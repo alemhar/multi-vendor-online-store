@@ -39511,7 +39511,7 @@ var render = function() {
                         staticClass: "form-control",
                         attrs: {
                           type: "text",
-                          name: "public_id",
+                          name: "public_address",
                           id: "inputURLAddress",
                           readonly: ""
                         },
