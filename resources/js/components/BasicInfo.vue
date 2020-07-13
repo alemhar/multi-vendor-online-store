@@ -99,6 +99,8 @@
                             <div class="form-row">
                                 <input type="file" ref="file" style="display: none">
                                 <button @click="$refs.file.click()">Upload Photo</button>
+                            </div>
+                            <div class="form-row">
                                 <img src="public/img/your_logo_here.png" alt="">
                             </div>
                             <div class="row">
