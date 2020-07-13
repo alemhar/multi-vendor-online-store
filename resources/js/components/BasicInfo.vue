@@ -98,7 +98,7 @@
                             </div>
                             <div class="form-row">
                                 <input type="file" ref="file" style="display: none">
-                                <button @click="$refs.file.click()">open file dialog</button>
+                                <button @click="$refs.file.click()">Upload Photo</button>
                             </div>
                             <div class="row">
                                 <div class="col-12">
