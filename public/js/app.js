@@ -39946,7 +39946,10 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "form-row" }, [
-      _c("img", { attrs: { src: "public/img/your_logo_here.png", alt: "" } })
+      _c("img", {
+        staticStyle: { height: "300px" },
+        attrs: { src: "img/your_logo_here.png", alt: "" }
+      })
     ])
   }
 ]

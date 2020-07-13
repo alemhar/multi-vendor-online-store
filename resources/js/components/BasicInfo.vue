@@ -101,7 +101,7 @@
                                 <button @click="$refs.file.click()">Upload Photo</button>
                             </div>
                             <div class="form-row">
-                                <img src="public/img/your_logo_here.png" alt="">
+                                <img src="img/your_logo_here.png" alt="" style="height: 300px;">
                             </div>
                             <div class="row">
                                 <div class="col-12">
