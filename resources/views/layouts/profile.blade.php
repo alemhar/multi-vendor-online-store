@@ -58,7 +58,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <!-- /.navbar -->
 
   <!-- Main Sidebar Container -->
-  <aside class="main-sidebar sidebar-dark-primary elevation-4" style="background-color: #6c757d !important;">
+  <aside class="main-sidebar sidebar-dark-primary elevation-4" style="background-color: #2980b9 !important;">
     <!-- Brand Logo -->
     <a href="#" class="brand-link">
       <img src="{{asset('adminlte/img/osk_logo_full_white.png')}}" alt="Online Store Ko Logo" class="brand-image"

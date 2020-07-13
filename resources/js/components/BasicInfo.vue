@@ -96,6 +96,10 @@
                                 </div -->
                                  
                             </div>
+                            <div class="form-row">
+                                <input type="file" ref="file" style="display: none">
+                                <button @click="$refs.file.click()">open file dialog</button>
+                            </div>
                             <div class="row">
                                 <div class="col-12">
                                     <button type="submit" @click="saveInfo" class="btn btn-primary float-right">Save</button>
@@ -238,6 +242,7 @@
 
     $(document).ready(function(){
         $('[data-toggle="tooltip"]').tooltip();
+
         $('[data-toggle="tooltip"]').on('click', function() {
             $('[data-toggle="tooltip"]').tooltip('hide');
             $(this).attr('data-original-title', 'Copied to Clipboard!');
