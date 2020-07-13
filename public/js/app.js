@@ -39894,7 +39894,17 @@ var render = function() {
                   )
                 ]),
                 _vm._v(" "),
-                _vm._m(1),
+                _c("div", { staticClass: "form-row" }, [
+                  _c("img", {
+                    staticStyle: { height: "300px" },
+                    attrs: { src: "img/your_logo_here.png", alt: "" },
+                    on: {
+                      click: function($event) {
+                        return _vm.$refs.file.click()
+                      }
+                    }
+                  })
+                ]),
                 _vm._v(" "),
                 _c("div", { staticClass: "row" }, [
                   _c("div", { staticClass: "col-12" }, [
@@ -39939,17 +39949,6 @@ var staticRenderFns = [
           )
         ])
       ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "form-row" }, [
-      _c("img", {
-        staticStyle: { height: "300px" },
-        attrs: { src: "img/your_logo_here.png", alt: "" }
-      })
     ])
   }
 ]
