@@ -292,7 +292,7 @@
             //console.log('Component mounted.');
         },
         computed: {
-            store_logo: function () {
+            store_logo() {
                 return user_logo ? user_logo : 'img/your_logo_here.png';
             }
         }
