@@ -100,8 +100,11 @@
                                 <input type="file" ref="file" style="display: none">
                                 <button @click="$refs.file.click()">Upload Photo</button>
                             </div>
-                            <div class="form-row">
-                                <img  @click="$refs.file.click()" src="img/your_logo_here.png" alt="" style="height: 300px;">
+                            <div class="form-row profile-photo-container">
+                                <img class="profile-photo" @click="$refs.file.click()" src="img/your_logo_here.png" alt="" style="height: 300px;">
+                                <div class="profile-middle">
+                                    <div class="profile-update-text">Update</div>
+                                </div>
                             </div>
                             <div class="row">
                                 <div class="col-12">
@@ -145,6 +148,47 @@
 .tooltip:hover .tooltiptext {
   visibility: visible;
 }
+
+.profile-photo-container {
+  position: relative;
+  width: 50%;
+}
+
+.profile-photo {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.profile-middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.profile-photo-container:hover .profile-photo {
+  opacity: 0.3;
+}
+
+.profile-photo-container:hover .profile-photo {
+  opacity: 1;
+}
+
+.profile-update-text {
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+
 </style>
 
 <script>
@@ -233,7 +277,7 @@
         created() {
             this.user_id = document.querySelector('meta[name="user-id"]').getAttribute('content');
             this.loadInfo();
-            
+            //$('[data-toggle="tooltip"]').tooltip();
             //console.log('Component created.');
             
 
