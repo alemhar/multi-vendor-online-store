@@ -6717,7 +6717,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.tooltip {\n  position: relative;\n  display: inline-block;\n  border-bottom: 1px dotted gray;\n}\n.tooltip .tooltiptext {\n  visibility: hidden;\n  width: 120px;\n  background-color: gray;\n  color: #fff;\n  text-align: center;\n  border-radius: 6px;\n  padding: 5px 0;\n  \n  /* Position the tooltip */\n  position: absolute;\n  z-index: 1;\n  bottom: 100%;\n  left: 50%;\n  margin-left: -60px;\n}\n.tooltip:hover .tooltiptext {\n  visibility: visible;\n}\n.profile-photo-container {\n  position: relative;\n}\n.profile-photo {\n  opacity: 1;\n  display: block;\n  transition: .5s ease;\n  -webkit-backface-visibility: hidden;\n          backface-visibility: hidden;\n}\n.profile-middle {\n  transition: .5s ease;\n  opacity: 0;\n  position: absolute;\n  top: 40%;\n  left: 16%;\n  transform: translate(-50%, -50%);\n  -ms-transform: translate(-50%, -50%);\n  text-align: center;\n}\n.profile-middle:hover {\n  opacity: 0.7;\n}\n.profile-photo-container:hover .profile-photo {\n  opacity: 0.3;\n}\n.profile-photo-container:hover .profile-photo {\n  opacity: 1;\n}\n.profile-update-text {\n  background-color: #acacac;\n  color: white;\n  font-size: 12px;\n  padding: 16px 32px;\n}\n\n", ""]);
+exports.push([module.i, "\n.tooltip {\n  position: relative;\n  display: inline-block;\n  border-bottom: 1px dotted gray;\n}\n.tooltip .tooltiptext {\n  visibility: hidden;\n  width: 120px;\n  background-color: gray;\n  color: #fff;\n  text-align: center;\n  border-radius: 6px;\n  padding: 5px 0;\n  \n  /* Position the tooltip */\n  position: absolute;\n  z-index: 1;\n  bottom: 100%;\n  left: 50%;\n  margin-left: -60px;\n}\n.tooltip:hover .tooltiptext {\n  visibility: visible;\n}\n.profile-photo-container {\n  position: relative;\n}\n.profile-photo {\n  opacity: 1;\n  display: block;\n  transition: .5s ease;\n  -webkit-backface-visibility: hidden;\n          backface-visibility: hidden;\n}\n.profile-middle {\n  transition: .5s ease;\n  opacity: 0;\n  position: absolute;\n  top: 40%;\n  left: 16%;\n  transform: translate(-50%, -50%);\n  -ms-transform: translate(-50%, -50%);\n  text-align: center;\n}\n.profile-middle:hover {\n  opacity: 0.7;\n}\n.profile-photo-container:hover .profile-photo {\n  opacity: 0.3;\n}\n.profile-photo-container:hover .profile-photo {\n  opacity: 1;\n}\n.profile-update-text {\n  background-color: #cfcfcf;\n    color: #000000;\n    font-size: 14px;\n  padding: 16px 32px;\n}\n\n", ""]);
 
 // exports
 
@@ -39933,15 +39933,23 @@ var render = function() {
                   _c("img", {
                     staticClass: "profile-photo",
                     staticStyle: { height: "300px" },
-                    attrs: { src: "img/your_logo_here.png", alt: "" },
-                    on: {
-                      click: function($event) {
-                        return _vm.$refs.file.click()
-                      }
-                    }
+                    attrs: { src: "img/your_logo_here.png", alt: "" }
                   }),
                   _vm._v(" "),
-                  _vm._m(1)
+                  _c("div", { staticClass: "profile-middle" }, [
+                    _c(
+                      "div",
+                      {
+                        staticClass: "profile-update-text",
+                        on: {
+                          click: function($event) {
+                            return _vm.$refs.file.click()
+                          }
+                        }
+                      },
+                      [_vm._v("Update")]
+                    )
+                  ])
                 ]),
                 _vm._v(" "),
                 _c("div", { staticClass: "row" }, [
@@ -39987,14 +39995,6 @@ var staticRenderFns = [
           )
         ])
       ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "profile-middle" }, [
-      _c("div", { staticClass: "profile-update-text" }, [_vm._v("Update")])
     ])
   }
 ]

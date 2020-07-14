@@ -102,9 +102,9 @@
                             </div -->
                             <div class="form-row profile-photo-container">
                                 <input type="file" ref="file" style="display: none">
-                                <img class="profile-photo" @click="$refs.file.click()" src="img/your_logo_here.png" alt="" style="height: 300px;">
+                                <img class="profile-photo" src="img/your_logo_here.png" alt="" style="height: 300px;">
                                 <div class="profile-middle">
-                                    <div class="profile-update-text">Update</div>
+                                    <div class="profile-update-text" @click="$refs.file.click()">Update</div>
                                 </div>
                             </div>
                             <div class="row">
@@ -187,9 +187,9 @@
 }
 
 .profile-update-text {
-  background-color: #acacac;
-  color: white;
-  font-size: 12px;
+  background-color: #cfcfcf;
+    color: #000000;
+    font-size: 14px;
   padding: 16px 32px;
 }
 
