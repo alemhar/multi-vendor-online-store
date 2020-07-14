@@ -213,8 +213,6 @@
                 user_info: {},
                 user_id:'',
                 public_address: ''
-                
-                
             }
         },
         methods: {
