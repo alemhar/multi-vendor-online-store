@@ -151,14 +151,12 @@
 
 .profile-photo-container {
   position: relative;
-  width: 50%;
+  
 }
 
 .profile-photo {
   opacity: 1;
   display: block;
-  width: 100%;
-  height: auto;
   transition: .5s ease;
   backface-visibility: hidden;
 }
