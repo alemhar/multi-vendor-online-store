@@ -2183,6 +2183,9 @@ __webpack_require__.r(__webpack_exports__);
         console.log(_this.form.public_id);
       })["catch"](function () {//
       }); //console.log(this.user_info);
+    },
+    store_logo: function store_logo() {
+      return user_logo ? user_logo : 'img/your_logo_here.png';
     }
   },
   created: function created() {
@@ -2192,11 +2195,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   mounted: function mounted() {//console.log('Component mounted.');
   },
-  computed: {
-    store_logo: function store_logo() {
-      return user_logo ? user_logo : 'img/your_logo_here.png';
-    }
-  }
+  computed: {}
 });
 $(document).ready(function () {
   $('[data-toggle="tooltip"]').tooltip();
