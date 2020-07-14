@@ -39937,7 +39937,7 @@ var render = function() {
                     staticStyle: { height: "300px" },
                     attrs: {
                       src:
-                        "{ user_logo ? 'img/your_logo_here.png' : 'img/your_logo_here2.png'}",
+                        "{ user_logo.lenght > 0 ? 'img/your_logo_here.png' : 'img/your_logo_here.png'}",
                       alt: ""
                     }
                   }),
