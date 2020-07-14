@@ -280,7 +280,7 @@
                 //console.log(this.user_info);
             },
             store_logo() {
-                return user_logo ? user_logo : 'img/your_logo_here.png';
+                return this.user_logo ? this.user_logo : 'img/your_logo_here.png';
             }
         },
         created() {
