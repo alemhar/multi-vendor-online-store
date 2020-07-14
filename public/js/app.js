@@ -39939,7 +39939,7 @@ var render = function() {
                   _c("img", {
                     staticClass: "profile-photo",
                     staticStyle: { height: "300px" },
-                    attrs: { src: _vm.store_logo, alt: "" }
+                    attrs: { alt: "" }
                   }),
                   _vm._v(" "),
                   _c("div", { staticClass: "profile-middle" }, [
