@@ -2191,6 +2191,11 @@ __webpack_require__.r(__webpack_exports__);
     //console.log('Component created.');
   },
   mounted: function mounted() {//console.log('Component mounted.');
+  },
+  computed: {
+    store_logo: function store_logo() {
+      return user_logo ? user_logo : 'img/your_logo_here.png';
+    }
   }
 });
 $(document).ready(function () {
@@ -39937,7 +39942,7 @@ var render = function() {
                   _c("img", {
                     staticClass: "profile-photo",
                     staticStyle: { height: "300px" },
-                    attrs: { src: "", alt: "" }
+                    attrs: { src: _vm.store_logo, alt: "" }
                   }),
                   _vm._v(" "),
                   _c("div", { staticClass: "profile-middle" }, [
@@ -39966,15 +39971,6 @@ var render = function() {
                         on: { click: _vm.saveInfo }
                       },
                       [_vm._v("Save")]
-                    ),
-                    _vm._v(
-                      "\n                                \n                            " +
-                        _vm._s(
-                          _vm.user_logo
-                            ? "img/your_logo_here.png"
-                            : "img/your_logo_here.png"
-                        ) +
-                        "\n                            "
                     )
                   ])
                 ])

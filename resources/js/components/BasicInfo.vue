@@ -102,7 +102,7 @@
                             </div -->
                             <div class="form-row profile-photo-container">
                                 <input type="file" ref="file" style="display: none">
-                                <img class="profile-photo" src="" alt="" style="height: 300px;">
+                                <img class="profile-photo" :src="store_logo" alt="" style="height: 300px;">
                                 <div class="profile-middle">
                                     <div class="profile-update-text" @click="$refs.file.click()">Update</div>
                                 
@@ -111,8 +111,8 @@
                             <div class="row">
                                 <div class="col-12">
                                     <button type="submit" @click="saveInfo" class="btn btn-primary float-right">Save</button>
-                                    
-                                {{ user_logo ? 'img/your_logo_here.png' : 'img/your_logo_here.png'}}
+
+                                
                                 </div>
                             </div>
                             </form>
@@ -290,6 +290,11 @@
         },    
         mounted() {
             //console.log('Component mounted.');
+        },
+        computed: {
+            store_logo: function () {
+                return user_logo ? user_logo : 'img/your_logo_here.png';
+            }
         }
     }
 
