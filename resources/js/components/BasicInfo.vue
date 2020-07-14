@@ -166,8 +166,8 @@
   transition: .5s ease;
   opacity: 0;
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 40%;
+  left: 16%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   text-align: center;
@@ -187,9 +187,9 @@
 }
 
 .profile-update-text {
-  background-color: #4CAF50;
+  background-color: #acacac;
   color: white;
-  font-size: 16px;
+  font-size: 12px;
   padding: 16px 32px;
 }
 
