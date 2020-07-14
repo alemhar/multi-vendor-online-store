@@ -172,6 +172,11 @@
   text-align: center;
 }
 
+.profile-middle:hover {
+  opacity: 1;
+  
+}
+
 .profile-photo-container:hover .profile-photo {
   opacity: 0.3;
 }
