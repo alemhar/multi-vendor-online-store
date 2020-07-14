@@ -2184,8 +2184,7 @@ __webpack_require__.r(__webpack_exports__);
       })["catch"](function () {//
       }); //console.log(this.user_info);
     },
-    store_logo: function store_logo() {
-      return this.user_logo ? this.user_logo : 'img/your_logo_here.png';
+    store_logo: function store_logo() {//return this.user_logo ? this.user_logo : 'img/your_logo_here.png';
     }
   },
   created: function created() {
