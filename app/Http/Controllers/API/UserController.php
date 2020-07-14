@@ -55,6 +55,7 @@ class UserController extends Controller
             'user_tel' =>  $user->detail->user_tel,
             'public_id' =>  $user->detail->public_id,
             'user_type' =>  $user->detail->user_type,
+            'user_logo' =>  $user->detail->user_logo,
             'created_at' =>  $user->created_at
 
         ];

@@ -32,7 +32,9 @@ class CreateUserDetailsTable extends Migration
             $table->string('platform_rank')->nullable();
             $table->string('public_id')->nullable();
             $table->string('user_type')->default('free');
+            $table->string('user_logo')->nullable();
             $table->boolean('is_active')->default(1);
+
             $table->timestamps();
         });
     }

@@ -9,4 +9,5 @@ class UserDetail extends Model
     protected $table = 'user_details';
     protected $guarded = ['id'];
     
+    
 }

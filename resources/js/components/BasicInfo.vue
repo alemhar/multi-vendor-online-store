@@ -102,7 +102,7 @@
                             </div -->
                             <div class="form-row profile-photo-container">
                                 <input type="file" ref="file" style="display: none">
-                                <img class="profile-photo" src="img/your_logo_here.png" alt="" style="height: 300px;">
+                                <img class="profile-photo" src="{ user_logo ? 'img/your_logo_here2.png' : 'img/your_logo_here.png'}" alt="" style="height: 300px;">
                                 <div class="profile-middle">
                                     <div class="profile-update-text" @click="$refs.file.click()">Update</div>
                                 </div>
@@ -187,10 +187,11 @@
 }
 
 .profile-update-text {
-  background-color: #cfcfcf;
+    background-color: #cfcfcf;
     color: #000000;
     font-size: 14px;
-  padding: 16px 32px;
+    padding: 16px 32px;
+    cursor: pointer;
 }
 
 </style>
@@ -212,7 +213,8 @@
                     user_mobile: '',
                     user_tel: '',
                     public_id: '',
-                    user_type: ''
+                    user_type: '',
+                    user_logo: ''
                 }),
                 user_info: {},
                 user_id:'',
