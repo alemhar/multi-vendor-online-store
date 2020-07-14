@@ -2194,8 +2194,7 @@ __webpack_require__.r(__webpack_exports__);
     //console.log('Component created.');
   },
   mounted: function mounted() {//console.log('Component mounted.');
-  },
-  computed: {}
+  }
 });
 $(document).ready(function () {
   $('[data-toggle="tooltip"]').tooltip();

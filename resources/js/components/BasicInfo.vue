@@ -279,7 +279,7 @@
                 });
                 //console.log(this.user_info);
             },
-            store_logo() {
+            store_logo(){
                 return this.user_logo ? this.user_logo : 'img/your_logo_here.png';
             }
         },
@@ -293,9 +293,6 @@
         },    
         mounted() {
             //console.log('Component mounted.');
-        },
-        computed: {
-            
         }
     }
 
