@@ -105,12 +105,13 @@
                                 <img class="profile-photo" src="{ user_logo.lenght > 0 ? 'img/your_logo_here.png' : 'img/your_logo_here.png'}" alt="" style="height: 300px;">
                                 <div class="profile-middle">
                                     <div class="profile-update-text" @click="$refs.file.click()">Update</div>
+                                
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-12">
                                     <button type="submit" @click="saveInfo" class="btn btn-primary float-right">Save</button>
-
+                                {user_logo}
                                 </div>
                             </div>
                             </form>
