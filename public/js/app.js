@@ -2107,6 +2107,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -39936,11 +39937,7 @@ var render = function() {
                   _c("img", {
                     staticClass: "profile-photo",
                     staticStyle: { height: "300px" },
-                    attrs: {
-                      src:
-                        "{ user_logo.lenght > 0 ? 'img/your_logo_here.png' : 'img/your_logo_here.png'}",
-                      alt: ""
-                    }
+                    attrs: { src: "", alt: "" }
                   }),
                   _vm._v(" "),
                   _c("div", { staticClass: "profile-middle" }, [
@@ -39971,7 +39968,13 @@ var render = function() {
                       [_vm._v("Save")]
                     ),
                     _vm._v(
-                      "\n                            {user_logo}\n                            "
+                      "\n                                \n                            " +
+                        _vm._s(
+                          _vm.user_logo
+                            ? "img/your_logo_here.png"
+                            : "img/your_logo_here.png"
+                        ) +
+                        "\n                            "
                     )
                   ])
                 ])

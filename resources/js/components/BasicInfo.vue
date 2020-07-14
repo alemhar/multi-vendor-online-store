@@ -102,7 +102,7 @@
                             </div -->
                             <div class="form-row profile-photo-container">
                                 <input type="file" ref="file" style="display: none">
-                                <img class="profile-photo" src="{ user_logo.lenght > 0 ? 'img/your_logo_here.png' : 'img/your_logo_here.png'}" alt="" style="height: 300px;">
+                                <img class="profile-photo" src="" alt="" style="height: 300px;">
                                 <div class="profile-middle">
                                     <div class="profile-update-text" @click="$refs.file.click()">Update</div>
                                 
@@ -111,7 +111,8 @@
                             <div class="row">
                                 <div class="col-12">
                                     <button type="submit" @click="saveInfo" class="btn btn-primary float-right">Save</button>
-                                {user_logo}
+                                    
+                                {{ user_logo ? 'img/your_logo_here.png' : 'img/your_logo_here.png'}}
                                 </div>
                             </div>
                             </form>
