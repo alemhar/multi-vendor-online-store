@@ -96,11 +96,12 @@
                                 </div -->
                                  
                             </div>
-                            <div class="form-row">
+                            <!-- div class="form-row">
                                 <input type="file" ref="file" style="display: none">
                                 <button @click="$refs.file.click()">Upload Photo</button>
-                            </div>
+                            </div -->
                             <div class="form-row profile-photo-container">
+                                <input type="file" ref="file" style="display: none">
                                 <img class="profile-photo" @click="$refs.file.click()" src="img/your_logo_here.png" alt="" style="height: 300px;">
                                 <div class="profile-middle">
                                     <div class="profile-update-text">Update</div>

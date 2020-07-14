@@ -2104,6 +2104,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -39922,27 +39923,13 @@ var render = function() {
                   ])
                 ]),
                 _vm._v(" "),
-                _c("div", { staticClass: "form-row" }, [
+                _c("div", { staticClass: "form-row profile-photo-container" }, [
                   _c("input", {
                     ref: "file",
                     staticStyle: { display: "none" },
                     attrs: { type: "file" }
                   }),
                   _vm._v(" "),
-                  _c(
-                    "button",
-                    {
-                      on: {
-                        click: function($event) {
-                          return _vm.$refs.file.click()
-                        }
-                      }
-                    },
-                    [_vm._v("Upload Photo")]
-                  )
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "form-row profile-photo-container" }, [
                   _c("img", {
                     staticClass: "profile-photo",
                     staticStyle: { height: "300px" },
