@@ -174,7 +174,7 @@
 }
 
 .profile-middle:hover {
-  opacity: 1;
+  opacity: 0.7;
   
 }
 
