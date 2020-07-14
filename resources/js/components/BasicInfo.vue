@@ -102,7 +102,7 @@
                             </div -->
                             <div class="form-row profile-photo-container">
                                 <input type="file" ref="file" style="display: none">
-                                <img class="profile-photo" src="{ user_logo ? 'img/your_logo_here2.png' : 'img/your_logo_here.png'}" alt="" style="height: 300px;">
+                                <img class="profile-photo" src="{ user_logo ? 'img/your_logo_here.png' : 'img/your_logo_here2.png'}" alt="" style="height: 300px;">
                                 <div class="profile-middle">
                                     <div class="profile-update-text" @click="$refs.file.click()">Update</div>
                                 </div>
