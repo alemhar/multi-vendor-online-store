@@ -102,7 +102,7 @@
                             </div -->
                             <div class="form-row profile-photo-container">
                                 <input type="file" ref="file" style="display: none">
-                                <img class="profile-photo" alt="" style="height: 300px;">
+                                <img class="profile-photo" :src="store_logo" alt="" style="height: 300px;">
                                 <div class="profile-middle">
                                     <div class="profile-update-text" @click="$refs.file.click()">Update</div>
                                 
@@ -220,7 +220,8 @@
                 }),
                 user_info: {},
                 user_id:'',
-                public_address: ''
+                public_address: '',
+                store_logo: ''
             }
         },
         methods: {
@@ -271,16 +272,14 @@
                 axios.get("api/user/"+this.user_id)
                 .then((data)=>{
                   this.form = data.data;
-                  this.public_address = window.location.hostname + '/main/' + this.form.public_id; 
+                  this.public_address = window.location.hostname + '/main/' + this.form.public_id;
+                  this.store_logo = this.user_logo ? this.user_logo : 'img/your_logo_here.png';
                   console.log(this.form.public_id);
                 })
                 .catch(()=>{
                   //
                 });
                 //console.log(this.user_info);
-            },
-            store_logo(){
-                //return this.user_logo ? this.user_logo : 'img/your_logo_here.png';
             }
         },
         created() {

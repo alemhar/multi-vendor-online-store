@@ -2129,7 +2129,8 @@ __webpack_require__.r(__webpack_exports__);
       }),
       user_info: {},
       user_id: '',
-      public_address: ''
+      public_address: '',
+      store_logo: ''
     };
   },
   methods: {
@@ -2180,11 +2181,10 @@ __webpack_require__.r(__webpack_exports__);
       axios.get("api/user/" + this.user_id).then(function (data) {
         _this.form = data.data;
         _this.public_address = window.location.hostname + '/main/' + _this.form.public_id;
+        _this.store_logo = _this.user_logo ? _this.user_logo : 'img/your_logo_here.png';
         console.log(_this.form.public_id);
       })["catch"](function () {//
       }); //console.log(this.user_info);
-    },
-    store_logo: function store_logo() {//return this.user_logo ? this.user_logo : 'img/your_logo_here.png';
     }
   },
   created: function created() {
@@ -39939,7 +39939,7 @@ var render = function() {
                   _c("img", {
                     staticClass: "profile-photo",
                     staticStyle: { height: "300px" },
-                    attrs: { alt: "" }
+                    attrs: { src: _vm.store_logo, alt: "" }
                   }),
                   _vm._v(" "),
                   _c("div", { staticClass: "profile-middle" }, [
