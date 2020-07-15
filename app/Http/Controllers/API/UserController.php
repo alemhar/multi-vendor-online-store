@@ -75,9 +75,12 @@ class UserController extends Controller
         //$user = User::find($id);
         $user = User::with('detail')->findOrFail($id);
         
+        // Header
         $user->name = $request->input('store_name');
-        $first_name = $request->input('first_name');
 
+
+        // Detail
+        $first_name = $request->input('first_name');
         $middle_name = $request->input('middle_name');
         $last_name = $request->input('last_name');
         $user_address1 = $request->input('user_address1');
@@ -85,11 +88,28 @@ class UserController extends Controller
         $user_city = $request->input('user_city');
         $user_mobile = $request->input('user_mobile');
         $user_tel = $request->input('user_tel');
-
-
+        $public_id = $request->input('public_id');
+        $user_logo_base64 = $request->input('user_logo_base64');
+        $user_logo = $request->input('user_logo');
+        
 
 
         $user->save();
+        
+        if($user_logo_base64){
+            // or $user_logo = time().'.' . explode('/', explode(':', substr($request->photo, 0, strpos($request->photo, ';')))[1])[1];
+
+            // Delete Old Photo
+            $current_user_logo = public_path('img/logo/').$user_logo;
+            if(file_exists($current_user_logo)){
+                @unlink($current_user_logo);
+            }
+
+            // Create and save new photo
+            $file_ext = explode('/', mime_content_type($user_logo_base64))[1];
+            $user_logo = $public_id . '_' . time() . '.' . $file_ext;
+            \Image::make($user_logo_base64)->save(public_path('img/logo/').$user_logo);
+        } 
 
         if ($user->detail === null)
         {
@@ -101,7 +121,8 @@ class UserController extends Controller
                 'user_address2' => $user_address2,
                 'user_city' => $user_city,
                 'user_mobile' => $user_mobile,
-                'user_tel' => $user_tel
+                'user_tel' => $user_tel,
+                'user_logo' => $user_logo
                 ]);
             $user->detail()->save($detail);
         }
@@ -117,6 +138,7 @@ class UserController extends Controller
                 'user_mobile' => $user_mobile,
                 'user_tel' => $user_tel
                 ]);
+              
         }
 
         //$userInfo = UserDetail::
@@ -136,5 +158,15 @@ class UserController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+
+    public function updateProfile(Request $request)
+    {
+        $user = auth('api')-user();
+
+        if($request->user_logo_base64){
+            //$name 
+        }
     }
 }

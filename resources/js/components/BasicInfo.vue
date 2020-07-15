@@ -221,7 +221,8 @@
                 user_info: {},
                 user_id:'',
                 public_address: '',
-                store_logo: ''
+                store_logo: '',
+                user_logo_base64: ''
             }
         },
         methods: {
@@ -249,7 +250,11 @@
                     user_address2: this.form.user_address2,
                     user_city: this.form.user_city,
                     user_mobile: this.form.user_mobile,
-                    user_tel: this.form.user_tel  
+                    user_tel: this.form.user_tel,
+                    public_id: this.form.public_id,
+                    user_logo: this.form.user_logo,
+                    user_logo_base64: this.user_logo_base64
+                      
                 })
                 .then(() => {
                     /*
@@ -284,7 +289,14 @@
                 //console.log(this.user_info);
             },
             profilePhotoChange(e){
-                console.log('profile changed');
+                let file = e.target.files[0];
+                let file_reader = new FileReader();
+                file_reader.onloadend = (file) =>   {
+                    console.log('RESULT', file_reader.result)
+                    this.user_logo_base64 = file_reader.result;
+                }
+                file_reader.readAsDataURL(file);
+
             }
         },
         created() {
