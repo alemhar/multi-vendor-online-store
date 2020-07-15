@@ -113,8 +113,8 @@ class UserController extends Controller
             $user_logo = $public_id . '_' . time() . '.' . $file_ext;
 
             // configure with favored image driver (gd by default)
-            // \Image::configure(array('driver' => 'imagick'));
-            \Image::make($user_logo_base64)->save(public_path('img/logo/').$user_logo);
+            // Image::configure(array('driver' => 'imagick'));
+            Image::make($user_logo_base64)->save(public_path('img/logo/').$user_logo);
         } 
 
         if ($user->detail === null)
