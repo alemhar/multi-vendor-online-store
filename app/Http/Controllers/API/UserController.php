@@ -6,6 +6,9 @@ use App\User;
 use App\UserDetail;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+// import the Intervention Image Manager Class
+use Intervention\Image\ImageManagerStatic as Image;
+
 
 class UserController extends Controller
 {
@@ -108,6 +111,9 @@ class UserController extends Controller
             // Create and save new photo
             $file_ext = explode('/', mime_content_type($user_logo_base64))[1];
             $user_logo = $public_id . '_' . time() . '.' . $file_ext;
+
+            // configure with favored image driver (gd by default)
+            // \Image::configure(array('driver' => 'imagick'));
             \Image::make($user_logo_base64)->save(public_path('img/logo/').$user_logo);
         } 
 
