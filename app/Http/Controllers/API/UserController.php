@@ -142,7 +142,8 @@ class UserController extends Controller
                 'user_address2' => $user_address2,
                 'user_city' => $user_city,
                 'user_mobile' => $user_mobile,
-                'user_tel' => $user_tel
+                'user_tel' => $user_tel,
+                'user_logo' => $user_logo
                 ]);
               
         }

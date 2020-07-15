@@ -2151,6 +2151,8 @@ __webpack_require__.r(__webpack_exports__);
       //alert("Copied the text: " + copyText.value);
     },
     saveInfo: function saveInfo() {
+      var _this = this;
+
       //this.form.put('api/user/'+this.user_id)
       axios.put('api/user/' + this.user_id, {
         store_name: this.form.store_name,
@@ -2175,29 +2177,30 @@ __webpack_require__.r(__webpack_exports__);
         */
         //this.$Progress.finish();
         //VueListen.$emit('RefreshItemTable');
+        _this.loadInfo();
       })["catch"](function () {//this.form.errors = response;
         //this.$Progress.fail();
       });
     },
     loadInfo: function loadInfo(id) {
-      var _this = this;
+      var _this2 = this;
 
       axios.get("api/user/" + this.user_id).then(function (data) {
-        _this.form = data.data;
-        _this.public_address = window.location.hostname + '/main/' + _this.form.public_id;
-        _this.store_logo = _this.user_logo ? _this.user_logo : 'img/your_logo_here.png';
-        console.log(_this.user_logo ? _this.user_logo : 'img/your_logo_here.png');
+        _this2.form = data.data;
+        _this2.public_address = window.location.hostname + '/main/' + _this2.form.public_id;
+        _this2.store_logo = _this2.user_logo ? _this2.user_logo : 'img/your_logo_here.png';
+        console.log(_this2.user_logo ? _this2.user_logo : 'img/your_logo_here.png');
       })["catch"](function () {}); //console.log(this.user_info);
     },
     profilePhotoChange: function profilePhotoChange(e) {
-      var _this2 = this;
+      var _this3 = this;
 
       var file = e.target.files[0];
       var file_reader = new FileReader();
 
       file_reader.onloadend = function (file) {
         console.log('RESULT', file_reader.result);
-        _this2.user_logo_base64 = file_reader.result;
+        _this3.user_logo_base64 = file_reader.result;
       };
 
       file_reader.readAsDataURL(file);
