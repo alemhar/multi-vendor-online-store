@@ -2184,6 +2184,9 @@ __webpack_require__.r(__webpack_exports__);
         _this.store_logo = _this.user_logo ? _this.user_logo : 'img/your_logo_here.png';
         console.log(_this.user_logo ? _this.user_logo : 'img/your_logo_here.png');
       })["catch"](function () {}); //console.log(this.user_info);
+    },
+    profilePhotoChange: function profilePhotoChange(e) {
+      console.log('profile changed');
     }
   },
   created: function created() {
@@ -39932,7 +39935,8 @@ var render = function() {
                   _c("input", {
                     ref: "file",
                     staticStyle: { display: "none" },
-                    attrs: { type: "file" }
+                    attrs: { type: "file" },
+                    on: { change: _vm.profilePhotoChange }
                   }),
                   _vm._v(" "),
                   _c("img", {

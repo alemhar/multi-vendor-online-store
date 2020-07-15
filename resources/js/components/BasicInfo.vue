@@ -101,7 +101,7 @@
                                 <button @click="$refs.file.click()">Upload Photo</button>
                             </div -->
                             <div class="form-row profile-photo-container">
-                                <input type="file" ref="file" style="display: none">
+                                <input type="file" @change="profilePhotoChange" ref="file" style="display: none">
                                 <img class="profile-photo" :src="store_logo" alt="" style="height: 300px;">
                                 <div class="profile-middle">
                                     <div class="profile-update-text" @click="$refs.file.click()">Update</div>
@@ -282,6 +282,9 @@
                     
                 });
                 //console.log(this.user_info);
+            },
+            profilePhotoChange(e){
+                console.log('profile changed');
             }
         },
         created() {
