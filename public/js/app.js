@@ -2181,10 +2181,9 @@ __webpack_require__.r(__webpack_exports__);
       axios.get("api/user/" + this.user_id).then(function (data) {
         _this.form = data.data;
         _this.public_address = window.location.hostname + '/main/' + _this.form.public_id;
-        _this.store_logo = !_this.user_logo ? _this.user_logo : 'img/your_logo_here.png';
-        console.log(_this.form.public_id);
-      })["catch"](function () {//
-      }); //console.log(this.user_info);
+        _this.store_logo = _this.user_logo ? _this.user_logo : 'img/your_logo_here.png';
+        console.log(_this.user_logo ? _this.user_logo : 'img/your_logo_here.png');
+      })["catch"](function () {}); //console.log(this.user_info);
     }
   },
   created: function created() {
