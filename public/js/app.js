@@ -2189,7 +2189,7 @@ __webpack_require__.r(__webpack_exports__);
         _this2.form = data.data;
         _this2.public_address = window.location.hostname + '/main/' + _this2.form.public_id;
         _this2.store_logo = _this2.user_logo ? _this2.user_logo : 'img/your_logo_here.png';
-        console.log(_this2.user_logo ? _this2.user_logo : 'img/your_logo_here.png');
+        console.log(_this2.form.user_logo ? _this2.form.user_logo : 'img/your_logo_here.png');
       })["catch"](function () {}); //console.log(this.user_info);
     },
     profilePhotoChange: function profilePhotoChange(e) {

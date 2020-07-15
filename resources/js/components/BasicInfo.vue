@@ -281,7 +281,7 @@
                   this.public_address = window.location.hostname + '/main/' + this.form.public_id;
                   this.store_logo = this.user_logo ? this.user_logo : 'img/your_logo_here.png';
                   
-                  console.log(this.user_logo ? this.user_logo : 'img/your_logo_here.png');
+                  console.log(this.form.user_logo ? this.form.user_logo : 'img/your_logo_here.png');
 
                 })
                 .catch(()=>{
