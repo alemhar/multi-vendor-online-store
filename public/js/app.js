@@ -2113,6 +2113,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -39935,9 +39937,9 @@ var render = function() {
                 ])
               ]),
               _vm._v(" "),
+              _vm._m(1),
+              _vm._v(" "),
               _c("div", { staticClass: "form-row profile-photo-container" }, [
-                _vm._m(1),
-                _vm._v(" "),
                 _c("input", {
                   ref: "file",
                   staticStyle: { display: "none" },
@@ -40025,7 +40027,9 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", [
+    return _c("div", { staticClass: "form-row" }, [
+      _c("hr"),
+      _vm._v(" "),
       _c("label", { attrs: { for: "user_type" } }, [_vm._v("Store Logo")])
     ])
   }
