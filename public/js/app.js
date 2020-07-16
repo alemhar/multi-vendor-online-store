@@ -2401,6 +2401,14 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {};
@@ -40321,6 +40329,8 @@ var render = function() {
               _vm._v(" "),
               _vm._m(4),
               _vm._v(" "),
+              _vm._m(5),
+              _vm._v(" "),
               _c("div", { staticClass: "form-row profile-photo-container" }, [
                 _c("input", {
                   ref: "file",
@@ -40389,6 +40399,45 @@ var staticRenderFns = [
     return _c("div", { staticClass: "col-6" }, [
       _c("h3", [_vm._v("Product Page")])
     ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "col-sm-6 col-md-4 col-lg-3 col-xl-2 pb-4" },
+      [
+        _c(
+          "div",
+          { staticClass: "card border-info", attrs: { id: "'+i+'Panel" } },
+          [
+            _c("div", { staticClass: "card-body" }, [
+              _c("div", { staticClass: "h4 card-title" }, [
+                _c("span", [_vm._v("Card '+i+' 👀")]),
+                _c(
+                  "button",
+                  {
+                    staticClass: "close",
+                    attrs: {
+                      type: "button",
+                      "data-target": "#'+i+'Panel",
+                      "data-dismiss": "alert"
+                    }
+                  },
+                  [_c("span", [_vm._v("×")])]
+                )
+              ]),
+              _c("p", [_vm._v("Some text")]),
+              _c("img", {
+                staticClass: "rounded rounded-circle",
+                attrs: { src: "//placehold.it/50/eeeeee" }
+              })
+            ])
+          ]
+        )
+      ]
+    )
   },
   function() {
     var _vm = this
