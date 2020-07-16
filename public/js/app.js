@@ -40464,7 +40464,7 @@ var staticRenderFns = [
               staticClass: "btn btn-outline-dark",
               attrs: { type: "button", href: "#" }
             },
-            [_c("i", { staticClass: "fas fa-shopping-cart" })]
+            [_c("i", { staticClass: "fas" }, [_vm._v("BUY")])]
           ),
           _vm._v(" "),
           _c(

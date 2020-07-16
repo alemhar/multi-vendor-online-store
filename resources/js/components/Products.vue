@@ -28,7 +28,7 @@
                                     </div>
                                     <div class="card-footer">
                                     <a type="button" class="btn btn-outline-dark" href="#"><i class="fas fa-images"></i></a>
-                                    <a type="button" class="btn btn-outline-dark" href="#"><i class="fas fa-shopping-cart"></i></a>
+                                    <a type="button" class="btn btn-outline-dark" href="#"><i class="fas">BUY</i></a>
                                     <a type="button" class="btn btn-outline-dark" href="#"><i class="fas fa-cart-plus"></i></a>
                                     </div>
                                 </div>
