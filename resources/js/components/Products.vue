@@ -15,16 +15,11 @@
                         </div>
                     </div>
                     <div class="card-body">
-                        <div class="form">
-                            <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 pb-4">
-                                <div class="card border-info" id="'+i+'Panel">
-                                    <div class="card-body"><div class="h4 card-title"><span>Card '+i+' 👀</span><button type="button" class="close" data-target="#'+i+'Panel" data-dismiss="alert"><span>&times;</span></button></div><p>Some text</p><img src="//placehold.it/50/eeeeee" class="rounded rounded-circle">
-                                </div>
-                                </div>
-                            </div>
+                        <div class="form row">
                             
                             
-                            <div class="card bg-light mb-3" style="max-width: 18rem;">
+                            
+                            <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 card bg-light mb-3" style="max-width: 18rem;">
                                 <div class="card-header">Header</div>
                                 <div class="card-body">
                                     <h5 class="card-title">Light card title</h5>
@@ -32,21 +27,21 @@
                                 </div>
                             </div>
 
-                            <div class="card bg-light mb-3" style="max-width: 18rem;">
+                            <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 card bg-light mb-3" style="max-width: 18rem;">
                                 <div class="card-header">Header</div>
                                 <div class="card-body">
                                     <h5 class="card-title">Light card title</h5>
                                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                                 </div>
                             </div>
-                            <div class="card bg-light mb-3" style="max-width: 18rem;">
+                            <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 card bg-light mb-3" style="max-width: 18rem;">
                                 <div class="card-header">Header</div>
                                 <div class="card-body">
                                     <h5 class="card-title">Light card title</h5>
                                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                                 </div>
                             </div>
-                            <div class="card bg-light mb-3" style="max-width: 18rem;">
+                            <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 card bg-light mb-3" style="max-width: 18rem;">
                                 <div class="card-header">Header</div>
                                 <div class="card-body">
                                     <h5 class="card-title">Light card title</h5>
