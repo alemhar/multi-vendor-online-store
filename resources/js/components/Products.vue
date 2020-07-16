@@ -27,9 +27,9 @@
                                     <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                                     </div>
                                     <div class="card-footer">
-                                    <a type="button" class="btn btn-outline-dark" href="#"><i class="fas fa-images"></i></a>
-                                    <a type="button" class="btn btn-outline-dark" href="#"><i class="fas">BUY</i></a>
-                                    <a type="button" class="btn btn-outline-dark" href="#"><i class="fas fa-cart-plus"></i></a>
+                                    <a type="button" class="btn btn-outline-dark float-right" href="#"><i class="fas fa-images"></i></a>
+                                    <a type="button" class="btn btn-outline-dark float-right" href="#"><i style="font-family:sans-serif;font-size: .6em;font-weight: 700;">BUY</i></a>
+                                    <a type="button" class="btn btn-outline-dark float-right" href="#"><i class="fas fa-cart-plus"></i></a>
                                     </div>
                                 </div>
                                 <div class="card">

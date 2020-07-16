@@ -40452,7 +40452,7 @@ var staticRenderFns = [
           _c(
             "a",
             {
-              staticClass: "btn btn-outline-dark",
+              staticClass: "btn btn-outline-dark float-right",
               attrs: { type: "button", href: "#" }
             },
             [_c("i", { staticClass: "fas fa-images" })]
@@ -40461,16 +40461,28 @@ var staticRenderFns = [
           _c(
             "a",
             {
-              staticClass: "btn btn-outline-dark",
+              staticClass: "btn btn-outline-dark float-right",
               attrs: { type: "button", href: "#" }
             },
-            [_c("i", { staticClass: "fas" }, [_vm._v("BUY")])]
+            [
+              _c(
+                "i",
+                {
+                  staticStyle: {
+                    "font-family": "sans-serif",
+                    "font-size": ".6em",
+                    "font-weight": "700"
+                  }
+                },
+                [_vm._v("BUY")]
+              )
+            ]
           ),
           _vm._v(" "),
           _c(
             "a",
             {
-              staticClass: "btn btn-outline-dark",
+              staticClass: "btn btn-outline-dark float-right",
               attrs: { type: "button", href: "#" }
             },
             [_c("i", { staticClass: "fas fa-cart-plus" })]
