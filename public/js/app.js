@@ -40429,7 +40429,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "card-deck" }, [
+    return _c("div", { staticClass: "card-deck mb-3" }, [
       _c("div", { staticClass: "card" }, [
         _c("img", {
           staticClass: "card-img-top",

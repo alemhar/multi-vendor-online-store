@@ -19,7 +19,7 @@
                             
                             
                             
-                            <div class="card-deck">
+                            <div class="card-deck mb-3">
                                 <div class="card">
                                     <img class="card-img-top" src="img/products/226x180.svg" alt="Card image cap">
                                     <div class="card-body">
@@ -84,7 +84,7 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
 
                             <div class="form-row profile-photo-container">
                                 <input type="file" @change="profilePhotoChange" ref="file" style="display: none">
