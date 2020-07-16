@@ -110,6 +110,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-12">
+                                    <button type="submit" @click="loadInfo" class="btn btn-default float-right">Cancel</button>
                                     <button type="submit" @click="saveInfo" class="btn btn-primary float-right">Save</button>
 
                                 
@@ -274,7 +275,7 @@
                     //this.$Progress.fail();
                 });
             },
-            loadInfo(id){
+            loadInfo(){
                 axios.get("api/user/"+this.user_id)
                 .then((data)=>{
                   this.form = data.data;

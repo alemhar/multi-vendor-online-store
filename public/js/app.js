@@ -2108,6 +2108,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -2182,7 +2183,7 @@ __webpack_require__.r(__webpack_exports__);
         //this.$Progress.fail();
       });
     },
-    loadInfo: function loadInfo(id) {
+    loadInfo: function loadInfo() {
       var _this2 = this;
 
       axios.get("api/user/" + this.user_id).then(function (data) {
@@ -39980,6 +39981,16 @@ var render = function() {
                 _vm._v(" "),
                 _c("div", { staticClass: "row" }, [
                   _c("div", { staticClass: "col-12" }, [
+                    _c(
+                      "button",
+                      {
+                        staticClass: "btn btn-default float-right",
+                        attrs: { type: "submit" },
+                        on: { click: _vm.loadInfo }
+                      },
+                      [_vm._v("Cancel")]
+                    ),
+                    _vm._v(" "),
                     _c(
                       "button",
                       {
