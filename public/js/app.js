@@ -40449,17 +40449,32 @@ var staticRenderFns = [
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "card-footer" }, [
-          _c("a", { attrs: { href: "#" } }, [
-            _c("i", { staticClass: "fas fa-images" })
-          ]),
+          _c(
+            "a",
+            {
+              staticClass: "btn btn-outline-dark",
+              attrs: { type: "button", href: "#" }
+            },
+            [_c("i", { staticClass: "fas fa-images" })]
+          ),
           _vm._v(" "),
-          _c("a", { attrs: { href: "#" } }, [
-            _c("i", { staticClass: "fas fa-shopping-cart" })
-          ]),
+          _c(
+            "a",
+            {
+              staticClass: "btn btn-outline-dark",
+              attrs: { type: "button", href: "#" }
+            },
+            [_c("i", { staticClass: "fas fa-shopping-cart" })]
+          ),
           _vm._v(" "),
-          _c("a", { attrs: { href: "#" } }, [
-            _c("i", { staticClass: "fas fa-cart-plus" })
-          ])
+          _c(
+            "a",
+            {
+              staticClass: "btn btn-outline-dark",
+              attrs: { type: "button", href: "#" }
+            },
+            [_c("i", { staticClass: "fas fa-cart-plus" })]
+          )
         ])
       ]),
       _vm._v(" "),
