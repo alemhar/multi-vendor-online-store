@@ -27,8 +27,9 @@
                                     <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                                     </div>
                                     <div class="card-footer">
-                                    <a href="#"><i class="fas fa-cart-plus"></i></a>
+                                    <a href="#"><i class="fas fa-images"></i></a>
                                     <a href="#"><i class="fas fa-shopping-cart"></i></a>
+                                    <a href="#"><i class="fas fa-cart-plus"></i></a>
                                     </div>
                                 </div>
                                 <div class="card">
