@@ -2416,6 +2416,30 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {};
@@ -40330,6 +40354,8 @@ var render = function() {
             _c("div", { staticClass: "form row" }, [
               _vm._m(1),
               _vm._v(" "),
+              _vm._m(2),
+              _vm._v(" "),
               _c("div", { staticClass: "form-row profile-photo-container" }, [
                 _c("input", {
                   ref: "file",
@@ -40462,6 +40488,58 @@ var staticRenderFns = [
           _c("p", { staticClass: "card-text" }, [
             _vm._v(
               "This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action."
+            )
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "card-footer" }, [
+          _c("small", { staticClass: "text-muted" }, [
+            _vm._v("Last updated 3 mins ago")
+          ])
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "card-deck" }, [
+      _c("div", { staticClass: "card" }, [
+        _c("img", {
+          staticClass: "card-img-top",
+          attrs: { src: "img/products/226x180.svg", alt: "Card image cap" }
+        }),
+        _vm._v(" "),
+        _c("div", { staticClass: "card-body" }, [
+          _c("h5", { staticClass: "card-title" }, [_vm._v("Card title")]),
+          _vm._v(" "),
+          _c("p", { staticClass: "card-text" }, [
+            _vm._v(
+              "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer."
+            )
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "card-footer" }, [
+          _c("small", { staticClass: "text-muted" }, [
+            _vm._v("Last updated 3 mins ago")
+          ])
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "card" }, [
+        _c("img", {
+          staticClass: "card-img-top",
+          attrs: { src: "img/products/226x180.svg", alt: "Card image cap" }
+        }),
+        _vm._v(" "),
+        _c("div", { staticClass: "card-body" }, [
+          _c("h5", { staticClass: "card-title" }, [_vm._v("Card title")]),
+          _vm._v(" "),
+          _c("p", { staticClass: "card-text" }, [
+            _vm._v(
+              "This card has supporting text below as a natural lead-in to additional content."
             )
           ])
         ]),
