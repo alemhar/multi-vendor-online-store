@@ -10,7 +10,7 @@
                             </div>
                             <div class="col-6">
                                 <button type="submit" @click="saveInfo" class="btn btn-primary float-right"><i class="fas fa-shopping-cart"></i></button>
-                                <button type="submit" @click="loadInfo" class="btn btn-default float-right">Contact Seller</button>
+                                <button type="submit" @click="loadInfo" class="btn btn-outline-default float-right">Contact Seller</button>
                             </div>
                         </div>
                     </div>
