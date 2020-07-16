@@ -40346,7 +40346,7 @@ var render = function() {
                 _c(
                   "button",
                   {
-                    staticClass: "btn btn-outline-default float-right",
+                    staticClass: "btn btn-outline-primary float-right",
                     attrs: { type: "submit" },
                     on: { click: _vm.loadInfo }
                   },
