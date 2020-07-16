@@ -40447,8 +40447,8 @@ var staticRenderFns = [
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "card-footer" }, [
-          _c("small", { staticClass: "text-muted" }, [
-            _vm._v("Last updated 3 mins ago")
+          _c("a", { attrs: { href: "#" } }, [
+            _c("i", { staticClass: "fas fa-cart-plus" })
           ])
         ])
       ]),
@@ -40504,7 +40504,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "card-deck" }, [
+    return _c("div", { staticClass: "card-deck mb-3" }, [
       _c("div", { staticClass: "card" }, [
         _c("img", {
           staticClass: "card-img-top",

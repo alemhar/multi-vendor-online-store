@@ -27,7 +27,7 @@
                                     <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                                     </div>
                                     <div class="card-footer">
-                                    <small class="text-muted">Last updated 3 mins ago</small>
+                                    <a href="#"><i class="fas fa-cart-plus"></i></a>
                                     </div>
                                 </div>
                                 <div class="card">
@@ -52,7 +52,7 @@
                                 </div>
                             </div>
 
-                            <div class="card-deck">
+                            <div class="card-deck mb-3">
                                 <div class="card">
                                     <img class="card-img-top" src="img/products/226x180.svg" alt="Card image cap">
                                     <div class="card-body">
