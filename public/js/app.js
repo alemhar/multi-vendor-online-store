@@ -2442,6 +2442,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {};
@@ -40452,7 +40456,7 @@ var staticRenderFns = [
           _c(
             "a",
             {
-              staticClass: "btn btn-outline-dark float-right",
+              staticClass: "btn btn-outline-dark",
               attrs: { type: "button", href: "#" }
             },
             [_c("i", { staticClass: "fas fa-images" })]
@@ -40461,7 +40465,7 @@ var staticRenderFns = [
           _c(
             "a",
             {
-              staticClass: "btn btn-outline-dark float-right",
+              staticClass: "btn btn-outline-dark",
               attrs: { type: "button", href: "#" }
             },
             [
@@ -40482,7 +40486,7 @@ var staticRenderFns = [
           _c(
             "a",
             {
-              staticClass: "btn btn-outline-dark float-right",
+              staticClass: "btn btn-outline-dark",
               attrs: { type: "button", href: "#" }
             },
             [_c("i", { staticClass: "fas fa-cart-plus" })]
@@ -40507,9 +40511,44 @@ var staticRenderFns = [
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "card-footer" }, [
-          _c("small", { staticClass: "text-muted" }, [
-            _vm._v("Last updated 3 mins ago")
-          ])
+          _c(
+            "a",
+            {
+              staticClass: "btn btn-outline-dark",
+              attrs: { type: "button", href: "#" }
+            },
+            [_c("i", { staticClass: "fas fa-images" })]
+          ),
+          _vm._v(" "),
+          _c(
+            "a",
+            {
+              staticClass: "btn btn-outline-dark",
+              attrs: { type: "button", href: "#" }
+            },
+            [
+              _c(
+                "i",
+                {
+                  staticStyle: {
+                    "font-family": "sans-serif",
+                    "font-size": ".6em",
+                    "font-weight": "700"
+                  }
+                },
+                [_vm._v("BUY")]
+              )
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "a",
+            {
+              staticClass: "btn btn-outline-dark",
+              attrs: { type: "button", href: "#" }
+            },
+            [_c("i", { staticClass: "fas fa-cart-plus" })]
+          )
         ])
       ]),
       _vm._v(" "),
@@ -40530,9 +40569,44 @@ var staticRenderFns = [
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "card-footer" }, [
-          _c("small", { staticClass: "text-muted" }, [
-            _vm._v("Last updated 3 mins ago")
-          ])
+          _c(
+            "a",
+            {
+              staticClass: "btn btn-outline-dark",
+              attrs: { type: "button", href: "#" }
+            },
+            [_c("i", { staticClass: "fas fa-images" })]
+          ),
+          _vm._v(" "),
+          _c(
+            "a",
+            {
+              staticClass: "btn btn-outline-dark",
+              attrs: { type: "button", href: "#" }
+            },
+            [
+              _c(
+                "i",
+                {
+                  staticStyle: {
+                    "font-family": "sans-serif",
+                    "font-size": ".6em",
+                    "font-weight": "700"
+                  }
+                },
+                [_vm._v("BUY")]
+              )
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "a",
+            {
+              staticClass: "btn btn-outline-dark",
+              attrs: { type: "button", href: "#" }
+            },
+            [_c("i", { staticClass: "fas fa-cart-plus" })]
+          )
         ])
       ])
     ])
