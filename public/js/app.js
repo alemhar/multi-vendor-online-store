@@ -40400,7 +40400,8 @@ var staticRenderFns = [
     return _c(
       "div",
       {
-        staticClass: "col-sm-6 col-md-4 col-lg-3 col-xl-2 card bg-light mb-3",
+        staticClass:
+          "col-sm-6 col-md-4 col-lg-3 col-xl-2 card bg-light mb-3 pb-4",
         staticStyle: { "max-width": "18rem" }
       },
       [
@@ -40425,7 +40426,8 @@ var staticRenderFns = [
     return _c(
       "div",
       {
-        staticClass: "col-sm-6 col-md-4 col-lg-3 col-xl-2 card bg-light mb-3",
+        staticClass:
+          "col-sm-6 col-md-4 col-lg-3 col-xl-2 card bg-light mb-3 pb-4",
         staticStyle: { "max-width": "18rem" }
       },
       [
@@ -40450,7 +40452,8 @@ var staticRenderFns = [
     return _c(
       "div",
       {
-        staticClass: "col-sm-6 col-md-4 col-lg-3 col-xl-2 card bg-light mb-3",
+        staticClass:
+          "col-sm-6 col-md-4 col-lg-3 col-xl-2 card bg-light mb-3 pb-4",
         staticStyle: { "max-width": "18rem" }
       },
       [
@@ -40475,7 +40478,8 @@ var staticRenderFns = [
     return _c(
       "div",
       {
-        staticClass: "col-sm-6 col-md-4 col-lg-3 col-xl-2 card bg-light mb-3",
+        staticClass:
+          "col-sm-6 col-md-4 col-lg-3 col-xl-2 card bg-light mb-3 pb-4",
         staticStyle: { "max-width": "18rem" }
       },
       [
