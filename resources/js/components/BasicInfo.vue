@@ -17,7 +17,7 @@
                     </div>
                     
                     <div class="card-body">
-                        <form @submit.prevent="saveInfo">
+                        <div class="form">
                             
                             <div class="form-row">
                                 <div class="form-group col-md-4">
@@ -110,13 +110,14 @@
                             </div>
                             <div class="row">
                                 <div class="col-12">
-                                    <button type="submit" @click="loadInfo" class="btn btn-default float-right">Cancel</button>
                                     <button type="submit" @click="saveInfo" class="btn btn-primary float-right">Save</button>
+                                    <button type="submit" @click="loadInfo" class="btn btn-default float-right">Cancel</button>
+                                    
 
                                 
                                 </div>
                             </div>
-                            </form>
+                            </div> <!-- form -->
                         
 
                     </div>
