@@ -9,13 +9,11 @@
                                 <h3>Account Info</h3> 
                             </div>
                             <div class="col-6">
-                                <button type="submit" class="btn btn-primary float-right">Save</button>
+                                <button type="submit" @click="saveInfo" class="btn btn-primary float-right">Save</button>
+                                <button type="submit" @click="loadInfo" class="btn btn-default float-right">Cancel</button>
                             </div>
                         </div>
-                        
-
                     </div>
-                    
                     <div class="card-body">
                         <div class="form">
                             
@@ -101,11 +99,10 @@
                                 <button @click="$refs.file.click()">Upload Photo</button>
                             </div -->
                             <div class="form-row">
-                                <hr>
                                 <label for="user_type">Store Logo</label>
                             </div>
+                            
                             <div class="form-row profile-photo-container">
-                                
                                 <input type="file" @change="profilePhotoChange" ref="file" style="display: none">
                                 <img class="profile-photo" id="profile-photo" :src="store_logo" alt="" style="height: 300px;">
                                 <div class="profile-middle">
@@ -299,11 +296,28 @@
             profilePhotoChange(e){
                 let file = e.target.files[0];
                 let file_reader = new FileReader();
+
+
+                let limit = 1024 * 1024 * 2;
+
+                if(file['size'] > limit){
+                    /*
+                    swal({
+                        type: 'error',
+                        title: 'Oops...',
+                        text: 'You are uploading a large file',
+                    })
+                    */
+                   alert('Picture Size Limit : 2MB or less.');
+                    return false;
+                }
+
                 file_reader.onloadend = (file) =>   {
                     console.log('RESULT', file_reader.result)
                     this.user_logo_base64 = file_reader.result;
                     this.store_logo = file_reader.result;
                 }
+
                 file_reader.readAsDataURL(file);
 
             }

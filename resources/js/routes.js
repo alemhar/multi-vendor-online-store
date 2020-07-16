@@ -4,8 +4,8 @@ export const routes = [
         component: require('./components/BasicInfo.vue').default 
     },
     {
-        path: '/skills',
-        component: require('./components/Skills.vue').default 
+        path: '/products',
+        component: require('./components/Products.vue').default 
     }
 ];
 
