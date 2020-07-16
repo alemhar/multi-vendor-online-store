@@ -2440,6 +2440,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {};
@@ -40449,6 +40450,10 @@ var staticRenderFns = [
         _c("div", { staticClass: "card-footer" }, [
           _c("a", { attrs: { href: "#" } }, [
             _c("i", { staticClass: "fas fa-cart-plus" })
+          ]),
+          _vm._v(" "),
+          _c("a", { attrs: { href: "#" } }, [
+            _c("i", { staticClass: "fas fa-shopping-cart" })
           ])
         ])
       ]),

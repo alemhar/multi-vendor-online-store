@@ -28,6 +28,7 @@
                                     </div>
                                     <div class="card-footer">
                                     <a href="#"><i class="fas fa-cart-plus"></i></a>
+                                    <a href="#"><i class="fas fa-shopping-cart"></i></a>
                                     </div>
                                 </div>
                                 <div class="card">
