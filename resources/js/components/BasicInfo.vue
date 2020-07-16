@@ -101,9 +101,11 @@
                                 <button @click="$refs.file.click()">Upload Photo</button>
                             </div -->
                             <div class="form-row profile-photo-container">
+                                <div>
                                 <label for="user_type">Store Logo</label>
+                                </div>
                                 <input type="file" @change="profilePhotoChange" ref="file" style="display: none">
-                                <img class="profile-photo" :src="store_logo" alt="" style="height: 300px;">
+                                <img class="profile-photo" id="profile-photo" :src="store_logo" alt="" style="height: 300px;">
                                 <div class="profile-middle">
                                     <div class="profile-update-text" @click="$refs.file.click()">Update</div>
                                 
