@@ -281,7 +281,7 @@
                   this.public_address = window.location.hostname + '/main/' + this.form.public_id;
                   this.store_logo = this.form.user_logo ? 'img/logo/'+this.form.user_logo : 'img/your_logo_here.png';
                   
-                  console.log( this.form.user_logo ? this.form.user_logo : 'img/your_logo_here.png');
+                  //console.log( this.form.user_logo ? this.form.user_logo : 'img/your_logo_here.png');
 
                 })
                 .catch(()=>{
@@ -295,6 +295,7 @@
                 file_reader.onloadend = (file) =>   {
                     console.log('RESULT', file_reader.result)
                     this.user_logo_base64 = file_reader.result;
+                    this.store_logo = file_reader.result;
                 }
                 file_reader.readAsDataURL(file);
 

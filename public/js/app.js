@@ -2188,8 +2188,7 @@ __webpack_require__.r(__webpack_exports__);
       axios.get("api/user/" + this.user_id).then(function (data) {
         _this2.form = data.data;
         _this2.public_address = window.location.hostname + '/main/' + _this2.form.public_id;
-        _this2.store_logo = _this2.form.user_logo ? 'img/logo/' + _this2.form.user_logo : 'img/your_logo_here.png';
-        console.log(_this2.form.user_logo ? _this2.form.user_logo : 'img/your_logo_here.png');
+        _this2.store_logo = _this2.form.user_logo ? 'img/logo/' + _this2.form.user_logo : 'img/your_logo_here.png'; //console.log( this.form.user_logo ? this.form.user_logo : 'img/your_logo_here.png');
       })["catch"](function () {}); //console.log(this.user_info);
     },
     profilePhotoChange: function profilePhotoChange(e) {
@@ -2201,6 +2200,7 @@ __webpack_require__.r(__webpack_exports__);
       file_reader.onloadend = function (file) {
         console.log('RESULT', file_reader.result);
         _this3.user_logo_base64 = file_reader.result;
+        _this3.store_logo = file_reader.result;
       };
 
       file_reader.readAsDataURL(file);
