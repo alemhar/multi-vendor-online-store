@@ -2375,6 +2375,11 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {};
@@ -40287,6 +40292,8 @@ var render = function() {
           _vm._v(" "),
           _c("div", { staticClass: "card-body" }, [
             _c("div", { staticClass: "form" }, [
+              _vm._m(1),
+              _vm._v(" "),
               _c("div", { staticClass: "form-row profile-photo-container" }, [
                 _c("input", {
                   ref: "file",
@@ -40353,8 +40360,33 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "col-6" }, [
-      _c("h3", [_vm._v("Account Info")])
+      _c("h3", [_vm._v("Product Page")])
     ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass: "card bg-light mb-3",
+        staticStyle: { "max-width": "18rem" }
+      },
+      [
+        _c("div", { staticClass: "card-header" }, [_vm._v("Header")]),
+        _vm._v(" "),
+        _c("div", { staticClass: "card-body" }, [
+          _c("h5", { staticClass: "card-title" }, [_vm._v("Light card title")]),
+          _vm._v(" "),
+          _c("p", { staticClass: "card-text" }, [
+            _vm._v(
+              "Some quick example text to build on the card title and make up the bulk of the card's content."
+            )
+          ])
+        ])
+      ]
+    )
   }
 ]
 render._withStripped = true

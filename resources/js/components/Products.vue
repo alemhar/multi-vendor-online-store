@@ -6,7 +6,7 @@
                     <div class="card-header">
                         <div class="row">
                             <div class="col-6">
-                                <h3>Account Info</h3> 
+                                <h3>Product Page</h3> 
                             </div>
                             <div class="col-6">
                                 <button type="submit" @click="saveInfo" class="btn btn-primary float-right">Save</button>
@@ -17,6 +17,13 @@
                     <div class="card-body">
                         <div class="form">
                             
+                            <div class="card bg-light mb-3" style="max-width: 18rem;">
+                                <div class="card-header">Header</div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Light card title</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                </div>
+                            </div>
                             
                             
                             <div class="form-row profile-photo-container">
@@ -31,8 +38,6 @@
                                 <div class="col-12">
                                     <button type="submit" @click="saveInfo" class="btn btn-primary float-right">Save</button>
                                     <button type="submit" @click="loadInfo" class="btn btn-default float-right">Cancel</button>
-                                    
-
                                 
                                 </div>
                             </div>
