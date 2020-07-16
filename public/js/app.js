@@ -40340,7 +40340,7 @@ var render = function() {
                     attrs: { type: "submit" },
                     on: { click: _vm.saveInfo }
                   },
-                  [_vm._v("Save")]
+                  [_c("i", { staticClass: "fas fa-shopping-cart" })]
                 ),
                 _vm._v(" "),
                 _c(
@@ -40350,7 +40350,7 @@ var render = function() {
                     attrs: { type: "submit" },
                     on: { click: _vm.loadInfo }
                   },
-                  [_vm._v("Cancel")]
+                  [_vm._v("Contact Seller")]
                 )
               ])
             ])

@@ -9,8 +9,8 @@
                                 <h3>Product Page</h3> 
                             </div>
                             <div class="col-6">
-                                <button type="submit" @click="saveInfo" class="btn btn-primary float-right">Save</button>
-                                <button type="submit" @click="loadInfo" class="btn btn-default float-right">Cancel</button>
+                                <button type="submit" @click="saveInfo" class="btn btn-primary float-right"><i class="fas fa-shopping-cart"></i></button>
+                                <button type="submit" @click="loadInfo" class="btn btn-default float-right">Contact Seller</button>
                             </div>
                         </div>
                     </div>
