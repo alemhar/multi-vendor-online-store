@@ -40397,7 +40397,7 @@ var staticRenderFns = [
       _c("div", { staticClass: "card" }, [
         _c("img", {
           staticClass: "card-img-top",
-          attrs: { src: "", alt: "Card image cap" }
+          attrs: { src: "img/products/226x180.svg", alt: "Card image cap" }
         }),
         _vm._v(" "),
         _c("div", { staticClass: "card-body" }, [
