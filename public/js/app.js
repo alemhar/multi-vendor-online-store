@@ -2421,9 +2421,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -40728,8 +40725,6 @@ var staticRenderFns = [
                   _vm._v(" "),
                   _c("tbody", [
                     _c("tr", [
-                      _c("th", { attrs: { scope: "row" } }, [_vm._v("1")]),
-                      _vm._v(" "),
                       _c("td", [_vm._v("Mark")]),
                       _vm._v(" "),
                       _c("td", [_vm._v("Otto")]),
@@ -40756,8 +40751,6 @@ var staticRenderFns = [
                     ]),
                     _vm._v(" "),
                     _c("tr", [
-                      _c("th", { attrs: { scope: "row" } }, [_vm._v("2")]),
-                      _vm._v(" "),
                       _c("td", [_vm._v("Jacob")]),
                       _vm._v(" "),
                       _c("td", [_vm._v("Thornton")]),
@@ -40784,8 +40777,6 @@ var staticRenderFns = [
                     ]),
                     _vm._v(" "),
                     _c("tr", [
-                      _c("th", { attrs: { scope: "row" } }, [_vm._v("3")]),
-                      _vm._v(" "),
                       _c("td", [_vm._v("Larry")]),
                       _vm._v(" "),
                       _c("td", [_vm._v("the Bird")]),
@@ -40801,12 +40792,12 @@ var staticRenderFns = [
                           _vm._v(
                             "Delete\n                                    "
                           ),
-                          _c("i", { staticClass: "fa fa-close" })
+                          _c("i", { staticClass: "fas fa-trash-alt" })
                         ]),
                         _vm._v(" "),
                         _c("a", { attrs: { href: "#" } }, [
                           _vm._v("Edit\n                                    "),
-                          _c("i", { staticClass: "fa fa-edit" })
+                          _c("i", { staticClass: "fas fa-edit" })
                         ])
                       ])
                     ])

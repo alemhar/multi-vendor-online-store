@@ -36,7 +36,6 @@
                                 </thead>
                                 <tbody>
                                     <tr>
-                                    <th scope="row">1</th>
                                     <td>Mark</td>
                                     <td>Otto</td>
                                     <td>@mdo</td>
@@ -52,7 +51,6 @@
                                     </td>
                                     </tr>
                                     <tr>
-                                    <th scope="row">2</th>
                                     <td>Jacob</td>
                                     <td>Thornton</td>
                                     <td>@fat</td>
@@ -68,7 +66,6 @@
                                     </td>
                                     </tr>
                                     <tr>
-                                    <th scope="row">3</th>
                                     <td>Larry</td>
                                     <td>the Bird</td>
                                     <td>@twitter</td>
@@ -76,10 +73,10 @@
                                     <td>@mdo</td>
                                     <td>
                                         <a href="#">Delete
-                                        <i class="fa fa-close"></i>
+                                        <i class="fas fa-trash-alt"></i>
                                         </a>
                                         <a href="#">Edit
-                                        <i class="fa fa-edit"></i>
+                                        <i class="fas fa-edit"></i>
                                         </a>
                                     </td>
                                     
