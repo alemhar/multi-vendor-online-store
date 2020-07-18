@@ -95,7 +95,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
           </li>
           
           <li class="nav-item">
-            <router-link to="/products" class="nav-link">
+            <router-link to="/productlist" class="nav-link">
               <!-- i class="nav-icon fas fa-user-cog"></i -->
               <i class="nav-icon fas fa-boxes"></i>
               <p>
