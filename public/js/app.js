@@ -2446,6 +2446,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {};
@@ -40347,6 +40348,7 @@ var render = function() {
                   "button",
                   {
                     staticClass: "btn btn-outline-primary float-right",
+                    staticStyle: { "margin-right": "10px" },
                     attrs: { type: "submit" },
                     on: { click: _vm.loadInfo }
                   },
@@ -40459,7 +40461,7 @@ var staticRenderFns = [
               staticClass: "btn btn-outline-dark",
               attrs: { type: "button", href: "#" }
             },
-            [_c("i", { staticClass: "fas fa-images" })]
+            [_c("i", { staticClass: "fas fa-eye" })]
           ),
           _vm._v(" "),
           _c(
@@ -40468,19 +40470,7 @@ var staticRenderFns = [
               staticClass: "btn btn-outline-dark",
               attrs: { type: "button", href: "#" }
             },
-            [
-              _c(
-                "i",
-                {
-                  staticStyle: {
-                    "font-family": "sans-serif",
-                    "font-size": ".6em",
-                    "font-weight": "700"
-                  }
-                },
-                [_vm._v("BUY")]
-              )
-            ]
+            [_c("i", { staticClass: "fas fa-cash-register" })]
           ),
           _vm._v(" "),
           _c(
@@ -40517,7 +40507,7 @@ var staticRenderFns = [
               staticClass: "btn btn-outline-dark",
               attrs: { type: "button", href: "#" }
             },
-            [_c("i", { staticClass: "fas fa-images" })]
+            [_c("i", { staticClass: "fas fa-eye" })]
           ),
           _vm._v(" "),
           _c(
@@ -40575,7 +40565,7 @@ var staticRenderFns = [
               staticClass: "btn btn-outline-dark",
               attrs: { type: "button", href: "#" }
             },
-            [_c("i", { staticClass: "fas fa-images" })]
+            [_c("i", { staticClass: "fas fa-eye" })]
           ),
           _vm._v(" "),
           _c(

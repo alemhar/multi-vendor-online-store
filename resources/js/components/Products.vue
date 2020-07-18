@@ -10,7 +10,7 @@
                             </div>
                             <div class="col-6">
                                 <button type="submit" @click="saveInfo" class="btn btn-primary float-right"><i class="fas fa-shopping-cart"></i></button>
-                                <button type="submit" @click="loadInfo" class="btn btn-outline-primary float-right">Contact Seller</button>
+                                <button type="submit" @click="loadInfo" style="margin-right: 10px;" class="btn btn-outline-primary float-right">Contact Seller</button>
                             </div>
                         </div>
                     </div>
@@ -27,8 +27,9 @@
                                     <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                                     </div>
                                     <div class="card-footer">
-                                    <a type="button" class="btn btn-outline-dark" href="#"><i class="fas fa-images"></i></a>
-                                    <a type="button" class="btn btn-outline-dark" href="#"><i style="font-family:sans-serif;font-size: .6em;font-weight: 700;">BUY</i></a>
+                                    <!-- a type="button" class="btn btn-outline-dark" href="#"><i class="fas fa-images"></i></a -->
+                                    <a type="button" class="btn btn-outline-dark" href="#"><i class="fas fa-eye"></i></a>
+                                    <a type="button" class="btn btn-outline-dark" href="#"><i class="fas fa-cash-register"></i></a>
                                     <a type="button" class="btn btn-outline-dark" href="#"><i class="fas fa-cart-plus"></i></a>
                                     </div>
                                 </div>
@@ -39,7 +40,7 @@
                                     <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
                                     </div>
                                     <div class="card-footer">
-                                    <a type="button" class="btn btn-outline-dark" href="#"><i class="fas fa-images"></i></a>
+                                    <a type="button" class="btn btn-outline-dark" href="#"><i class="fas fa-eye"></i></a>
                                     <a type="button" class="btn btn-outline-dark" href="#"><i style="font-family:sans-serif;font-size: .6em;font-weight: 700;">BUY</i></a>
                                     <a type="button" class="btn btn-outline-dark" href="#"><i class="fas fa-cart-plus"></i></a>
                                     </div>
@@ -51,7 +52,7 @@
                                     <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
                                     </div>
                                     <div class="card-footer">
-                                    <a type="button" class="btn btn-outline-dark" href="#"><i class="fas fa-images"></i></a>
+                                    <a type="button" class="btn btn-outline-dark" href="#"><i class="fas fa-eye"></i></a>
                                     <a type="button" class="btn btn-outline-dark" href="#"><i style="font-family:sans-serif;font-size: .6em;font-weight: 700;">BUY</i></a>
                                     <a type="button" class="btn btn-outline-dark" href="#"><i class="fas fa-cart-plus"></i></a>
                                     </div>
