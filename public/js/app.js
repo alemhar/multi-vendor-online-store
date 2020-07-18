@@ -2383,6 +2383,47 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -40671,13 +40712,17 @@ var staticRenderFns = [
                 _c("table", { staticClass: "table" }, [
                   _c("thead", { staticClass: "thead-dark" }, [
                     _c("tr", [
-                      _c("th", { attrs: { scope: "col" } }, [_vm._v("#")]),
+                      _c("td", [_vm._v("Name")]),
                       _vm._v(" "),
-                      _c("th", { attrs: { scope: "col" } }, [_vm._v("First")]),
+                      _c("td", [_vm._v("Model #")]),
                       _vm._v(" "),
-                      _c("th", { attrs: { scope: "col" } }, [_vm._v("Last")]),
+                      _c("td", [_vm._v("Brand")]),
                       _vm._v(" "),
-                      _c("th", { attrs: { scope: "col" } }, [_vm._v("Handle")])
+                      _c("td", [_vm._v("Price")]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v("Description")]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v("Option")])
                     ])
                   ]),
                   _vm._v(" "),
@@ -40689,7 +40734,25 @@ var staticRenderFns = [
                       _vm._v(" "),
                       _c("td", [_vm._v("Otto")]),
                       _vm._v(" "),
-                      _c("td", [_vm._v("@mdo")])
+                      _c("td", [_vm._v("@mdo")]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v("Otto")]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v("@mdo")]),
+                      _vm._v(" "),
+                      _c("td", [
+                        _c("a", { attrs: { href: "#" } }, [
+                          _vm._v(
+                            "Delete\n                                    "
+                          ),
+                          _c("i", { staticClass: "fa fa-close" })
+                        ]),
+                        _vm._v(" "),
+                        _c("a", { attrs: { href: "#" } }, [
+                          _vm._v("Edit\n                                    "),
+                          _c("i", { staticClass: "fa fa-edit" })
+                        ])
+                      ])
                     ]),
                     _vm._v(" "),
                     _c("tr", [
@@ -40699,7 +40762,25 @@ var staticRenderFns = [
                       _vm._v(" "),
                       _c("td", [_vm._v("Thornton")]),
                       _vm._v(" "),
-                      _c("td", [_vm._v("@fat")])
+                      _c("td", [_vm._v("@fat")]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v("Otto")]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v("@mdo")]),
+                      _vm._v(" "),
+                      _c("td", [
+                        _c("a", { attrs: { href: "#" } }, [
+                          _vm._v(
+                            "Delete\n                                    "
+                          ),
+                          _c("i", { staticClass: "fa fa-close" })
+                        ]),
+                        _vm._v(" "),
+                        _c("a", { attrs: { href: "#" } }, [
+                          _vm._v("Edit\n                                    "),
+                          _c("i", { staticClass: "fa fa-edit" })
+                        ])
+                      ])
                     ]),
                     _vm._v(" "),
                     _c("tr", [
@@ -40709,7 +40790,25 @@ var staticRenderFns = [
                       _vm._v(" "),
                       _c("td", [_vm._v("the Bird")]),
                       _vm._v(" "),
-                      _c("td", [_vm._v("@twitter")])
+                      _c("td", [_vm._v("@twitter")]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v("Otto")]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v("@mdo")]),
+                      _vm._v(" "),
+                      _c("td", [
+                        _c("a", { attrs: { href: "#" } }, [
+                          _vm._v(
+                            "Delete\n                                    "
+                          ),
+                          _c("i", { staticClass: "fa fa-close" })
+                        ]),
+                        _vm._v(" "),
+                        _c("a", { attrs: { href: "#" } }, [
+                          _vm._v("Edit\n                                    "),
+                          _c("i", { staticClass: "fa fa-edit" })
+                        ])
+                      ])
                     ])
                   ])
                 ])

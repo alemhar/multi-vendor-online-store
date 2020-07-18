@@ -19,10 +19,19 @@
                             <table class="table">
                                 <thead class="thead-dark">
                                     <tr>
-                                    <th scope="col">#</th>
-                                    <th scope="col">First</th>
-                                    <th scope="col">Last</th>
-                                    <th scope="col">Handle</th>
+                                    <!-- td>id</td -->
+                                    <!-- td>user_id</td -->
+                                    <td>Name</td>
+                                    <td>Model #</td>
+                                    <td>Brand</td>
+                                    <td>Price</td>
+                                    <td>Description</td>
+                                    <td>Option</td>
+                                    
+                                    <!-- td>Category </td -->
+                                    <!-- td>in_stock</td -->
+                                    <!-- td>created_at</td -->
+                                    <!-- td>updated_at</td -->
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -31,18 +40,50 @@
                                     <td>Mark</td>
                                     <td>Otto</td>
                                     <td>@mdo</td>
+                                    <td>Otto</td>
+                                    <td>@mdo</td>
+                                    <td>
+                                        <a href="#">Delete
+                                        <i class="fa fa-close"></i>
+                                        </a>
+                                        <a href="#">Edit
+                                        <i class="fa fa-edit"></i>
+                                        </a>
+                                    </td>
                                     </tr>
                                     <tr>
                                     <th scope="row">2</th>
                                     <td>Jacob</td>
                                     <td>Thornton</td>
                                     <td>@fat</td>
+                                    <td>Otto</td>
+                                    <td>@mdo</td>
+                                    <td>
+                                        <a href="#">Delete
+                                        <i class="fa fa-close"></i>
+                                        </a>
+                                        <a href="#">Edit
+                                        <i class="fa fa-edit"></i>
+                                        </a>
+                                    </td>
                                     </tr>
                                     <tr>
                                     <th scope="row">3</th>
                                     <td>Larry</td>
                                     <td>the Bird</td>
                                     <td>@twitter</td>
+                                    <td>Otto</td>
+                                    <td>@mdo</td>
+                                    <td>
+                                        <a href="#">Delete
+                                        <i class="fa fa-close"></i>
+                                        </a>
+                                        <a href="#">Edit
+                                        <i class="fa fa-edit"></i>
+                                        </a>
+                                    </td>
+                                    
+
                                     </tr>
                                 </tbody>
                             </table>
