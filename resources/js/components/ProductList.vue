@@ -42,12 +42,14 @@
                                     <td>Otto</td>
                                     <td>@mdo</td>
                                     <td>
-                                        <a href="#">Delete
-                                        <i class="fa fa-close"></i>
+                                        <a href="#">
+                                        <i class="fas fa-trash-alt"></i>
                                         </a>
-                                        <a href="#">Edit
-                                        <i class="fa fa-edit"></i>
+                                        |
+                                        <a href="#">
+                                        <i class="fas fa-edit"></i>
                                         </a>
+                                        
                                     </td>
                                     </tr>
                                     <tr>
@@ -57,11 +59,11 @@
                                     <td>Otto</td>
                                     <td>@mdo</td>
                                     <td>
-                                        <a href="#">Delete
-                                        <i class="fa fa-close"></i>
+                                        <a href="#">
+                                        <i class="fas fa-trash-alt"></i>
                                         </a>
-                                        <a href="#">Edit
-                                        <i class="fa fa-edit"></i>
+                                        <a href="#">
+                                        <i class="fas fa-edit"></i>
                                         </a>
                                     </td>
                                     </tr>
@@ -72,10 +74,10 @@
                                     <td>Otto</td>
                                     <td>@mdo</td>
                                     <td>
-                                        <a href="#">Delete
+                                        <a href="#">
                                         <i class="fas fa-trash-alt"></i>
                                         </a>
-                                        <a href="#">Edit
+                                        <a href="#">
                                         <i class="fas fa-edit"></i>
                                         </a>
                                     </td>

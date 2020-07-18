@@ -2421,6 +2421,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -40737,15 +40739,13 @@ var staticRenderFns = [
                       _vm._v(" "),
                       _c("td", [
                         _c("a", { attrs: { href: "#" } }, [
-                          _vm._v(
-                            "Delete\n                                    "
-                          ),
-                          _c("i", { staticClass: "fa fa-close" })
+                          _c("i", { staticClass: "fas fa-trash-alt" })
                         ]),
-                        _vm._v(" "),
+                        _vm._v(
+                          "\n                                    |\n                                    "
+                        ),
                         _c("a", { attrs: { href: "#" } }, [
-                          _vm._v("Edit\n                                    "),
-                          _c("i", { staticClass: "fa fa-edit" })
+                          _c("i", { staticClass: "fas fa-edit" })
                         ])
                       ])
                     ]),
@@ -40763,15 +40763,11 @@ var staticRenderFns = [
                       _vm._v(" "),
                       _c("td", [
                         _c("a", { attrs: { href: "#" } }, [
-                          _vm._v(
-                            "Delete\n                                    "
-                          ),
-                          _c("i", { staticClass: "fa fa-close" })
+                          _c("i", { staticClass: "fas fa-trash-alt" })
                         ]),
                         _vm._v(" "),
                         _c("a", { attrs: { href: "#" } }, [
-                          _vm._v("Edit\n                                    "),
-                          _c("i", { staticClass: "fa fa-edit" })
+                          _c("i", { staticClass: "fas fa-edit" })
                         ])
                       ])
                     ]),
@@ -40789,14 +40785,10 @@ var staticRenderFns = [
                       _vm._v(" "),
                       _c("td", [
                         _c("a", { attrs: { href: "#" } }, [
-                          _vm._v(
-                            "Delete\n                                    "
-                          ),
                           _c("i", { staticClass: "fas fa-trash-alt" })
                         ]),
                         _vm._v(" "),
                         _c("a", { attrs: { href: "#" } }, [
-                          _vm._v("Edit\n                                    "),
                           _c("i", { staticClass: "fas fa-edit" })
                         ])
                       ])
