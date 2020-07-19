@@ -345,7 +345,7 @@
                     //this.products = response.data;
                     //this.public_address = window.location.hostname + '/main/' + this.form.public_id;
                   
-                 console.log(response);
+                 console.log('test');
                     
                 })
                 .catch(()=>{

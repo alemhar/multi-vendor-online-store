@@ -2583,7 +2583,7 @@ __webpack_require__.r(__webpack_exports__);
       }).then(function (response) {
         //this.products = response.data;
         //this.public_address = window.location.hostname + '/main/' + this.form.public_id;
-        console.log(response);
+        console.log('test');
       })["catch"](function () {});
       this.showProductForm = false;
       $('#product-form').modal('hide');
