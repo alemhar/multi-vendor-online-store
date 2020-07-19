@@ -291,7 +291,11 @@
                 products:{},
                 public_address: '',
                 showProductForm: true,
-                productEditMode: false
+                productEditMode: false,
+                product_name: '',
+                product_model_no: '',
+                brand: '',
+                product_price: ''
             }
         },
         methods: {
