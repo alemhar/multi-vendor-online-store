@@ -34,8 +34,6 @@
                                 </thead>
                                 <tbody>
                                     <tr v-for="product in products.data" :key="product.id">
-                                        <td>{{product.id}}</td>
-                                        
                                         <td>{{product.product_name}}</td>
                                         <td>{{product.product_model_no}}</td>
                                         <td>{{product.brand}}</td>
@@ -196,7 +194,7 @@
                     //this.public_address = window.location.hostname + '/main/' + this.form.public_id;
                   
                   //console.log( this.form.user_logo ? this.form.user_logo : 'img/your_logo_here.png');
-                    console.log(this.products);
+                    
                 })
                 .catch(()=>{
                     
