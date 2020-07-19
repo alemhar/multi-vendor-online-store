@@ -15,8 +15,8 @@
                         </div>
                     </div>
                     <div class="card-body">
-                        <div class="table-responsive">
-                            <table class="table">
+                        <div class="table-responsive-md">
+                            <table class="table table-sm">
                                 <thead class="thead-dark">
                                     <tr>
                                     <!-- td>id</td -->
@@ -25,7 +25,6 @@
                                     <td>Model #</td>
                                     <td>Brand</td>
                                     <td>Price</td>
-                                    <td>Description</td>
                                     <td>Option</td>
                                     
                                     <!-- td>Category </td -->
@@ -35,11 +34,26 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                    <td>Mark</td>
-                                    <td>Otto</td>
-                                    <td>@mdo</td>
-                                    <td>Otto</td>
+                                    <tr v-for="product in products" :key="product.id">
+                                        <td>{{product.name}}</td>
+                                        <td>{{product.Model}}</td>
+                                        <td>{{product.Brand}}</td>
+                                        <td>{{product.Price}}</td>
+                                        <td>
+                                            <a href="#">
+                                            <i class="fas fa-trash-alt"></i>
+                                            </a>
+                                            |
+                                            <a href="#">
+                                            <i class="fas fa-edit"></i>
+                                            </a>
+                                            
+                                        </td>
+                                    </tr>
+                                    <!-- tr>
+                                    <td>Jacob</td>
+                                    <td>Thornton</td>
+                                    <td>@fat</td>
                                     <td>@mdo</td>
                                     <td>
                                         <a href="#">
@@ -49,43 +63,31 @@
                                         <a href="#">
                                         <i class="fas fa-edit"></i>
                                         </a>
-                                        
-                                    </td>
-                                    </tr>
-                                    <tr>
-                                    <td>Jacob</td>
-                                    <td>Thornton</td>
-                                    <td>@fat</td>
-                                    <td>Otto</td>
-                                    <td>@mdo</td>
-                                    <td>
-                                        <a href="#">
-                                        <i class="fas fa-trash-alt"></i>
-                                        </a>
-                                        <a href="#">
-                                        <i class="fas fa-edit"></i>
-                                        </a>
                                     </td>
                                     </tr>
                                     <tr>
                                     <td>Larry</td>
                                     <td>the Bird</td>
                                     <td>@twitter</td>
-                                    <td>Otto</td>
                                     <td>@mdo</td>
                                     <td>
                                         <a href="#">
                                         <i class="fas fa-trash-alt"></i>
                                         </a>
+                                        |
                                         <a href="#">
                                         <i class="fas fa-edit"></i>
                                         </a>
                                     </td>
                                     
 
-                                    </tr>
+                                    </tr -->
                                 </tbody>
                             </table>
+                            
+                        </div>
+                        <div class="card-footer">
+                            <pagination :data="laravelData" @pagination-change-page="getResults"></pagination>
                         </div>
                     </div>
                 </div>
@@ -171,22 +173,7 @@
     export default {
         data() {
             return {
-                form: new vform({
-                    id:'',
-                    store_name: '',
-                    email: '',
-                    first_name: '',
-                    middle_name: '',
-                    last_name: '',
-                    user_address1: '',
-                    user_address2: '',
-                    user_city: '',
-                    user_mobile: '',
-                    user_tel: '',
-                    public_id: '',
-                    user_type: '',
-                    user_logo: ''
-                }),
+                products:{},
                 user_info: {},
                 user_id:'',
                 public_address: '',
@@ -207,48 +194,12 @@
                 /* Alert the copied text */
                 //alert("Copied the text: " + copyText.value);
             },
-            saveInfo(){
-
-                //this.form.put('api/user/'+this.user_id)
-                axios.put('api/user/'+this.user_id, { 
-                    store_name: this.form.store_name,
-                    first_name: this.form.first_name,
-                    middle_name: this.form.middle_name,
-                    last_name: this.form.last_name,
-                    user_address1: this.form.user_address1,
-                    user_address2: this.form.user_address2,
-                    user_city: this.form.user_city,
-                    user_mobile: this.form.user_mobile,
-                    user_tel: this.form.user_tel,
-                    public_id: this.form.public_id,
-                    user_logo: this.form.user_logo,
-                    user_logo_base64: this.user_logo_base64
-                      
-                })
-                .then(() => {
-                    /*
-                    swal.fire(
-                        'Updated!',
-                        'Payee information has been updated.',
-                        'success'
-                    );
-                    */
-
-                    //this.$Progress.finish();
-                    //VueListen.$emit('RefreshItemTable');
-                    this.loadInfo();
-                })
-                .catch(() => {
-                    //this.form.errors = response;
-                    //this.$Progress.fail();
-                });
-            },
-            loadInfo(){
-                axios.get("api/user/"+this.user_id)
+            loadProducts(){
+                axios.get("api/product/")
                 .then((data)=>{
-                  this.form = data.data;
+                    
+                  this.products = data;
                   this.public_address = window.location.hostname + '/main/' + this.form.public_id;
-                  this.store_logo = this.form.user_logo ? 'img/logo/'+this.form.user_logo : 'img/your_logo_here.png';
                   
                   //console.log( this.form.user_logo ? this.form.user_logo : 'img/your_logo_here.png');
 
@@ -257,34 +208,6 @@
                     
                 });
                 //console.log(this.user_info);
-            },
-            profilePhotoChange(e){
-                let file = e.target.files[0];
-                let file_reader = new FileReader();
-
-
-                let limit = 1024 * 1024 * 2;
-
-                if(file['size'] > limit){
-                    /*
-                    swal({
-                        type: 'error',
-                        title: 'Oops...',
-                        text: 'You are uploading a large file',
-                    })
-                    */
-                   alert('Picture Size Limit : 2MB or less.');
-                    return false;
-                }
-
-                file_reader.onloadend = (file) =>   {
-                    console.log('RESULT', file_reader.result)
-                    this.user_logo_base64 = file_reader.result;
-                    this.store_logo = file_reader.result;
-                }
-
-                file_reader.readAsDataURL(file);
-
             }
         },
         created() {
