@@ -41336,11 +41336,15 @@ var render = function() {
               _vm._m(0),
               _vm._v(" "),
               _c("div", { staticClass: "col-6" }, [
-                _c("button", {
-                  staticClass: "btn btn-primary float-right",
-                  attrs: { type: "submit" },
-                  on: { click: _vm.addProduct }
-                })
+                _c(
+                  "button",
+                  {
+                    staticClass: "btn btn-primary float-right",
+                    attrs: { type: "submit" },
+                    on: { click: _vm.addProduct }
+                  },
+                  [_vm._v("New "), _c("i", { staticClass: "fas fa-plus" })]
+                )
               ])
             ])
           ]),
