@@ -41390,14 +41390,6 @@ var render = function() {
     _c(
       "div",
       {
-        directives: [
-          {
-            name: "show",
-            rawName: "v-show",
-            value: _vm.showProductForm,
-            expression: "showProductForm"
-          }
-        ],
         staticClass: "modal fade",
         attrs: {
           id: "entry-items",
