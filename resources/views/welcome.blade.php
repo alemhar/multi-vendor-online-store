@@ -74,14 +74,14 @@
                 </div>
                 
                 @if (Route::has('login'))
-                <div class="links" style="background-color: #cf3d0d;">
+                <div class="links" style="">
                     @auth
-                        <a href="{{ url('/home') }}" style="color: #eaeaea;">Home</a>
+                        <a href="{{ url('/home') }}" style="color: #ff4900;">Home</a>
                     @else
-                        <a href="{{ route('login') }}" style="color: #eaeaea;">Login</a>
+                        <a href="{{ route('login') }}" style="color: #ff4900;">Login</a>
 
                         @if (Route::has('register'))
-                            <a href="{{ route('register') }}" style="color: #eaeaea;">Register</a>
+                            <a href="{{ route('register') }}" style="color: #ff4900;">Register</a>
                         @endif
                     @endauth
                 </div>
