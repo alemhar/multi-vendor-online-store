@@ -368,8 +368,8 @@
         },
         created() {
             this.user_id = document.querySelector('meta[name="user-id"]').getAttribute('content');
-            //this.loadInfo();
-            this.loadProducts();
+            //this.loadProducts();
+            
             //$('[data-toggle="tooltip"]').tooltip();
             //console.log('Component created.');
             

@@ -2600,9 +2600,8 @@ __webpack_require__.r(__webpack_exports__);
     }
   },
   created: function created() {
-    this.user_id = document.querySelector('meta[name="user-id"]').getAttribute('content'); //this.loadInfo();
-
-    this.loadProducts(); //$('[data-toggle="tooltip"]').tooltip();
+    this.user_id = document.querySelector('meta[name="user-id"]').getAttribute('content'); //this.loadProducts();
+    //$('[data-toggle="tooltip"]').tooltip();
     //console.log('Component created.');
 
     /* Scrollbar fix
