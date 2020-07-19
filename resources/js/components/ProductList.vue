@@ -126,7 +126,7 @@
                 
                 <input v-model="product_name" type="text" name="product_name"
                   
-                  class="form-control" :class="{ 'is-invalid': form_item.errors.has('product_name') }" aria-describedby="inputGroup-sizing-default" onfocus="this.select()">
+                  class="form-control" aria-describedby="inputGroup-sizing-default" onfocus="this.select()">
                    
                 <has-error :form="form_item" field="product_name"></has-error>
               </div>
@@ -140,7 +140,7 @@
                 </div>
 
                 <input v-model="product_model_no" type="text" name="product_model_no"
-                  class="form-control" :class="{ 'is-invalid': form_item.errors.has('product_model_no') }" aria-describedby="inputGroup-sizing-default" onfocus="this.select()">
+                  class="form-control" aria-describedby="inputGroup-sizing-default" onfocus="this.select()">
                   
                 
               </div>
@@ -154,7 +154,7 @@
                 </div>
 
                 <input v-model="brand" type="text" name="brand"
-                  class="form-control" :class="{ 'is-invalid': form_item.errors.has('brand') }" aria-describedby="inputGroup-sizing-default" onfocus="this.select()">
+                  class="form-control" aria-describedby="inputGroup-sizing-default" onfocus="this.select()">
                   
                 
               </div>
@@ -167,7 +167,7 @@
                   <span class="input-group-text inputGroup-sizing-default">Price</span>
                 </div>
                   <input v-model="product_price" name="product_price" id="product_price"
-                  class="form-control" :class="{ 'is-invalid': form_entry.errors.has('product_price') }" aria-describedby="inputGroup-sizing-default" onfocus="this.select()">
+                  class="form-control" aria-describedby="inputGroup-sizing-default" onfocus="this.select()">
               </div>
 
               <div class="input-group mb-2">

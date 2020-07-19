@@ -41452,9 +41452,6 @@ var render = function() {
                         }
                       ],
                       staticClass: "form-control",
-                      class: {
-                        "is-invalid": _vm.form_item.errors.has("product_name")
-                      },
                       attrs: {
                         type: "text",
                         name: "product_name",
@@ -41494,9 +41491,6 @@ var render = function() {
                       }
                     ],
                     staticClass: "form-control",
-                    class: {
-                      "is-invalid": _vm.form_item.errors.has("product_model_no")
-                    },
                     attrs: {
                       type: "text",
                       name: "product_model_no",
@@ -41530,7 +41524,6 @@ var render = function() {
                       }
                     ],
                     staticClass: "form-control",
-                    class: { "is-invalid": _vm.form_item.errors.has("brand") },
                     attrs: {
                       type: "text",
                       name: "brand",
@@ -41564,9 +41557,6 @@ var render = function() {
                       }
                     ],
                     staticClass: "form-control",
-                    class: {
-                      "is-invalid": _vm.form_entry.errors.has("product_price")
-                    },
                     attrs: {
                       name: "product_price",
                       id: "product_price",
