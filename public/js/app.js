@@ -41341,7 +41341,7 @@ var render = function() {
                   {
                     staticClass: "btn btn-primary float-right",
                     attrs: { type: "submit" },
-                    on: { click: _vm.addProduct }
+                    on: { click: _vm.newProduct }
                   },
                   [_vm._v("New "), _c("i", { staticClass: "fas fa-plus" })]
                 )
