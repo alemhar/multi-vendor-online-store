@@ -9,8 +9,8 @@
                                 <h3>Product List</h3> 
                             </div>
                             <div class="col-6">
-                                <!-- button type="submit" @click="addNew" class="btn btn-primary float-right"></button -->
-                                <button type="button" class="btn btn-primary float-right" data-toggle="modal" data-target="#ProductModal">New <i class="fas fa-plus"></i></button>
+                                <button type="submit" @click="addProduct" class="btn btn-primary float-right"></button>
+                                <!-- button type="button" class="btn btn-primary float-right" data-toggle="modal" data-target="#ProductModal">New <i class="fas fa-plus"></i></button --> 
                                 <!-- button type="submit" @click="loadInfo" class="btn btn-default float-right">Cancel</button -->
                             </div>
                         </div>
@@ -68,7 +68,7 @@
         
 
         <!-- Modal -->
-        <div class="modal fade" id="ProductModal" tabindex="-1" role="dialog" aria-labelledby="ProductModalTitle" aria-hidden="true">
+        <!-- div class="modal fade" id="ProductModal" tabindex="-1" role="dialog" aria-labelledby="ProductModalTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
             <div class="modal-header">
@@ -86,7 +86,7 @@
             </div>
             </div>
         </div>
-        </div> <!-- modal -->
+        </div --> <!-- modal -->
 
       <!-- Product Modal
       *

@@ -41331,7 +41331,19 @@ var render = function() {
     _c("div", { staticClass: "row justify-content-center" }, [
       _c("div", { staticClass: "col-md-12" }, [
         _c("div", { staticClass: "card" }, [
-          _vm._m(0),
+          _c("div", { staticClass: "card-header" }, [
+            _c("div", { staticClass: "row" }, [
+              _vm._m(0),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-6" }, [
+                _c("button", {
+                  staticClass: "btn btn-primary float-right",
+                  attrs: { type: "submit" },
+                  on: { click: _vm.addProduct }
+                })
+              ])
+            ])
+          ]),
           _vm._v(" "),
           _c("div", { staticClass: "card-body" }, [
             _c("div", { staticClass: "table-responsive-md" }, [
@@ -41363,8 +41375,6 @@ var render = function() {
         ])
       ])
     ]),
-    _vm._v(" "),
-    _vm._m(3),
     _vm._v(" "),
     _c(
       "div",
@@ -41432,12 +41442,12 @@ var render = function() {
                   [_vm._v("Update Product")]
                 ),
                 _vm._v(" "),
-                _vm._m(4)
+                _vm._m(3)
               ]),
               _vm._v(" "),
               _c("div", { staticClass: "modal-body" }, [
                 _c("div", { staticClass: "input-group mb-2" }, [
-                  _vm._m(5),
+                  _vm._m(4),
                   _vm._v(" "),
                   _c("input", {
                     directives: [
@@ -41470,7 +41480,7 @@ var render = function() {
                 _c("div", { staticClass: "input-group mb-2" }),
                 _vm._v(" "),
                 _c("div", { staticClass: "input-group mb-2" }, [
-                  _vm._m(6),
+                  _vm._m(5),
                   _vm._v(" "),
                   _c("input", {
                     directives: [
@@ -41503,7 +41513,7 @@ var render = function() {
                 _c("div", { staticClass: "input-group mb-2" }),
                 _vm._v(" "),
                 _c("div", { staticClass: "input-group mb-2" }, [
-                  _vm._m(7),
+                  _vm._m(6),
                   _vm._v(" "),
                   _c("input", {
                     directives: [
@@ -41536,7 +41546,7 @@ var render = function() {
                 _c("div", { staticClass: "input-group mb-2" }),
                 _vm._v(" "),
                 _c("div", { staticClass: "input-group mb-2" }, [
-                  _vm._m(8),
+                  _vm._m(7),
                   _vm._v(" "),
                   _c("input", {
                     directives: [
@@ -41602,27 +41612,8 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "card-header" }, [
-      _c("div", { staticClass: "row" }, [
-        _c("div", { staticClass: "col-6" }, [
-          _c("h3", [_vm._v("Product List")])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "col-6" }, [
-          _c(
-            "button",
-            {
-              staticClass: "btn btn-primary float-right",
-              attrs: {
-                type: "button",
-                "data-toggle": "modal",
-                "data-target": "#ProductModal"
-              }
-            },
-            [_vm._v("New "), _c("i", { staticClass: "fas fa-plus" })]
-          )
-        ])
-      ])
+    return _c("div", { staticClass: "col-6" }, [
+      _c("h3", [_vm._v("Product List")])
     ])
   },
   function() {
@@ -41658,85 +41649,6 @@ var staticRenderFns = [
         _c("i", { staticClass: "fas fa-edit" })
       ])
     ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      {
-        staticClass: "modal fade",
-        attrs: {
-          id: "ProductModal",
-          tabindex: "-1",
-          role: "dialog",
-          "aria-labelledby": "ProductModalTitle",
-          "aria-hidden": "true"
-        }
-      },
-      [
-        _c(
-          "div",
-          {
-            staticClass: "modal-dialog modal-dialog-centered",
-            attrs: { role: "document" }
-          },
-          [
-            _c("div", { staticClass: "modal-content" }, [
-              _c("div", { staticClass: "modal-header" }, [
-                _c(
-                  "h5",
-                  {
-                    staticClass: "modal-title",
-                    attrs: { id: "exampleModalLongTitle" }
-                  },
-                  [_vm._v("Modal title")]
-                ),
-                _vm._v(" "),
-                _c(
-                  "button",
-                  {
-                    staticClass: "close",
-                    attrs: {
-                      type: "button",
-                      "data-dismiss": "modal",
-                      "aria-label": "Close"
-                    }
-                  },
-                  [
-                    _c("span", { attrs: { "aria-hidden": "true" } }, [
-                      _vm._v("×")
-                    ])
-                  ]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "modal-body" }, [
-                _vm._v("\n            ...\n        ")
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "modal-footer" }, [
-                _c(
-                  "button",
-                  {
-                    staticClass: "btn btn-secondary",
-                    attrs: { type: "button", "data-dismiss": "modal" }
-                  },
-                  [_vm._v("Close")]
-                ),
-                _vm._v(" "),
-                _c(
-                  "button",
-                  { staticClass: "btn btn-primary", attrs: { type: "button" } },
-                  [_vm._v("Save changes")]
-                )
-              ])
-            ])
-          ]
-        )
-      ]
-    )
   },
   function() {
     var _vm = this
