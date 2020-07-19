@@ -374,11 +374,11 @@
                 axios.get("api/product/"+id)
                 .then((response)=>{
                     console.log(response);
-                    this.product_name = response.product_name;
-                    this.product_model_no = response.product_model_no;
-                    this.product_price = response.product_price;
-                    this.product_description = response.product_description;
-                    this.brand = response.brand;
+                    this.product_name = response.data.product_name;
+                    this.product_model_no = response.data.product_model_no;
+                    this.product_price = response.data.product_price;
+                    this.product_description = response.data.product_description;
+                    this.brand = response.data.brand;
                     
                 })
                 .catch(()=>{
