@@ -330,23 +330,23 @@
                 $('#product-form').modal('hide');
             },
             saveProduct(){
-                // axios.post('api/product/', {
-                //     user_id: this.user_id,
-                //     product_name: this.product_name,
-                //     product_model_no: this.product_model_no,
-                //     product_price: this.product_price,
-                //     brand: this.brand
-                // })
-                // .then((response)=>{
+                axios.post('api/product/', {
+                    user_id: this.user_id,
+                    product_name: this.product_name,
+                    product_model_no: this.product_model_no,
+                    product_price: this.product_price,
+                    brand: this.brand
+                })
+                .then((response)=>{
 
                     
                   
-                 console.log('test');
+                 console.log(response);
                     
-                // })
-                // .catch(()=>{
+                })
+                .catch(()=>{
                     
-                // });
+                });
 
                 this.showProductForm = false;
                 $('#product-form').modal('hide');
