@@ -43,7 +43,8 @@ class ProductController extends Controller
             'product_name' => $request['product_name'],
             'product_model_no' => $request['product_model_no'],
             'product_price' => $request['product_price'],
-            'brand' => $request['brand']
+            'brand' => $request['brand'],
+            'product_description' => $request['product_description']
         ]);
     }
 

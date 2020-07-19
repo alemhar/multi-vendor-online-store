@@ -373,7 +373,7 @@
             editProduct(id){
                 axios.get("api/product/"+id)
                 .then((response)=>{
-                    console.log(response);
+                    //console.log(response);
                     this.product_name = response.data.product_name;
                     this.product_model_no = response.data.product_model_no;
                     this.product_price = response.data.product_price;

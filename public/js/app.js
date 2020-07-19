@@ -2613,7 +2613,7 @@ __webpack_require__.r(__webpack_exports__);
       var _this3 = this;
 
       axios.get("api/product/" + id).then(function (response) {
-        console.log(response);
+        //console.log(response);
         _this3.product_name = response.data.product_name;
         _this3.product_model_no = response.data.product_model_no;
         _this3.product_price = response.data.product_price;
