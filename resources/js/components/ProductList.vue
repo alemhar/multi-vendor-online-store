@@ -103,7 +103,7 @@
       *
       -->
 
-    <div v-if="showProductForm">
+
       <div class="modal fade"   id="product-form" tabindex="-1" role="dialog" aria-labelledby="addNewLabel" aria-hidden="true"  data-backdrop="static" data-keyboard="false">
         <div class="modal-dialog modal-dialog-centered" role="document">
           <div class="modal-content">
@@ -204,7 +204,6 @@
         </div>
       </div>
       <!-- Product Modal -->
-      </div>
 
     </div>
 </template>
@@ -291,7 +290,7 @@
             return {
                 products:{},
                 public_address: '',
-                showProductForm: true,
+                showProductForm: false,
                 productEditMode: false,
                 product_name: '',
                 product_model_no: '',
@@ -327,21 +326,21 @@
             },
             cancelProduct(){
                 //this.showProductForm = true;
-                //$('#product-form').modal('hide');
+                $('#product-form').modal('hide');
             },
             saveProduct(){
                 this.showProductForm = false;
-                //$('#product-form').modal('hide');
+                $('#product-form').modal('hide');
             },
             newProduct(){
                 this.showProductForm = true;
                 this.productEditMode = false;
-                //$('#product-form').modal('show');
+                $('#product-form').modal('show');
             },
             editProduct(){
                 this.showProductForm = true;
                 this.productEditMode = true;
-                //$('#product-form').modal('show');
+                $('#product-form').modal('show');
             }
 
 
@@ -358,7 +357,7 @@
             $(document).on('hidden.bs.modal', '.modal', function () {
                 $('.modal:visible').length && $(document.body).addClass('modal-open');
             });
-            $('#product-form').modal('show');
+
         },    
         mounted() {
             //console.log('Component mounted.');
