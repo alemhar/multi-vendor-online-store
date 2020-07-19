@@ -328,7 +328,29 @@
                 //this.showProductForm = true;
                 $('#product-form').modal('hide');
             },
+
+
+
             saveProduct(){
+                axios.post('api/product/', {
+                    user_id: this.user_id,
+                    product_name: this.product_name,
+                    product_model_no: this.product_model_no,
+                    product_price: this.product_price,
+                    brand: this.brand
+                })
+                .then((response)=>{
+
+                    //this.products = response.data;
+                    //this.public_address = window.location.hostname + '/main/' + this.form.public_id;
+                  
+                 console.log(response);
+                    
+                })
+                .catch(()=>{
+                    
+                });
+
                 this.showProductForm = false;
                 $('#product-form').modal('hide');
             },
@@ -342,8 +364,6 @@
                 this.productEditMode = true;
                 $('#product-form').modal('show');
             }
-
-
         },
         created() {
             this.user_id = document.querySelector('meta[name="user-id"]').getAttribute('content');
