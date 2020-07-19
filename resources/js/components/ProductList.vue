@@ -26,7 +26,6 @@
                                     <td>Brand</td>
                                     <td>Price</td>
                                     <td>Option</td>
-                                    
                                     <!-- td>Category </td -->
                                     <!-- td>in_stock</td -->
                                     <!-- td>created_at</td -->
@@ -47,7 +46,6 @@
                                             <a href="#">
                                             <i class="fas fa-edit"></i>
                                             </a>
-                                            
                                         </td>
                                     </tr>
                                     <!-- tr>
