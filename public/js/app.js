@@ -41211,8 +41211,8 @@ var render = function() {
                     on: { click: _vm.addNew }
                   },
                   [
-                    _vm._v("New"),
-                    _c("i", { staticClass: "fas fa-plus-square" })
+                    _vm._v("New "),
+                    _c("i", { staticClass: "far fa-plus-square" })
                   ]
                 )
               ])
