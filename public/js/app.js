@@ -41436,45 +41436,36 @@ var render = function() {
               ]),
               _vm._v(" "),
               _c("div", { staticClass: "modal-body" }, [
-                _c(
-                  "div",
-                  { staticClass: "input-group mb-2" },
-                  [
-                    _vm._m(5),
-                    _vm._v(" "),
-                    _c("input", {
-                      directives: [
-                        {
-                          name: "model",
-                          rawName: "v-model",
-                          value: _vm.product_name,
-                          expression: "product_name"
-                        }
-                      ],
-                      staticClass: "form-control",
-                      attrs: {
-                        type: "text",
-                        name: "product_name",
-                        "aria-describedby": "inputGroup-sizing-default",
-                        onfocus: "this.select()"
-                      },
-                      domProps: { value: _vm.product_name },
-                      on: {
-                        input: function($event) {
-                          if ($event.target.composing) {
-                            return
-                          }
-                          _vm.product_name = $event.target.value
-                        }
+                _c("div", { staticClass: "input-group mb-2" }, [
+                  _vm._m(5),
+                  _vm._v(" "),
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.product_name,
+                        expression: "product_name"
                       }
-                    }),
-                    _vm._v(" "),
-                    _c("has-error", {
-                      attrs: { form: _vm.form_item, field: "product_name" }
-                    })
-                  ],
-                  1
-                ),
+                    ],
+                    staticClass: "form-control",
+                    attrs: {
+                      type: "text",
+                      name: "product_name",
+                      "aria-describedby": "inputGroup-sizing-default",
+                      onfocus: "this.select()"
+                    },
+                    domProps: { value: _vm.product_name },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.product_name = $event.target.value
+                      }
+                    }
+                  })
+                ]),
                 _vm._v(" "),
                 _c("div", { staticClass: "input-group mb-2" }),
                 _vm._v(" "),

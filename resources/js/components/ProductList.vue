@@ -128,7 +128,7 @@
                   
                   class="form-control" aria-describedby="inputGroup-sizing-default" onfocus="this.select()">
                    
-                <has-error :form="form_item" field="product_name"></has-error>
+                <!-- has-error :form="form_item" field="product_name"></has-error -->
               </div>
               <div class="input-group mb-2">
                 <!-- p v-show="no_item" class="empty-field-message">** Please enter product.</p -->
