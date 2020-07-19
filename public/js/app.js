@@ -41209,7 +41209,7 @@ var render = function() {
                 _vm._v(" "),
                 _c(
                   "tbody",
-                  _vm._l(_vm.products, function(product) {
+                  _vm._l(_vm.products.data, function(product) {
                     return _c("tr", { key: product.id }, [
                       _c("td", [_vm._v(_vm._s(product.name))]),
                       _vm._v(" "),
