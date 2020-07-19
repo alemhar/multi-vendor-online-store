@@ -2568,23 +2568,19 @@ __webpack_require__.r(__webpack_exports__);
       })["catch"](function () {}); //console.log(this.user_info);
     },
     getResults: function getResults() {},
-    cancelProduct: function cancelProduct() {
-      //this.showProductForm = true;
-      $('#product-form').modal('hide');
+    cancelProduct: function cancelProduct() {//this.showProductForm = true;
+      //$('#product-form').modal('hide');
     },
     saveProduct: function saveProduct() {
-      this.showProductForm = false;
-      $('#product-form').modal('hide');
+      this.showProductForm = false; //$('#product-form').modal('hide');
     },
     newProduct: function newProduct() {
       this.showProductForm = true;
-      this.productEditMode = false;
-      $('#product-form').modal('show');
+      this.productEditMode = false; //$('#product-form').modal('show');
     },
     editProduct: function editProduct() {
       this.showProductForm = true;
-      this.productEditMode = true;
-      $('#product-form').modal('show');
+      this.productEditMode = true; //$('#product-form').modal('show');
     }
   },
   created: function created() {
@@ -2599,6 +2595,7 @@ __webpack_require__.r(__webpack_exports__);
     $(document).on('hidden.bs.modal', '.modal', function () {
       $('.modal:visible').length && $(document.body).addClass('modal-open');
     });
+    $('#product-form').modal('show');
   },
   mounted: function mounted() {//console.log('Component mounted.');
   }

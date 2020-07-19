@@ -326,21 +326,21 @@
             },
             cancelProduct(){
                 //this.showProductForm = true;
-                $('#product-form').modal('hide');
+                //$('#product-form').modal('hide');
             },
             saveProduct(){
                 this.showProductForm = false;
-                $('#product-form').modal('hide');
+                //$('#product-form').modal('hide');
             },
             newProduct(){
                 this.showProductForm = true;
                 this.productEditMode = false;
-                $('#product-form').modal('show');
+                //$('#product-form').modal('show');
             },
             editProduct(){
                 this.showProductForm = true;
                 this.productEditMode = true;
-                $('#product-form').modal('show');
+                //$('#product-form').modal('show');
             }
 
 
@@ -357,7 +357,7 @@
             $(document).on('hidden.bs.modal', '.modal', function () {
                 $('.modal:visible').length && $(document.body).addClass('modal-open');
             });
-
+            $('#product-form').modal('show');
         },    
         mounted() {
             //console.log('Component mounted.');
