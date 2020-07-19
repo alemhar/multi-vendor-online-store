@@ -88,6 +88,124 @@
         </div>
         </div> <!-- modal -->
 
+      <!-- Product Modal
+      *
+      *
+      *
+      *
+      *
+      *
+      *
+      *
+      *
+      *
+      *
+      *
+      -->
+
+
+      <div class="modal fade"  v-show="showProductForm"  id="entry-items" tabindex="-1" role="dialog" aria-labelledby="addNewLabel" aria-hidden="true"  data-backdrop="static" data-keyboard="false">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" v-show="!editmode" id="addNewLabel">Add Product</h5>
+              <h5 class="modal-title" v-show="editmode" id="addNewLabel">Update Product</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <!-- form onsubmit="return false;" -->
+            <div class="modal-body">
+              
+              
+              <div class="input-group mb-2">
+                <div class="input-group-prepend">
+                  <span class="input-group-text inputGroup-sizing-default">Name</span>
+                </div>
+                
+                
+                <input v-model="form_item.item" type="text" name="product_name"
+                  
+                  class="form-control" :class="{ 'is-invalid': form_item.errors.has('product_name') }" aria-describedby="inputGroup-sizing-default" onfocus="this.select()">
+                   
+                <has-error :form="form_item" field="product_name"></has-error>
+              </div>
+              <div class="input-group mb-2">
+                <p v-show="no_item" class="empty-field-message">** Please enter product.</p>
+              </div>  
+
+              <div class="input-group mb-2">
+                <div class="input-group-prepend">
+                  <span class="input-group-text inputGroup-sizing-default">Model #</span>
+                </div>
+
+                <input v-model="form_item.quantity" type="text" name="product_model_no"
+                  class="form-control" :class="{ 'is-invalid': form_item.errors.has('product_model_no') }" aria-describedby="inputGroup-sizing-default" onfocus="this.select()">
+                  
+                <has-error :form="form_item" field="product_model_no"></has-error>
+              </div>
+              <div class="input-group mb-2">
+                <p v-show="no_quantity" class="empty-field-message">** Please enter brand.</p> 
+              </div>  
+
+              <div class="input-group mb-2">
+                <div class="input-group-prepend">
+                  <span class="input-group-text inputGroup-sizing-default">Brand</span>
+                </div>
+
+                <input v-model="form_item.quantity" type="text" name="brand"
+                  class="form-control" :class="{ 'is-invalid': form_item.errors.has('brand') }" aria-describedby="inputGroup-sizing-default" onfocus="this.select()">
+                  
+                <has-error :form="form_item" field="brand"></has-error>
+              </div>
+              <div class="input-group mb-2">
+                <p v-show="no_quantity" class="empty-field-message">** Please enter brand.</p> 
+              </div>  
+
+              <div class="input-group mb-2">
+                <div class="input-group-prepend">
+                  <span class="input-group-text inputGroup-sizing-default">Price</span>
+                </div>
+                  <input v-model="form_item.price" name="product_price" id="product_price"
+                  class="form-control" :class="{ 'is-invalid': form_entry.errors.has('product_price') }" aria-describedby="inputGroup-sizing-default" onfocus="this.select()">
+                  <has-error :form="form_item" field="product_price"></has-error>
+              </div>
+
+              <div class="input-group mb-2">
+                <p v-show="no_price" class="empty-field-message">** Please enter price.</p> 
+              </div>  
+              
+
+
+              <!-- div class="input-group mb-2">
+                <div class="input-group-prepend">
+                  <span class="input-group-text inputGroup-sizing-default">Tax Type</span>
+                </div>
+
+              
+
+                <select v-model="form_item.tax_type" @change="computeTaxChange" class="form-control col-12" aria-describedby="inputGroup-sizing-default">
+                  <option value="VAT">VAT</option>
+                  <option value="NON VAT">NON VAT</option>
+                  <option value="VAT EXEMPT">VAT EXEMPT</option>
+                  <option value="ZERO RATED">ZERO RATED</option>
+                </select>
+              </div -->
+
+              
+
+            </div>
+            <div class="modal-footer">
+              <button type="button" @click="cancelProduct" class="btn btn-danger">Cancel</button>
+              <button type="button" @click="saveProduct" class="btn btn-success">Save</button>
+            </div>
+
+            <!-- /form -->
+          </div>
+        </div>
+      </div>
+      <!-- Product Modal -->
+
     </div>
 </template>
 <style>
@@ -172,7 +290,9 @@
         data() {
             return {
                 products:{},
-                public_address: ''
+                public_address: '',
+                showProductForm: true,
+                productEditMode: false
             }
         },
         methods: {
@@ -200,7 +320,23 @@
             },
             getResults(){
 
+            },
+            cancelProduct(){
+                //this.showProductForm = true;
+            },
+            saveProduct(){
+                this.showProductForm = false;
+            },
+            newProduct(){
+                this.showProductForm = true;
+                this.productEditMode = false;
+            },
+            editProduct(){
+                this.showProductForm = true;
+                this.productEditMode = true;
             }
+
+
         },
         created() {
             this.user_id = document.querySelector('meta[name="user-id"]').getAttribute('content');
