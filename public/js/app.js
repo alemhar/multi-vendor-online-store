@@ -41215,13 +41215,13 @@ var render = function() {
                     return _c("tr", { key: product.id }, [
                       _c("td", [_vm._v(_vm._s(product.id))]),
                       _vm._v(" "),
-                      _c("td", [_vm._v(_vm._s(product.name))]),
+                      _c("td", [_vm._v(_vm._s(product.product_name))]),
                       _vm._v(" "),
-                      _c("td", [_vm._v(_vm._s(product.Model))]),
+                      _c("td", [_vm._v(_vm._s(product.product_model_no))]),
                       _vm._v(" "),
-                      _c("td", [_vm._v(_vm._s(product.Brand))]),
+                      _c("td", [_vm._v(_vm._s(product.brand))]),
                       _vm._v(" "),
-                      _c("td", [_vm._v(_vm._s(product.Price))]),
+                      _c("td", [_vm._v(_vm._s(product.product_price))]),
                       _vm._v(" "),
                       _vm._m(2, true)
                     ])

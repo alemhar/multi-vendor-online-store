@@ -36,10 +36,10 @@
                                     <tr v-for="product in products.data" :key="product.id">
                                         <td>{{product.id}}</td>
                                         
-                                        <td>{{product.name}}</td>
-                                        <td>{{product.Model}}</td>
-                                        <td>{{product.Brand}}</td>
-                                        <td>{{product.Price}}</td>
+                                        <td>{{product.product_name}}</td>
+                                        <td>{{product.product_model_no}}</td>
+                                        <td>{{product.brand}}</td>
+                                        <td>{{product.product_price}}</td>
                                         <td>
                                             <a href="#">
                                             <i class="fas fa-trash-alt"></i>
