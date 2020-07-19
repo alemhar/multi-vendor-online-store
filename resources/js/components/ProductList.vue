@@ -295,7 +295,8 @@
                 product_name: '',
                 product_model_no: '',
                 brand: '',
-                product_price: ''
+                product_price: '',
+                user_id: ''
             }
         },
         methods: {
