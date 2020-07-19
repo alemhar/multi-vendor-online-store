@@ -291,7 +291,7 @@
             return {
                 products:{},
                 public_address: '',
-                showProductForm: false,
+                showProductForm: true,
                 productEditMode: false,
                 product_name: '',
                 product_model_no: '',
