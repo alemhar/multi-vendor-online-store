@@ -28,7 +28,23 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        return '$request';
+        /*
+        $this->validate($request,[
+            'name' => 'required|string|max:191',
+            'address' => 'required|string|max:191',
+            'city' => 'required|string|max:191',
+            'phone' => 'required|string|max:191'
+
+        ]);
+        */
+
+        return Payee::create([
+            'user_id' => $request['user_id'],
+            'product_name' => $request['product_name'],
+            'product_model_no' => $request['product_model_no'],
+            'product_price' => $request['product_price'],
+            'brand' => $request['brand']
+        ]);
     }
 
     /**

@@ -2540,6 +2540,18 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -2551,7 +2563,8 @@ __webpack_require__.r(__webpack_exports__);
       product_model_no: '',
       brand: '',
       product_price: '',
-      user_id: ''
+      user_id: '',
+      product_description: ''
     };
   },
   methods: {
@@ -2579,6 +2592,7 @@ __webpack_require__.r(__webpack_exports__);
         product_name: this.product_name,
         product_model_no: this.product_model_no,
         product_price: this.product_price,
+        product_description: this.product_description,
         brand: this.brand
       }).then(function (response) {
         console.log(response);
@@ -41593,6 +41607,39 @@ var render = function() {
                   })
                 ]),
                 _vm._v(" "),
+                _c("div", { staticClass: "input-group mb-2" }),
+                _vm._v(" "),
+                _c("div", { staticClass: "input-group mb-2" }, [
+                  _vm._m(8),
+                  _vm._v(" "),
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.product_description,
+                        expression: "product_description"
+                      }
+                    ],
+                    staticClass: "form-control",
+                    attrs: {
+                      name: "product_description",
+                      id: "product_description",
+                      "aria-describedby": "inputGroup-sizing-default",
+                      onfocus: "this.select()"
+                    },
+                    domProps: { value: _vm.product_description },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.product_description = $event.target.value
+                      }
+                    }
+                  })
+                ]),
+                _vm._v(" "),
                 _c("div", { staticClass: "input-group mb-2" })
               ]),
               _vm._v(" "),
@@ -41729,6 +41776,18 @@ var staticRenderFns = [
         "span",
         { staticClass: "input-group-text inputGroup-sizing-default" },
         [_vm._v("Price")]
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "input-group-prepend" }, [
+      _c(
+        "span",
+        { staticClass: "input-group-text inputGroup-sizing-default" },
+        [_vm._v("Description")]
       )
     ])
   }

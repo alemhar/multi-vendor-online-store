@@ -174,7 +174,19 @@
                 <!-- p v-show="no_price" class="empty-field-message">** Please enter price.</p --> 
               </div>  
               
+                
 
+              <div class="input-group mb-2">
+                <div class="input-group-prepend">
+                  <span class="input-group-text inputGroup-sizing-default">Description</span>
+                </div>
+                  <input v-model="product_description" name="product_description" id="product_description"
+                  class="form-control" aria-describedby="inputGroup-sizing-default" onfocus="this.select()">
+              </div>
+
+              <div class="input-group mb-2">
+                <!-- p v-show="no_price" class="empty-field-message">** Please enter price.</p --> 
+              </div>  
 
               <!-- div class="input-group mb-2">
                 <div class="input-group-prepend">
@@ -296,7 +308,8 @@
                 product_model_no: '',
                 brand: '',
                 product_price: '',
-                user_id: ''
+                user_id: '',
+                product_description: ''
             }
         },
         methods: {
@@ -335,6 +348,7 @@
                     product_name: this.product_name,
                     product_model_no: this.product_model_no,
                     product_price: this.product_price,
+                    product_description: this.product_description,
                     brand: this.brand
                 })
                 .then((response)=>{
