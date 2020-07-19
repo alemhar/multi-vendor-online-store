@@ -180,7 +180,7 @@
                 <div class="input-group-prepend">
                   <span class="input-group-text inputGroup-sizing-default">Description</span>
                 </div>
-                  <textarea rows="5" v-model="product_description" name="product_description" id="product_description"
+                  <textarea rows="3" v-model="product_description" name="product_description" id="product_description"
                   class="form-control" aria-describedby="inputGroup-sizing-default" onfocus="this.select()"></textarea >
               </div>
 
@@ -355,7 +355,7 @@
 
                     
                     this.loadProducts();
-                 //console.log(response);
+                 console.log(response);
                     
                 })
                 .catch(()=>{

@@ -2597,8 +2597,9 @@ __webpack_require__.r(__webpack_exports__);
         product_description: this.product_description,
         brand: this.brand
       }).then(function (response) {
-        _this2.loadProducts(); //console.log(response);
+        _this2.loadProducts();
 
+        console.log(response);
       })["catch"](function () {});
       this.showProductForm = false;
       $('#product-form').modal('hide');
@@ -41626,7 +41627,7 @@ var render = function() {
                     ],
                     staticClass: "form-control",
                     attrs: {
-                      rows: "5",
+                      rows: "3",
                       name: "product_description",
                       id: "product_description",
                       "aria-describedby": "inputGroup-sizing-default",
