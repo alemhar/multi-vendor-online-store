@@ -38,7 +38,7 @@ class ProductController extends Controller
         ]);
         */
 
-        return Payee::create([
+        return Product::create([
             'user_id' => $request['user_id'],
             'product_name' => $request['product_name'],
             'product_model_no' => $request['product_model_no'],
