@@ -2610,10 +2610,19 @@ __webpack_require__.r(__webpack_exports__);
       $('#product-form').modal('show');
     },
     editProduct: function editProduct() {
+      axios.get("api/product/" + this.user_id).then(function (response) {
+        console.log(response); // this.user_id = response.user_id;
+        // this.product_name = response.product_name;
+        // this.product_model_no = response.product_model_no;
+        // this.product_price = response.product_price;
+        // this.product_description = response.product_description;
+        // this.brand = response.brand;
+      })["catch"](function () {});
       this.showProductForm = true;
       this.productEditMode = true;
       $('#product-form').modal('show');
-    }
+    },
+    deleteProduct: function deleteProduct() {}
   },
   created: function created() {
     this.user_id = document.querySelector('meta[name="user-id"]').getAttribute('content');
@@ -41409,9 +41418,8 @@ var render = function() {
                         _c(
                           "a",
                           {
-                            staticClass: "btn btn-primary float-right",
                             attrs: { href: "#" },
-                            on: { click: _vm.editProduct }
+                            on: { click: _vm.deleteProduct }
                           },
                           [_c("i", { staticClass: "fas fa-trash-alt" })]
                         ),
@@ -41421,7 +41429,6 @@ var render = function() {
                         _c(
                           "a",
                           {
-                            staticClass: "btn btn-primary float-right",
                             attrs: { href: "#" },
                             on: { click: _vm.editProduct }
                           },

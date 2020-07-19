@@ -40,11 +40,11 @@
                                         <td>{{product.brand}}</td>
                                         <td>{{product.product_price}}</td>
                                         <td>
-                                            <a href="#" @click="editProduct" class="btn btn-primary float-right">
+                                            <a href="#" @click="deleteProduct">
                                             <i class="fas fa-trash-alt"></i>
                                             </a>
                                             |
-                                            <a href="#" @click="editProduct" class="btn btn-primary float-right">
+                                            <a href="#" @click="editProduct">
                                             <i class="fas fa-edit"></i>
                                             </a>
                                         </td>
@@ -371,9 +371,27 @@
                 $('#product-form').modal('show');
             },
             editProduct(){
+                axios.get("api/product/"+this.user_id)
+                .then((response)=>{
+                    console.log(response);
+                    // this.user_id = response.user_id;
+                    // this.product_name = response.product_name;
+                    // this.product_model_no = response.product_model_no;
+                    // this.product_price = response.product_price;
+                    // this.product_description = response.product_description;
+                    // this.brand = response.brand;
+                    
+                })
+                .catch(()=>{
+                    
+                });
                 this.showProductForm = true;
                 this.productEditMode = true;
+
                 $('#product-form').modal('show');
+            },
+            deleteProduct() {
+                
             }
         },
         created() {
