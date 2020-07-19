@@ -104,7 +104,7 @@
       -->
 
 
-      <div class="modal fade"   id="entry-items" tabindex="-1" role="dialog" aria-labelledby="addNewLabel" aria-hidden="true"  data-backdrop="static" data-keyboard="false">
+      <div class="modal fade"   id="product-form" tabindex="-1" role="dialog" aria-labelledby="addNewLabel" aria-hidden="true"  data-backdrop="static" data-keyboard="false">
         <div class="modal-dialog modal-dialog-centered" role="document">
           <div class="modal-content">
             <div class="modal-header">
@@ -326,17 +326,21 @@
             },
             cancelProduct(){
                 //this.showProductForm = true;
+                $('#entry-details').modal('hide');
             },
             saveProduct(){
                 this.showProductForm = false;
+                $('#entry-details').modal('hide');
             },
             newProduct(){
                 this.showProductForm = true;
                 this.productEditMode = false;
+                $('#entry-items').modal('show');
             },
             editProduct(){
                 this.showProductForm = true;
                 this.productEditMode = true;
+                $('#entry-items').modal('show');
             }
 
 

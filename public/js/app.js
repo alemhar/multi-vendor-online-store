@@ -2568,18 +2568,23 @@ __webpack_require__.r(__webpack_exports__);
       })["catch"](function () {}); //console.log(this.user_info);
     },
     getResults: function getResults() {},
-    cancelProduct: function cancelProduct() {//this.showProductForm = true;
+    cancelProduct: function cancelProduct() {
+      //this.showProductForm = true;
+      $('#entry-details').modal('hide');
     },
     saveProduct: function saveProduct() {
       this.showProductForm = false;
+      $('#entry-details').modal('hide');
     },
     newProduct: function newProduct() {
       this.showProductForm = true;
       this.productEditMode = false;
+      $('#entry-items').modal('show');
     },
     editProduct: function editProduct() {
       this.showProductForm = true;
       this.productEditMode = true;
+      $('#entry-items').modal('show');
     }
   },
   created: function created() {
@@ -41392,7 +41397,7 @@ var render = function() {
       {
         staticClass: "modal fade",
         attrs: {
-          id: "entry-items",
+          id: "product-form",
           tabindex: "-1",
           role: "dialog",
           "aria-labelledby": "addNewLabel",
