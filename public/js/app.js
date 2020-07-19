@@ -2589,7 +2589,7 @@ __webpack_require__.r(__webpack_exports__);
     saveProduct: function saveProduct() {
       var _this2 = this;
 
-      axios.post('api/product/', {
+      axios.post('api/product', {
         user_id: this.user_id,
         product_name: this.product_name,
         product_model_no: this.product_model_no,
