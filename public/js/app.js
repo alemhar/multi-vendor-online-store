@@ -41246,7 +41246,7 @@ var staticRenderFns = [
           _c(
             "button",
             {
-              staticClass: "btn btn-primary",
+              staticClass: "btn btn-primary float-right",
               attrs: {
                 type: "button",
                 "data-toggle": "modal",

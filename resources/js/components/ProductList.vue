@@ -10,7 +10,7 @@
                             </div>
                             <div class="col-6">
                                 <!-- button type="submit" @click="addNew" class="btn btn-primary float-right"></button -->
-                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ProductModal">New <i class="fas fa-plus"></i></button>
+                                <button type="button" class="btn btn-primary float-right" data-toggle="modal" data-target="#ProductModal">New <i class="fas fa-plus"></i></button>
                                 <!-- button type="submit" @click="loadInfo" class="btn btn-default float-right">Cancel</button -->
                             </div>
                         </div>
