@@ -2587,6 +2587,8 @@ __webpack_require__.r(__webpack_exports__);
       $('#product-form').modal('hide');
     },
     saveProduct: function saveProduct() {
+      var _this2 = this;
+
       axios.post('api/product/', {
         user_id: this.user_id,
         product_name: this.product_name,
@@ -2595,7 +2597,8 @@ __webpack_require__.r(__webpack_exports__);
         product_description: this.product_description,
         brand: this.brand
       }).then(function (response) {
-        console.log(response);
+        _this2.loadProducts(); //console.log(response);
+
       })["catch"](function () {});
       this.showProductForm = false;
       $('#product-form').modal('hide');
@@ -2612,8 +2615,8 @@ __webpack_require__.r(__webpack_exports__);
     }
   },
   created: function created() {
-    this.user_id = document.querySelector('meta[name="user-id"]').getAttribute('content'); //this.loadProducts();
-    //$('[data-toggle="tooltip"]').tooltip();
+    this.user_id = document.querySelector('meta[name="user-id"]').getAttribute('content');
+    this.loadProducts(); //$('[data-toggle="tooltip"]').tooltip();
     //console.log('Component created.');
 
     /* Scrollbar fix

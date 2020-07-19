@@ -354,8 +354,8 @@
                 .then((response)=>{
 
                     
-                  
-                 console.log(response);
+                    this.loadProducts();
+                 //console.log(response);
                     
                 })
                 .catch(()=>{
@@ -378,7 +378,7 @@
         },
         created() {
             this.user_id = document.querySelector('meta[name="user-id"]').getAttribute('content');
-            //this.loadProducts();
+            this.loadProducts();
             
             //$('[data-toggle="tooltip"]').tooltip();
             //console.log('Component created.');
