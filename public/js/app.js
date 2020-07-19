@@ -41615,7 +41615,7 @@ var render = function() {
                 _c("div", { staticClass: "input-group mb-2" }, [
                   _vm._m(8),
                   _vm._v(" "),
-                  _c("input", {
+                  _c("textarea", {
                     directives: [
                       {
                         name: "model",
@@ -41626,6 +41626,7 @@ var render = function() {
                     ],
                     staticClass: "form-control",
                     attrs: {
+                      rows: "5",
                       name: "product_description",
                       id: "product_description",
                       "aria-describedby": "inputGroup-sizing-default",
