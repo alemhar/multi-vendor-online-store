@@ -2609,20 +2609,22 @@ __webpack_require__.r(__webpack_exports__);
       this.productEditMode = false;
       $('#product-form').modal('show');
     },
-    editProduct: function editProduct() {
-      axios.get("api/product/" + this.user_id).then(function (response) {
-        console.log(response); // this.user_id = response.user_id;
-        // this.product_name = response.product_name;
-        // this.product_model_no = response.product_model_no;
-        // this.product_price = response.product_price;
-        // this.product_description = response.product_description;
-        // this.brand = response.brand;
+    editProduct: function editProduct(id) {
+      var _this3 = this;
+
+      axios.get("api/product/" + id).then(function (response) {
+        console.log(response);
+        _this3.product_name = response.product_name;
+        _this3.product_model_no = response.product_model_no;
+        _this3.product_price = response.product_price;
+        _this3.product_description = response.product_description;
+        _this3.brand = response.brand;
       })["catch"](function () {});
       this.showProductForm = true;
       this.productEditMode = true;
       $('#product-form').modal('show');
     },
-    deleteProduct: function deleteProduct() {}
+    deleteProduct: function deleteProduct(id) {}
   },
   created: function created() {
     this.user_id = document.querySelector('meta[name="user-id"]').getAttribute('content');
@@ -41419,7 +41421,11 @@ var render = function() {
                           "a",
                           {
                             attrs: { href: "#" },
-                            on: { click: _vm.deleteProduct }
+                            on: {
+                              click: function($event) {
+                                return _vm.deleteProduct(product.id)
+                              }
+                            }
                           },
                           [_c("i", { staticClass: "fas fa-trash-alt" })]
                         ),
@@ -41430,7 +41436,11 @@ var render = function() {
                           "a",
                           {
                             attrs: { href: "#" },
-                            on: { click: _vm.editProduct }
+                            on: {
+                              click: function($event) {
+                                return _vm.editProduct(product.id)
+                              }
+                            }
                           },
                           [_c("i", { staticClass: "fas fa-edit" })]
                         )

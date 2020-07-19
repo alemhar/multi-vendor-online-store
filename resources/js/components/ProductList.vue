@@ -40,11 +40,11 @@
                                         <td>{{product.brand}}</td>
                                         <td>{{product.product_price}}</td>
                                         <td>
-                                            <a href="#" @click="deleteProduct">
+                                            <a href="#" @click="deleteProduct(product.id)">
                                             <i class="fas fa-trash-alt"></i>
                                             </a>
                                             |
-                                            <a href="#" @click="editProduct">
+                                            <a href="#" @click="editProduct(product.id)">
                                             <i class="fas fa-edit"></i>
                                             </a>
                                         </td>
@@ -370,16 +370,15 @@
                 this.productEditMode = false;
                 $('#product-form').modal('show');
             },
-            editProduct(){
-                axios.get("api/product/"+this.user_id)
+            editProduct(id){
+                axios.get("api/product/"+id)
                 .then((response)=>{
                     console.log(response);
-                    // this.user_id = response.user_id;
-                    // this.product_name = response.product_name;
-                    // this.product_model_no = response.product_model_no;
-                    // this.product_price = response.product_price;
-                    // this.product_description = response.product_description;
-                    // this.brand = response.brand;
+                    this.product_name = response.product_name;
+                    this.product_model_no = response.product_model_no;
+                    this.product_price = response.product_price;
+                    this.product_description = response.product_description;
+                    this.brand = response.brand;
                     
                 })
                 .catch(()=>{
@@ -390,7 +389,7 @@
 
                 $('#product-form').modal('show');
             },
-            deleteProduct() {
+            deleteProduct(id) {
                 
             }
         },
