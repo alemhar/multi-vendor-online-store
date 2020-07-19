@@ -2447,6 +2447,8 @@ __webpack_require__.r(__webpack_exports__);
       axios.get("api/product/").then(function (response) {
         _this.products = response.data; //this.public_address = window.location.hostname + '/main/' + this.form.public_id;
         //console.log( this.form.user_logo ? this.form.user_logo : 'img/your_logo_here.png');
+
+        console.log(_this.products);
       })["catch"](function () {}); //console.log(this.user_info);
     },
     getResults: function getResults() {}
@@ -41229,17 +41231,7 @@ var render = function() {
               ])
             ]),
             _vm._v(" "),
-            _c(
-              "div",
-              { staticClass: "card-footer" },
-              [
-                _c("pagination", {
-                  attrs: { data: _vm.products.data },
-                  on: { "pagination-change-page": _vm.getResults }
-                })
-              ],
-              1
-            )
+            _c("div", { staticClass: "card-footer" })
           ])
         ])
       ])
