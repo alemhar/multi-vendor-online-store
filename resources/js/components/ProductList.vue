@@ -400,7 +400,14 @@
                 $('#product-form').modal('show');
             },
             deleteProduct(id) {
-                
+                 axios.delete("api/product/"+id)
+                .then((response)=>{
+                    this.loadProducts();
+                    
+                })
+                .catch(()=>{
+                    
+                });
             }
         },
         created() {

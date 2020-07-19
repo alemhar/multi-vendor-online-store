@@ -2633,7 +2633,13 @@ __webpack_require__.r(__webpack_exports__);
       this.productEditMode = true;
       $('#product-form').modal('show');
     },
-    deleteProduct: function deleteProduct(id) {}
+    deleteProduct: function deleteProduct(id) {
+      var _this4 = this;
+
+      axios["delete"]("api/product/" + id).then(function (response) {
+        _this4.loadProducts();
+      })["catch"](function () {});
+    }
   },
   created: function created() {
     this.user_id = document.querySelector('meta[name="user-id"]').getAttribute('content');
