@@ -34,6 +34,8 @@
                                 </thead>
                                 <tbody>
                                     <tr v-for="product in products.data" :key="product.id">
+                                        <td>{{product.id}}</td>
+                                        
                                         <td>{{product.name}}</td>
                                         <td>{{product.Model}}</td>
                                         <td>{{product.Brand}}</td>
