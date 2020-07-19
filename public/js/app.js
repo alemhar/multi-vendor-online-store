@@ -2570,21 +2570,21 @@ __webpack_require__.r(__webpack_exports__);
     getResults: function getResults() {},
     cancelProduct: function cancelProduct() {
       //this.showProductForm = true;
-      $('#entry-details').modal('hide');
+      $('#product-form').modal('hide');
     },
     saveProduct: function saveProduct() {
       this.showProductForm = false;
-      $('#entry-details').modal('hide');
+      $('#product-form').modal('hide');
     },
     newProduct: function newProduct() {
       this.showProductForm = true;
       this.productEditMode = false;
-      $('#entry-items').modal('show');
+      $('#product-form').modal('show');
     },
     editProduct: function editProduct() {
       this.showProductForm = true;
       this.productEditMode = true;
-      $('#entry-items').modal('show');
+      $('#product-form').modal('show');
     }
   },
   created: function created() {

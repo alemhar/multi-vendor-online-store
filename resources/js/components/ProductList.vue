@@ -326,21 +326,21 @@
             },
             cancelProduct(){
                 //this.showProductForm = true;
-                $('#entry-details').modal('hide');
+                $('#product-form').modal('hide');
             },
             saveProduct(){
                 this.showProductForm = false;
-                $('#entry-details').modal('hide');
+                $('#product-form').modal('hide');
             },
             newProduct(){
                 this.showProductForm = true;
                 this.productEditMode = false;
-                $('#entry-items').modal('show');
+                $('#product-form').modal('show');
             },
             editProduct(){
                 this.showProductForm = true;
                 this.productEditMode = true;
-                $('#entry-items').modal('show');
+                $('#product-form').modal('show');
             }
 
 
