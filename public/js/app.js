@@ -2445,7 +2445,7 @@ __webpack_require__.r(__webpack_exports__);
       var _this = this;
 
       axios.get("api/product/").then(function (data) {
-        _this.products = data; //this.public_address = window.location.hostname + '/main/' + this.form.public_id;
+        _this.products = data.data; //this.public_address = window.location.hostname + '/main/' + this.form.public_id;
         //console.log( this.form.user_logo ? this.form.user_logo : 'img/your_logo_here.png');
       })["catch"](function () {}); //console.log(this.user_info);
     },
@@ -41210,7 +41210,7 @@ var render = function() {
                 _c(
                   "tbody",
                   _vm._l(_vm.products.data, function(product) {
-                    return _c("tr", { key: product.data.id }, [
+                    return _c("tr", { key: product.id }, [
                       _c("td", [_vm._v(_vm._s(product.id))]),
                       _vm._v(" "),
                       _c("td", [_vm._v(_vm._s(product.name))]),
