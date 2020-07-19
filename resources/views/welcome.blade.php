@@ -81,7 +81,7 @@
 
             <div class="content">
                 <div class="title">
-                    <img src="img/osk_logo_full.png" style="width: 6em;">
+                    <img src="img/osk_logo_full.png" class="img-fluid" style="width: 60%;">
                     
                 </div>
 
