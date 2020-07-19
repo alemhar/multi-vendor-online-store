@@ -2442,8 +2442,10 @@ __webpack_require__.r(__webpack_exports__);
       //document.execCommand("copy");
     },
     loadProducts: function loadProducts() {
-      axios.get("api/product/").then(function (data) {//this.products = data;
-        //this.public_address = window.location.hostname + '/main/' + this.form.public_id;
+      var _this = this;
+
+      axios.get("api/product/").then(function (data) {
+        _this.products = data; //this.public_address = window.location.hostname + '/main/' + this.form.public_id;
         //console.log( this.form.user_logo ? this.form.user_logo : 'img/your_logo_here.png');
       })["catch"](function () {}); //console.log(this.user_info);
     },

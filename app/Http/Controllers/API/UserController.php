@@ -116,6 +116,8 @@ class UserController extends Controller
             // Image::configure(array('driver' => 'imagick'));
             Image::make($user_logo_base64)->save(public_path('img/logo/').$user_logo);
         } 
+        
+        
 
         if ($user->detail === null)
         {
