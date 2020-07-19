@@ -2540,7 +2540,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -41402,8 +41401,8 @@ var render = function() {
                       {
                         name: "show",
                         rawName: "v-show",
-                        value: !_vm.editmode,
-                        expression: "!editmode"
+                        value: !_vm.productEditMode,
+                        expression: "!productEditMode"
                       }
                     ],
                     staticClass: "modal-title",
@@ -41419,8 +41418,8 @@ var render = function() {
                       {
                         name: "show",
                         rawName: "v-show",
-                        value: _vm.editmode,
-                        expression: "editmode"
+                        value: _vm.productEditMode,
+                        expression: "productEditMode"
                       }
                     ],
                     staticClass: "modal-title",
@@ -41444,8 +41443,8 @@ var render = function() {
                         {
                           name: "model",
                           rawName: "v-model",
-                          value: _vm.form_item.item,
-                          expression: "form_item.item"
+                          value: _vm.product_name,
+                          expression: "product_name"
                         }
                       ],
                       staticClass: "form-control",
@@ -41458,13 +41457,13 @@ var render = function() {
                         "aria-describedby": "inputGroup-sizing-default",
                         onfocus: "this.select()"
                       },
-                      domProps: { value: _vm.form_item.item },
+                      domProps: { value: _vm.product_name },
                       on: {
                         input: function($event) {
                           if ($event.target.composing) {
                             return
                           }
-                          _vm.$set(_vm.form_item, "item", $event.target.value)
+                          _vm.product_name = $event.target.value
                         }
                       }
                     }),
@@ -41476,216 +41475,113 @@ var render = function() {
                   1
                 ),
                 _vm._v(" "),
+                _c("div", { staticClass: "input-group mb-2" }),
+                _vm._v(" "),
                 _c("div", { staticClass: "input-group mb-2" }, [
-                  _c(
-                    "p",
-                    {
-                      directives: [
-                        {
-                          name: "show",
-                          rawName: "v-show",
-                          value: _vm.no_item,
-                          expression: "no_item"
-                        }
-                      ],
-                      staticClass: "empty-field-message"
+                  _vm._m(6),
+                  _vm._v(" "),
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.product_model_no,
+                        expression: "product_model_no"
+                      }
+                    ],
+                    staticClass: "form-control",
+                    class: {
+                      "is-invalid": _vm.form_item.errors.has("product_model_no")
                     },
-                    [_vm._v("** Please enter product.")]
-                  )
+                    attrs: {
+                      type: "text",
+                      name: "product_model_no",
+                      "aria-describedby": "inputGroup-sizing-default",
+                      onfocus: "this.select()"
+                    },
+                    domProps: { value: _vm.product_model_no },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.product_model_no = $event.target.value
+                      }
+                    }
+                  })
                 ]),
                 _vm._v(" "),
-                _c(
-                  "div",
-                  { staticClass: "input-group mb-2" },
-                  [
-                    _vm._m(6),
-                    _vm._v(" "),
-                    _c("input", {
-                      directives: [
-                        {
-                          name: "model",
-                          rawName: "v-model",
-                          value: _vm.form_item.quantity,
-                          expression: "form_item.quantity"
-                        }
-                      ],
-                      staticClass: "form-control",
-                      class: {
-                        "is-invalid": _vm.form_item.errors.has(
-                          "product_model_no"
-                        )
-                      },
-                      attrs: {
-                        type: "text",
-                        name: "product_model_no",
-                        "aria-describedby": "inputGroup-sizing-default",
-                        onfocus: "this.select()"
-                      },
-                      domProps: { value: _vm.form_item.quantity },
-                      on: {
-                        input: function($event) {
-                          if ($event.target.composing) {
-                            return
-                          }
-                          _vm.$set(
-                            _vm.form_item,
-                            "quantity",
-                            $event.target.value
-                          )
-                        }
-                      }
-                    }),
-                    _vm._v(" "),
-                    _c("has-error", {
-                      attrs: { form: _vm.form_item, field: "product_model_no" }
-                    })
-                  ],
-                  1
-                ),
+                _c("div", { staticClass: "input-group mb-2" }),
                 _vm._v(" "),
                 _c("div", { staticClass: "input-group mb-2" }, [
-                  _c(
-                    "p",
-                    {
-                      directives: [
-                        {
-                          name: "show",
-                          rawName: "v-show",
-                          value: _vm.no_quantity,
-                          expression: "no_quantity"
-                        }
-                      ],
-                      staticClass: "empty-field-message"
+                  _vm._m(7),
+                  _vm._v(" "),
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.brand,
+                        expression: "brand"
+                      }
+                    ],
+                    staticClass: "form-control",
+                    class: { "is-invalid": _vm.form_item.errors.has("brand") },
+                    attrs: {
+                      type: "text",
+                      name: "brand",
+                      "aria-describedby": "inputGroup-sizing-default",
+                      onfocus: "this.select()"
                     },
-                    [_vm._v("** Please enter brand.")]
-                  )
+                    domProps: { value: _vm.brand },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.brand = $event.target.value
+                      }
+                    }
+                  })
                 ]),
                 _vm._v(" "),
-                _c(
-                  "div",
-                  { staticClass: "input-group mb-2" },
-                  [
-                    _vm._m(7),
-                    _vm._v(" "),
-                    _c("input", {
-                      directives: [
-                        {
-                          name: "model",
-                          rawName: "v-model",
-                          value: _vm.form_item.quantity,
-                          expression: "form_item.quantity"
-                        }
-                      ],
-                      staticClass: "form-control",
-                      class: {
-                        "is-invalid": _vm.form_item.errors.has("brand")
-                      },
-                      attrs: {
-                        type: "text",
-                        name: "brand",
-                        "aria-describedby": "inputGroup-sizing-default",
-                        onfocus: "this.select()"
-                      },
-                      domProps: { value: _vm.form_item.quantity },
-                      on: {
-                        input: function($event) {
-                          if ($event.target.composing) {
-                            return
-                          }
-                          _vm.$set(
-                            _vm.form_item,
-                            "quantity",
-                            $event.target.value
-                          )
-                        }
-                      }
-                    }),
-                    _vm._v(" "),
-                    _c("has-error", {
-                      attrs: { form: _vm.form_item, field: "brand" }
-                    })
-                  ],
-                  1
-                ),
+                _c("div", { staticClass: "input-group mb-2" }),
                 _vm._v(" "),
                 _c("div", { staticClass: "input-group mb-2" }, [
-                  _c(
-                    "p",
-                    {
-                      directives: [
-                        {
-                          name: "show",
-                          rawName: "v-show",
-                          value: _vm.no_quantity,
-                          expression: "no_quantity"
-                        }
-                      ],
-                      staticClass: "empty-field-message"
+                  _vm._m(8),
+                  _vm._v(" "),
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.product_price,
+                        expression: "product_price"
+                      }
+                    ],
+                    staticClass: "form-control",
+                    class: {
+                      "is-invalid": _vm.form_entry.errors.has("product_price")
                     },
-                    [_vm._v("** Please enter brand.")]
-                  )
+                    attrs: {
+                      name: "product_price",
+                      id: "product_price",
+                      "aria-describedby": "inputGroup-sizing-default",
+                      onfocus: "this.select()"
+                    },
+                    domProps: { value: _vm.product_price },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.product_price = $event.target.value
+                      }
+                    }
+                  })
                 ]),
                 _vm._v(" "),
-                _c(
-                  "div",
-                  { staticClass: "input-group mb-2" },
-                  [
-                    _vm._m(8),
-                    _vm._v(" "),
-                    _c("input", {
-                      directives: [
-                        {
-                          name: "model",
-                          rawName: "v-model",
-                          value: _vm.form_item.price,
-                          expression: "form_item.price"
-                        }
-                      ],
-                      staticClass: "form-control",
-                      class: {
-                        "is-invalid": _vm.form_entry.errors.has("product_price")
-                      },
-                      attrs: {
-                        name: "product_price",
-                        id: "product_price",
-                        "aria-describedby": "inputGroup-sizing-default",
-                        onfocus: "this.select()"
-                      },
-                      domProps: { value: _vm.form_item.price },
-                      on: {
-                        input: function($event) {
-                          if ($event.target.composing) {
-                            return
-                          }
-                          _vm.$set(_vm.form_item, "price", $event.target.value)
-                        }
-                      }
-                    }),
-                    _vm._v(" "),
-                    _c("has-error", {
-                      attrs: { form: _vm.form_item, field: "product_price" }
-                    })
-                  ],
-                  1
-                ),
-                _vm._v(" "),
-                _c("div", { staticClass: "input-group mb-2" }, [
-                  _c(
-                    "p",
-                    {
-                      directives: [
-                        {
-                          name: "show",
-                          rawName: "v-show",
-                          value: _vm.no_price,
-                          expression: "no_price"
-                        }
-                      ],
-                      staticClass: "empty-field-message"
-                    },
-                    [_vm._v("** Please enter price.")]
-                  )
-                ])
+                _c("div", { staticClass: "input-group mb-2" })
               ]),
               _vm._v(" "),
               _c("div", { staticClass: "modal-footer" }, [
