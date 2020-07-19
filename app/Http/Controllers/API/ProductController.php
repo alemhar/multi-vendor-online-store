@@ -14,6 +14,7 @@ class ProductController extends Controller
      */
     public function index()
     {
+        
         return Product::latest()->paginate(5);
         //return ['message' => 'Product Listing.'];
     }
