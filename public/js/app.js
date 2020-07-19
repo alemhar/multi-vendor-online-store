@@ -2585,6 +2585,11 @@ __webpack_require__.r(__webpack_exports__);
     cancelProduct: function cancelProduct() {
       //this.showProductForm = true;
       $('#product-form').modal('hide');
+      this.product_name = '';
+      this.product_model_no = '';
+      this.product_price = '';
+      this.product_description = '';
+      this.brand = '';
     },
     saveProduct: function saveProduct() {
       var _this2 = this;
@@ -2599,7 +2604,11 @@ __webpack_require__.r(__webpack_exports__);
       }).then(function (response) {
         _this2.loadProducts();
 
-        console.log(response);
+        _this2.product_name = '';
+        _this2.product_model_no = '';
+        _this2.product_price = '';
+        _this2.product_description = '';
+        _this2.brand = ''; //console.log(response);
       })["catch"](function () {});
       this.showProductForm = false;
       $('#product-form').modal('hide');

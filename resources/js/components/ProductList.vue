@@ -341,6 +341,11 @@
             cancelProduct(){
                 //this.showProductForm = true;
                 $('#product-form').modal('hide');
+                this.product_name = '';
+                this.product_model_no = '';
+                this.product_price = '';
+                this.product_description = '';
+                this.brand = '';
             },
             saveProduct(){
                 axios.post('api/product', {
@@ -355,7 +360,12 @@
 
                     
                     this.loadProducts();
-                 console.log(response);
+                    this.product_name = '';
+                    this.product_model_no = '';
+                    this.product_price = '';
+                    this.product_description = '';
+                    this.brand = '';
+                 //console.log(response);
                     
                 })
                 .catch(()=>{
