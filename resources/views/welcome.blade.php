@@ -65,8 +65,16 @@
     </head>
     <body>
         <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
+            
+
+            <div class="content">
+                <div class="title">
+                    <img src="img/osk_logo_sqr_with_text.png" class="img-fluid" style="width: 40%;">
+                    
+                </div>
+                
+                @if (Route::has('login'))
+                <div class="links">
                     @auth
                         <a href="{{ url('/home') }}">Home</a>
                     @else
@@ -77,14 +85,7 @@
                         @endif
                     @endauth
                 </div>
-            @endif
-
-            <div class="content">
-                <div class="title">
-                    <img src="img/osk_logo_sqr_with_text.png" class="img-fluid" style="width: 40%;">
-                    
-                </div>
-
+                @endif
                 <!-- div class="links">
                     <a href="https://laravel.com/docs">Docs</a>
                     <a href="https://laracasts.com">Laracasts</a>
