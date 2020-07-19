@@ -2574,17 +2574,18 @@ __webpack_require__.r(__webpack_exports__);
       $('#product-form').modal('hide');
     },
     saveProduct: function saveProduct() {
-      axios.post('api/product/', {
-        user_id: this.user_id,
-        product_name: this.product_name,
-        product_model_no: this.product_model_no,
-        product_price: this.product_price,
-        brand: this.brand
-      }).then(function (response) {
-        //this.products = response.data;
-        //this.public_address = window.location.hostname + '/main/' + this.form.public_id;
-        console.log('test');
-      })["catch"](function () {});
+      // axios.post('api/product/', {
+      //     user_id: this.user_id,
+      //     product_name: this.product_name,
+      //     product_model_no: this.product_model_no,
+      //     product_price: this.product_price,
+      //     brand: this.brand
+      // })
+      // .then((response)=>{
+      console.log('test'); // })
+      // .catch(()=>{
+      // });
+
       this.showProductForm = false;
       $('#product-form').modal('hide');
     },
