@@ -41210,7 +41210,7 @@ var render = function() {
                 _c(
                   "tbody",
                   _vm._l(_vm.products.data, function(product) {
-                    return _c("tr", { key: product.id }, [
+                    return _c("tr", { key: product.data.id }, [
                       _c("td", [_vm._v(_vm._s(product.id))]),
                       _vm._v(" "),
                       _c("td", [_vm._v(_vm._s(product.name))]),

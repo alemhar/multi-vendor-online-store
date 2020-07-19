@@ -33,7 +33,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr v-for="product in products.data" :key="product.id">
+                                    <tr v-for="product in products.data" :key="product.data.id">
                                         <td>{{product.id}}</td>
                                         
                                         <td>{{product.name}}</td>
