@@ -290,7 +290,7 @@
             return {
                 products:{},
                 public_address: '',
-                showProductForm: true,
+                showProductForm: false,
                 productEditMode: false,
                 product_name: '',
                 product_model_no: '',
@@ -348,6 +348,11 @@
             //$('[data-toggle="tooltip"]').tooltip();
             //console.log('Component created.');
             
+            /* Scrollbar fix
+               If you have a modal on your page that exceeds the browser height, then you can't scroll in it when closing an second modal. To fix this add: */
+            $(document).on('hidden.bs.modal', '.modal', function () {
+                $('.modal:visible').length && $(document.body).addClass('modal-open');
+            });
 
         },    
         mounted() {
