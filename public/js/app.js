@@ -41234,7 +41234,7 @@ var render = function() {
               { staticClass: "card-footer" },
               [
                 _c("pagination", {
-                  attrs: { data: _vm.products },
+                  attrs: { data: _vm.products.data },
                   on: { "pagination-change-page": _vm.getResults }
                 })
               ],
