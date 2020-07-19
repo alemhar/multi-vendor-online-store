@@ -2423,7 +2423,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -41196,23 +41195,7 @@ var render = function() {
     _c("div", { staticClass: "row justify-content-center" }, [
       _c("div", { staticClass: "col-md-12" }, [
         _c("div", { staticClass: "card" }, [
-          _c("div", { staticClass: "card-header" }, [
-            _c("div", { staticClass: "row" }, [
-              _vm._m(0),
-              _vm._v(" "),
-              _c("div", { staticClass: "col-6" }, [
-                _c(
-                  "button",
-                  {
-                    staticClass: "btn btn-primary float-right",
-                    attrs: { type: "submit" },
-                    on: { click: _vm.addNew }
-                  },
-                  [_vm._v("New "), _c("i", { staticClass: "fas fa-plus" })]
-                )
-              ])
-            ])
-          ]),
+          _vm._m(0),
           _vm._v(" "),
           _c("div", { staticClass: "card-body" }, [
             _c("div", { staticClass: "table-responsive-md" }, [
@@ -41245,19 +41228,6 @@ var render = function() {
       ])
     ]),
     _vm._v(" "),
-    _c(
-      "button",
-      {
-        staticClass: "btn btn-primary",
-        attrs: {
-          type: "button",
-          "data-toggle": "modal",
-          "data-target": "#exampleModalCenter"
-        }
-      },
-      [_vm._v("\n    Launch demo modal\n    ")]
-    ),
-    _vm._v(" "),
     _vm._m(3)
   ])
 }
@@ -41266,8 +41236,27 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-6" }, [
-      _c("h3", [_vm._v("Product List")])
+    return _c("div", { staticClass: "card-header" }, [
+      _c("div", { staticClass: "row" }, [
+        _c("div", { staticClass: "col-6" }, [
+          _c("h3", [_vm._v("Product List")])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-6" }, [
+          _c(
+            "button",
+            {
+              staticClass: "btn btn-primary",
+              attrs: {
+                type: "button",
+                "data-toggle": "modal",
+                "data-target": "#ProductModal"
+              }
+            },
+            [_vm._v("New "), _c("i", { staticClass: "fas fa-plus" })]
+          )
+        ])
+      ])
     ])
   },
   function() {
@@ -41313,10 +41302,10 @@ var staticRenderFns = [
       {
         staticClass: "modal fade",
         attrs: {
-          id: "exampleModalCenter",
+          id: "ProductModal",
           tabindex: "-1",
           role: "dialog",
-          "aria-labelledby": "exampleModalCenterTitle",
+          "aria-labelledby": "ProductModalTitle",
           "aria-hidden": "true"
         }
       },
