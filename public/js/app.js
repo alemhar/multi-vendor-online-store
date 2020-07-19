@@ -2432,11 +2432,7 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       products: {},
-      user_info: {},
-      user_id: '',
-      public_address: '',
-      store_logo: '',
-      user_logo_base64: ''
+      public_address: ''
     };
   },
   methods: {
@@ -2450,7 +2446,8 @@ __webpack_require__.r(__webpack_exports__);
         //this.public_address = window.location.hostname + '/main/' + this.form.public_id;
         //console.log( this.form.user_logo ? this.form.user_logo : 'img/your_logo_here.png');
       })["catch"](function () {}); //console.log(this.user_info);
-    }
+    },
+    getResults: function getResults() {}
   },
   created: function created() {
     this.user_id = document.querySelector('meta[name="user-id"]').getAttribute('content'); //this.loadInfo();
@@ -41233,7 +41230,7 @@ var render = function() {
               { staticClass: "card-footer" },
               [
                 _c("pagination", {
-                  attrs: { data: _vm.laravelData },
+                  attrs: { data: _vm.products },
                   on: { "pagination-change-page": _vm.getResults }
                 })
               ],

@@ -87,7 +87,7 @@
                             
                         </div>
                         <div class="card-footer">
-                            <pagination :data="laravelData" @pagination-change-page="getResults"></pagination>
+                            <pagination :data="products" @pagination-change-page="getResults"></pagination>
                         </div>
                     </div>
                 </div>
@@ -177,11 +177,7 @@
         data() {
             return {
                 products:{},
-                user_info: {},
-                user_id:'',
-                public_address: '',
-                store_logo: '',
-                user_logo_base64: ''
+                public_address: ''
             }
         },
         methods: {
@@ -206,6 +202,9 @@
                     
                 });
                 //console.log(this.user_info);
+            },
+            getResults(){
+
             }
         },
         created() {
