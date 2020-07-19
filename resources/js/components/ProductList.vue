@@ -40,11 +40,11 @@
                                         <td>{{product.brand}}</td>
                                         <td>{{product.product_price}}</td>
                                         <td>
-                                            <a href="#">
+                                            <a href="#" @click="editProduct" class="btn btn-primary float-right">
                                             <i class="fas fa-trash-alt"></i>
                                             </a>
                                             |
-                                            <a href="#">
+                                            <a href="#" @click="editProduct" class="btn btn-primary float-right">
                                             <i class="fas fa-edit"></i>
                                             </a>
                                         </td>

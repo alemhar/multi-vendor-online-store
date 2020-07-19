@@ -41405,7 +41405,29 @@ var render = function() {
                       _vm._v(" "),
                       _c("td", [_vm._v(_vm._s(product.product_price))]),
                       _vm._v(" "),
-                      _vm._m(2, true)
+                      _c("td", [
+                        _c(
+                          "a",
+                          {
+                            staticClass: "btn btn-primary float-right",
+                            attrs: { href: "#" },
+                            on: { click: _vm.editProduct }
+                          },
+                          [_c("i", { staticClass: "fas fa-trash-alt" })]
+                        ),
+                        _vm._v(
+                          "\n                                        |\n                                        "
+                        ),
+                        _c(
+                          "a",
+                          {
+                            staticClass: "btn btn-primary float-right",
+                            attrs: { href: "#" },
+                            on: { click: _vm.editProduct }
+                          },
+                          [_c("i", { staticClass: "fas fa-edit" })]
+                        )
+                      ])
                     ])
                   }),
                   0
@@ -41477,12 +41499,12 @@ var render = function() {
                   [_vm._v("Update Product")]
                 ),
                 _vm._v(" "),
-                _vm._m(3)
+                _vm._m(2)
               ]),
               _vm._v(" "),
               _c("div", { staticClass: "modal-body" }, [
                 _c("div", { staticClass: "input-group mb-2" }, [
-                  _vm._m(4),
+                  _vm._m(3),
                   _vm._v(" "),
                   _c("input", {
                     directives: [
@@ -41515,7 +41537,7 @@ var render = function() {
                 _c("div", { staticClass: "input-group mb-2" }),
                 _vm._v(" "),
                 _c("div", { staticClass: "input-group mb-2" }, [
-                  _vm._m(5),
+                  _vm._m(4),
                   _vm._v(" "),
                   _c("input", {
                     directives: [
@@ -41548,7 +41570,7 @@ var render = function() {
                 _c("div", { staticClass: "input-group mb-2" }),
                 _vm._v(" "),
                 _c("div", { staticClass: "input-group mb-2" }, [
-                  _vm._m(6),
+                  _vm._m(5),
                   _vm._v(" "),
                   _c("input", {
                     directives: [
@@ -41581,7 +41603,7 @@ var render = function() {
                 _c("div", { staticClass: "input-group mb-2" }),
                 _vm._v(" "),
                 _c("div", { staticClass: "input-group mb-2" }, [
-                  _vm._m(7),
+                  _vm._m(6),
                   _vm._v(" "),
                   _c("input", {
                     directives: [
@@ -41614,7 +41636,7 @@ var render = function() {
                 _c("div", { staticClass: "input-group mb-2" }),
                 _vm._v(" "),
                 _c("div", { staticClass: "input-group mb-2" }, [
-                  _vm._m(8),
+                  _vm._m(7),
                   _vm._v(" "),
                   _c("textarea", {
                     directives: [
@@ -41700,22 +41722,6 @@ var staticRenderFns = [
         _c("td", [_vm._v("Price")]),
         _vm._v(" "),
         _c("td", [_vm._v("Option")])
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("td", [
-      _c("a", { attrs: { href: "#" } }, [
-        _c("i", { staticClass: "fas fa-trash-alt" })
-      ]),
-      _vm._v(
-        "\n                                        |\n                                        "
-      ),
-      _c("a", { attrs: { href: "#" } }, [
-        _c("i", { staticClass: "fas fa-edit" })
       ])
     ])
   },
