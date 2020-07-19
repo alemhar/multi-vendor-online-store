@@ -159,13 +159,16 @@
   opacity: 1;
 }
 
+
 .profile-update-text {
     background-color: #cfcfcf;
     color: #000000;
     font-size: 14px;
     padding: 16px 32px;
     cursor: pointer;
+
 }
+
 
 </style>
 
@@ -183,23 +186,18 @@
         },
         methods: {
             copyToClipboard(myInput){
-                /* Get the text field */
-                let copyText = document.getElementById(myInput);
-                /* Select the text field */
-                copyText.select();
-                copyText.setSelectionRange(0, 99999); /*For mobile devices*/
-                /* Copy the text inside the text field */
-                document.execCommand("copy");
+                //let copyText = document.getElementById(myInput);
+                //copyText.select();
+                //copyText.setSelectionRange(0, 99999); /*For mobile devices*/
+                //document.execCommand("copy");
 
-                /* Alert the copied text */
-                //alert("Copied the text: " + copyText.value);
             },
             loadProducts(){
                 axios.get("api/product/")
                 .then((data)=>{
-                    
-                  this.products = data;
-                  this.public_address = window.location.hostname + '/main/' + this.form.public_id;
+
+                    //this.products = data;
+                    //this.public_address = window.location.hostname + '/main/' + this.form.public_id;
                   
                   //console.log( this.form.user_logo ? this.form.user_logo : 'img/your_logo_here.png');
 
@@ -212,7 +210,8 @@
         },
         created() {
             this.user_id = document.querySelector('meta[name="user-id"]').getAttribute('content');
-            this.loadInfo();
+            //this.loadInfo();
+            this.loadProducts();
             //$('[data-toggle="tooltip"]').tooltip();
             //console.log('Component created.');
             

@@ -2425,6 +2425,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -2437,33 +2440,22 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   methods: {
-    copyToClipboard: function copyToClipboard(myInput) {
-      /* Get the text field */
-      var copyText = document.getElementById(myInput);
-      /* Select the text field */
-
-      copyText.select();
-      copyText.setSelectionRange(0, 99999);
-      /*For mobile devices*/
-
-      /* Copy the text inside the text field */
-
-      document.execCommand("copy");
-      /* Alert the copied text */
-      //alert("Copied the text: " + copyText.value);
+    copyToClipboard: function copyToClipboard(myInput) {//let copyText = document.getElementById(myInput);
+      //copyText.select();
+      //copyText.setSelectionRange(0, 99999); /*For mobile devices*/
+      //document.execCommand("copy");
     },
     loadProducts: function loadProducts() {
-      var _this = this;
-
-      axios.get("api/product/").then(function (data) {
-        _this.products = data;
-        _this.public_address = window.location.hostname + '/main/' + _this.form.public_id; //console.log( this.form.user_logo ? this.form.user_logo : 'img/your_logo_here.png');
+      axios.get("api/product/").then(function (data) {//this.products = data;
+        //this.public_address = window.location.hostname + '/main/' + this.form.public_id;
+        //console.log( this.form.user_logo ? this.form.user_logo : 'img/your_logo_here.png');
       })["catch"](function () {}); //console.log(this.user_info);
     }
   },
   created: function created() {
-    this.user_id = document.querySelector('meta[name="user-id"]').getAttribute('content');
-    this.loadInfo(); //$('[data-toggle="tooltip"]').tooltip();
+    this.user_id = document.querySelector('meta[name="user-id"]').getAttribute('content'); //this.loadInfo();
+
+    this.loadProducts(); //$('[data-toggle="tooltip"]').tooltip();
     //console.log('Component created.');
   },
   mounted: function mounted() {//console.log('Component mounted.');
@@ -7218,7 +7210,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.tooltip {\n  position: relative;\n  display: inline-block;\n  border-bottom: 1px dotted gray;\n}\n.tooltip .tooltiptext {\n  visibility: hidden;\n  width: 120px;\n  background-color: gray;\n  color: #fff;\n  text-align: center;\n  border-radius: 6px;\n  padding: 5px 0;\n  \n  /* Position the tooltip */\n  position: absolute;\n  z-index: 1;\n  bottom: 100%;\n  left: 50%;\n  margin-left: -60px;\n}\n.tooltip:hover .tooltiptext {\n  visibility: visible;\n}\n.profile-photo-container {\n  position: relative;\n}\n.profile-photo {\n  opacity: 1;\n  display: block;\n  transition: .5s ease;\n  -webkit-backface-visibility: hidden;\n          backface-visibility: hidden;\n}\n.profile-middle {\n  transition: .5s ease;\n  opacity: 0;\n  position: absolute;\n  top: 40%;\n  left: 16%;\n  transform: translate(-50%, -50%);\n  -ms-transform: translate(-50%, -50%);\n  text-align: center;\n}\n.profile-middle:hover {\n  opacity: 0.7;\n}\n.profile-photo-container:hover .profile-photo {\n  opacity: 0.3;\n}\n.profile-photo-container:hover .profile-photo {\n  opacity: 1;\n}\n.profile-update-text {\n    background-color: #cfcfcf;\n    color: #000000;\n    font-size: 14px;\n    padding: 16px 32px;\n    cursor: pointer;\n}\n\n", ""]);
+exports.push([module.i, "\n.tooltip {\n  position: relative;\n  display: inline-block;\n  border-bottom: 1px dotted gray;\n}\n.tooltip .tooltiptext {\n  visibility: hidden;\n  width: 120px;\n  background-color: gray;\n  color: #fff;\n  text-align: center;\n  border-radius: 6px;\n  padding: 5px 0;\n  \n  /* Position the tooltip */\n  position: absolute;\n  z-index: 1;\n  bottom: 100%;\n  left: 50%;\n  margin-left: -60px;\n}\n.tooltip:hover .tooltiptext {\n  visibility: visible;\n}\n.profile-photo-container {\n  position: relative;\n}\n.profile-photo {\n  opacity: 1;\n  display: block;\n  transition: .5s ease;\n  -webkit-backface-visibility: hidden;\n          backface-visibility: hidden;\n}\n.profile-middle {\n  transition: .5s ease;\n  opacity: 0;\n  position: absolute;\n  top: 40%;\n  left: 16%;\n  transform: translate(-50%, -50%);\n  -ms-transform: translate(-50%, -50%);\n  text-align: center;\n}\n.profile-middle:hover {\n  opacity: 0.7;\n}\n.profile-photo-container:hover .profile-photo {\n  opacity: 0.3;\n}\n.profile-photo-container:hover .profile-photo {\n  opacity: 1;\n}\n.profile-update-text {\n    background-color: #cfcfcf;\n    color: #000000;\n    font-size: 14px;\n    padding: 16px 32px;\n    cursor: pointer;\n}\n\n\n", ""]);
 
 // exports
 
