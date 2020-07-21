@@ -114,7 +114,7 @@ class UserController extends Controller
 
             // configure with favored image driver (gd by default)
             // Image::configure(array('driver' => 'imagick'));
-            Image::make($user_logo_base64)$img->resize(400, 400, function ($constraint) {
+            Image::make($user_logo_base64)->resize(300, 300, function ($constraint) {
                 $constraint->aspectRatio();
                 $constraint->upsize();
             })->save(public_path('img/logo/').$user_logo);

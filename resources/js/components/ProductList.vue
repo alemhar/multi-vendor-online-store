@@ -217,12 +217,12 @@
                 </select>
               </div -->
 
-              
 
             </div>
             <div class="modal-footer">
               <button type="button" @click="cancelProduct" class="btn btn-danger">Cancel</button>
-              <button type="button" @click="saveProduct" class="btn btn-success">Save</button>
+              <button type="button"  v-show="!productEditMode"  @click="saveProduct" class="btn btn-success">Save</button>
+              <button type="button" v-show="productEditMode" @click="updateProduct(id)" class="btn btn-success">Update</button>
             </div>
 
             <!-- /form -->
@@ -315,6 +315,7 @@
         data() {
             return {
                 products:{},
+                id: '',
                 public_address: '',
                 showProductForm: false,
                 productEditMode: false,
@@ -396,6 +397,39 @@
                 this.showProductForm = false;
                 $('#product-form').modal('hide');
             },
+            updateProduct(){
+
+                axios.put('api/product/'+ this.id, {
+                    user_id: this.user_id,
+                    product_name: this.product_name,
+                    product_model_no: this.product_model_no,
+                    product_price: this.product_price,
+                    product_photo: this.product_photo,
+                    product_description: this.product_description,
+                    brand: this.brand,
+                    product_photo_base64: this.product_photo_base64
+                })
+                .then((response)=>{
+
+                    
+                    this.loadProducts();
+                    this.product_name = '';
+                    this.product_model_no = '';
+                    this.product_price = '';
+                    this.product_description = '';
+                    this.brand = '';
+
+                 //console.log(response);
+                    
+                })
+                .catch(()=>{
+                    
+                });
+
+                this.showProductForm = false;
+                $('#product-form').modal('hide');
+            },
+            
             newProduct(){
                 this.showProductForm = true;
                 this.productEditMode = false;
@@ -403,6 +437,7 @@
                 $('#product-form').modal('show');
             },
             editProduct(id){
+                
                 axios.get("api/product/"+id)
                 .then((response)=>{
                     //console.log(response);
@@ -412,7 +447,7 @@
                     this.product_description = response.data.product_description;
                     this.brand = response.data.brand;
                     this.product_photo = response.data.product_photo;
-                    
+                    this.id = response.data.id;
                     //this.current_product_photo = 'img/products/'+this.product_photo;
                     this.current_product_photo = this.product_photo.length > 0 ? 'img/products/'+this.product_photo  : 'img/products/'+this.product_photo;
 

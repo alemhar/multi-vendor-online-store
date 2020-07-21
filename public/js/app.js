@@ -2570,6 +2570,7 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       products: {},
+      id: '',
       public_address: '',
       showProductForm: false,
       productEditMode: false,
@@ -2632,6 +2633,30 @@ __webpack_require__.r(__webpack_exports__);
       this.showProductForm = false;
       $('#product-form').modal('hide');
     },
+    updateProduct: function updateProduct() {
+      var _this3 = this;
+
+      axios.put('api/product/' + this.id, {
+        user_id: this.user_id,
+        product_name: this.product_name,
+        product_model_no: this.product_model_no,
+        product_price: this.product_price,
+        product_photo: this.product_photo,
+        product_description: this.product_description,
+        brand: this.brand,
+        product_photo_base64: this.product_photo_base64
+      }).then(function (response) {
+        _this3.loadProducts();
+
+        _this3.product_name = '';
+        _this3.product_model_no = '';
+        _this3.product_price = '';
+        _this3.product_description = '';
+        _this3.brand = ''; //console.log(response);
+      })["catch"](function () {});
+      this.showProductForm = false;
+      $('#product-form').modal('hide');
+    },
     newProduct: function newProduct() {
       this.showProductForm = true;
       this.productEditMode = false;
@@ -2639,32 +2664,33 @@ __webpack_require__.r(__webpack_exports__);
       $('#product-form').modal('show');
     },
     editProduct: function editProduct(id) {
-      var _this3 = this;
+      var _this4 = this;
 
       axios.get("api/product/" + id).then(function (response) {
         //console.log(response);
-        _this3.product_name = response.data.product_name;
-        _this3.product_model_no = response.data.product_model_no;
-        _this3.product_price = response.data.product_price;
-        _this3.product_description = response.data.product_description;
-        _this3.brand = response.data.brand;
-        _this3.product_photo = response.data.product_photo; //this.current_product_photo = 'img/products/'+this.product_photo;
+        _this4.product_name = response.data.product_name;
+        _this4.product_model_no = response.data.product_model_no;
+        _this4.product_price = response.data.product_price;
+        _this4.product_description = response.data.product_description;
+        _this4.brand = response.data.brand;
+        _this4.product_photo = response.data.product_photo;
+        _this4.id = response.data.id; //this.current_product_photo = 'img/products/'+this.product_photo;
 
-        _this3.current_product_photo = _this3.product_photo.length > 0 ? 'img/products/' + _this3.product_photo : 'img/products/' + _this3.product_photo;
+        _this4.current_product_photo = _this4.product_photo.length > 0 ? 'img/products/' + _this4.product_photo : 'img/products/' + _this4.product_photo;
       })["catch"](function () {});
       this.showProductForm = true;
       this.productEditMode = true;
       $('#product-form').modal('show');
     },
     deleteProduct: function deleteProduct(id) {
-      var _this4 = this;
+      var _this5 = this;
 
       axios["delete"]("api/product/" + id).then(function (response) {
-        _this4.loadProducts();
+        _this5.loadProducts();
       })["catch"](function () {});
     },
     productPhotoChange: function productPhotoChange(e) {
-      var _this5 = this;
+      var _this6 = this;
 
       var file = e.target.files[0];
       var file_reader = new FileReader();
@@ -2684,8 +2710,8 @@ __webpack_require__.r(__webpack_exports__);
 
       file_reader.onloadend = function (file) {
         console.log('RESULT', file_reader.result);
-        _this5.product_photo_base64 = file_reader.result;
-        _this5.current_product_photo = file_reader.result;
+        _this6.product_photo_base64 = file_reader.result;
+        _this6.current_product_photo = file_reader.result;
       };
 
       file_reader.readAsDataURL(file);
@@ -41802,11 +41828,41 @@ var render = function() {
                 _c(
                   "button",
                   {
+                    directives: [
+                      {
+                        name: "show",
+                        rawName: "v-show",
+                        value: !_vm.productEditMode,
+                        expression: "!productEditMode"
+                      }
+                    ],
                     staticClass: "btn btn-success",
                     attrs: { type: "button" },
                     on: { click: _vm.saveProduct }
                   },
                   [_vm._v("Save")]
+                ),
+                _vm._v(" "),
+                _c(
+                  "button",
+                  {
+                    directives: [
+                      {
+                        name: "show",
+                        rawName: "v-show",
+                        value: _vm.productEditMode,
+                        expression: "productEditMode"
+                      }
+                    ],
+                    staticClass: "btn btn-success",
+                    attrs: { type: "button" },
+                    on: {
+                      click: function($event) {
+                        return _vm.updateProduct(_vm.id)
+                      }
+                    }
+                  },
+                  [_vm._v("Update")]
                 )
               ])
             ])
