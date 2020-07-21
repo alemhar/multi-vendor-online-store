@@ -134,7 +134,7 @@ class ProductController extends Controller
             })->save(public_path('img/logo/').$product_photo);
         } 
 
-        $user->detail->update([
+        $product->update([
             'user_id' => $user_id,
             'product_name' => $product_name,
             'product_model_no' => $product_model_no,
