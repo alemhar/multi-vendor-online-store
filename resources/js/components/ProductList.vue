@@ -326,7 +326,7 @@
                 product_description: '',
                 product_photo: '226x180.svg',
                 product_photo_base64: '',
-                current_product_photo: 'img/product/226x180.svg'
+                current_product_photo: 'img/products/226x180.svg'
 
             }
         },
@@ -412,7 +412,7 @@
                     this.product_description = response.data.product_description;
                     this.brand = response.data.brand;
                     this.product_photo = response.data.product_photo;
-                    this.current_product_photo = 'img/product/'+this.product_photo;
+                    this.current_product_photo = 'img/products/'+this.product_photo;
 
                 })
                 .catch(()=>{

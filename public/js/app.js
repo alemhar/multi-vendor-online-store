@@ -2581,7 +2581,7 @@ __webpack_require__.r(__webpack_exports__);
       product_description: '',
       product_photo: '226x180.svg',
       product_photo_base64: '',
-      current_product_photo: 'img/product/226x180.svg'
+      current_product_photo: 'img/products/226x180.svg'
     };
   },
   methods: {
@@ -2649,7 +2649,7 @@ __webpack_require__.r(__webpack_exports__);
         _this3.product_description = response.data.product_description;
         _this3.brand = response.data.brand;
         _this3.product_photo = response.data.product_photo;
-        _this3.current_product_photo = 'img/product/' + _this3.product_photo;
+        _this3.current_product_photo = 'img/products/' + _this3.product_photo;
       })["catch"](function () {});
       this.showProductForm = true;
       this.productEditMode = true;
