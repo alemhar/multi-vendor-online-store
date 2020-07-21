@@ -144,7 +144,7 @@ class ProductController extends Controller
             'product_description' => $product_description
             ]);
 
-        return ['message' => 'Product updated!'];    
+        return ['message' => $product_photo];    
 
 
     }
