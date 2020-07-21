@@ -188,6 +188,20 @@
                 <!-- p v-show="no_price" class="empty-field-message">** Please enter price.</p --> 
               </div>  
 
+
+              <div class="form-row">
+                  <label for="user_type">Product Photo</label>
+              </div>
+              
+              <div class="form-row profile-photo-container">
+                  <input type="file" @change="productPhotoChange" ref="file" style="display: none">
+                  <img class="profile-photo" id="profile-photo" :src="store_logo" alt="" style="height: 300px;">
+                  <div class="profile-middle">
+                      <div class="profile-update-text" @click="$refs.file.click()">Update</div>
+                  
+                  </div>
+              </div>
+              
               <!-- div class="input-group mb-2">
                 <div class="input-group-prepend">
                   <span class="input-group-text inputGroup-sizing-default">Tax Type</span>
@@ -309,7 +323,11 @@
                 brand: '',
                 product_price: '',
                 user_id: '',
-                product_description: ''
+                product_description: '',
+                product_photo: '226x180.svg',
+                product_photo_base64: '',
+                current_product_photo: 'img/product/226x180.svg'
+
             }
         },
         methods: {
@@ -346,6 +364,7 @@
                 this.product_price = '';
                 this.product_description = '';
                 this.brand = '';
+                this.product_photo = '226x180.svg';
             },
             saveProduct(){
                 axios.post('api/product', {
@@ -353,6 +372,7 @@
                     product_name: this.product_name,
                     product_model_no: this.product_model_no,
                     product_price: this.product_price,
+                    product_photo: this.product_photo,
                     product_description: this.product_description,
                     brand: this.brand
                 })
@@ -365,6 +385,7 @@
                     this.product_price = '';
                     this.product_description = '';
                     this.brand = '';
+
                  //console.log(response);
                     
                 })
@@ -378,6 +399,7 @@
             newProduct(){
                 this.showProductForm = true;
                 this.productEditMode = false;
+                this.product_photo = '226x180.svg';
                 $('#product-form').modal('show');
             },
             editProduct(id){
@@ -389,7 +411,9 @@
                     this.product_price = response.data.product_price;
                     this.product_description = response.data.product_description;
                     this.brand = response.data.brand;
-                    
+                    this.product_photo = response.data.product_photo;
+                    this.current_product_photo = 'img/product/'+this.product_photo;
+
                 })
                 .catch(()=>{
                     
@@ -408,6 +432,32 @@
                 .catch(()=>{
                     
                 });
+            },
+            productPhotoChange(e){
+                let file = e.target.files[0];
+                let file_reader = new FileReader();
+
+
+                let limit = 1024 * 1024 * 2;
+
+                if(file['size'] > limit){
+                    /*
+                    swal({
+                        type: 'error',
+                        title: 'Oops...',
+                        text: 'You are uploading a large file',
+                    })
+                    */
+                   alert('Picture Size Limit : 2MB or less.');
+                    return false;
+                }
+
+                file_reader.onloadend = (file) =>   {
+                    console.log('RESULT', file_reader.result)
+                    this.product_photo_base64 = file_reader.result;
+                    this.current_product_photo = file_reader.result;
+                }
+                file_reader.readAsDataURL(file);
             }
         },
         created() {
@@ -422,7 +472,6 @@
             $(document).on('hidden.bs.modal', '.modal', function () {
                 $('.modal:visible').length && $(document.body).addClass('modal-open');
             });
-
         },    
         mounted() {
             //console.log('Component mounted.');
@@ -431,7 +480,6 @@
 
     $(document).ready(function(){
         $('[data-toggle="tooltip"]').tooltip();
-
         $('[data-toggle="tooltip"]').on('click', function() {
             $('[data-toggle="tooltip"]').tooltip('hide');
             $(this).attr('data-original-title', 'Copied to Clipboard!');
