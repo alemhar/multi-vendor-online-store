@@ -124,7 +124,7 @@ class ProductController extends Controller
             }
             // Create and save new photo
             $file_ext = explode('/', mime_content_type($product_photo_base64))[1];
-            $product_photo = $public_id . '_' . time() . '.' . $file_ext;
+            $product_photo = $user_id . '_' . time() . '.' . $file_ext;
 
             // configure with favored image driver (gd by default)
             // Image::configure(array('driver' => 'imagick'));
