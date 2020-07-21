@@ -156,7 +156,7 @@ class UserController extends Controller
         //$userInfo = UserDetail::
 
 
-        return ['message' => 'Item updated!'];
+        return ['message' => 'User Info updated!'];
         
 
     }
