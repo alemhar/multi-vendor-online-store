@@ -14,6 +14,7 @@ class Product extends Model
         'product_price', 
         'brand', 
         'category_id', 
-        'in_stock'
+        'in_stock',
+        'product_photo'
     ];
 }
