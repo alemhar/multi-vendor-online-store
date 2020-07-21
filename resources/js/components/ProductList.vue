@@ -222,7 +222,7 @@
             <div class="modal-footer">
               <button type="button" @click="cancelProduct" class="btn btn-danger">Cancel</button>
               <button type="button"  v-show="!productEditMode"  @click="saveProduct" class="btn btn-success">Save</button>
-              <button type="button" v-show="productEditMode" @click="updateProduct(id)" class="btn btn-success">Update</button>
+              <button type="button" v-show="productEditMode" @click="updateProduct()" class="btn btn-success">Update</button>
             </div>
 
             <!-- /form -->
@@ -429,7 +429,7 @@
                 this.showProductForm = false;
                 $('#product-form').modal('hide');
             },
-            
+
             newProduct(){
                 this.showProductForm = true;
                 this.productEditMode = false;

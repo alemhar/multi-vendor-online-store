@@ -41858,7 +41858,7 @@ var render = function() {
                     attrs: { type: "button" },
                     on: {
                       click: function($event) {
-                        return _vm.updateProduct(_vm.id)
+                        return _vm.updateProduct()
                       }
                     }
                   },
