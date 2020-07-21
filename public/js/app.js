@@ -41752,7 +41752,7 @@ var render = function() {
                 _vm._v(" "),
                 _vm._m(8),
                 _vm._v(" "),
-                _c("div", { staticClass: "form-row profile-photo-container" }, [
+                _c("div", { staticClass: "form-row product-photo-container" }, [
                   _c("input", {
                     ref: "file",
                     staticStyle: { display: "none" },
@@ -41763,7 +41763,11 @@ var render = function() {
                   _c("img", {
                     staticClass: "profile-photo",
                     staticStyle: { height: "300px" },
-                    attrs: { id: "profile-photo", src: _vm.store_logo, alt: "" }
+                    attrs: {
+                      id: "product-photo",
+                      src: _vm.current_product_photo,
+                      alt: ""
+                    }
                   }),
                   _vm._v(" "),
                   _c("div", { staticClass: "profile-middle" }, [
