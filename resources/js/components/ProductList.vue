@@ -278,7 +278,7 @@
   opacity: 0;
   position: absolute;
   top: 40%;
-  left: 16%;
+  left: 40%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   text-align: center;
@@ -412,7 +412,9 @@
                     this.product_description = response.data.product_description;
                     this.brand = response.data.brand;
                     this.product_photo = response.data.product_photo;
-                    this.current_product_photo = 'img/products/'+this.product_photo;
+                    
+                    //this.current_product_photo = 'img/products/'+this.product_photo;
+                    this.current_product_photo = this.product_photo ? 'img/products/'+this.product_photo  : 'img/products/'+this.product_photo;
 
                 })
                 .catch(()=>{
