@@ -106,7 +106,7 @@ class ProductController extends Controller
 
         
 
-        $product_photo_base64 = $request->input('product_photo_base64');
+        $product_photo_base64 = $request['product_photo_base64'];
         $user_id = $request['user_id'];
         $product_name = $request['product_name'];
         $product_model_no = $request['product_model_no'];
