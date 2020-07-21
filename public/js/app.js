@@ -41752,7 +41752,7 @@ var render = function() {
                 _vm._v(" "),
                 _vm._m(8),
                 _vm._v(" "),
-                _c("div", { staticClass: "form-row product-photo-container" }, [
+                _c("div", { staticClass: "form-row profile-photo-container" }, [
                   _c("input", {
                     ref: "file",
                     staticStyle: { display: "none" },
