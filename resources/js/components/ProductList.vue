@@ -414,7 +414,7 @@
                     this.product_photo = response.data.product_photo;
                     
                     //this.current_product_photo = 'img/products/'+this.product_photo;
-                    this.current_product_photo = this.product_photo ? 'img/products/'+this.product_photo  : 'img/products/'+this.product_photo;
+                    this.current_product_photo = this.product_photo.length > 0 ? 'img/products/'+this.product_photo  : 'img/products/'+this.product_photo;
 
                 })
                 .catch(()=>{
