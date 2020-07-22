@@ -22,7 +22,7 @@
                     
                             <div class=" row">
                                 <div class="card">
-                                    @if (file_exists(public_path('img/products/'. $product->product_photo)))
+                                    @if ($product->product_photo)
                                     
                                         <img class="card-img-top" src="{{ asset('img/products/'. $product->product_photo)}}" alt="Card image cap">
 
