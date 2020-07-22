@@ -2675,9 +2675,9 @@ __webpack_require__.r(__webpack_exports__);
         _this4.product_description = response.data.product_description;
         _this4.brand = response.data.brand;
         _this4.product_photo = response.data.product_photo;
-        _this4.id = response.data.id; //this.current_product_photo = 'img/products/'+this.product_photo;
+        _this4.id = response.data.id;
+        _this4.current_product_photo = 'img/products/' + _this4.product_photo; //this.current_product_photo = this.product_photo.length > 0 ? 'img/products/'+this.product_photo  : 'img/products/226x180.svg';
 
-        _this4.current_product_photo = _this4.product_photo.length > 0 ? 'img/products/' + _this4.product_photo : 'img/products/226x180.svg';
         console.log(_this4.current_product_photo);
       })["catch"](function () {});
       this.showProductForm = true;
