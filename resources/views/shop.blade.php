@@ -21,32 +21,38 @@
                         @foreach ($products as $product)
                     
                             <div class=" row">
-                                <div class="card">
-                                    @if ($product->product_photo)
-                                    
-                                        <img class="card-img-top" src="{{ asset('img/products/'. $product->product_photo)}}" alt="Card image cap">
+                                <div class="col-4">
+                                    <div class="card">
+                                        @if ($product->product_photo)
+                                        
+                                            <img class="card-img-top" src="{{ asset('img/products/'. $product->product_photo)}}" alt="Card image cap">
 
-                                        <!-- img src="{{ asset('path/to/asset.png') }}" -->
-                                    @else
-                                        <img class="card-img-top" src="{{ asset('img/products/226x180.svg') }}"  alt="Card image cap">
-                                    @endif
+                                            <!-- img src="{{ asset('path/to/asset.png') }}" -->
+                                        @else
+                                            <img style="width: 300px;" class="card-img-top" src="{{ asset('img/products/226x180.svg') }}"  alt="Card image cap">
+                                        @endif
 
-                                    
-                                    
-                                    <div class="card-body">
-                                        <h5 class="card-title">{{ $product->product_name }}</h5>
-                                        <p class="card-text">{{ $product->product_description }}</p>
+                                        
+                                        
+                                        <div class="card-body">
+                                            <h5 class="card-title">{{ $product->product_name }}</h5>
+                                            
+                                        </div>
+                                        <div class="card-footer">
+                                            <a type="button" class="btn btn-outline-dark" href="#"><i class="fas fa-eye"></i></a>
+                                            <a type="button" class="btn btn-outline-dark" href="#"><i class="fas fa-cash-register"></i></a>
+                                            <a type="button" class="btn btn-outline-dark" href="#"><i class="fas fa-cart-plus"></i></a>
+                                        </div>
+                                        
                                     </div>
-                                    <div class="card-footer">
-                                        <a type="button" class="btn btn-outline-dark" href="#"><i class="fas fa-eye"></i></a>
-                                        <a type="button" class="btn btn-outline-dark" href="#"><i class="fas fa-cash-register"></i></a>
-                                        <a type="button" class="btn btn-outline-dark" href="#"><i class="fas fa-cart-plus"></i></a>
+                                    <div class="col-8">
+                                        <p class="card-text">{{ $product->product_description }}</p>
+                                    
                                     </div>
                                 </div>
-                            
                             </div>
 
-                            <p>Item: {{ $product->product_name }}</p>
+                            
                         @endforeach    
 
 
