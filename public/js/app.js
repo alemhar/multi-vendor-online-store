@@ -2591,10 +2591,10 @@ __webpack_require__.r(__webpack_exports__);
       //copyText.setSelectionRange(0, 99999); /*For mobile devices*/
       //document.execCommand("copy");
     },
-    loadProducts: function loadProducts() {
+    loadProducts: function loadProducts(id) {
       var _this = this;
 
-      axios.get("api/product/").then(function (response) {
+      axios.get("api/product/list/" + id).then(function (response) {
         _this.products = response.data; //this.public_address = window.location.hostname + '/main/' + this.form.public_id;
         //console.log( this.form.user_logo ? this.form.user_logo : 'img/your_logo_here.png');
       })["catch"](function () {}); //console.log(this.user_info);
@@ -2622,7 +2622,7 @@ __webpack_require__.r(__webpack_exports__);
         product_description: this.product_description,
         brand: this.brand
       }).then(function (response) {
-        _this2.loadProducts();
+        _this2.loadProducts(_this2.user_id);
 
         _this2.product_name = '';
         _this2.product_model_no = '';
@@ -2646,7 +2646,7 @@ __webpack_require__.r(__webpack_exports__);
         brand: this.brand,
         product_photo_base64: this.product_photo_base64
       }).then(function (response) {
-        _this3.loadProducts();
+        _this3.loadProducts(_this3.user_id);
 
         _this3.product_name = '';
         _this3.product_model_no = '';
@@ -2687,7 +2687,7 @@ __webpack_require__.r(__webpack_exports__);
       var _this5 = this;
 
       axios["delete"]("api/product/" + id).then(function (response) {
-        _this5.loadProducts();
+        _this5.loadProducts(_this5.user_id);
       })["catch"](function () {});
     },
     productPhotoChange: function productPhotoChange(e) {
@@ -2720,7 +2720,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   created: function created() {
     this.user_id = document.querySelector('meta[name="user-id"]').getAttribute('content');
-    this.loadProducts(); //$('[data-toggle="tooltip"]').tooltip();
+    this.loadProducts(this.user_id); //$('[data-toggle="tooltip"]').tooltip();
     //console.log('Component created.');
 
     /* Scrollbar fix

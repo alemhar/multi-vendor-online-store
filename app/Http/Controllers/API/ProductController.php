@@ -19,8 +19,7 @@ class ProductController extends Controller
     public function index()
     {
        
-        $user = auth('api')->user();
-        return 'ID: '.$user;
+        
         //return Product::where('user_id', $id)->latest()->paginate(5);
         //return ['message' => 'Product Listing.'];
     }
@@ -164,5 +163,10 @@ class ProductController extends Controller
 
         $product->delete();
         return ['message' => 'Product Deleted'];
+    }
+
+    public function list($id)
+    {
+        return Product::where('user_id', $id)->latest()->paginate(5);
     }
 }

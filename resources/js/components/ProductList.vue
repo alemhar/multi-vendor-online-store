@@ -339,8 +339,8 @@
                 //document.execCommand("copy");
 
             },
-            loadProducts(){
-                axios.get("api/product/")
+            loadProducts(id){
+                axios.get("api/product/list/"+id)
                 .then((response)=>{
 
                     this.products = response.data;
@@ -380,7 +380,7 @@
                 .then((response)=>{
 
                     
-                    this.loadProducts();
+                    this.loadProducts(this.user_id);
                     this.product_name = '';
                     this.product_model_no = '';
                     this.product_price = '';
@@ -412,7 +412,7 @@
                 .then((response)=>{
 
                     
-                    this.loadProducts();
+                    this.loadProducts(this.user_id);
                     this.product_name = '';
                     this.product_model_no = '';
                     this.product_price = '';
@@ -463,7 +463,7 @@
             deleteProduct(id) {
                  axios.delete("api/product/"+id)
                 .then((response)=>{
-                    this.loadProducts();
+                    this.loadProducts(this.user_id);
                     
                 })
                 .catch(()=>{
@@ -499,7 +499,7 @@
         },
         created() {
             this.user_id = document.querySelector('meta[name="user-id"]').getAttribute('content');
-            this.loadProducts();
+            this.loadProducts(this.user_id);
             
             //$('[data-toggle="tooltip"]').tooltip();
             //console.log('Component created.');

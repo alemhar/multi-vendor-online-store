@@ -25,3 +25,5 @@ Route::apiResources([
 Route::apiResources([
     'product' => 'API\ProductController'
 ]);
+
+Route::get('product/list/{user_id}', 'API\ProductController@list');
