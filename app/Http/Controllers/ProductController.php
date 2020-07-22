@@ -85,7 +85,7 @@ class ProductController extends Controller
 
     public function shop($public_id)
     {
-        $userDetail = UserDetail::where('public_id', $public_id); 
+        $userDetail = UserDetail::where('public_id', $public_id)->get(); 
         
         $user_id = $userDetail->user_id;
         
