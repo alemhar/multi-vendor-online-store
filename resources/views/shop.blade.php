@@ -71,7 +71,9 @@
                 <div class="">
                     SHOP
                 </div>
-                
+                @foreach ($products as $product)
+                    <p>Item: {{ $product->product_name }}</p>
+                @endforeach
                 <!-- div class="links">
                     <a href="https://laravel.com/docs">Docs</a>
                     <a href="https://laracasts.com">Laracasts</a>

@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Product;
+use App\UserDetail;
 class ProductController extends Controller
 {
     /**
@@ -84,6 +85,12 @@ class ProductController extends Controller
 
     public function shop($public_id)
     {
-        return view('shop');
+        $userDetail = UserDetail::where('public_id', $public_id); 
+        
+        $user_id = $userDetail->user_id;
+        
+        $products = Product::where('user_id', $user_id)->latest()->paginate(5);
+
+        return view('shop', $products);
     }
 }
