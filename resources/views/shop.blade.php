@@ -45,10 +45,11 @@
                                         </div>
                                         
                                     </div>
-                                    <div class="col-8">
+                                    
+                                </div>
+                                <div class="col-8">
                                         <p class="card-text">{{ $product->product_description }}</p>
                                     
-                                    </div>
                                 </div>
                             </div>
 
