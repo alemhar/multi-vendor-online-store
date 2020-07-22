@@ -21,7 +21,7 @@
                         @foreach ($products as $product)
                     
                             <div class="row mb-3">
-                                <div class="col-4">
+                                <div class="col-md-4">
                                     <div class="card">
                                         @if ($product->product_photo)
                                         
@@ -47,7 +47,7 @@
                                     </div>
                                     
                                 </div>
-                                <div class="col-8">
+                                <div class="col-md-8">
                                         <p class="card-text">{{ $product->product_description }}</p>
                                     
                                 </div>
