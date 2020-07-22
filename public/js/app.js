@@ -2666,7 +2666,7 @@ __webpack_require__.r(__webpack_exports__);
     editProduct: function editProduct(id) {
       var _this4 = this;
 
-      alert(id);
+      //alert(id);
       axios.get("api/product/" + id).then(function (response) {
         //console.log(response);
         _this4.product_name = response.data.product_name;
