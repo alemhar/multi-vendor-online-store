@@ -22,16 +22,15 @@
                     
                             <div class="col">
                                 <div class="card">
-                                    <img class="card-img-top" src="{{ $product->product_photo }}" alt="Card image cap">
+                                    <img class="card-img-top" src="{{ img/products/$product->product_photo }}" alt="Card image cap">
                                     <div class="card-body">
-                                    <h5 class="card-title">{{ $product->product_name }}</h5>
-                                    <p class="card-text">{{ $product->product_description }}</p>
+                                        <h5 class="card-title">{{ $product->product_name }}</h5>
+                                        <p class="card-text">{{ $product->product_description }}</p>
                                     </div>
                                     <div class="card-footer">
-                                    
-                                    <a type="button" class="btn btn-outline-dark" href="#"><i class="fas fa-eye"></i></a>
-                                    <a type="button" class="btn btn-outline-dark" href="#"><i class="fas fa-cash-register"></i></a>
-                                    <a type="button" class="btn btn-outline-dark" href="#"><i class="fas fa-cart-plus"></i></a>
+                                        <a type="button" class="btn btn-outline-dark" href="#"><i class="fas fa-eye"></i></a>
+                                        <a type="button" class="btn btn-outline-dark" href="#"><i class="fas fa-cash-register"></i></a>
+                                        <a type="button" class="btn btn-outline-dark" href="#"><i class="fas fa-cart-plus"></i></a>
                                     </div>
                                 </div>
                             
