@@ -57,6 +57,18 @@
                                     <a type="button" class="btn btn-outline-dark" href="#"><i class="fas fa-cart-plus"></i></a>
                                     </div>
                                 </div>
+                                <div class="card">
+                                    <img class="card-img-top" src="img/products/226x180.svg" alt="Card image cap">
+                                    <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                                    </div>
+                                    <div class="card-footer">
+                                    <a type="button" class="btn btn-outline-dark" href="#"><i class="fas fa-eye"></i></a>
+                                    <a type="button" class="btn btn-outline-dark" href="#"><i style="font-family:sans-serif;font-size: .6em;font-weight: 700;">BUY</i></a>
+                                    <a type="button" class="btn btn-outline-dark" href="#"><i class="fas fa-cart-plus"></i></a>
+                                    </div>
+                                </div>
                             </div>
 
                             
