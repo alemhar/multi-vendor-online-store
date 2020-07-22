@@ -2,12 +2,12 @@
 
 namespace App\Http\Controllers\API;
 
-use Auth;
+
 use App\Product;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Intervention\Image\ImageManagerStatic as Image;
-
+use Illuminate\Support\Facades\Auth;
 
 class ProductController extends Controller
 {
@@ -19,8 +19,8 @@ class ProductController extends Controller
     public function index()
     {
        
-        $user_id = auth()->user()->id;
-        return Product::where('user_id', $user_id)->latest()->paginate(5);
+        $id = Auth::id();
+        return Product::where('user_id', $id)->latest()->paginate(5);
         //return ['message' => 'Product Listing.'];
     }
 
