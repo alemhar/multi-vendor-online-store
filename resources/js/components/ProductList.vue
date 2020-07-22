@@ -437,7 +437,7 @@
                 $('#product-form').modal('show');
             },
             editProduct(id){
-                
+                alert(id);
                 axios.get("api/product/"+id)
                 .then((response)=>{
                     //console.log(response);
