@@ -18,8 +18,8 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $user = Auth::user();
-        $user_id = $user->id;
+       
+        $user_id = auth()->user()->id;
         return Product::where('user_id', $user_id)->latest()->paginate(5);
         //return ['message' => 'Product Listing.'];
     }
