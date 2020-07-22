@@ -449,7 +449,7 @@
                     this.product_photo = response.data.product_photo;
                     this.id = response.data.id;
                     //this.current_product_photo = 'img/products/'+this.product_photo;
-                    this.current_product_photo = this.product_photo.length > 0 ? 'img/products/'+this.product_photo  : 'img/products/'+this.product_photo;
+                    this.current_product_photo = this.product_photo.length > 0 ? 'img/products/'+this.product_photo  : 'img/products/226x180.svg';
 
                 })
                 .catch(()=>{
