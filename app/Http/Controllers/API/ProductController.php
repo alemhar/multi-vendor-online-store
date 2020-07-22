@@ -20,7 +20,7 @@ class ProductController extends Controller
     {
        
         $user = auth('api')->user();
-        return 'ID: '.$user->id;
+        return 'ID: '.$user;
         //return Product::where('user_id', $id)->latest()->paginate(5);
         //return ['message' => 'Product Listing.'];
     }
