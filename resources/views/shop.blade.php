@@ -20,7 +20,7 @@
                         <div class="form">
                         @foreach ($products as $product)
                     
-                            <div class=" row">
+                            <div class="row mb-3">
                                 <div class="col-4">
                                     <div class="card">
                                         @if ($product->product_photo)
