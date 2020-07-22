@@ -22,7 +22,16 @@
                     
                             <div class=" row">
                                 <div class="card">
-                                    <img class="card-img-top" src="{{ asset('img/products/'. $product->product_photo) }}" alt="Card image cap">
+                                    @if (file_exists(public_path('img/products/'. $product->product_photo)))
+                                        <img class="card-img-top" src="{{ asset('img/products/'. $product->product_photo) }}" alt="Card image cap">
+
+                                        <!-- img src="{{ asset('path/to/asset.png') }}" -->
+                                    @else
+                                        <img class="card-img-top" src="{{ asset('img/products/226x180.svg') }}"  alt="Card image cap">
+                                    @endif
+
+                                    
+                                    
                                     <div class="card-body">
                                         <h5 class="card-title">{{ $product->product_name }}</h5>
                                         <p class="card-text">{{ $product->product_description }}</p>
