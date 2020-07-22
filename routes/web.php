@@ -16,6 +16,8 @@ Route::get('/', function () {
 });
 
 
+Route::get('/shop/{public_id}', 'ProductController@shop')->name('shop');
+
 
 Auth::routes();
 

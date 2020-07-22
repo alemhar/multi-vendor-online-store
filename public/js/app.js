@@ -2191,7 +2191,7 @@ __webpack_require__.r(__webpack_exports__);
 
       axios.get("api/user/" + this.user_id).then(function (data) {
         _this2.form = data.data;
-        _this2.public_address = window.location.hostname + '/main/' + _this2.form.public_id;
+        _this2.public_address = window.location.hostname + '/shop/' + _this2.form.public_id;
         _this2.store_logo = _this2.form.user_logo ? 'img/logo/' + _this2.form.user_logo : 'img/your_logo_here.png'; //console.log( this.form.user_logo ? this.form.user_logo : 'img/your_logo_here.png');
       })["catch"](function () {}); //console.log(this.user_info);
     },
