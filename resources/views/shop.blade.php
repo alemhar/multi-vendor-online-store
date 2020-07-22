@@ -22,7 +22,7 @@
                     
                             <div class="col">
                                 <div class="card">
-                                    <img class="card-img-top" src="{{ ../img/products/$product->product_photo }}" alt="Card image cap">
+                                    <img class="card-img-top" src="{{ asset('img/products/'$product->product_photo) }}" alt="Card image cap">
                                     <div class="card-body">
                                         <h5 class="card-title">{{ $product->product_name }}</h5>
                                         <p class="card-text">{{ $product->product_description }}</p>
