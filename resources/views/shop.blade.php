@@ -17,10 +17,10 @@
                         </div>
                     </div>
                     <div class="card-body">
-                        <div class="form row">
+                        <div class="form">
                         @foreach ($products as $product)
                     
-                            <div class="col">
+                            <div class=" row">
                                 <div class="card">
                                     <img class="card-img-top" src="{{ asset('img/products/'. $product->product_photo) }}" alt="Card image cap">
                                     <div class="card-body">
@@ -40,7 +40,7 @@
                         @endforeach    
 
 
-                            <div class="form-row profile-photo-container">
+                            <!-- div class="form-row profile-photo-container">
                                 <input type="file" @change="profilePhotoChange" ref="file" style="display: none">
                                 <img class="profile-photo" id="profile-photo" :src="store_logo" alt="" style="height: 300px;">
                                 <div class="profile-middle">
@@ -54,7 +54,7 @@
                                     <button type="submit" @click="loadInfo" class="btn btn-default float-right">Cancel</button>
                                 
                                 </div>
-                            </div>
+                            </div -->
                         </div> <!-- form -->
                         
 
