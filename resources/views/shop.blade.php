@@ -12,7 +12,28 @@
                             </div>
                             <div class="col-6">
                                 <button type="submit" @click="saveInfo" class="btn btn-primary float-right"><i class="fas fa-shopping-cart"></i></button>
-                                <button type="submit" @click="loadInfo" style="margin-right: 10px;" class="btn btn-outline-primary float-right">Contact Seller</button>
+                                <nav class="nav">
+                                    <h2 class="nav__header">Products</h2>
+                                    <div class="nav__cart">
+                                    <button @click="showCart = !showCart">
+                                        <i class="fas fa-shopping-cart"></i>
+                                    </button>
+                                    <span class="total-quantity">totalQuantity</span>
+                                    <div v-if="showCart" class="cart-dropdown">
+                                        <ul class="cart-dropdown__list">
+                                        <li
+                                            v-for="product in cart"
+                                            :key="product.id"
+                                        >
+                                            product.name product.quantity
+                                        </li>
+                                        </ul>
+                                    </div>
+                                    </div>
+                                </nav>
+
+
+                                <!-- button type="submit" @click="loadInfo" style="margin-right: 10px;" class="btn btn-outline-primary float-right">Contact Seller</button -->
                             </div>
                         </div>
                     </div>
