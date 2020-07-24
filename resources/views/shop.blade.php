@@ -67,7 +67,7 @@
     <div id="app">
         <navbar></navbar>
         <div class="container">
-            <products public_id="TEST"></products>
+            <products public_id="{{ $public_id }}"></products>
         </div>
     </div>
 

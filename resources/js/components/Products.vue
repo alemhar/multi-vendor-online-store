@@ -161,8 +161,8 @@
             }
         },
         created() {
-            this.user_id = document.querySelector('meta[name="user-id"]').getAttribute('content');
-            this.loadInfo();
+            //this.user_id = document.querySelector('meta[name="user-id"]').getAttribute('content');
+            //this.loadInfo();
             //$('[data-toggle="tooltip"]').tooltip();
             //console.log('Component created.');
             

@@ -2911,9 +2911,9 @@ __webpack_require__.r(__webpack_exports__);
       file_reader.readAsDataURL(file);
     }
   },
-  created: function created() {
-    this.user_id = document.querySelector('meta[name="user-id"]').getAttribute('content');
-    this.loadInfo(); //$('[data-toggle="tooltip"]').tooltip();
+  created: function created() {//this.user_id = document.querySelector('meta[name="user-id"]').getAttribute('content');
+    //this.loadInfo();
+    //$('[data-toggle="tooltip"]').tooltip();
     //console.log('Component created.');
   },
   mounted: function mounted() {//console.log('Component mounted.');
