@@ -20,8 +20,8 @@ Vue.component(AlertError.name, AlertError)
 
 Vue.component('pagination',require('laravel-vue-pagination'));
 
-Vue.component('navbar', require('./components/NavBar.vue'));
-Vue.component('products', require('./components/Products.vue'));
+Vue.component('navbar', require('./components/NavBar.vue').default);
+Vue.component('products', require('./components/Products.vue').default);
 
 const router = new VueRouter({
     routes,
