@@ -117,7 +117,7 @@
                 //alert("Copied the text: " + copyText.value);
             },
             loadProducts(){
-                axios.get("api/product/public_list/"+this.public_id)
+                axios.get("/public_list/"+this.public_id)
                 .then((response)=>{
 
                     this.products = response.data;
