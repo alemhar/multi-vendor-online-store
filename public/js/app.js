@@ -41969,7 +41969,7 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _c("div", { staticClass: "container mt-5" }, [
+    _c("div", { staticClass: "container mt-3" }, [
       _c("div", { staticClass: "row justify-content-center" }, [
         _c("div", { staticClass: "col-md-12" }, [
           _c("div", { staticClass: "card" }, [
@@ -41978,7 +41978,7 @@ var render = function() {
                 _c("div", { staticClass: "col-6" }, [
                   _c("h3", [_vm._v(_vm._s(_vm.store_name))]),
                   _vm._v(" "),
-                  _c("h4", [_vm._v("Product Page")])
+                  _c("p", [_vm._v("Product Page")])
                 ]),
                 _vm._v(" "),
                 _c("div", { staticClass: "col-6" })

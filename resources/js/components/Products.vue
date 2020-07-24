@@ -6,7 +6,7 @@
         </div>
     </nav -->
     
-    <div class="container mt-5">
+    <div class="container mt-3">
   
         <div class="row justify-content-center">
             <div class="col-md-12">
@@ -15,7 +15,7 @@
                         <div class="row">
                             <div class="col-6">
                                 <h3>{{ store_name }}</h3> 
-                                <h4>Product Page</h4>
+                                <p>Product Page</p>
                             </div>
                             <div class="col-6">
                                 <!-- button type="submit" @click="saveInfo" class="btn btn-primary float-right"><i class="fas fa-shopping-cart"></i></button -->
