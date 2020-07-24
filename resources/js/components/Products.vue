@@ -1,7 +1,13 @@
 <template>
+    <div>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-info mb-2">
+        <div class="container">
+        <a href="#" class="navbar-brand">Products</a>
+        </div>
+    </nav>
     
     <div class="container">
-        {{ public_id }}
+  
         <div class="row justify-content-center">
             <div class="col-md-12">
                 <div class="card">
@@ -47,6 +53,7 @@
             </div>
         </div>
     </div>
+</div>    
 </template>
 <style>
 .tooltip {
