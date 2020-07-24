@@ -93,7 +93,7 @@ class ProductController extends Controller
         
         $user_name = $userDetail->name;
 
-        $user_info = ['user_name' => $user_name, 'public_id' => $public_id];
+        $user_info = ['store_name' => $user_name, 'public_id' => $public_id];
         //$products = Product::where('user_id', $user_id)->latest()->paginate(5);
         
         return view('shop', compact('data', 'user_info') );
