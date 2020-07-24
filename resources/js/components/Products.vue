@@ -23,7 +23,7 @@
                             <div class="row mb-3" v-for="product in products.data" :key="product.id">
                                 <div class="col-md-4">
                                     <div class="card">
-                                            <img class="card-img-top img-fluid" :src="current_product_photo" alt="Card image cap">
+                                            <img class="card-img-top img-fluid" :src="'/img/products/'+product_photo" alt="Card image cap">
                                         <div class="card-body">
                                             <h5 class="card-title">{{ product.product_name }}</h5>
                                         </div>
