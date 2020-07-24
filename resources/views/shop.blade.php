@@ -15,9 +15,6 @@
     
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
-    @if (Auth::check())
-        <meta name="user-id" content="{{ Auth::user()->id }}" />
-    @endif
     <!-- Scripts -->
     <!-- script src="{{ asset('js/app.js') }}" defer></script -->
 
