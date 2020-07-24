@@ -64,39 +64,12 @@
         </style>
     </head>
     <body>
-        <div class="flex-center position-ref full-height">
-            
-
-            <div class="content">
-                <div class="">
-                    <img src="img/osk_logo_sqr_with_text.png" class="img-fluid" style="width: 40%;">
-                    
-                </div>
-                
-                @if (Route::has('login'))
-                <div class="links" style="">
-                    @auth
-                        <a href="{{ url('/home') }}" style="color: #ff4900;text-decoration: underline;">Home</a>
-                    @else
-                        <a href="{{ route('login') }}" style="color: #ff4900;text-decoration: underline;">Login</a>
-
-                        @if (Route::has('register'))
-                            <!-- a href="{{ route('register') }}" style="color: #ff4900;text-decoration: underline;">Register</a -->
-                        @endif
-                    @endauth
-                </div>
-                @endif
-                <!-- div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div-->
-            </div>
+    <div id="app">
+        <navbar></navbar>
+        <div class="container">
+            <articles></articles>
         </div>
+    </div>
 
 
 
