@@ -5,7 +5,6 @@
         <a href="#" class="navbar-brand">Products</a>
         </div>
     </nav -->
-    
     <div class="mt-3">
   
         <div class="row justify-content-center">
