@@ -2887,6 +2887,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['public_id', 'store_name'],
   data: function data() {
@@ -41975,7 +41976,12 @@ var render = function() {
             _c("div", { staticClass: "card-header" }, [
               _c("div", { staticClass: "row" }, [
                 _c("div", { staticClass: "col-6" }, [
-                  _c("h3", [_vm._v(_vm._s(_vm.store_name) + " Product Page")])
+                  _vm._v(
+                    "\n                                " +
+                      _vm._s(_vm.store_name) +
+                      " \n                                "
+                  ),
+                  _c("h3", [_vm._v("Product Page")])
                 ]),
                 _vm._v(" "),
                 _c("div", { staticClass: "col-6" })
