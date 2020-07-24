@@ -18,8 +18,6 @@
                     </div>
                     <div class="card-body">
                         <div class="form">
-                        
-                    
                             <div class="row mb-3" v-for="product in products.data" :key="product.id">
                                 <div class="col-md-4">
                                     <div class="card">
