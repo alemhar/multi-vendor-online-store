@@ -90,11 +90,10 @@ class ProductController extends Controller
     public function shop($public_id)
     {
         $userDetail = UserDetail::where('public_id', $public_id)->get()->first(); 
-        
-        $user_name = $userDetail->name;
+        $user_id = $userDetail->user_id;
+        $user = User::where('id', $user_id)->get()->first();
 
-        $user_info = ['store_name' => $user_name, 'public_id' => $public_id];
-        //$products = Product::where('user_id', $user_id)->latest()->paginate(5);
+        $user_info = ['store_name' => $user->name, 'public_id' => $public_id];
         
         return view('shop', compact('data', 'user_info') );
     }
