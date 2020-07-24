@@ -20,7 +20,7 @@ Route::get('/', function () {
 
 Route::get('/userdetail/{public_id}', function ($public_id) {
     $userDetail = UserDetail::where('public_id', $public_id)->get();
-    dd($userDetail);
+    //dd($userDetail);
 });
 
 
