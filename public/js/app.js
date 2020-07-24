@@ -2839,116 +2839,25 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
+  props: ['public_id'],
   data: function data() {
-    return {};
+    return {
+      products: {},
+      id: '',
+      public_address: '',
+      showProductForm: false,
+      productEditMode: false,
+      product_name: '',
+      product_model_no: '',
+      brand: '',
+      product_price: '',
+      user_id: '',
+      product_description: '',
+      product_photo: '226x180.svg',
+      product_photo_base64: '',
+      current_product_photo: 'img/products/226x180.svg'
+    };
   },
   methods: {
     copyToClipboard: function copyToClipboard(myInput) {
@@ -2966,10 +2875,16 @@ __webpack_require__.r(__webpack_exports__);
       /* Alert the copied text */
       //alert("Copied the text: " + copyText.value);
     },
-    saveInfo: function saveInfo() {},
-    loadInfo: function loadInfo() {},
-    profilePhotoChange: function profilePhotoChange(e) {
+    loadProducts: function loadProducts(id) {
       var _this = this;
+
+      axios.get("api/product/list/" + id).then(function (response) {
+        _this.products = response.data; //this.public_address = window.location.hostname + '/main/' + this.form.public_id;
+        //console.log( this.form.user_logo ? this.form.user_logo : 'img/your_logo_here.png');
+      })["catch"](function () {}); //console.log(this.user_info);
+    },
+    profilePhotoChange: function profilePhotoChange(e) {
+      var _this2 = this;
 
       var file = e.target.files[0];
       var file_reader = new FileReader();
@@ -2989,8 +2904,8 @@ __webpack_require__.r(__webpack_exports__);
 
       file_reader.onloadend = function (file) {
         console.log('RESULT', file_reader.result);
-        _this.user_logo_base64 = file_reader.result;
-        _this.store_logo = file_reader.result;
+        _this2.user_logo_base64 = file_reader.result;
+        _this2.store_logo = file_reader.result;
       };
 
       file_reader.readAsDataURL(file);
@@ -42046,357 +41961,11 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "container" }, [
-    _c("div", { staticClass: "row justify-content-center" }, [
-      _c("div", { staticClass: "col-md-12" }, [
-        _c("div", { staticClass: "card" }, [
-          _c("div", { staticClass: "card-header" }, [
-            _c("div", { staticClass: "row" }, [
-              _vm._m(0),
-              _vm._v(" "),
-              _c("div", { staticClass: "col-6" }, [
-                _c(
-                  "button",
-                  {
-                    staticClass: "btn btn-primary float-right",
-                    attrs: { type: "submit" },
-                    on: { click: _vm.saveInfo }
-                  },
-                  [_c("i", { staticClass: "fas fa-shopping-cart" })]
-                ),
-                _vm._v(" "),
-                _c(
-                  "button",
-                  {
-                    staticClass: "btn btn-outline-primary float-right",
-                    staticStyle: { "margin-right": "10px" },
-                    attrs: { type: "submit" },
-                    on: { click: _vm.loadInfo }
-                  },
-                  [_vm._v("Contact Seller")]
-                )
-              ])
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "card-body" }, [
-            _c("div", { staticClass: "form row" }, [
-              _vm._m(1),
-              _vm._v(" "),
-              _vm._m(2),
-              _vm._v(" "),
-              _c("div", { staticClass: "form-row profile-photo-container" }, [
-                _c("input", {
-                  ref: "file",
-                  staticStyle: { display: "none" },
-                  attrs: { type: "file" },
-                  on: { change: _vm.profilePhotoChange }
-                }),
-                _vm._v(" "),
-                _c("img", {
-                  staticClass: "profile-photo",
-                  staticStyle: { height: "300px" },
-                  attrs: { id: "profile-photo", src: _vm.store_logo, alt: "" }
-                }),
-                _vm._v(" "),
-                _c("div", { staticClass: "profile-middle" }, [
-                  _c(
-                    "div",
-                    {
-                      staticClass: "profile-update-text",
-                      on: {
-                        click: function($event) {
-                          return _vm.$refs.file.click()
-                        }
-                      }
-                    },
-                    [_vm._v("Update")]
-                  )
-                ])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "row" }, [
-                _c("div", { staticClass: "col-12" }, [
-                  _c(
-                    "button",
-                    {
-                      staticClass: "btn btn-primary float-right",
-                      attrs: { type: "submit" },
-                      on: { click: _vm.saveInfo }
-                    },
-                    [_vm._v("Save")]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "button",
-                    {
-                      staticClass: "btn btn-default float-right",
-                      attrs: { type: "submit" },
-                      on: { click: _vm.loadInfo }
-                    },
-                    [_vm._v("Cancel")]
-                  )
-                ])
-              ])
-            ])
-          ])
-        ])
-      ])
-    ])
+    _vm._v("\n    " + _vm._s(_vm.public_id) + "\n    "),
+    _c("div", { staticClass: "row justify-content-center" })
   ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-6" }, [
-      _c("h3", [_vm._v("Product Page")])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "card-deck mb-3" }, [
-      _c("div", { staticClass: "card" }, [
-        _c("img", {
-          staticClass: "card-img-top",
-          attrs: { src: "img/products/226x180.svg", alt: "Card image cap" }
-        }),
-        _vm._v(" "),
-        _c("div", { staticClass: "card-body" }, [
-          _c("h5", { staticClass: "card-title" }, [_vm._v("Card title")]),
-          _vm._v(" "),
-          _c("p", { staticClass: "card-text" }, [
-            _vm._v(
-              "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer."
-            )
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "card-footer" }, [
-          _c(
-            "a",
-            {
-              staticClass: "btn btn-outline-dark",
-              attrs: { type: "button", href: "#" }
-            },
-            [_c("i", { staticClass: "fas fa-eye" })]
-          ),
-          _vm._v(" "),
-          _c(
-            "a",
-            {
-              staticClass: "btn btn-outline-dark",
-              attrs: { type: "button", href: "#" }
-            },
-            [_c("i", { staticClass: "fas fa-cash-register" })]
-          ),
-          _vm._v(" "),
-          _c(
-            "a",
-            {
-              staticClass: "btn btn-outline-dark",
-              attrs: { type: "button", href: "#" }
-            },
-            [_c("i", { staticClass: "fas fa-cart-plus" })]
-          )
-        ])
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "card" }, [
-        _c("img", {
-          staticClass: "card-img-top",
-          attrs: { src: "img/products/226x180.svg", alt: "Card image cap" }
-        }),
-        _vm._v(" "),
-        _c("div", { staticClass: "card-body" }, [
-          _c("h5", { staticClass: "card-title" }, [_vm._v("Card title")]),
-          _vm._v(" "),
-          _c("p", { staticClass: "card-text" }, [
-            _vm._v(
-              "This card has supporting text below as a natural lead-in to additional content."
-            )
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "card-footer" }, [
-          _c(
-            "a",
-            {
-              staticClass: "btn btn-outline-dark",
-              attrs: { type: "button", href: "#" }
-            },
-            [_c("i", { staticClass: "fas fa-eye" })]
-          ),
-          _vm._v(" "),
-          _c(
-            "a",
-            {
-              staticClass: "btn btn-outline-dark",
-              attrs: { type: "button", href: "#" }
-            },
-            [
-              _c(
-                "i",
-                {
-                  staticStyle: {
-                    "font-family": "sans-serif",
-                    "font-size": ".6em",
-                    "font-weight": "700"
-                  }
-                },
-                [_vm._v("BUY")]
-              )
-            ]
-          ),
-          _vm._v(" "),
-          _c(
-            "a",
-            {
-              staticClass: "btn btn-outline-dark",
-              attrs: { type: "button", href: "#" }
-            },
-            [_c("i", { staticClass: "fas fa-cart-plus" })]
-          )
-        ])
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "card" }, [
-        _c("img", {
-          staticClass: "card-img-top",
-          attrs: { src: "img/products/226x180.svg", alt: "Card image cap" }
-        }),
-        _vm._v(" "),
-        _c("div", { staticClass: "card-body" }, [
-          _c("h5", { staticClass: "card-title" }, [_vm._v("Card title")]),
-          _vm._v(" "),
-          _c("p", { staticClass: "card-text" }, [
-            _vm._v(
-              "This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action."
-            )
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "card-footer" }, [
-          _c(
-            "a",
-            {
-              staticClass: "btn btn-outline-dark",
-              attrs: { type: "button", href: "#" }
-            },
-            [_c("i", { staticClass: "fas fa-eye" })]
-          ),
-          _vm._v(" "),
-          _c(
-            "a",
-            {
-              staticClass: "btn btn-outline-dark",
-              attrs: { type: "button", href: "#" }
-            },
-            [
-              _c(
-                "i",
-                {
-                  staticStyle: {
-                    "font-family": "sans-serif",
-                    "font-size": ".6em",
-                    "font-weight": "700"
-                  }
-                },
-                [_vm._v("BUY")]
-              )
-            ]
-          ),
-          _vm._v(" "),
-          _c(
-            "a",
-            {
-              staticClass: "btn btn-outline-dark",
-              attrs: { type: "button", href: "#" }
-            },
-            [_c("i", { staticClass: "fas fa-cart-plus" })]
-          )
-        ])
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "card-deck mb-3" }, [
-      _c("div", { staticClass: "card" }, [
-        _c("img", {
-          staticClass: "card-img-top",
-          attrs: { src: "img/products/226x180.svg", alt: "Card image cap" }
-        }),
-        _vm._v(" "),
-        _c("div", { staticClass: "card-body" }, [
-          _c("h5", { staticClass: "card-title" }, [_vm._v("Card title")]),
-          _vm._v(" "),
-          _c("p", { staticClass: "card-text" }, [
-            _vm._v(
-              "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer."
-            )
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "card-footer" }, [
-          _c("small", { staticClass: "text-muted" }, [
-            _vm._v("Last updated 3 mins ago")
-          ])
-        ])
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "card" }, [
-        _c("img", {
-          staticClass: "card-img-top",
-          attrs: { src: "img/products/226x180.svg", alt: "Card image cap" }
-        }),
-        _vm._v(" "),
-        _c("div", { staticClass: "card-body" }, [
-          _c("h5", { staticClass: "card-title" }, [_vm._v("Card title")]),
-          _vm._v(" "),
-          _c("p", { staticClass: "card-text" }, [
-            _vm._v(
-              "This card has supporting text below as a natural lead-in to additional content."
-            )
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "card-footer" }, [
-          _c("small", { staticClass: "text-muted" }, [
-            _vm._v("Last updated 3 mins ago")
-          ])
-        ])
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "card" }, [
-        _c("img", {
-          staticClass: "card-img-top",
-          attrs: { src: "img/products/226x180.svg", alt: "Card image cap" }
-        }),
-        _vm._v(" "),
-        _c("div", { staticClass: "card-body" }, [
-          _c("h5", { staticClass: "card-title" }, [_vm._v("Card title")]),
-          _vm._v(" "),
-          _c("p", { staticClass: "card-text" }, [
-            _vm._v(
-              "This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action."
-            )
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "card-footer" }, [
-          _c("small", { staticClass: "text-muted" }, [
-            _vm._v("Last updated 3 mins ago")
-          ])
-        ])
-      ])
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
