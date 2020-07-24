@@ -14,7 +14,7 @@
                     <div class="card-header">
                         <div class="row">
                             <div class="col-6">
-                                <h3>Product Page</h3> 
+                                <h3>{{ store_name }} Product Page</h3> 
                             </div>
                             <div class="col-6">
                                 <!-- button type="submit" @click="saveInfo" class="btn btn-primary float-right"><i class="fas fa-shopping-cart"></i></button -->
@@ -131,7 +131,7 @@
 
 <script>
     export default {
-        props: ['public_id'],
+        props: ['public_id','store_name'],
         data() {
             return {
                 products:{},

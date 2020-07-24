@@ -2888,7 +2888,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
-  props: ['public_id'],
+  props: ['public_id', 'store_name'],
   data: function data() {
     return {
       products: {},
@@ -41972,7 +41972,15 @@ var render = function() {
       _c("div", { staticClass: "row justify-content-center" }, [
         _c("div", { staticClass: "col-md-12" }, [
           _c("div", { staticClass: "card" }, [
-            _vm._m(0),
+            _c("div", { staticClass: "card-header" }, [
+              _c("div", { staticClass: "row" }, [
+                _c("div", { staticClass: "col-6" }, [
+                  _c("h3", [_vm._v(_vm._s(_vm.store_name) + " Product Page")])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-6" })
+              ])
+            ]),
             _vm._v(" "),
             _c("div", { staticClass: "card-body" }, [
               _c(
@@ -42001,7 +42009,7 @@ var render = function() {
                             ])
                           ]),
                           _vm._v(" "),
-                          _vm._m(1, true)
+                          _vm._m(0, true)
                         ])
                       ]),
                       _vm._v(" "),
@@ -42023,20 +42031,6 @@ var render = function() {
   ])
 }
 var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "card-header" }, [
-      _c("div", { staticClass: "row" }, [
-        _c("div", { staticClass: "col-6" }, [
-          _c("h3", [_vm._v("Product Page")])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "col-6" })
-      ])
-    ])
-  },
   function() {
     var _vm = this
     var _h = _vm.$createElement
