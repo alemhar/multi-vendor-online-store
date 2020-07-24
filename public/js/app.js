@@ -2875,10 +2875,10 @@ __webpack_require__.r(__webpack_exports__);
       /* Alert the copied text */
       //alert("Copied the text: " + copyText.value);
     },
-    loadProducts: function loadProducts(id) {
+    loadProducts: function loadProducts() {
       var _this = this;
 
-      axios.get("api/product/list/" + id).then(function (response) {
+      axios.get("api/product/public_list/" + this.public_id).then(function (response) {
         _this.products = response.data; //this.public_address = window.location.hostname + '/main/' + this.form.public_id;
         //console.log( this.form.user_logo ? this.form.user_logo : 'img/your_logo_here.png');
       })["catch"](function () {}); //console.log(this.user_info);
@@ -2911,9 +2911,9 @@ __webpack_require__.r(__webpack_exports__);
       file_reader.readAsDataURL(file);
     }
   },
-  created: function created() {//this.user_id = document.querySelector('meta[name="user-id"]').getAttribute('content');
-    //this.loadInfo();
-    //$('[data-toggle="tooltip"]').tooltip();
+  created: function created() {
+    //this.user_id = document.querySelector('meta[name="user-id"]').getAttribute('content');
+    this.loadProducts(); //$('[data-toggle="tooltip"]').tooltip();
     //console.log('Component created.');
   },
   mounted: function mounted() {//console.log('Component mounted.');

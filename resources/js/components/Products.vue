@@ -116,8 +116,8 @@
                 /* Alert the copied text */
                 //alert("Copied the text: " + copyText.value);
             },
-            loadProducts(id){
-                axios.get("api/product/list/"+id)
+            loadProducts(){
+                axios.get("api/product/public_list/"+this.public_id)
                 .then((response)=>{
 
                     this.products = response.data;
@@ -162,7 +162,7 @@
         },
         created() {
             //this.user_id = document.querySelector('meta[name="user-id"]').getAttribute('content');
-            //this.loadInfo();
+            this.loadProducts();
             //$('[data-toggle="tooltip"]').tooltip();
             //console.log('Component created.');
             

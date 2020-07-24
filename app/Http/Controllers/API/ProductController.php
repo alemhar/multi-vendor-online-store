@@ -4,6 +4,7 @@ namespace App\Http\Controllers\API;
 
 
 use App\Product;
+use App\UserDetail;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Intervention\Image\ImageManagerStatic as Image;
@@ -167,6 +168,20 @@ class ProductController extends Controller
 
     public function list($id)
     {
+       
+
         return Product::where('user_id', $id)->latest()->paginate(5);
     }
+
+    public function public_list($public_id)
+    {
+        $userDetail = UserDetail::where('public_id', $public_id)->get()->first(); 
+        
+        $user_id = $userDetail->user_id;
+        
+        return Product::where('user_id', $user_id)->latest()->paginate(5);
+
+        
+    }
+
 }
