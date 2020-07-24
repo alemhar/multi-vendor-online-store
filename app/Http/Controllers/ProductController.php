@@ -91,6 +91,6 @@ class ProductController extends Controller
         
         $products = Product::where('user_id', $user_id)->latest()->paginate(5);
 
-        return view('welcome', compact('data', 'products') );
+        return view('shop', compact('data', 'products') );
     }
 }
