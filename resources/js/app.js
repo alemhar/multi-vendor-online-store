@@ -44,6 +44,9 @@ Vue.filter('myDate',function(created){
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
+Vue.component('navbar', require('./components/NavBar.vue'));
+Vue.component('products', require('./components/Products.vue'));
+
 const app = new Vue({
     el: '#app',
     router

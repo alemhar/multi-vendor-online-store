@@ -58719,6 +58719,8 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.filter('myDate', function (created) {
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
+vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('navbar', __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module './components/NavBar.vue'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())));
+vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('products', __webpack_require__(/*! ./components/Products.vue */ "./resources/js/components/Products.vue"));
 var app = new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
   el: '#app',
   router: router
