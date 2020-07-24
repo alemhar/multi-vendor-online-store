@@ -25,7 +25,7 @@
                                     <div class="card">
                                             <img class="card-img-top img-fluid" src="" alt="Card image cap">
                                         <div class="card-body">
-                                            <h5 class="card-title">{{product.name}}</h5>
+                                            <h5 class="card-title">{{ product.product_name }}</h5>
                                         </div>
                                         <div class="card-footer">
                                             <a type="button" class="btn btn-outline-dark" href="#"><i class="fas fa-eye"></i></a>
