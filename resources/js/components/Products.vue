@@ -14,8 +14,8 @@
                     <div class="card-header">
                         <div class="row">
                             <div class="col-6">
-                                {{ store_name }} 
-                                <h3>Product Page</h3> 
+                                <h3>{{ store_name }}</h3> 
+                                <h4>Product Page</h4>
                             </div>
                             <div class="col-6">
                                 <!-- button type="submit" @click="saveInfo" class="btn btn-primary float-right"><i class="fas fa-shopping-cart"></i></button -->
