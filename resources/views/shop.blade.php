@@ -107,6 +107,6 @@
 <!-- AdminLTE App -->
 <script src="{{ asset('adminlte/js/adminlte.min.js')}}"></script>
 
-<script src="{{ asset('js/app-guest.js')}}"></script>
+<script src="{{ asset('js/app-public.js')}}"></script>
     </body>
 </html>
