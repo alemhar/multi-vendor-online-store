@@ -20,6 +20,9 @@ Vue.component(AlertError.name, AlertError)
 
 Vue.component('pagination',require('laravel-vue-pagination'));
 
+Vue.component('navbar', require('./components/NavBar.vue'));
+Vue.component('products', require('./components/Products.vue'));
+
 const router = new VueRouter({
     routes,
     mode: 'history'
@@ -44,10 +47,9 @@ Vue.filter('myDate',function(created){
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-Vue.component('navbar', require('./components/NavBar.vue'));
-Vue.component('products', require('./components/Products.vue'));
+
 
 const app = new Vue({
     el: '#app',
-    //router
+    router
 });
