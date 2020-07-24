@@ -49,5 +49,5 @@ Vue.component('products', require('./components/Products.vue'));
 
 const app = new Vue({
     el: '#app',
-    router
+    //router
 });

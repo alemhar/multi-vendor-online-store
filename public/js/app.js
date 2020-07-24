@@ -58760,8 +58760,8 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.filter('myDate', function (created) {
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('navbar', __webpack_require__(/*! ./components/NavBar.vue */ "./resources/js/components/NavBar.vue"));
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('products', __webpack_require__(/*! ./components/Products.vue */ "./resources/js/components/Products.vue"));
 var app = new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
-  el: '#app',
-  router: router
+  el: '#app' //router
+
 });
 
 /***/ }),
