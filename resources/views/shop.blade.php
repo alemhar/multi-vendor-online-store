@@ -72,7 +72,7 @@
     <body>
     <div id="app">
         <div class="container">
-            <products public_id="{{ $public_id }}"></products>
+            <products public_id="{{ $user_info->public_id }}"></products>
         </div>
     </div>
 
