@@ -42036,7 +42036,11 @@ var render = function() {
                     ])
                   ]),
                   _vm._v(" "),
-                  _vm._m(2, true)
+                  _c("div", { staticClass: "col-md-8" }, [
+                    _c("p", { staticClass: "card-text" }, [
+                      _vm._v(_vm._s(product.product_description))
+                    ])
+                  ])
                 ])
               }),
               0
@@ -42093,14 +42097,6 @@ var staticRenderFns = [
         },
         [_c("i", { staticClass: "fas fa-cart-plus" })]
       )
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-md-8" }, [
-      _c("p", { staticClass: "card-text" }, [_vm._v("Product_description")])
     ])
   }
 ]
