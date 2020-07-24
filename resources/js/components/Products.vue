@@ -16,9 +16,6 @@
                     </div>
                     <div class="card-body">
                         <div class="form row">
-                            
-                            
-                            
                             <div class="card-deck mb-3">
                                 <div class="card">
                                     <img class="card-img-top" src="img/products/226x180.svg" alt="Card image cap">
