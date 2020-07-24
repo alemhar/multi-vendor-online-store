@@ -42019,7 +42019,7 @@ var render = function() {
                       _c("img", {
                         staticClass: "card-img-top img-fluid",
                         attrs: {
-                          src: "/img/products/" + _vm.product_photo,
+                          src: "/img/products/" + product.product_photo,
                           alt: "Card image cap"
                         }
                       }),
