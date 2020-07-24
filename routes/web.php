@@ -17,15 +17,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
+// For testing
 Route::get('/userdetail/{public_id}', function ($public_id) {
     $userDetail = UserDetail::where('public_id', $public_id)->get();
     //dd($userDetail);
 });
 
-
+// Public Landing Page
 Route::get('/shop/{public_id}', 'ProductController@shop')->name('shop');
-
 Route::get('/public_list/{public_id}', 'ProductController@public_list')->name('public_list');
 
 

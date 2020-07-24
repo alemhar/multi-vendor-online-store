@@ -71,7 +71,7 @@
     </head>
     <body>
     <div id="app">
-        <div class="container">
+        <div class="container-fluid">
             <products public_id="{{ $user_info['public_id'] }}" store_name="{{ $user_info['store_name'] }}" ></products>
         </div>
     </div>
