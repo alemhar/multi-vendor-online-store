@@ -12,8 +12,7 @@
             <div class="col-md-8 col-md-offset-2">
                 <div class="panel panel-default">
                     <h2>New Order</h2> 
-                    <p>Name: {{ $customer->name }}</p>
-                    <p>Contact: {{ $customer->contact }}</p>
+
                     <div>
 
                     @if ($products)
