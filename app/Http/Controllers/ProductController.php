@@ -8,6 +8,7 @@ use App\Product;
 use App\UserDetail;
 use App\User;
 use Illuminate\Support\Facades\Mail;
+use App\Mail\NewOrder;
 use App\Http\Resources\Product as ProductResource;
 
 class ProductController extends Controller
