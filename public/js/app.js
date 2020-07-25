@@ -3100,6 +3100,7 @@ __webpack_require__.r(__webpack_exports__);
     checkOut: function checkOut() {
       if (this.check_out_name.length == 0 || this.check_out_contact_no.length == 0) {
         this.hasError = true;
+        return;
       }
 
       axios.post("/checkout", {
@@ -42229,9 +42230,9 @@ var render = function() {
                                         rawName: "v-show",
                                         value:
                                           _vm.hasError &&
-                                          _vm.check_out_name.legnth == 0,
+                                          _vm.check_out_name.length == 0,
                                         expression:
-                                          "hasError && check_out_name.legnth == 0"
+                                          "hasError && check_out_name.length == 0"
                                       }
                                     ],
                                     staticClass: "text-danger"
@@ -42274,9 +42275,9 @@ var render = function() {
                                         rawName: "v-show",
                                         value:
                                           _vm.hasError &&
-                                          _vm.check_out_name.legnth == 0,
+                                          _vm.check_out_name.length == 0,
                                         expression:
-                                          "hasError && check_out_name.legnth == 0"
+                                          "hasError && check_out_name.length == 0"
                                       }
                                     ],
                                     staticClass: "text-danger"
