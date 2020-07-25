@@ -42303,13 +42303,28 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "row" }, [
-      _c(
-        "button",
-        { staticClass: "btn btn-outline-dark", attrs: { type: "button" } },
-        [_vm._v("Check Out")]
-      )
-    ])
+    return _c(
+      "div",
+      {
+        staticClass: "row",
+        staticStyle: { "justify-content": "center", "padding-bottom": "10px" }
+      },
+      [
+        _c(
+          "button",
+          {
+            staticClass: "btn btn-primary",
+            staticStyle: {
+              color: "#fff",
+              "background-color": "#227dc7",
+              "border-color": "#2176bd"
+            },
+            attrs: { type: "button" }
+          },
+          [_vm._v("Check Out")]
+        )
+      ]
+    )
   }
 ]
 render._withStripped = true
