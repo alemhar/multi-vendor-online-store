@@ -2892,6 +2892,25 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['public_id', 'store_name'],
   data: function data() {
@@ -2910,7 +2929,8 @@ __webpack_require__.r(__webpack_exports__);
       product_photo: '226x180.svg',
       product_photo_base64: '',
       current_product_photo: '/img/products/226x180.svg',
-      cart: []
+      cart: [],
+      showCart: false
     };
   },
   methods: {
@@ -2937,8 +2957,9 @@ __webpack_require__.r(__webpack_exports__);
         //console.log( this.form.user_logo ? this.form.user_logo : 'img/your_logo_here.png');
       })["catch"](function () {}); //console.log(this.user_info);
     },
-    addToCart: function addToCart(id, product_name, type) {
-      //if(this.products.length > 0 ){
+    addToCart: function addToCart(id, product_name) {
+      var type = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 'add';
+
       for (var i = 0; i < this.cart.length; i++) {
         if (this.cart[i].id === id) {
           if (type === 'subtract') {
@@ -2957,8 +2978,7 @@ __webpack_require__.r(__webpack_exports__);
         id: id,
         product_name: product_name,
         quantity: 1
-      }); //} else {
-      //}
+      });
     },
     profilePhotoChange: function profilePhotoChange(e) {
       var _this2 = this;
@@ -2992,6 +3012,13 @@ __webpack_require__.r(__webpack_exports__);
     //this.user_id = document.querySelector('meta[name="user-id"]').getAttribute('content');
     this.loadProducts(); //$('[data-toggle="tooltip"]').tooltip();
     //console.log('Component created.');
+  },
+  computed: {
+    totalQuantity: function totalQuantity() {
+      return this.cart.reduce(function (total, product) {
+        return total + cart.quantity;
+      }, 0);
+    }
   },
   mounted: function mounted() {//console.log('Component mounted.');
   }
@@ -42009,7 +42036,52 @@ var render = function() {
                   _c("p", [_vm._v("Product Page")])
                 ]),
                 _vm._v(" "),
-                _c("div", { staticClass: "col-6" })
+                _c("div", { staticClass: "col-6" }, [
+                  _c("nav", { staticClass: "nav" }, [
+                    _c("h2", { staticClass: "nav__header" }, [
+                      _vm._v("Products")
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "nav__cart" }, [
+                      _c(
+                        "button",
+                        {
+                          on: {
+                            click: function($event) {
+                              _vm.showCart = !_vm.showCart
+                            }
+                          }
+                        },
+                        [_c("i", { staticClass: "fas fa-shopping-cart" })]
+                      ),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "total-quantity" }, [
+                        _vm._v(_vm._s(_vm.totalQuantity))
+                      ]),
+                      _vm._v(" "),
+                      _vm.showCart
+                        ? _c("div", { staticClass: "cart-dropdown" }, [
+                            _c(
+                              "ul",
+                              { staticClass: "cart-dropdown__list" },
+                              _vm._l(_vm.cart, function(product) {
+                                return _c("li", { key: product.id }, [
+                                  _vm._v(
+                                    "\n                                            " +
+                                      _vm._s(product.product_name) +
+                                      " (" +
+                                      _vm._s(product.quantity) +
+                                      ")\n                                        "
+                                  )
+                                ])
+                              }),
+                              0
+                            )
+                          ])
+                        : _vm._e()
+                    ])
+                  ])
+                ])
               ])
             ]),
             _vm._v(" "),

@@ -19,6 +19,25 @@
                             <div class="col-6">
                                 <!-- button type="submit" @click="saveInfo" class="btn btn-primary float-right"><i class="fas fa-shopping-cart"></i></button -->
                                 <!-- button type="submit" @click="loadInfo" style="margin-right: 10px;" class="btn btn-outline-primary float-right">Contact Seller</button -->
+                                <nav class="nav">
+                                    <h2 class="nav__header">Products</h2>
+                                    <div class="nav__cart">
+                                    <button @click="showCart = !showCart">
+                                        <i class="fas fa-shopping-cart"></i>
+                                    </button>
+                                    <span class="total-quantity">{{ totalQuantity }}</span>
+                                    <div v-if="showCart" class="cart-dropdown">
+                                        <ul class="cart-dropdown__list">
+                                        <li
+                                            v-for="product in cart"
+                                            :key="product.id"
+                                        >
+                                            {{ product.product_name }} ({{ product.quantity }})
+                                        </li>
+                                        </ul>
+                                    </div>
+                                    </div>
+                                </nav>
                             </div>
                         </div>
                     </div>
@@ -153,7 +172,8 @@
                 product_photo: '226x180.svg',
                 product_photo_base64: '',
                 current_product_photo: '/img/products/226x180.svg',
-                cart: []
+                cart: [],
+                showCart: false
 
             }
         },
@@ -185,8 +205,7 @@
                 });
                 //console.log(this.user_info);
             },
-            addToCart(id,product_name,type){
-                //if(this.products.length > 0 ){
+            addToCart(id,product_name,type = 'add'){
                     for (let i = 0; i < this.cart.length; i++) {
                         if (this.cart[i].id === id) {
                             if (type === 'subtract') {
@@ -196,16 +215,10 @@
                             } else {
                                 this.cart[i].quantity++;
                             }
-                            
                             return;
                         }
-                        
                     }
                     this.cart.push({ id: id,product_name: product_name, quantity: 1});
-                //} else {
-                    
-
-                //}
             },
             profilePhotoChange(e){
                 let file = e.target.files[0];
@@ -244,7 +257,16 @@
             //console.log('Component created.');
             
 
-        },    
+        },
+        computed:{
+            totalQuantity() {
+                return this.cart.reduce(
+                    (total, product) => total + cart.quantity,
+                    0
+                );
+            }
+        }
+        ,    
         mounted() {
             //console.log('Component mounted.');
         }
