@@ -36,10 +36,11 @@
                                             </ul>
                                             <div class="row" style="justify-content: center;padding-bottom: 10px;">
                                                 <input type="text" v-model="check_out_name" placeholder="Full Name" class="mb-2 check-out-info">
+                                                <p class="text-danger" v-show="hasError && check_out_name.legnth == 0">Please enter name.</p>
                                                 <input type="text" v-model="check_out_contact_no" placeholder="Contact Number" class="mb-2 check-out-info">
+                                                <p class="text-danger" v-show="hasError && check_out_name.legnth == 0">Please enter contact no.</p>
                                             </div>
                                             <div class="row" style="justify-content: center;padding-bottom: 10px;">
-
                                             <button type="button" class="btn btn-primary" style="color: #fff;background-color: #227dc7;border-color: #2176bd;" @click="checkOut">Check Out</button>
                                             </div>
                                         </div>
@@ -303,6 +304,7 @@
                 product_photo: '226x180.svg',
                 product_photo_base64: '',
                 current_product_photo: '/img/products/226x180.svg',
+                hasError = false
 
             }
         },
@@ -342,6 +344,8 @@
                 axios.post("/checkout",
                     {
                         user_id: this.user_id,
+                        customer_name: this.check_out_name,
+                        customer_contact_no: this.check_out_contact_no,
                         products: this.cart
                     }
                 ).then((response)=>{

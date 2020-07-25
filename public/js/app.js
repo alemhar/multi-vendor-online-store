@@ -2752,382 +2752,9 @@ $(document).ready(function () {
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Products.vue?vue&type=script&lang=js& ***!
   \*******************************************************************************************************************************************************************/
 /*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-/* harmony default export */ __webpack_exports__["default"] = ({
-  props: ['public_id', 'store_name'],
-  data: function data() {
-    return {
-      products: {},
-      cart: [],
-      check_out_name: '',
-      check_out_contact_no: '',
-      showCart: false,
-      id: '',
-      product_name: '',
-      product_model_no: '',
-      brand: '',
-      product_price: '',
-      user_id: '',
-      product_description: '',
-      product_photo: '226x180.svg',
-      product_photo_base64: '',
-      current_product_photo: '/img/products/226x180.svg'
-    };
-  },
-  methods: {
-    loadProducts: function loadProducts() {
-      var _this = this;
-
-      axios.get("/public_list/" + this.public_id).then(function (response) {
-        _this.products = response.data;
-        _this.user_id = _this.products.data[0].user_id; //this.public_address = window.location.hostname + '/main/' + this.form.public_id;
-        //console.log( this.form.user_logo ? this.form.user_logo : 'img/your_logo_here.png');
-      })["catch"](function () {}); //console.log(this.user_info);
-    },
-    addToCart: function addToCart(id, product_name) {
-      var type = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 'add';
-
-      for (var i = 0; i < this.cart.length; i++) {
-        if (this.cart[i].id === id) {
-          if (type === 'subtract') {
-            if (this.cart[i].quantity !== 0) {
-              this.prodcartucts[i].quantity--;
-            }
-          } else {
-            this.cart[i].quantity++;
-          }
-
-          return;
-        }
-      }
-
-      this.cart.push({
-        id: id,
-        product_name: product_name,
-        quantity: 1
-      });
-    },
-    checkOut: function checkOut() {
-      axios.post("/checkout", {
-        user_id: this.user_id,
-        products: this.cart
-      }).then(function (response) {})["catch"](function () {});
-    }
-  },
-  created: function created() {
-    //this.user_id = document.querySelector('meta[name="user-id"]').getAttribute('content');
-    this.loadProducts(); //$('[data-toggle="tooltip"]').tooltip();
-    //console.log('Component created.');
-  },
-  computed: {
-    totalQuantity: function totalQuantity() {
-      return this.cart.reduce(function (total, cart) {
-        return total + cart.quantity;
-      }, 0);
-    }
-  },
-  mounted: function mounted() {//console.log('Component mounted.');
-  }
-});
-$(document).ready(function () {
-  $('[data-toggle="tooltip"]').tooltip();
-  $('[data-toggle="tooltip"]').on('click', function () {
-    $('[data-toggle="tooltip"]').tooltip('hide');
-    $(this).attr('data-original-title', 'Copied to Clipboard!');
-    $('[data-toggle="tooltip"]').tooltip('show');
-  });
-  $('[data-toggle="tooltip"]').mouseout(function () {
-    $(this).attr('data-original-title', 'Copy');
-  });
-});
+throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: D:\\onlinestoreko\\resources\\js\\components\\Products.vue: Unexpected token (307:21)\n\n  305 |             product_photo_base64: '',\n  306 |             current_product_photo: '/img/products/226x180.svg',\n> 307 |             hasError = false\n      |                      ^\n  308 | \n  309 |         }\n  310 |     },\n    at Parser._raise (D:\\onlinestoreko\\node_modules\\@babel\\parser\\lib\\index.js:754:17)\n    at Parser.raiseWithData (D:\\onlinestoreko\\node_modules\\@babel\\parser\\lib\\index.js:747:17)\n    at Parser.raise (D:\\onlinestoreko\\node_modules\\@babel\\parser\\lib\\index.js:741:17)\n    at Parser.unexpected (D:\\onlinestoreko\\node_modules\\@babel\\parser\\lib\\index.js:8844:16)\n    at Parser.checkExpressionErrors (D:\\onlinestoreko\\node_modules\\@babel\\parser\\lib\\index.js:8942:12)\n    at Parser.parseMaybeAssign (D:\\onlinestoreko\\node_modules\\@babel\\parser\\lib\\index.js:9506:12)\n    at Parser.parseExpression (D:\\onlinestoreko\\node_modules\\@babel\\parser\\lib\\index.js:9423:23)\n    at Parser.parseReturnStatement (D:\\onlinestoreko\\node_modules\\@babel\\parser\\lib\\index.js:11560:28)\n    at Parser.parseStatementContent (D:\\onlinestoreko\\node_modules\\@babel\\parser\\lib\\index.js:11241:21)\n    at Parser.parseStatement (D:\\onlinestoreko\\node_modules\\@babel\\parser\\lib\\index.js:11193:17)\n    at Parser.parseBlockOrModuleBlockBody (D:\\onlinestoreko\\node_modules\\@babel\\parser\\lib\\index.js:11768:25)\n    at Parser.parseBlockBody (D:\\onlinestoreko\\node_modules\\@babel\\parser\\lib\\index.js:11754:10)\n    at Parser.parseBlock (D:\\onlinestoreko\\node_modules\\@babel\\parser\\lib\\index.js:11738:10)\n    at Parser.parseFunctionBody (D:\\onlinestoreko\\node_modules\\@babel\\parser\\lib\\index.js:10745:24)\n    at Parser.parseFunctionBodyAndFinish (D:\\onlinestoreko\\node_modules\\@babel\\parser\\lib\\index.js:10728:10)\n    at Parser.parseMethod (D:\\onlinestoreko\\node_modules\\@babel\\parser\\lib\\index.js:10690:10)\n    at Parser.parseObjectMethod (D:\\onlinestoreko\\node_modules\\@babel\\parser\\lib\\index.js:10606:19)\n    at Parser.parseObjPropValue (D:\\onlinestoreko\\node_modules\\@babel\\parser\\lib\\index.js:10648:23)\n    at Parser.parseObjectMember (D:\\onlinestoreko\\node_modules\\@babel\\parser\\lib\\index.js:10572:10)\n    at Parser.parseObj (D:\\onlinestoreko\\node_modules\\@babel\\parser\\lib\\index.js:10485:25)\n    at Parser.parseExprAtom (D:\\onlinestoreko\\node_modules\\@babel\\parser\\lib\\index.js:10092:28)\n    at Parser.parseExprSubscripts (D:\\onlinestoreko\\node_modules\\@babel\\parser\\lib\\index.js:9693:23)\n    at Parser.parseMaybeUnary (D:\\onlinestoreko\\node_modules\\@babel\\parser\\lib\\index.js:9673:21)\n    at Parser.parseExprOps (D:\\onlinestoreko\\node_modules\\@babel\\parser\\lib\\index.js:9543:23)\n    at Parser.parseMaybeConditional (D:\\onlinestoreko\\node_modules\\@babel\\parser\\lib\\index.js:9516:23)\n    at Parser.parseMaybeAssign (D:\\onlinestoreko\\node_modules\\@babel\\parser\\lib\\index.js:9471:21)\n    at Parser.parseExportDefaultExpression (D:\\onlinestoreko\\node_modules\\@babel\\parser\\lib\\index.js:12395:24)\n    at Parser.parseExport (D:\\onlinestoreko\\node_modules\\@babel\\parser\\lib\\index.js:12297:31)\n    at Parser.parseStatementContent (D:\\onlinestoreko\\node_modules\\@babel\\parser\\lib\\index.js:11297:27)\n    at Parser.parseStatement (D:\\onlinestoreko\\node_modules\\@babel\\parser\\lib\\index.js:11193:17)\n    at Parser.parseBlockOrModuleBlockBody (D:\\onlinestoreko\\node_modules\\@babel\\parser\\lib\\index.js:11768:25)\n    at Parser.parseBlockBody (D:\\onlinestoreko\\node_modules\\@babel\\parser\\lib\\index.js:11754:10)\n    at Parser.parseTopLevel (D:\\onlinestoreko\\node_modules\\@babel\\parser\\lib\\index.js:11124:10)\n    at Parser.parse (D:\\onlinestoreko\\node_modules\\@babel\\parser\\lib\\index.js:12826:10)\n    at parse (D:\\onlinestoreko\\node_modules\\@babel\\parser\\lib\\index.js:12879:38)\n    at parser (D:\\onlinestoreko\\node_modules\\@babel\\core\\lib\\parser\\index.js:54:34)");
 
 /***/ }),
 
@@ -42212,6 +41839,25 @@ var render = function() {
                                   }
                                 }),
                                 _vm._v(" "),
+                                _c(
+                                  "p",
+                                  {
+                                    directives: [
+                                      {
+                                        name: "show",
+                                        rawName: "v-show",
+                                        value:
+                                          _vm.hasError &&
+                                          _vm.check_out_name.legnth == 0,
+                                        expression:
+                                          "hasError && check_out_name.legnth == 0"
+                                      }
+                                    ],
+                                    staticClass: "text-danger"
+                                  },
+                                  [_vm._v("Please enter name.")]
+                                ),
+                                _vm._v(" "),
                                 _c("input", {
                                   directives: [
                                     {
@@ -42236,7 +41882,26 @@ var render = function() {
                                         $event.target.value
                                     }
                                   }
-                                })
+                                }),
+                                _vm._v(" "),
+                                _c(
+                                  "p",
+                                  {
+                                    directives: [
+                                      {
+                                        name: "show",
+                                        rawName: "v-show",
+                                        value:
+                                          _vm.hasError &&
+                                          _vm.check_out_name.legnth == 0,
+                                        expression:
+                                          "hasError && check_out_name.legnth == 0"
+                                      }
+                                    ],
+                                    staticClass: "text-danger"
+                                  },
+                                  [_vm._v("Please enter contact no.")]
+                                )
                               ]
                             ),
                             _vm._v(" "),
