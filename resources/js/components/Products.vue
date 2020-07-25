@@ -34,7 +34,10 @@
                                                 {{ product.product_name }} ({{ product.quantity }})
                                             </li>
                                             </ul>
-                                            <button type="button" class="btn btn-outline-dark">Check Out<!-- i class="fas fa-cart-plus"></i --></button>
+                                            <div class="row">
+
+                                            <button type="button" class="btn btn-outline-dark">Check Out</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </nav>
