@@ -2938,6 +2938,7 @@ __webpack_require__.r(__webpack_exports__);
       })["catch"](function () {}); //console.log(this.user_info);
     },
     addToCart: function addToCart(product_name) {
+      console.log(product_name);
       this.cart.push({
         product_name: product_name
       });
