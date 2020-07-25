@@ -353,7 +353,10 @@
                         products: this.cart
                     }
                 ).then((response)=>{
-
+                    this.check_out_name = '';
+                    this.check_out_contact_no = '';
+                    this.showCart = false;
+                    this.cart = [];
                     
                 })
                 .catch(()=>{

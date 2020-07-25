@@ -3098,6 +3098,8 @@ __webpack_require__.r(__webpack_exports__);
       });
     },
     checkOut: function checkOut() {
+      var _this2 = this;
+
       if (this.check_out_name.length == 0 || this.check_out_contact_no.length == 0) {
         this.hasError = true;
         return;
@@ -3108,7 +3110,12 @@ __webpack_require__.r(__webpack_exports__);
         customer_name: this.check_out_name,
         customer_contact_no: this.check_out_contact_no,
         products: this.cart
-      }).then(function (response) {})["catch"](function () {});
+      }).then(function (response) {
+        _this2.check_out_name = '';
+        _this2.check_out_contact_no = '';
+        _this2.showCart = false;
+        _this2.cart = [];
+      })["catch"](function () {});
     }
   },
   created: function created() {
