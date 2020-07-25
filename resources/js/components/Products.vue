@@ -304,7 +304,7 @@
                 product_photo: '226x180.svg',
                 product_photo_base64: '',
                 current_product_photo: '/img/products/226x180.svg',
-                hasError = false
+                hasError: false
 
             }
         },
