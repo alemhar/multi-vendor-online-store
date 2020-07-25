@@ -341,15 +341,11 @@
             checkOut(){
                 axios.post("/checkout",
                     {
-                        firstName: 'Finn',
-                        lastName: 'Williams'
+                        user_id: this.user_id,
+                        products: this.cart
                     }
                 ).then((response)=>{
 
-                    this.products = response.data;
-                    //this.public_address = window.location.hostname + '/main/' + this.form.public_id;
-                  
-                  //console.log( this.form.user_logo ? this.form.user_logo : 'img/your_logo_here.png');
                     
                 })
                 .catch(()=>{

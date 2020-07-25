@@ -3096,15 +3096,10 @@ __webpack_require__.r(__webpack_exports__);
       });
     },
     checkOut: function checkOut() {
-      var _this2 = this;
-
       axios.post("/checkout", {
-        firstName: 'Finn',
-        lastName: 'Williams'
-      }).then(function (response) {
-        _this2.products = response.data; //this.public_address = window.location.hostname + '/main/' + this.form.public_id;
-        //console.log( this.form.user_logo ? this.form.user_logo : 'img/your_logo_here.png');
-      })["catch"](function () {});
+        user_id: this.user_id,
+        products: this.cart
+      }).then(function (response) {})["catch"](function () {});
     }
   },
   created: function created() {
