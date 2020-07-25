@@ -35,6 +35,10 @@
                                             </li>
                                             </ul>
                                             <div class="row" style="justify-content: center;padding-bottom: 10px;">
+                                                <input type="text" placeholder="Full Name">
+                                                <input type="text" placeholder="Contact Number">
+                                            </div>
+                                            <div class="row" style="justify-content: center;padding-bottom: 10px;">
 
                                             <button type="button" class="btn btn-primary" style="color: #fff;background-color: #227dc7;border-color: #2176bd;">Check Out</button>
                                             </div>

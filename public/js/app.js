@@ -3025,6 +3025,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['public_id', 'store_name'],
   data: function data() {
@@ -42197,7 +42201,9 @@ var render = function() {
                               0
                             ),
                             _vm._v(" "),
-                            _vm._m(0)
+                            _vm._m(0),
+                            _vm._v(" "),
+                            _vm._m(1)
                           ])
                         : _vm._e()
                     ])
@@ -42299,6 +42305,23 @@ var render = function() {
   ])
 }
 var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass: "row",
+        staticStyle: { "justify-content": "center", "padding-bottom": "10px" }
+      },
+      [
+        _c("input", { attrs: { type: "text", placeholder: "Full Name" } }),
+        _vm._v(" "),
+        _c("input", { attrs: { type: "text", placeholder: "Contact Number" } })
+      ]
+    )
+  },
   function() {
     var _vm = this
     var _h = _vm.$createElement
