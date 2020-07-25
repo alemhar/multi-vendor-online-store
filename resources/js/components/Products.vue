@@ -151,6 +151,116 @@
     color: black;
     font-family: sans-serif;
 }
+
+.nav {
+  -webkit-box-align: center;
+          align-items: center;
+  background: salmon;
+  color: white;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+  padding: 2rem;
+}
+.nav__header {
+  font-size: 2.5rem;
+}
+.nav__cart {
+  position: relative;
+}
+.nav__cart button {
+  background: none;
+  border: 0;
+  color: white;
+  cursor: pointer;
+}
+.nav__cart i {
+  font-size: 2rem;
+}
+.nav__cart .total-quantity {
+  -webkit-box-align: center;
+          align-items: center;
+  background: lightblue;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: flex;
+  font-weight: bold;
+  height: 2rem;
+  -webkit-box-pack: center;
+          justify-content: center;
+  padding: 0.5rem;
+  position: absolute;
+  right: -10px;
+  top: -10px;
+  width: 2rem;
+}
+.nav__cart .cart-dropdown {
+  background: white;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+  color: #333;
+  font-size: 1.3rem;
+  overflow: auto;
+  padding: 0 1rem;
+  position: absolute;
+  right: 0;
+  width: 12rem;
+}
+.nav__cart .cart-dropdown .cart-dropdown__list {
+  list-style: none;
+}
+.nav__cart .cart-dropdown .cart-dropdown__list li {
+  margin: 1rem 0;
+}
+
+.products {
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+          justify-content: center;
+}
+.products .product {
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  margin: 2rem;
+  padding: 1rem;
+}
+.products .product__header {
+  font-size: 2rem;
+  text-align: center;
+}
+.products .product__image {
+  display: block;
+  margin: 1rem auto;
+}
+.products .product__description {
+  font-size: 1.3rem;
+  margin-top: 1rem;
+}
+
+.cart {
+  margin-top: 2rem;
+  text-align: center;
+}
+.cart__button {
+  background: lightblue;
+  border: 0;
+  color: white;
+  cursor: pointer;
+  font-size: 1.5rem;
+  font-weight: bold;
+  height: 2.5rem;
+  width: 2.5rem;
+}
+.cart__quantity {
+  font-size: 1.5rem;
+  margin: 0 1rem;
+}
+
+
 </style>
 
 <script>
