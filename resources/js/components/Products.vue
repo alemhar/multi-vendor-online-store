@@ -32,15 +32,14 @@
                                             <h5 class="card-title">{{ product.product_name }}</h5>
                                         </div>
                                         <div class="card-footer">
-                                            <a type="button" class="btn btn-outline-dark" href="#"><i class="fas fa-eye"></i></a>
-                                            <a type="button" class="btn btn-outline-dark" href="#"><i class="fas fa-cash-register"></i></a>
-                                            <a type="button" class="btn btn-outline-dark" href="#"><i class="fas fa-cart-plus"></i></a>
+                                            <a type="button" class="btn btn-outline-dark" href="#">Photos<!-- i class="fas fa-eye"></i --></a>
+                                            <a type="button" class="btn btn-outline-dark" href="#">Buy<!-- i class="fas fa-cash-register"></i --></a>
+                                            <a type="button" class="btn btn-outline-dark" href="#">+Cart<!-- i class="fas fa-cart-plus"></i --></a>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-8">
                                         <p class="card-text product-description" style="">{{ product.product_description }}</p>
-                                    
                                 </div>
                             </div>
 

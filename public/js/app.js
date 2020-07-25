@@ -2892,7 +2892,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['public_id', 'store_name'],
   data: function data() {
@@ -42052,7 +42051,7 @@ var staticRenderFns = [
           staticClass: "btn btn-outline-dark",
           attrs: { type: "button", href: "#" }
         },
-        [_c("i", { staticClass: "fas fa-eye" })]
+        [_vm._v("Photos")]
       ),
       _vm._v(" "),
       _c(
@@ -42061,7 +42060,7 @@ var staticRenderFns = [
           staticClass: "btn btn-outline-dark",
           attrs: { type: "button", href: "#" }
         },
-        [_c("i", { staticClass: "fas fa-cash-register" })]
+        [_vm._v("Buy")]
       ),
       _vm._v(" "),
       _c(
@@ -42070,7 +42069,7 @@ var staticRenderFns = [
           staticClass: "btn btn-outline-dark",
           attrs: { type: "button", href: "#" }
         },
-        [_c("i", { staticClass: "fas fa-cart-plus" })]
+        [_vm._v("+Cart")]
       )
     ])
   }
