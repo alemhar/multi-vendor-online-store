@@ -158,8 +158,9 @@
   display: -webkit-box;
   display: flex;
   -webkit-box-pack: justify;
-          justify-content: space-between;
-  padding: 2rem;
+  justify-content: space-between;
+  padding: 1rem;
+  float: right;
 }
 .nav__header {
   font-size: 2.5rem;
