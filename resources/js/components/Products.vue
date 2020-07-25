@@ -186,7 +186,8 @@
                 //console.log(this.user_info);
             },
             addToCart(product_name){
-                cart.push({product_name: product_name});
+
+                cart.push({ product_name: product_name});
             },
             profilePhotoChange(e){
                 let file = e.target.files[0];
