@@ -42275,9 +42275,9 @@ var render = function() {
                                         rawName: "v-show",
                                         value:
                                           _vm.hasError &&
-                                          _vm.check_out_name.length == 0,
+                                          _vm.check_out_contact_no.length == 0,
                                         expression:
-                                          "hasError && check_out_name.length == 0"
+                                          "hasError && check_out_contact_no.length == 0"
                                       }
                                     ],
                                     staticClass: "text-danger"

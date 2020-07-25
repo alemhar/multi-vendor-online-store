@@ -38,7 +38,7 @@
                                                 <input type="text" v-model="check_out_name" placeholder="Full Name" class="mb-2 check-out-info">
                                                 <p class="text-danger" v-show="hasError && check_out_name.length == 0">Please enter name.</p>
                                                 <input type="text" v-model="check_out_contact_no" placeholder="Contact Number" class="mb-2 check-out-info">
-                                                <p class="text-danger" v-show="hasError && check_out_name.length == 0">Please enter contact no.</p>
+                                                <p class="text-danger" v-show="hasError && check_out_contact_no.length == 0">Please enter contact no.</p>
                                             </div>
                                             <div class="row" style="justify-content: center;padding-bottom: 10px;">
                                             <button type="button" class="btn btn-primary" style="color: #fff;background-color: #227dc7;border-color: #2176bd;" @click="checkOut">Check Out</button>
