@@ -2940,7 +2940,7 @@ __webpack_require__.r(__webpack_exports__);
     addToCart: function addToCart(id, product_name, type) {
       //if(this.products.length > 0 ){
       for (var i = 0; i < this.products.length; i++) {
-        if (this.products[i].id === product.id) {
+        if (this.products[i].id === id) {
           if (type === 'subtract') {
             if (this.products[i].quantity !== 0) {
               this.products[i].quantity--;
