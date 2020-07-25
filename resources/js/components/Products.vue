@@ -39,7 +39,7 @@
                                     </div>
                                 </div>
                                 <div class="col-md-8">
-                                        <p class="card-text">{{ product.product_description }}</p>
+                                        <p class="card-text" style="font-size: 1.2em;">{{ product.product_description }}</p>
                                     
                                 </div>
                             </div>

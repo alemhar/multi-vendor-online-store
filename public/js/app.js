@@ -42016,9 +42016,14 @@ var render = function() {
                       ]),
                       _vm._v(" "),
                       _c("div", { staticClass: "col-md-8" }, [
-                        _c("p", { staticClass: "card-text" }, [
-                          _vm._v(_vm._s(product.product_description))
-                        ])
+                        _c(
+                          "p",
+                          {
+                            staticClass: "card-text",
+                            staticStyle: { "font-size": "1.2em" }
+                          },
+                          [_vm._v(_vm._s(product.product_description))]
+                        )
                       ])
                     ]
                   )
