@@ -2909,7 +2909,8 @@ __webpack_require__.r(__webpack_exports__);
       product_description: '',
       product_photo: '226x180.svg',
       product_photo_base64: '',
-      current_product_photo: '/img/products/226x180.svg'
+      current_product_photo: '/img/products/226x180.svg',
+      cart: []
     };
   },
   methods: {
@@ -2935,6 +2936,11 @@ __webpack_require__.r(__webpack_exports__);
         _this.products = response.data; //this.public_address = window.location.hostname + '/main/' + this.form.public_id;
         //console.log( this.form.user_logo ? this.form.user_logo : 'img/your_logo_here.png');
       })["catch"](function () {}); //console.log(this.user_info);
+    },
+    addToCart: function addToCart(product_name) {
+      cart.push({
+        product_name: product_name
+      });
     },
     profilePhotoChange: function profilePhotoChange(e) {
       var _this2 = this;
@@ -42016,7 +42022,46 @@ var render = function() {
                             ])
                           ]),
                           _vm._v(" "),
-                          _vm._m(0, true)
+                          _c(
+                            "div",
+                            {
+                              staticClass: "card-footer",
+                              staticStyle: { "text-align": "end" }
+                            },
+                            [
+                              _c(
+                                "button",
+                                {
+                                  staticClass: "btn btn-outline-dark",
+                                  attrs: { type: "button" }
+                                },
+                                [_vm._v("Photos")]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "button",
+                                {
+                                  staticClass: "btn btn-outline-dark",
+                                  attrs: { type: "button" }
+                                },
+                                [_vm._v("Buy")]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "button",
+                                {
+                                  staticClass: "btn btn-outline-dark",
+                                  attrs: { type: "button" },
+                                  on: {
+                                    click: function($event) {
+                                      return _vm.addToCart(product.product_name)
+                                    }
+                                  }
+                                },
+                                [_vm._v("+Cart")]
+                              )
+                            ]
+                          )
                         ])
                       ]),
                       _vm._v(" "),
@@ -42039,36 +42084,7 @@ var render = function() {
     ])
   ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      { staticClass: "card-footer", staticStyle: { "text-align": "end" } },
-      [
-        _c(
-          "button",
-          { staticClass: "btn btn-outline-dark", attrs: { type: "button" } },
-          [_vm._v("Photos")]
-        ),
-        _vm._v(" "),
-        _c(
-          "button",
-          { staticClass: "btn btn-outline-dark", attrs: { type: "button" } },
-          [_vm._v("Buy")]
-        ),
-        _vm._v(" "),
-        _c(
-          "button",
-          { staticClass: "btn btn-outline-dark", attrs: { type: "button" } },
-          [_vm._v("+Cart")]
-        )
-      ]
-    )
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 

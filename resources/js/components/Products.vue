@@ -34,7 +34,7 @@
                                         <div class="card-footer" style="text-align: end;">
                                             <button type="button" class="btn btn-outline-dark">Photos<!-- i class="fas fa-eye"></i --></button>
                                             <button type="button" class="btn btn-outline-dark">Buy<!-- i class="fas fa-cash-register"></i --></button>
-                                            <button type="button" class="btn btn-outline-dark">+Cart<!-- i class="fas fa-cart-plus"></i --></button>
+                                            <button type="button" class="btn btn-outline-dark" @click="addToCart(product.product_name)">+Cart<!-- i class="fas fa-cart-plus"></i --></button>
                                         </div>
                                     </div>
                                 </div>
@@ -152,7 +152,8 @@
                 product_description: '',
                 product_photo: '226x180.svg',
                 product_photo_base64: '',
-                current_product_photo: '/img/products/226x180.svg'
+                current_product_photo: '/img/products/226x180.svg',
+                cart: []
 
             }
         },
@@ -184,6 +185,9 @@
                 });
                 //console.log(this.user_info);
             },
+            addToCart(product_name){
+                cart.push({product_name: product_name});
+            },
             profilePhotoChange(e){
                 let file = e.target.files[0];
                 let file_reader = new FileReader();
@@ -212,6 +216,7 @@
                 file_reader.readAsDataURL(file);
 
             }
+
         },
         created() {
             //this.user_id = document.querySelector('meta[name="user-id"]').getAttribute('content');
