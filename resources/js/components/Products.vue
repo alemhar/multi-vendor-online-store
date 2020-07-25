@@ -24,7 +24,7 @@
                                     <button @click="showCart = !showCart">
                                         <i class="fas fa-shopping-cart"></i>
                                     </button>
-                                    <span class="total-quantity">{{ totalQuantity }}</span>
+                                    <span class="total-quantity" @click="showCart = !showCart">{{ totalQuantity }}</span>
                                     <div v-if="showCart" class="cart-dropdown">
                                         <ul class="cart-dropdown__list">
                                         <li
@@ -205,7 +205,7 @@
   padding: 0 1rem;
   position: absolute;
   right: 0;
-  width: 12rem;
+  width: 350px;
 }
 .nav__cart .cart-dropdown .cart-dropdown__list {
   list-style: none;
