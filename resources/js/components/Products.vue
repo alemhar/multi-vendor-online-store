@@ -35,8 +35,8 @@
                                             </li>
                                             </ul>
                                             <div class="row" style="justify-content: center;padding-bottom: 10px;">
-                                                <input type="text" placeholder="Full Name">
-                                                <input type="text" placeholder="Contact Number">
+                                                <input type="text" placeholder="Full Name" class="mb-2">
+                                                <input type="text" placeholder="Contact Number" class="mb-2">
                                             </div>
                                             <div class="row" style="justify-content: center;padding-bottom: 10px;">
 

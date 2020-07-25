@@ -42316,9 +42316,15 @@ var staticRenderFns = [
         staticStyle: { "justify-content": "center", "padding-bottom": "10px" }
       },
       [
-        _c("input", { attrs: { type: "text", placeholder: "Full Name" } }),
+        _c("input", {
+          staticClass: "mb-2",
+          attrs: { type: "text", placeholder: "Full Name" }
+        }),
         _vm._v(" "),
-        _c("input", { attrs: { type: "text", placeholder: "Contact Number" } })
+        _c("input", {
+          staticClass: "mb-2",
+          attrs: { type: "text", placeholder: "Contact Number" }
+        })
       ]
     )
   },
