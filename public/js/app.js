@@ -3015,7 +3015,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   computed: {
     totalQuantity: function totalQuantity() {
-      return this.cart.reduce(function (total, product) {
+      return this.cart.reduce(function (total, cart) {
         return total + cart.quantity;
       }, 0);
     }

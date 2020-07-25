@@ -261,7 +261,7 @@
         computed:{
             totalQuantity() {
                 return this.cart.reduce(
-                    (total, product) => total + cart.quantity,
+                    (total, cart) => total + cart.quantity,
                     0
                 );
             }
