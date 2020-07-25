@@ -3067,7 +3067,8 @@ __webpack_require__.r(__webpack_exports__);
       var _this = this;
 
       axios.get("/public_list/" + this.public_id).then(function (response) {
-        _this.products = response.data; //this.public_address = window.location.hostname + '/main/' + this.form.public_id;
+        _this.products = response.data;
+        _this.user_id = _this.products[0].user_id; //this.public_address = window.location.hostname + '/main/' + this.form.public_id;
         //console.log( this.form.user_logo ? this.form.user_logo : 'img/your_logo_here.png');
       })["catch"](function () {}); //console.log(this.user_info);
     },
