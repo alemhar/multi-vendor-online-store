@@ -107,8 +107,8 @@ class ProductController extends Controller
         
         $products = Product::where('user_id', $user_id)->latest()->paginate(5);
 
-        array_push($products,['user_id' => $user_id]);
-        
+        //array_push($products,['user_id' => $user_id]);
+        $products->user_id = $user_id;
         return ProductResource::collection($products);
 
         
