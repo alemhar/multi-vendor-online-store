@@ -3021,6 +3021,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['public_id', 'store_name'],
   data: function data() {
@@ -42191,6 +42192,15 @@ var render = function() {
                                 ])
                               }),
                               0
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "button",
+                              {
+                                staticClass: "btn btn-outline-dark",
+                                attrs: { type: "button" }
+                              },
+                              [_vm._v("Check Out")]
                             )
                           ])
                         : _vm._e()
