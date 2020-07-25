@@ -35,8 +35,8 @@
                                             </li>
                                             </ul>
                                             <div class="row" style="justify-content: center;padding-bottom: 10px;">
-                                                <input type="text" placeholder="Full Name" class="mb-2">
-                                                <input type="text" placeholder="Contact Number" class="mb-2">
+                                                <input type="text" placeholder="Full Name" class="mb-2 check-out-info">
+                                                <input type="text" placeholder="Contact Number" class="mb-2 check-out-info">
                                             </div>
                                             <div class="row" style="justify-content: center;padding-bottom: 10px;">
 
@@ -223,6 +223,18 @@
   margin: 1rem 0;
 }
 
+.cart-dropdown__list {
+    border: 1px solid lightgray;
+    margin-top: 15px;
+    border-radius: 10px;
+    background: lightgray;
+}
+
+.check-out-info {
+    border-radius: 5px;
+    border: 1px solid lightgray;
+    width: 80%;
+}
 .products {
   display: -webkit-box;
   display: flex;
