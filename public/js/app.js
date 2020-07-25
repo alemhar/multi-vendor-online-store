@@ -42044,34 +42044,29 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "card-footer" }, [
-      _c(
-        "a",
-        {
-          staticClass: "btn btn-outline-dark",
-          attrs: { type: "button", href: "#" }
-        },
-        [_vm._v("Photos")]
-      ),
-      _vm._v(" "),
-      _c(
-        "a",
-        {
-          staticClass: "btn btn-outline-dark",
-          attrs: { type: "button", href: "#" }
-        },
-        [_vm._v("Buy")]
-      ),
-      _vm._v(" "),
-      _c(
-        "a",
-        {
-          staticClass: "btn btn-outline-dark",
-          attrs: { type: "button", href: "#" }
-        },
-        [_vm._v("+Cart")]
-      )
-    ])
+    return _c(
+      "div",
+      { staticClass: "card-footer", staticStyle: { "text-align": "end" } },
+      [
+        _c(
+          "button",
+          { staticClass: "btn btn-outline-dark", attrs: { type: "button" } },
+          [_vm._v("Photos")]
+        ),
+        _vm._v(" "),
+        _c(
+          "button",
+          { staticClass: "btn btn-outline-dark", attrs: { type: "button" } },
+          [_vm._v("Buy")]
+        ),
+        _vm._v(" "),
+        _c(
+          "button",
+          { staticClass: "btn btn-outline-dark", attrs: { type: "button" } },
+          [_vm._v("+Cart")]
+        )
+      ]
+    )
   }
 ]
 render._withStripped = true
