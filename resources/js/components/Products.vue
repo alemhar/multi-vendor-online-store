@@ -21,20 +21,20 @@
                                 <!-- button type="submit" @click="loadInfo" style="margin-right: 10px;" class="btn btn-outline-primary float-right">Contact Seller</button -->
                                 <nav class="nav">
                                     <div class="nav__cart">
-                                    <button @click="showCart = !showCart">
-                                        <i class="fas fa-shopping-cart"></i>
-                                    </button>
-                                    <span class="total-quantity" @click="showCart = !showCart">{{ totalQuantity }}</span>
-                                    <div v-if="showCart && cart.length > 0" class="cart-dropdown">
-                                        <ul class="cart-dropdown__list">
-                                        <li
-                                            v-for="product in cart"
-                                            :key="product.id"
-                                        >
-                                            {{ product.product_name }} ({{ product.quantity }})
-                                        </li>
-                                        </ul>
-                                    </div>
+                                        <button @click="showCart = !showCart">
+                                            <i class="fas fa-shopping-cart"></i>
+                                        </button>
+                                        <span class="total-quantity" @click="showCart = !showCart">{{ totalQuantity }}</span>
+                                        <div v-if="showCart && cart.length > 0" class="cart-dropdown">
+                                            <ul class="cart-dropdown__list">
+                                            <li
+                                                v-for="product in cart"
+                                                :key="product.id"
+                                            >
+                                                {{ product.product_name }} ({{ product.quantity }})
+                                            </li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </nav>
                             </div>
@@ -200,12 +200,13 @@
   border-radius: 10px;
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
   color: #333;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   overflow: auto;
   padding: 0 1rem;
   position: absolute;
   right: 0;
-  width: 350px;
+  width: 300px;
+  z-index: 99;
 }
 .nav__cart .cart-dropdown .cart-dropdown__list {
   list-style: none;
