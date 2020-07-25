@@ -341,6 +341,9 @@
                     this.cart.push({ id: id,product_name: product_name, quantity: 1});
             },
             checkOut(){
+                if(this.check_out_name.length == 0 || this.check_out_contact_no.length == 0){
+                    this.hasError = true;
+                }
                 axios.post("/checkout",
                     {
                         user_id: this.user_id,

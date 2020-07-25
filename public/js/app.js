@@ -3098,6 +3098,10 @@ __webpack_require__.r(__webpack_exports__);
       });
     },
     checkOut: function checkOut() {
+      if (this.check_out_name.length == 0 || this.check_out_contact_no.length == 0) {
+        this.hasError = true;
+      }
+
       axios.post("/checkout", {
         user_id: this.user_id,
         customer_name: this.check_out_name,
