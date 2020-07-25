@@ -7,7 +7,7 @@ use App\Http\Requests;
 use App\Product;
 use App\UserDetail;
 use App\User;
-
+use Illuminate\Support\Facades\Mail;
 use App\Http\Resources\Product as ProductResource;
 
 class ProductController extends Controller
