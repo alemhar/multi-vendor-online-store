@@ -12,8 +12,9 @@
             <div class="col-md-8 col-md-offset-2">
                 <div class="panel panel-default">
                     <h2>New Order</h2> 
-                    <p>Name: {{ $customer['name'] }}</p>
-                    <p>Contact: {{ $customer['contact'] }}</p>
+                    <!-- p>Name: {{ $customer['name'] }}</p>
+                    <p>Contact: {{ $customer['contact'] }}</p -->
+                    <?php var_dump($customer);?>
                     <div>
 
                     @if ($products)
@@ -23,7 +24,7 @@
                         <ul>
                         	@foreach ($products as $product)
 		                        
-                                    <li><?php echo $product['product_name'] .' x '.$product['quantity'];?></li>
+                                    <!-- li><php echo $product['product_name'] .' x '.$product['quantity'];?></li -->
                                     
                             @endforeach
                         </ul>
