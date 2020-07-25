@@ -152,10 +152,9 @@
 }
 
 .nav {
-  -webkit-box-align: center;
-          align-items: center;
-  background: salmon;
-  color: white;
+  /* -webkit-box-align: center; */
+  /* align-items: center; */
+  color: black;
   display: -webkit-box;
   display: flex;
   -webkit-box-pack: justify;
@@ -171,7 +170,7 @@
 .nav__cart button {
   background: none;
   border: 0;
-  color: white;
+  color: black;
   cursor: pointer;
 }
 .nav__cart i {
