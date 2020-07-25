@@ -187,18 +187,19 @@
             },
             addToCart(id,product_name,type){
                 //if(this.products.length > 0 ){
-                    for (let i = 0; i < this.products.length; i++) {
-                        if (this.products[i].id === id) {
+                    for (let i = 0; i < this.cart.length; i++) {
+                        if (this.cart[i].id === id) {
                             if (type === 'subtract') {
-                                if (this.products[i].quantity !== 0) {
-                                    this.products[i].quantity--;
+                                if (this.cart[i].quantity !== 0) {
+                                    this.prodcartucts[i].quantity--;
                                 }
                             } else {
-                                this.products[i].quantity++;
+                                this.cart[i].quantity++;
                             }
                             
                             break;
                         }
+                        
                     }
                     this.cart.push({ id: id,product_name: product_name, quantity: 1});
                 //} else {

@@ -2939,14 +2939,14 @@ __webpack_require__.r(__webpack_exports__);
     },
     addToCart: function addToCart(id, product_name, type) {
       //if(this.products.length > 0 ){
-      for (var i = 0; i < this.products.length; i++) {
-        if (this.products[i].id === id) {
+      for (var i = 0; i < this.cart.length; i++) {
+        if (this.cart[i].id === id) {
           if (type === 'subtract') {
-            if (this.products[i].quantity !== 0) {
-              this.products[i].quantity--;
+            if (this.cart[i].quantity !== 0) {
+              this.prodcartucts[i].quantity--;
             }
           } else {
-            this.products[i].quantity++;
+            this.cart[i].quantity++;
           }
 
           break;
