@@ -114,13 +114,16 @@ class ProductController extends Controller
 
     public function checkout(Request $request)
     {
+       
+        $user_id = request['user_id'];
+        $customer_name = request['customer_name'];
+        $customer_contact_no = request['customer_contact_no'];
+        $products = request['products'];
+        $customer = ['name' => $customer_name, 'contact' => $customer_contact_no];
+        $user = User::where('id', $user_id)->get()->first();
+        $to = $user->email;
+        Mail::to($to)->send(new NewOrder($customer, $products));
         
-        //$userDetail = UserDetail::where('public_id', $public_id)->get()->first(); 
-        
-        //$user_id = $userDetail->user_id;
-        
-        //$products = Product::where('user_id', $user_id)->latest()->paginate(5);
-
         return $request;
 
         
