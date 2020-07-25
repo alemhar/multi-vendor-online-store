@@ -42173,7 +42173,7 @@ var render = function() {
                         [_vm._v(_vm._s(_vm.totalQuantity))]
                       ),
                       _vm._v(" "),
-                      _vm.showCart
+                      _vm.showCart && _vm.cart.length > 0
                         ? _c("div", { staticClass: "cart-dropdown" }, [
                             _c(
                               "ul",
