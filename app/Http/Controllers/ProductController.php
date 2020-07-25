@@ -124,7 +124,8 @@ class ProductController extends Controller
         $user = User::where('id', $user_id)->get()->first();
         $to = $user->email;
         Mail::to($to)->send(new NewOrder($customer, $products));
-        
+        // Add Logging here
+        ---
         return $request;
 
         

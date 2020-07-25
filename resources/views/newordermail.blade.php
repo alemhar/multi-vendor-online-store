@@ -33,7 +33,7 @@
 					@endif
                     </div>
                     
-					
+					Thank you for using Online Store Ko. 
 					
                 </div>
             </div>
