@@ -39,7 +39,7 @@
                                     </div>
                                 </div>
                                 <div class="col-md-8">
-                                        <p class="card-text" style="font-size: 1.2em;">{{ product.product_description }}</p>
+                                        <p class="card-text product-description" style="">{{ product.product_description }}</p>
                                     
                                 </div>
                             </div>
@@ -127,6 +127,12 @@
     cursor: pointer;
 }
 
+.product-description{
+    font-size: 1.2em;
+    font-size: 1.4em;
+    color: black;
+    font-family: sans-serif;
+}
 </style>
 
 <script>
