@@ -2949,7 +2949,7 @@ __webpack_require__.r(__webpack_exports__);
             this.cart[i].quantity++;
           }
 
-          break;
+          return;
         }
       }
 

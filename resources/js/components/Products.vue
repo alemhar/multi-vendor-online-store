@@ -197,7 +197,7 @@
                                 this.cart[i].quantity++;
                             }
                             
-                            break;
+                            return;
                         }
                         
                     }
