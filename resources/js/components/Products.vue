@@ -292,7 +292,17 @@
                 cart: [],
                 check_out_name: '',
                 check_out_contact_no: '',
-                showCart: false
+                showCart: false,
+                id: '',
+                product_name: '',
+                product_model_no: '',
+                brand: '',
+                product_price: '',
+                user_id: '',
+                product_description: '',
+                product_photo: '226x180.svg',
+                product_photo_base64: '',
+                current_product_photo: '/img/products/226x180.svg',
 
             }
         },
@@ -328,7 +338,22 @@
                     this.cart.push({ id: id,product_name: product_name, quantity: 1});
             },
             checkOut(){
+                axios.post("/checkout",
+                    {
+                        firstName: 'Finn',
+                        lastName: 'Williams'
+                    }
+                ).then((response)=>{
 
+                    this.products = response.data;
+                    //this.public_address = window.location.hostname + '/main/' + this.form.public_id;
+                  
+                  //console.log( this.form.user_logo ? this.form.user_logo : 'img/your_logo_here.png');
+                    
+                })
+                .catch(()=>{
+                    
+                });
             }
             
 

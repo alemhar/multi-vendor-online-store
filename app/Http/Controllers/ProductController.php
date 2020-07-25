@@ -107,8 +107,25 @@ class ProductController extends Controller
         
         $products = Product::where('user_id', $user_id)->latest()->paginate(5);
 
+        array_push($products,['user_id' => $user_id]);
+        
         return ProductResource::collection($products);
 
         
     }
+
+    public function checkout(Request $request)
+    {
+        
+        //$userDetail = UserDetail::where('public_id', $public_id)->get()->first(); 
+        
+        //$user_id = $userDetail->user_id;
+        
+        //$products = Product::where('user_id', $user_id)->latest()->paginate(5);
+
+        return $request;
+
+        
+    }
+
 }
