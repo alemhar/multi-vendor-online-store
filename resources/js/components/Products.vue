@@ -35,12 +35,12 @@
                                             </li>
                                             </ul>
                                             <div class="row" style="justify-content: center;padding-bottom: 10px;">
-                                                <input type="text" placeholder="Full Name" class="mb-2 check-out-info">
-                                                <input type="text" placeholder="Contact Number" class="mb-2 check-out-info">
+                                                <input type="text" v-model="check_out_name" placeholder="Full Name" class="mb-2 check-out-info">
+                                                <input type="text" v-model="check_out_contact_no" placeholder="Contact Number" class="mb-2 check-out-info">
                                             </div>
                                             <div class="row" style="justify-content: center;padding-bottom: 10px;">
 
-                                            <button type="button" class="btn btn-primary" style="color: #fff;background-color: #227dc7;border-color: #2176bd;">Check Out</button>
+                                            <button type="button" class="btn btn-primary" style="color: #fff;background-color: #227dc7;border-color: #2176bd;" @click="checkOut">Check Out</button>
                                             </div>
                                         </div>
                                     </div>
@@ -289,37 +289,14 @@
         data() {
             return {
                 products:{},
-                id: '',
-                public_address: '',
-                showProductForm: false,
-                productEditMode: false,
-                product_name: '',
-                product_model_no: '',
-                brand: '',
-                product_price: '',
-                user_id: '',
-                product_description: '',
-                product_photo: '226x180.svg',
-                product_photo_base64: '',
-                current_product_photo: '/img/products/226x180.svg',
                 cart: [],
+                check_out_name: '',
+                check_out_contact_no: '',
                 showCart: false
 
             }
         },
         methods: {
-            copyToClipboard(myInput){
-                /* Get the text field */
-                let copyText = document.getElementById(myInput);
-                /* Select the text field */
-                copyText.select();
-                copyText.setSelectionRange(0, 99999); /*For mobile devices*/
-                /* Copy the text inside the text field */
-                document.execCommand("copy");
-
-                /* Alert the copied text */
-                //alert("Copied the text: " + copyText.value);
-            },
             loadProducts(){
                 axios.get("/public_list/"+this.public_id)
                 .then((response)=>{
@@ -350,34 +327,10 @@
                     }
                     this.cart.push({ id: id,product_name: product_name, quantity: 1});
             },
-            profilePhotoChange(e){
-                let file = e.target.files[0];
-                let file_reader = new FileReader();
-
-
-                let limit = 1024 * 1024 * 2;
-
-                if(file['size'] > limit){
-                    /*
-                    swal({
-                        type: 'error',
-                        title: 'Oops...',
-                        text: 'You are uploading a large file',
-                    })
-                    */
-                   alert('Picture Size Limit : 2MB or less.');
-                    return false;
-                }
-
-                file_reader.onloadend = (file) =>   {
-                    console.log('RESULT', file_reader.result)
-                    this.user_logo_base64 = file_reader.result;
-                    this.store_logo = file_reader.result;
-                }
-
-                file_reader.readAsDataURL(file);
+            checkOut(){
 
             }
+            
 
         },
         created() {

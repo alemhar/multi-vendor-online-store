@@ -3046,39 +3046,13 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       products: {},
-      id: '',
-      public_address: '',
-      showProductForm: false,
-      productEditMode: false,
-      product_name: '',
-      product_model_no: '',
-      brand: '',
-      product_price: '',
-      user_id: '',
-      product_description: '',
-      product_photo: '226x180.svg',
-      product_photo_base64: '',
-      current_product_photo: '/img/products/226x180.svg',
       cart: [],
+      check_out_name: '',
+      check_out_contact_no: '',
       showCart: false
     };
   },
   methods: {
-    copyToClipboard: function copyToClipboard(myInput) {
-      /* Get the text field */
-      var copyText = document.getElementById(myInput);
-      /* Select the text field */
-
-      copyText.select();
-      copyText.setSelectionRange(0, 99999);
-      /*For mobile devices*/
-
-      /* Copy the text inside the text field */
-
-      document.execCommand("copy");
-      /* Alert the copied text */
-      //alert("Copied the text: " + copyText.value);
-    },
     loadProducts: function loadProducts() {
       var _this = this;
 
@@ -3110,33 +3084,7 @@ __webpack_require__.r(__webpack_exports__);
         quantity: 1
       });
     },
-    profilePhotoChange: function profilePhotoChange(e) {
-      var _this2 = this;
-
-      var file = e.target.files[0];
-      var file_reader = new FileReader();
-      var limit = 1024 * 1024 * 2;
-
-      if (file['size'] > limit) {
-        /*
-        swal({
-            type: 'error',
-            title: 'Oops...',
-            text: 'You are uploading a large file',
-        })
-        */
-        alert('Picture Size Limit : 2MB or less.');
-        return false;
-      }
-
-      file_reader.onloadend = function (file) {
-        console.log('RESULT', file_reader.result);
-        _this2.user_logo_base64 = file_reader.result;
-        _this2.store_logo = file_reader.result;
-      };
-
-      file_reader.readAsDataURL(file);
-    }
+    checkOut: function checkOut() {}
   },
   created: function created() {
     //this.user_id = document.querySelector('meta[name="user-id"]').getAttribute('content');
@@ -42213,9 +42161,95 @@ var render = function() {
                               0
                             ),
                             _vm._v(" "),
-                            _vm._m(0),
+                            _c(
+                              "div",
+                              {
+                                staticClass: "row",
+                                staticStyle: {
+                                  "justify-content": "center",
+                                  "padding-bottom": "10px"
+                                }
+                              },
+                              [
+                                _c("input", {
+                                  directives: [
+                                    {
+                                      name: "model",
+                                      rawName: "v-model",
+                                      value: _vm.check_out_name,
+                                      expression: "check_out_name"
+                                    }
+                                  ],
+                                  staticClass: "mb-2 check-out-info",
+                                  attrs: {
+                                    type: "text",
+                                    placeholder: "Full Name"
+                                  },
+                                  domProps: { value: _vm.check_out_name },
+                                  on: {
+                                    input: function($event) {
+                                      if ($event.target.composing) {
+                                        return
+                                      }
+                                      _vm.check_out_name = $event.target.value
+                                    }
+                                  }
+                                }),
+                                _vm._v(" "),
+                                _c("input", {
+                                  directives: [
+                                    {
+                                      name: "model",
+                                      rawName: "v-model",
+                                      value: _vm.check_out_contact_no,
+                                      expression: "check_out_contact_no"
+                                    }
+                                  ],
+                                  staticClass: "mb-2 check-out-info",
+                                  attrs: {
+                                    type: "text",
+                                    placeholder: "Contact Number"
+                                  },
+                                  domProps: { value: _vm.check_out_contact_no },
+                                  on: {
+                                    input: function($event) {
+                                      if ($event.target.composing) {
+                                        return
+                                      }
+                                      _vm.check_out_contact_no =
+                                        $event.target.value
+                                    }
+                                  }
+                                })
+                              ]
+                            ),
                             _vm._v(" "),
-                            _vm._m(1)
+                            _c(
+                              "div",
+                              {
+                                staticClass: "row",
+                                staticStyle: {
+                                  "justify-content": "center",
+                                  "padding-bottom": "10px"
+                                }
+                              },
+                              [
+                                _c(
+                                  "button",
+                                  {
+                                    staticClass: "btn btn-primary",
+                                    staticStyle: {
+                                      color: "#fff",
+                                      "background-color": "#227dc7",
+                                      "border-color": "#2176bd"
+                                    },
+                                    attrs: { type: "button" },
+                                    on: { click: _vm.checkOut }
+                                  },
+                                  [_vm._v("Check Out")]
+                                )
+                              ]
+                            )
                           ])
                         : _vm._e()
                     ])
@@ -42316,58 +42350,7 @@ var render = function() {
     ])
   ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      {
-        staticClass: "row",
-        staticStyle: { "justify-content": "center", "padding-bottom": "10px" }
-      },
-      [
-        _c("input", {
-          staticClass: "mb-2 check-out-info",
-          attrs: { type: "text", placeholder: "Full Name" }
-        }),
-        _vm._v(" "),
-        _c("input", {
-          staticClass: "mb-2 check-out-info",
-          attrs: { type: "text", placeholder: "Contact Number" }
-        })
-      ]
-    )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      {
-        staticClass: "row",
-        staticStyle: { "justify-content": "center", "padding-bottom": "10px" }
-      },
-      [
-        _c(
-          "button",
-          {
-            staticClass: "btn btn-primary",
-            staticStyle: {
-              color: "#fff",
-              "background-color": "#227dc7",
-              "border-color": "#2176bd"
-            },
-            attrs: { type: "button" }
-          },
-          [_vm._v("Check Out")]
-        )
-      ]
-    )
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
