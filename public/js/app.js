@@ -2937,11 +2937,28 @@ __webpack_require__.r(__webpack_exports__);
         //console.log( this.form.user_logo ? this.form.user_logo : 'img/your_logo_here.png');
       })["catch"](function () {}); //console.log(this.user_info);
     },
-    addToCart: function addToCart(product_name) {
-      console.log(product_name);
+    addToCart: function addToCart(id, product_name, type) {
+      //if(this.products.length > 0 ){
+      for (var i = 0; i < this.products.length; i++) {
+        if (this.products[i].id === product.id) {
+          if (type === 'subtract') {
+            if (this.products[i].quantity !== 0) {
+              this.products[i].quantity--;
+            }
+          } else {
+            this.products[i].quantity++;
+          }
+
+          break;
+        }
+      }
+
       this.cart.push({
-        product_name: product_name
-      });
+        id: id,
+        product_name: product_name,
+        quantity: 1
+      }); //} else {
+      //}
     },
     profilePhotoChange: function profilePhotoChange(e) {
       var _this2 = this;
@@ -42055,7 +42072,10 @@ var render = function() {
                                   attrs: { type: "button" },
                                   on: {
                                     click: function($event) {
-                                      return _vm.addToCart(product.product_name)
+                                      return _vm.addToCart(
+                                        product.id,
+                                        product.product_name
+                                      )
                                     }
                                   }
                                 },

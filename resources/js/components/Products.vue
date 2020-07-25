@@ -34,7 +34,7 @@
                                         <div class="card-footer" style="text-align: end;">
                                             <button type="button" class="btn btn-outline-dark">Photos<!-- i class="fas fa-eye"></i --></button>
                                             <button type="button" class="btn btn-outline-dark">Buy<!-- i class="fas fa-cash-register"></i --></button>
-                                            <button type="button" class="btn btn-outline-dark" @click="addToCart(product.product_name)">+Cart<!-- i class="fas fa-cart-plus"></i --></button>
+                                            <button type="button" class="btn btn-outline-dark" @click="addToCart(product.id,product.product_name)">+Cart<!-- i class="fas fa-cart-plus"></i --></button>
                                         </div>
                                     </div>
                                 </div>
@@ -185,9 +185,26 @@
                 });
                 //console.log(this.user_info);
             },
-            addToCart(product_name){
-                console.log(product_name);
-                this.cart.push({ product_name: product_name});
+            addToCart(id,product_name,type){
+                //if(this.products.length > 0 ){
+                    for (let i = 0; i < this.products.length; i++) {
+                        if (this.products[i].id === product.id) {
+                            if (type === 'subtract') {
+                                if (this.products[i].quantity !== 0) {
+                                    this.products[i].quantity--;
+                                }
+                            } else {
+                                this.products[i].quantity++;
+                            }
+                            
+                            break;
+                        }
+                    }
+                    this.cart.push({ id: id,product_name: product_name, quantity: 1});
+                //} else {
+                    
+
+                //}
             },
             profilePhotoChange(e){
                 let file = e.target.files[0];
