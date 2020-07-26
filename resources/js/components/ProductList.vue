@@ -380,7 +380,8 @@
                     user_id: this.user_id,
                     product_name: this.product_name,
                     product_model_no: this.product_model_no,
-                    product_price: this.product_price,
+                    //product_price: this.product_price,
+                    product_price: parseFloat(this.product_price.split(',').join('')),
                     product_photo: this.product_photo,
                     product_description: this.product_description,
                     brand: this.brand
@@ -411,7 +412,7 @@
                     user_id: this.user_id,
                     product_name: this.product_name,
                     product_model_no: this.product_model_no,
-                    product_price: this.product_price,
+                    product_price: parseFloat(this.product_price.split(',').join('')),
                     product_photo: this.product_photo,
                     product_description: this.product_description,
                     brand: this.brand,
