@@ -3086,9 +3086,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['public_id', 'store_name'],
   data: function data() {
@@ -45420,7 +45417,7 @@ var render = function() {
               _c("div", { staticClass: "row" }, [
                 _c("div", { staticClass: "col-8" }, [
                   _c("div", { staticClass: "row" }, [
-                    _c("div", { staticClass: "col" }, [
+                    _c("div", { staticClass: "float-left" }, [
                       _c("img", {
                         staticClass: "img-fluid",
                         staticStyle: { height: "100px" },
@@ -45434,53 +45431,24 @@ var render = function() {
                     _c("div", { staticClass: "col" }, [
                       _c("h4", [_vm._v(_vm._s(_vm.store_name))]),
                       _vm._v(" "),
-                      _c(
-                        "p",
-                        {
-                          directives: [
-                            {
-                              name: "show",
-                              rawName: "v-show",
-                              value: _vm.seller.user_tel,
-                              expression: "seller.user_tel"
-                            }
-                          ]
-                        },
-                        [_vm._v("Tel: " + _vm._s(this.seller.user_mobile))]
-                      ),
+                      _vm.seller.user_tel
+                        ? _c("p", [
+                            _vm._v("Tel: " + _vm._s(this.seller.user_mobile))
+                          ])
+                        : _vm._e(),
                       _vm._v(" "),
-                      _c(
-                        "p",
-                        {
-                          directives: [
-                            {
-                              name: "show",
-                              rawName: "v-show",
-                              value: _vm.seller.user_mobile,
-                              expression: "seller.user_mobile"
-                            }
-                          ]
-                        },
-                        [_vm._v("Mobile: " + _vm._s(this.seller.user_mobile))]
-                      ),
+                      _vm.seller.user_mobile
+                        ? _c("p", [
+                            _vm._v("Mobile: " + _vm._s(this.seller.user_mobile))
+                          ])
+                        : _vm._e(),
                       _vm._v(" "),
-                      _c(
-                        "p",
-                        {
-                          directives: [
-                            {
-                              name: "show",
-                              rawName: "v-show",
-                              value: _vm.seller.email,
-                              expression: "seller.email"
-                            }
-                          ]
-                        },
-                        [_vm._v("Email: " + _vm._s(this.seller.email))]
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("p", [_vm._v("Product Page")])
+                      _vm.seller.email
+                        ? _c("p", [
+                            _vm._v("Email: " + _vm._s(this.seller.email))
+                          ])
+                        : _vm._e()
+                    ])
                   ])
                 ]),
                 _vm._v(" "),
