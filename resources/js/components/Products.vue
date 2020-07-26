@@ -18,11 +18,11 @@
                                             
                                       <div class="float-left">
                                         
-                                        <img src="/img/osk_logo_sqr.png" alt="" class="img-fluid" style="height: 80px;padding: 2px;border: solid;border-color: aliceblue;">
+                                        <img src="/img/osk_logo_sqr.png" alt="" class="img-fluid" style="height: 80px;padding: 2px;border: solid;border-color: aliceblue;background: white;">
                                       </div>
                                       <div class="float-left">
                                         
-                                        <img :src="'/img/logo/'+this.seller.user_logo" alt="" class="img-fluid" style="height: 80px;padding: 2px;border: solid;border-color: aliceblue;">
+                                        <img :src="'/img/logo/'+this.seller.user_logo" alt="" class="img-fluid" style="height: 90px;padding: 2px;border: solid;border-color: aliceblue;    background: white;">
                                       </div>
 
                                       <div class="col">

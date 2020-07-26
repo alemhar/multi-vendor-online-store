@@ -45438,10 +45438,11 @@ var render = function() {
                         _c("img", {
                           staticClass: "img-fluid",
                           staticStyle: {
-                            height: "80px",
+                            height: "90px",
                             padding: "2px",
                             border: "solid",
-                            "border-color": "aliceblue"
+                            "border-color": "aliceblue",
+                            background: "white"
                           },
                           attrs: {
                             src: "/img/logo/" + this.seller.user_logo,
@@ -45835,7 +45836,8 @@ var staticRenderFns = [
           height: "80px",
           padding: "2px",
           border: "solid",
-          "border-color": "aliceblue"
+          "border-color": "aliceblue",
+          background: "white"
         },
         attrs: { src: "/img/osk_logo_sqr.png", alt: "" }
       })
