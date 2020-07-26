@@ -70,7 +70,7 @@
         </style>
     </head>
     <body>
-    <div class="wrapper"    
+    <div class="wrapper">    
     <div id="app">
         <div class="container-fluid">
             <products public_id="{{ $user_info['public_id'] }}" store_name="{{ $user_info['store_name'] }}" ></products>
