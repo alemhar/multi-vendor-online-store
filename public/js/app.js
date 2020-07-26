@@ -3145,15 +3145,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['public_id', 'store_name'],
   data: function data() {
@@ -45570,34 +45561,6 @@ var render = function() {
                               alt: ""
                             }
                           })
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "col" }, [
-                          _c("h4", [_vm._v(_vm._s(_vm.store_name))]),
-                          _vm._v(" "),
-                          _c("p", [
-                            _vm.seller.user_tel
-                              ? _c("span", [
-                                  _vm._v("Tel: " + _vm._s(this.seller.user_tel))
-                                ])
-                              : _vm._e(),
-                            _c("br"),
-                            _vm._v(" "),
-                            _vm.seller.user_mobile
-                              ? _c("span", [
-                                  _vm._v(
-                                    "Mobile: " + _vm._s(this.seller.user_mobile)
-                                  )
-                                ])
-                              : _vm._e(),
-                            _c("br"),
-                            _vm._v(" "),
-                            _vm.seller.email
-                              ? _c("span", [
-                                  _vm._v("Email: " + _vm._s(this.seller.email))
-                                ])
-                              : _vm._e()
-                          ])
                         ])
                       ]),
                       _vm._v(" "),
