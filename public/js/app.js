@@ -42384,15 +42384,15 @@ var render = function() {
             ]),
             _vm._v(" "),
             _c("div", { staticClass: "card-body" }, [
-              _c("div", { staticClass: "form" }, [
-                _c(
-                  "div",
-                  { staticClass: "row mb-3" },
-                  _vm._l(_vm.products.data, function(product) {
-                    return _c(
-                      "div",
-                      { key: product.id, staticClass: "col-md-6" },
-                      [
+              _c(
+                "div",
+                { staticClass: "form" },
+                _vm._l(_vm.products.data, function(product) {
+                  return _c(
+                    "div",
+                    { key: product.id, staticClass: "row mb-3 bg-default" },
+                    [
+                      _c("div", { staticClass: "col-md-6" }, [
                         _c("div", { staticClass: "card" }, [
                           _c("img", {
                             staticClass: "card-img-top img-fluid",
@@ -42460,23 +42460,21 @@ var render = function() {
                               )
                             ]
                           )
-                        ]),
-                        _vm._v(" "),
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "col-md-9" }, [
                         _c(
-                          "div",
+                          "p",
                           { staticClass: "card-text product-description" },
-                          [
-                            _vm._v("Details: "),
-                            _c("br"),
-                            _vm._v(_vm._s(product.product_description))
-                          ]
+                          [_vm._v(_vm._s(product.product_description))]
                         )
-                      ]
-                    )
-                  }),
-                  0
-                )
-              ])
+                      ])
+                    ]
+                  )
+                }),
+                0
+              )
             ])
           ])
         ])
