@@ -42252,9 +42252,9 @@ var render = function() {
                             _c("div", [
                               _vm._v(
                                 " Qty: " +
-                                  _vm._s(_vm.product.totalQuantity) +
+                                  _vm._s(_vm.totalQuantity) +
                                   " Total: " +
-                                  _vm._s(_vm.product.totalAmount) +
+                                  _vm._s(_vm.totalAmount) +
                                   " "
                               )
                             ]),
