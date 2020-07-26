@@ -123,7 +123,7 @@ class ProductController extends Controller
         $customer_id = $request['customer_id'];
         
         $customer_name = $request['customer_name'];
-        $customer_contact_no = $request['customer_contact_no'];
+        $customer_contact = $request['customer_contact_no'];
         $total = $request['total'];
         $total_qty = $request['total_qty'];
 
