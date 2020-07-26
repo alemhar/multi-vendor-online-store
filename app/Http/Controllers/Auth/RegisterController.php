@@ -81,7 +81,7 @@ class RegisterController extends Controller
         //$username = strstr($user->email, '@', true);
         //$public_id = str_replace(array('.','_'), '',$username) . rand(1050,9999);
         $cleanedUserName = preg_replace( '/\s+/', '', $user->name);
-        $public_id = str_replace(array(' ','.','_','\'',',','"','&','/','\\'), '',$cleanedUserName) . rand(1050,9999);
+        $public_id = str_replace(array(' ','.','_','\'',',','"','&','/','\\'), '',strtolower($cleanedUserName)) . rand(1050,9999);
         UserDetail::create([
             'user_id' => $user->id,
             'first_name' => '',

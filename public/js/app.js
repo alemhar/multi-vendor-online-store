@@ -42472,15 +42472,6 @@ var render = function() {
                                 "button",
                                 {
                                   staticClass: "btn btn-outline-dark",
-                                  attrs: { type: "button" }
-                                },
-                                [_vm._v("Buy")]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "button",
-                                {
-                                  staticClass: "btn btn-outline-dark",
                                   attrs: { type: "button" },
                                   on: {
                                     click: function($event) {
@@ -42493,7 +42484,7 @@ var render = function() {
                                     }
                                   }
                                 },
-                                [_vm._v("+Cart")]
+                                [_vm._v("Add to Cart")]
                               )
                             ]
                           )
