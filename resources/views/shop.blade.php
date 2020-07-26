@@ -70,11 +70,13 @@
         </style>
     </head>
     <body>
+    <div class="wrapper"    
     <div id="app">
         <div class="container-fluid">
             <products public_id="{{ $user_info['public_id'] }}" store_name="{{ $user_info['store_name'] }}" ></products>
         </div>
     </div>
+
     <footer class="main-footer">
     <!-- To the right -->
     <div class="float-right d-none d-sm-inline">
@@ -83,6 +85,7 @@
     <!-- Default to the left -->
     <strong>Copyright &copy; 2010-2019 <a href="onlinestoreko.com">onlinestoreko.com</a>.</strong> support@onlinestoreko.com
    </footer>
+    </div>
 
 
 <!-- jQuery -->
