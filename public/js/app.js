@@ -2624,7 +2624,7 @@ __webpack_require__.r(__webpack_exports__);
     saveProduct: function saveProduct() {
       var _this2 = this;
 
-      if (this.product_price.length > 8) {
+      if (this.product_price.length > 13) {
         return;
       }
 
@@ -2652,7 +2652,7 @@ __webpack_require__.r(__webpack_exports__);
     updateProduct: function updateProduct() {
       var _this3 = this;
 
-      if (this.product_price.length > 8) {
+      if (this.product_price.length > 13) {
         return;
       }
 

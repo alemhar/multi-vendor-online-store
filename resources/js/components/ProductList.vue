@@ -376,7 +376,7 @@
                 this.product_photo = '226x180.svg';
             },
             saveProduct(){
-                if(this.product_price.length > 8){
+                if(this.product_price.length > 13){
                   return;
                 }
                 axios.post('api/product', {
@@ -410,7 +410,7 @@
                 $('#product-form').modal('hide');
             },
             updateProduct(){
-                if(this.product_price.length > 8){
+                if(this.product_price.length > 13){
                   return;
                 }
                 axios.put('api/product/'+ this.id, {
