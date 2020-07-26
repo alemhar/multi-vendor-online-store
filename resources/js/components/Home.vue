@@ -14,7 +14,7 @@
                     </div>
                     
                     <div class="card-body">
-                        <h2>Welcome to you dashboard. You may contact us at support@onlinestoreko.com to report bugs, queries, support, request a feature.</h2>    
+                        <h2>Welcome to you dashboard. You may contact us at support@onlinestoreko.com to report bugs, queries or support.</h2>    
                     </div>
                 </div>
             </div>

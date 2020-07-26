@@ -44944,7 +44944,7 @@ var staticRenderFns = [
             _c("div", { staticClass: "card-body" }, [
               _c("h2", [
                 _vm._v(
-                  "Welcome to you dashboard. You may contact us at support@onlinestoreko.com to report bugs, queries, support, request a feature."
+                  "Welcome to you dashboard. You may contact us at support@onlinestoreko.com to report bugs, queries or support."
                 )
               ])
             ])
