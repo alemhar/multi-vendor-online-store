@@ -42203,7 +42203,12 @@ var render = function() {
                                       _vm._s(product.product_name) +
                                       " (" +
                                       _vm._s(product.product_qty) +
-                                      ") "
+                                      ") = " +
+                                      _vm._s(
+                                        product.product_qty *
+                                          product.product_price
+                                      ) +
+                                      " "
                                   ),
                                   _c("b", [
                                     _c(
