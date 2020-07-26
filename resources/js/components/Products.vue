@@ -27,7 +27,8 @@
                                     </div>
                                     <div class="row">
                                         <h4>{{ store_name }}</h4>
-                                        <br>
+                                    </div>
+                                    <div class="row">
                                         <p> 
                                         <span v-if="seller.user_tel">Tel: {{ this.seller.user_tel }}</span><br> 
                                         <span v-if="seller.user_mobile">Mobile: {{ this.seller.user_mobile }}</span><br> 
