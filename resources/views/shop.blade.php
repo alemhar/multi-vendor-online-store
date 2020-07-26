@@ -82,7 +82,7 @@
       "OSK" <i>Ang online store mo.</i>
     </div>
     <!-- Default to the left -->
-    <strong>Copyright &copy; <a href="onlinestoreko.com">onlinestoreko.com</a>.</strong> support@onlinestoreko.com
+    <strong>Copyright &copy; <a href="onlinestoreko.com">onlinestoreko.com </a> |</strong> support@onlinestoreko.com
    </footer>
     </div>
 
