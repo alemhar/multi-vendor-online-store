@@ -88,7 +88,7 @@
                                     </div>
                                         
                                 </div>
-                                <div class="col-md-9">
+                                <div class="col-md-9" style="background-color: lightgray;">
                                         <p class="card-text product-description" style="">{{ product.product_description }}</p>
                                 </div>
                             </div>

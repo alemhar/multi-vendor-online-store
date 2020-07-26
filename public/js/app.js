@@ -45804,13 +45804,20 @@ var render = function() {
                           ])
                         ]),
                         _vm._v(" "),
-                        _c("div", { staticClass: "col-md-9" }, [
-                          _c(
-                            "p",
-                            { staticClass: "card-text product-description" },
-                            [_vm._v(_vm._s(product.product_description))]
-                          )
-                        ])
+                        _c(
+                          "div",
+                          {
+                            staticClass: "col-md-9",
+                            staticStyle: { "background-color": "lightgray" }
+                          },
+                          [
+                            _c(
+                              "p",
+                              { staticClass: "card-text product-description" },
+                              [_vm._v(_vm._s(product.product_description))]
+                            )
+                          ]
+                        )
                       ]
                     )
                   }),
