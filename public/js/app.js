@@ -42392,7 +42392,7 @@ var render = function() {
                     "div",
                     { key: product.id, staticClass: "row mb-3 bg-default" },
                     [
-                      _c("div", { staticClass: "col-md-6" }, [
+                      _c("div", { staticClass: "col-md-3" }, [
                         _c("div", { staticClass: "card" }, [
                           _c("img", {
                             staticClass: "card-img-top img-fluid",
