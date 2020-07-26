@@ -75,7 +75,14 @@
             <products public_id="{{ $user_info['public_id'] }}" store_name="{{ $user_info['store_name'] }}" ></products>
         </div>
     </div>
-
+    <footer class="main-footer">
+    <!-- To the right -->
+    <div class="float-right d-none d-sm-inline">
+      "OSK" Ang online store mo.
+    </div>
+    <!-- Default to the left -->
+    <strong>Copyright &copy; 2010-2019 <a href="onlinestoreko.com">onlinestoreko.com</a>.</strong> support@onlinestoreko.com
+   </footer>
 
 
 <!-- jQuery -->
