@@ -81,7 +81,7 @@
                         <a href="{{ route('login') }}" style="color: #ff4900;text-decoration: underline;">Login</a>
 
                         @if (Route::has('register'))
-                            <!-- a href="{{ route('register') }}" style="color: #ff4900;text-decoration: underline;">Register</a -->
+                            <a href="{{ route('register') }}" style="color: #ff4900;text-decoration: underline;">Register</a>
                         @endif
                     @endauth
                 </div>
