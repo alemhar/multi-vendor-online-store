@@ -42262,10 +42262,10 @@ var render = function() {
                                 _vm._v(
                                   " Qty: " +
                                     _vm._s(_vm.totalQuantity) +
-                                    " Total: "
+                                    " Total: "
                                 ),
-                                _c("span", [_vm._v(" ₱ ")]),
-                                _vm._v(" " + _vm._s(_vm.totalAmount) + " ")
+                                _c("span", [_vm._v("₱")]),
+                                _vm._v(" " + _vm._s(_vm.totalAmount) + " ")
                               ]
                             ),
                             _vm._v(" "),

@@ -26,7 +26,7 @@
                         <ul>
                         	@foreach ($products as $product)
 		                        
-                                    <li><?php echo $product['product_name'] .' - '.$product['total_qty'].' x '.$product['product_price'];?></li>
+                                    <li><?php echo $product['product_name'] .' - '.$product['product_qty'].' x '.$product['product_price'];?></li>
                                     
                             @endforeach
                         </ul>
