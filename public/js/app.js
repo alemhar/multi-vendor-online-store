@@ -42390,7 +42390,7 @@ var render = function() {
                     "div",
                     { key: product.id, staticClass: "row mb-3" },
                     [
-                      _c("div", { staticClass: "col-md-4" }, [
+                      _c("div", { staticClass: "col-md-3" }, [
                         _c("div", { staticClass: "card" }, [
                           _c("img", {
                             staticClass: "card-img-top img-fluid",
@@ -42461,7 +42461,7 @@ var render = function() {
                         ])
                       ]),
                       _vm._v(" "),
-                      _c("div", { staticClass: "col-md-8" }, [
+                      _c("div", { staticClass: "col-md-9" }, [
                         _c(
                           "p",
                           { staticClass: "card-text product-description" },
