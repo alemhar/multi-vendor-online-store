@@ -13,11 +13,21 @@
                     <div class="card-header">
                         <div class="row">
                             <div class="col-8">
+                                    <div class="row">
+                                      <div class="col">
+                                        <img :src="'/img/logo/'+this.seller.user_logo" alt="" class="img-fluid" style="height:100px;">
+                                      </div>
+                                      <div class="col">
+                                        <h4>{{ store_name }}</h4> 
+                                        <p v-show="seller.user_tel">Tel: {{ this.seller.user_mobile }}</p> 
+                                        <p v-show="seller.user_mobile">Mobile: {{ this.seller.user_mobile }}</p> 
+                                        <p v-show="seller.email">Email: {{ this.seller.email }}</p> 
+                                      
+                                      </div>
+                                        <p>Product Page</p>
                                     
-                                    <img :src="'/img/logo/'+this.seller.user_logo" alt="" class="img-fluid" style="height:100px;">
-                                    <h3>{{ store_name }}</h3> 
-                                    <p>Product Page</p>
-                                  
+
+                                    </div>
                                 
                             </div>
                             <div class="col-4">

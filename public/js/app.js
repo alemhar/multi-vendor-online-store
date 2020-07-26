@@ -3079,6 +3079,16 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['public_id', 'store_name'],
   data: function data() {
@@ -45409,18 +45419,69 @@ var render = function() {
             _c("div", { staticClass: "card-header" }, [
               _c("div", { staticClass: "row" }, [
                 _c("div", { staticClass: "col-8" }, [
-                  _c("img", {
-                    staticClass: "img-fluid",
-                    staticStyle: { height: "100px" },
-                    attrs: {
-                      src: "/img/logo/" + this.seller.user_logo,
-                      alt: ""
-                    }
-                  }),
-                  _vm._v(" "),
-                  _c("h3", [_vm._v(_vm._s(_vm.store_name))]),
-                  _vm._v(" "),
-                  _c("p", [_vm._v("Product Page")])
+                  _c("div", { staticClass: "row" }, [
+                    _c("div", { staticClass: "col" }, [
+                      _c("img", {
+                        staticClass: "img-fluid",
+                        staticStyle: { height: "100px" },
+                        attrs: {
+                          src: "/img/logo/" + this.seller.user_logo,
+                          alt: ""
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col" }, [
+                      _c("h4", [_vm._v(_vm._s(_vm.store_name))]),
+                      _vm._v(" "),
+                      _c(
+                        "p",
+                        {
+                          directives: [
+                            {
+                              name: "show",
+                              rawName: "v-show",
+                              value: _vm.seller.user_tel,
+                              expression: "seller.user_tel"
+                            }
+                          ]
+                        },
+                        [_vm._v("Tel: " + _vm._s(this.seller.user_mobile))]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "p",
+                        {
+                          directives: [
+                            {
+                              name: "show",
+                              rawName: "v-show",
+                              value: _vm.seller.user_mobile,
+                              expression: "seller.user_mobile"
+                            }
+                          ]
+                        },
+                        [_vm._v("Mobile: " + _vm._s(this.seller.user_mobile))]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "p",
+                        {
+                          directives: [
+                            {
+                              name: "show",
+                              rawName: "v-show",
+                              value: _vm.seller.email,
+                              expression: "seller.email"
+                            }
+                          ]
+                        },
+                        [_vm._v("Email: " + _vm._s(this.seller.email))]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("p", [_vm._v("Product Page")])
+                  ])
                 ]),
                 _vm._v(" "),
                 _c("div", { staticClass: "col-4" }, [
