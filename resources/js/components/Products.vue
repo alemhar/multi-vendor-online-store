@@ -10,13 +10,21 @@
         <div class="row justify-content-center">
             <div class="col-md-12">
                 <div class="card">
-                    <div class="card-header">
+                    <div class="card-header" style="background-color: #2980b9;color: black;">
                         <div class="row">
                             <div class="col-8">
                                     <div class="row">
+                                      
+                                            
                                       <div class="float-left">
-                                        <img :src="'/img/logo/'+this.seller.user_logo" alt="" class="img-fluid" style="height: 80px;padding: 2px;border: solid;">
+                                        
+                                        <img src="/img/osk_logo_sqr.png" alt="" class="img-fluid" style="height: 80px;padding: 2px;border: solid;border-color: aliceblue;">
                                       </div>
+                                      <div class="float-left">
+                                        
+                                        <img :src="'/img/logo/'+this.seller.user_logo" alt="" class="img-fluid" style="height: 80px;padding: 2px;border: solid;border-color: aliceblue;">
+                                      </div>
+
                                       <div class="col">
                                         <h4>{{ store_name }}</h4>
                                         <p> 
@@ -62,7 +70,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="card-body">
+                    <div class="card-body" style="margin-top: 50px;">
                         <div class="form">
                             <div class="row mb-3 bg-default" v-for="product in products.data" :key="product.id">
                                 <div class="col-md-3">
