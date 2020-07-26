@@ -42226,7 +42226,7 @@ var render = function() {
                                     _c(
                                       "span",
                                       {
-                                        staticClass: "btn",
+                                        staticClass: "btn btn-danger",
                                         on: {
                                           click: function($event) {
                                             return _vm.updateCart(
@@ -42245,7 +42245,7 @@ var render = function() {
                                     _c(
                                       "span",
                                       {
-                                        staticClass: "btn",
+                                        staticClass: "btn btn-success",
                                         on: {
                                           click: function($event) {
                                             return _vm.updateCart(

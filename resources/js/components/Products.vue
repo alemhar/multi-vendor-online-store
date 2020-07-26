@@ -31,7 +31,7 @@
                                                 v-for="product in cart"
                                                 :key="product.id"
                                             >
-                                                {{ product.product_name }} ({{ product.product_qty }}) <b><span @click="updateCart(product.product_id,product.product_name,product.product_model_no,product.product_price,'subtract')" class="btn">-</span> <span  @click="updateCart(product.product_id,product.product_name,product.product_model_no,product.product_price)" class="btn">+</span></b>
+                                                {{ product.product_name }} ({{ product.product_qty }}) <b><span @click="updateCart(product.product_id,product.product_name,product.product_model_no,product.product_price,'subtract')" class="btn btn-danger">-</span> <span  @click="updateCart(product.product_id,product.product_name,product.product_model_no,product.product_price)" class="btn btn-success">+</span></b>
                                             </li>
                                             </ul>
                                             <div class="row" style="justify-content: center;padding-bottom: 10px;"> Qty: {{ totalQuantity}} Total:&nbsp;<span>&#8369;</span>&nbsp;{{ totalAmount }} </div>
