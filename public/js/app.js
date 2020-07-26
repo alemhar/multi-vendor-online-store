@@ -42249,15 +42249,25 @@ var render = function() {
                               0
                             ),
                             _vm._v(" "),
-                            _c("div", [
-                              _vm._v(
-                                " Qty: " +
-                                  _vm._s(_vm.totalQuantity) +
-                                  " Total: " +
-                                  _vm._s(_vm.totalAmount) +
-                                  " "
-                              )
-                            ]),
+                            _c(
+                              "div",
+                              {
+                                staticClass: "row",
+                                staticStyle: {
+                                  "justify-content": "center",
+                                  "padding-bottom": "10px"
+                                }
+                              },
+                              [
+                                _vm._v(
+                                  " Qty: " +
+                                    _vm._s(_vm.totalQuantity) +
+                                    " Total: "
+                                ),
+                                _c("span", [_vm._v("₱")]),
+                                _vm._v(_vm._s(_vm.totalAmount) + " ")
+                              ]
+                            ),
                             _vm._v(" "),
                             _c(
                               "div",

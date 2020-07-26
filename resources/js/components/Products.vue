@@ -34,7 +34,7 @@
                                                 {{ product.product_name }} ({{ product.product_qty }}) <b><span @click="updateCart(product.product_id,product.product_name,product.product_model_no,product.product_price,'subtract')" class="btn">-</span> <span  @click="updateCart(product.product_id,product.product_name,product.product_model_no,product.product_price)" class="btn">+</span></b>
                                             </li>
                                             </ul>
-                                            <div> Qty: {{ totalQuantity}} Total: {{totalAmount }} </div>
+                                            <div class="row" style="justify-content: center;padding-bottom: 10px;"> Qty: {{ totalQuantity}} Total: <span>&#8369;</span>{{totalAmount }} </div>
                                             <div class="row" style="justify-content: center;padding-bottom: 10px;">
                                                 <input type="text" v-model="check_out_name" placeholder="Full Name" class="mb-2 check-out-info">
                                                 <p class="text-danger" v-show="hasError && check_out_name.length == 0">Please enter name.</p>
