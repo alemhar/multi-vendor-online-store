@@ -17,7 +17,7 @@ window.Vue = require('vue');
 window.vform = Form;
 window.swal = swal;
 
-/*
+
 const toast = swal.mixin({
     toast: true,
     position: 'top-end',
@@ -31,7 +31,6 @@ const toast = swal.mixin({
   });
 
 window.toast = toast;
-*/
 
 Vue.component(HasError.name, HasError)
 Vue.component(AlertError.name, AlertError)

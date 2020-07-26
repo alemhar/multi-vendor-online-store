@@ -398,6 +398,10 @@
                     this.product_price = '';
                     this.product_description = '';
                     this.brand = '';
+                    toast.fire({
+                      icon: 'success',
+                      title: 'Product saved!'
+                    });
 
                  //console.log(response);
                     
@@ -432,6 +436,10 @@
                     this.product_price = '';
                     this.product_description = '';
                     this.brand = '';
+                    toast.fire({
+                      icon: 'success',
+                      title: 'Product saved!'
+                    });
 
                  //console.log(response);
                     
