@@ -3074,8 +3074,8 @@ __webpack_require__.r(__webpack_exports__);
         //console.log( this.form.user_logo ? this.form.user_logo : 'img/your_logo_here.png');
       })["catch"](function () {}); //console.log(this.user_info);
     },
-    addToCart: function addToCart(id, product_name, product_price) {
-      var type = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : 'add';
+    addToCart: function addToCart(id, product_name, product_model_no, product_price) {
+      var type = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : 'add';
 
       for (var i = 0; i < this.cart.length; i++) {
         if (this.cart[i].product_id === id) {
@@ -42406,6 +42406,7 @@ var render = function() {
                                       return _vm.addToCart(
                                         product.id,
                                         product.product_name,
+                                        product.product_model_no,
                                         product.product_price
                                       )
                                     }
