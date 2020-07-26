@@ -18,10 +18,11 @@
                                         <img :src="'/img/logo/'+this.seller.user_logo" alt="" class="img-fluid" style="height:100px;">
                                       </div>
                                       <div class="col">
-                                        <h4>{{ store_name }}</h4> 
-                                        <p v-if="seller.user_tel">Tel: {{ this.seller.user_mobile }}</p> 
-                                        <p v-if="seller.user_mobile">Mobile: {{ this.seller.user_mobile }}</p> 
-                                        <p v-if="seller.email">Email: {{ this.seller.email }}</p> 
+                                        <h4>{{ store_name }}</h4>
+                                        <p> 
+                                        <span v-if="seller.user_tel">Tel: {{ this.seller.user_mobile }}</span><br> 
+                                        <span v-if="seller.user_mobile">Mobile: {{ this.seller.user_mobile }}</span><br> 
+                                        <span v-if="seller.email">Email: {{ this.seller.email }}</span></p> 
                                       </div>
 
                                     </div>
