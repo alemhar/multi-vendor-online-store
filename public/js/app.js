@@ -2624,6 +2624,10 @@ __webpack_require__.r(__webpack_exports__);
     saveProduct: function saveProduct() {
       var _this2 = this;
 
+      if (this.product_price.length > 8) {
+        return;
+      }
+
       axios.post('api/product', {
         user_id: this.user_id,
         product_name: this.product_name,
@@ -2647,6 +2651,10 @@ __webpack_require__.r(__webpack_exports__);
     },
     updateProduct: function updateProduct() {
       var _this3 = this;
+
+      if (this.product_price.length > 8) {
+        return;
+      }
 
       axios.put('api/product/' + this.id, {
         user_id: this.user_id,
