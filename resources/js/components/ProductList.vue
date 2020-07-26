@@ -374,6 +374,7 @@
                 this.product_description = '';
                 this.brand = '';
                 this.product_photo = '226x180.svg';
+                this.current_product_photo ='img/products/226x180.svg';
             },
             saveProduct(){
                 if(this.product_price.length > 13){

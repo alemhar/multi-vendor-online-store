@@ -2620,6 +2620,7 @@ __webpack_require__.r(__webpack_exports__);
       this.product_description = '';
       this.brand = '';
       this.product_photo = '226x180.svg';
+      this.current_product_photo = 'img/products/226x180.svg';
     },
     saveProduct: function saveProduct() {
       var _this2 = this;
