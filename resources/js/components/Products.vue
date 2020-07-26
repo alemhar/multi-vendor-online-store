@@ -31,7 +31,7 @@
                                                 v-for="product in cart"
                                                 :key="product.id"
                                             >
-                                                {{ product.product_name }} ({{ product.product_qty }})
+                                                {{ product.product_name }} ({{ product.product_qty }}) <span class="btn">-</span> <span class="btn">+</span>
                                             </li>
                                             </ul>
                                             <div class="row" style="justify-content: center;padding-bottom: 10px;">

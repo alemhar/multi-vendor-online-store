@@ -42197,8 +42197,15 @@ var render = function() {
                                       _vm._s(product.product_name) +
                                       " (" +
                                       _vm._s(product.product_qty) +
-                                      ")\n                                            "
-                                  )
+                                      ") "
+                                  ),
+                                  _c("span", { staticClass: "btn" }, [
+                                    _vm._v("-")
+                                  ]),
+                                  _vm._v(" "),
+                                  _c("span", { staticClass: "btn" }, [
+                                    _vm._v("+")
+                                  ])
                                 ])
                               }),
                               0
