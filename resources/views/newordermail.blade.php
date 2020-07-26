@@ -14,6 +14,9 @@
                     <h2>New Order</h2> 
                     <p>Name: {{ $customer['name'] }}</p>
                     <p>Contact: {{ $customer['contact'] }}</p>
+                    <p>Quantity: {{ $customer['total_qty'] }}</p>
+                    <p>Total: {{ $customer['total'] }}</p>
+                    
                     <div>
 
                     @if ($products)
@@ -23,7 +26,7 @@
                         <ul>
                         	@foreach ($products as $product)
 		                        
-                                    <li><?php echo $product['product_name'] .' x '.$product['quantity'];?></li>
+                                    <li><?php echo $product['product_name'] .' - '.$product['total_qty'].' x '.$product['product_price'];?></li>
                                     
                             @endforeach
                         </ul>

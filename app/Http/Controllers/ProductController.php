@@ -128,7 +128,7 @@ class ProductController extends Controller
         $total_qty = $request['total_qty'];
 
         $products = $request['products'];
-        $customer = ['name' => $customer_name, 'contact' => $customer_contact];
+        $customer = ['name' => $customer_name, 'contact' => $customer_contact, 'total' => $total, 'total_qty' => $total_qty];
         
         $user = User::where('id', $user_id)->get()->first();
         $to = $user->email;
