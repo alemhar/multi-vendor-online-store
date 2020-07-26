@@ -135,11 +135,11 @@ class ProductController extends Controller
 
         $checkout = [ 
             'user_id' => $user_id, 
-            'customer_id' => $user_id, 
-            'customer_name' => $user_id, 
-            'customer_contact' => $user_id, 
-            'total' => $user_id, 
-            'total_qty' => $user_id
+            'customer_id' => $customer_id, 
+            'customer_name' => $customer_name, 
+            'customer_contact' => $customer_contact, 
+            'total' => $total, 
+            'total_qty' => $total_qty
         ];
         Checkout::insert($checkout);
         
