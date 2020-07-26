@@ -167,7 +167,7 @@
                   <span class="input-group-text inputGroup-sizing-default">Price</span>
                 </div>
                   <input v-model.lazy="product_price" v-money="money" name="product_price"  id="product_price"
-                  class="form-control" aria-describedby="inputGroup-sizing-default" onfocus="this.select()"> {{product_price}}
+                  class="form-control" aria-describedby="inputGroup-sizing-default" onfocus="this.select()">
               </div>
 
               <div class="input-group mb-2">

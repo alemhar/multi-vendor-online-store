@@ -41899,8 +41899,7 @@ var render = function() {
                         _vm.product_price = $event.target.value
                       }
                     }
-                  }),
-                  _vm._v(" " + _vm._s(_vm.product_price) + "\n          ")
+                  })
                 ]),
                 _vm._v(" "),
                 _c("div", { staticClass: "input-group mb-2" }),
