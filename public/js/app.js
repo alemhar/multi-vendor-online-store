@@ -3148,7 +3148,7 @@ __webpack_require__.r(__webpack_exports__);
         _this2.check_out_contact_no = '';
         _this2.showCart = false;
         _this2.cart = [];
-        Swal.fire({
+        swal.fire({
           position: 'top-end',
           icon: 'success',
           title: 'Your order has been sent!',
@@ -62064,18 +62064,22 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(_v_money__WEBPACK_IMPORTED_MODULE
 window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
 window.vform = vform__WEBPACK_IMPORTED_MODULE_4__["Form"];
 window.swal = sweetalert2__WEBPACK_IMPORTED_MODULE_6___default.a;
-var toast = sweetalert2__WEBPACK_IMPORTED_MODULE_6___default.a.mixin({
-  toast: true,
-  position: 'top-end',
-  showConfirmButton: false,
-  timer: 3000,
-  timerProgressBar: true,
-  onOpen: function onOpen(toast) {
-    toast.addEventListener('mouseenter', Swal.stopTimer);
-    toast.addEventListener('mouseleave', Swal.resumeTimer);
-  }
-});
+/*
+const toast = swal.mixin({
+    toast: true,
+    position: 'top-end',
+    showConfirmButton: false,
+    timer: 3000,
+    timerProgressBar: true,
+    onOpen: (toast) => {
+      toast.addEventListener('mouseenter', Swal.stopTimer)
+      toast.addEventListener('mouseleave', Swal.resumeTimer)
+    }
+  });
+
 window.toast = toast;
+*/
+
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.component(vform__WEBPACK_IMPORTED_MODULE_4__["HasError"].name, vform__WEBPACK_IMPORTED_MODULE_4__["HasError"]);
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.component(vform__WEBPACK_IMPORTED_MODULE_4__["AlertError"].name, vform__WEBPACK_IMPORTED_MODULE_4__["AlertError"]);
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('pagination', __webpack_require__(/*! laravel-vue-pagination */ "./node_modules/laravel-vue-pagination/dist/laravel-vue-pagination.common.js"));

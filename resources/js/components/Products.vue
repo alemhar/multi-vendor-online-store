@@ -369,8 +369,8 @@
                     this.check_out_contact_no = '';
                     this.showCart = false;
                     this.cart = [];
-                    
-                    Swal.fire({
+
+                    swal.fire({
                       position: 'top-end',
                       icon: 'success',
                       title: 'Your order has been sent!',
