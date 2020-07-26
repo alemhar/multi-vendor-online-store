@@ -370,6 +370,15 @@
                     this.showCart = false;
                     this.cart = [];
                     
+                    Swal.fire({
+                      position: 'top-end',
+                      icon: 'success',
+                      title: 'Your order has been sent!',
+                      showConfirmButton: false,
+                      timer: 1500
+                    })
+                    
+                    
                 })
                 .catch(()=>{
                     

@@ -6,6 +6,7 @@ import Vuex from 'vuex';
 import {routes} from './routes'; 
 import {Form, HasError, AlertError} from 'vform';
 import money from './v-money';
+import swal from 'sweetalert2';
 
 Vue.use(VueRouter);
 Vue.use(Vuex);
@@ -13,8 +14,23 @@ Vue.use(money, {precision: 2})
 //Vue.use(Form, {components: true})
 
 window.Vue = require('vue');
-
 window.vform = Form;
+window.swal = swal;
+
+const toast = swal.mixin({
+    toast: true,
+    position: 'top-end',
+    showConfirmButton: false,
+    timer: 3000,
+    timerProgressBar: true,
+    onOpen: (toast) => {
+      toast.addEventListener('mouseenter', Swal.stopTimer)
+      toast.addEventListener('mouseleave', Swal.resumeTimer)
+    }
+  });
+
+window.toast = toast;
+
 
 Vue.component(HasError.name, HasError)
 Vue.component(AlertError.name, AlertError)
