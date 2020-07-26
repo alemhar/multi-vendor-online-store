@@ -193,11 +193,11 @@
                   <label for="user_type">Product Photo</label>
               </div>
               
-              <div class="form-row profile-photo-container">
+              <div class="form-row product-photo-container">
                   <input type="file" @change="productPhotoChange" ref="file" style="display: none">
-                  <img class="profile-photo" id="product-photo" :src="current_product_photo" alt="" style="height: 300px;">
-                  <div class="profile-middle">
-                      <div class="profile-update-text" @click="$refs.file.click()">Update</div>
+                  <img class="product-photo" id="product-photo" :src="current_product_photo" alt="" style="height: 300px;">
+                  <div class="product-middle">
+                      <div class="product-update-text" @click="$refs.file.click()">Update</div>
                   
                   </div>
               </div>
@@ -261,19 +261,19 @@
   visibility: visible;
 }
 
-.profile-photo-container {
+.product-photo-container {
   position: relative;
   
 }
 
-.profile-photo {
+.product-photo {
   opacity: 1;
   display: block;
   transition: .5s ease;
   backface-visibility: hidden;
 }
 
-.profile-middle {
+.product-middle {
   transition: .5s ease;
   opacity: 0;
   position: absolute;
@@ -284,21 +284,21 @@
   text-align: center;
 }
 
-.profile-middle:hover {
+.product-middle:hover {
   opacity: 0.7;
   
 }
 
-.profile-photo-container:hover .profile-photo {
+.product-photo-container:hover .product-photo {
   opacity: 0.3;
 }
 
-.profile-photo-container:hover .profile-photo {
+.product-photo-container:hover .product-photo {
   opacity: 1;
 }
 
 
-.profile-update-text {
+.product-update-text {
     background-color: #cfcfcf;
     color: #000000;
     font-size: 14px;
@@ -475,7 +475,7 @@
                 let file_reader = new FileReader();
 
 
-                let limit = 1024 * 1024 * 2;
+                let limit = 1024 * 1024 * 5;
 
                 if(file['size'] > limit){
                     /*

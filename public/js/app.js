@@ -2696,7 +2696,7 @@ __webpack_require__.r(__webpack_exports__);
 
       var file = e.target.files[0];
       var file_reader = new FileReader();
-      var limit = 1024 * 1024 * 2;
+      var limit = 1024 * 1024 * 5;
 
       if (file['size'] > limit) {
         /*
@@ -7627,7 +7627,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.tooltip {\n  position: relative;\n  display: inline-block;\n  border-bottom: 1px dotted gray;\n}\n.tooltip .tooltiptext {\n  visibility: hidden;\n  width: 120px;\n  background-color: gray;\n  color: #fff;\n  text-align: center;\n  border-radius: 6px;\n  padding: 5px 0;\n  \n  /* Position the tooltip */\n  position: absolute;\n  z-index: 1;\n  bottom: 100%;\n  left: 50%;\n  margin-left: -60px;\n}\n.tooltip:hover .tooltiptext {\n  visibility: visible;\n}\n.profile-photo-container {\n  position: relative;\n}\n.profile-photo {\n  opacity: 1;\n  display: block;\n  transition: .5s ease;\n  -webkit-backface-visibility: hidden;\n          backface-visibility: hidden;\n}\n.profile-middle {\n  transition: .5s ease;\n  opacity: 0;\n  position: absolute;\n  top: 40%;\n  left: 40%;\n  transform: translate(-50%, -50%);\n  -ms-transform: translate(-50%, -50%);\n  text-align: center;\n}\n.profile-middle:hover {\n  opacity: 0.7;\n}\n.profile-photo-container:hover .profile-photo {\n  opacity: 0.3;\n}\n.profile-photo-container:hover .profile-photo {\n  opacity: 1;\n}\n.profile-update-text {\n    background-color: #cfcfcf;\n    color: #000000;\n    font-size: 14px;\n    padding: 16px 32px;\n    cursor: pointer;\n}\n\n\n", ""]);
+exports.push([module.i, "\n.tooltip {\n  position: relative;\n  display: inline-block;\n  border-bottom: 1px dotted gray;\n}\n.tooltip .tooltiptext {\n  visibility: hidden;\n  width: 120px;\n  background-color: gray;\n  color: #fff;\n  text-align: center;\n  border-radius: 6px;\n  padding: 5px 0;\n  \n  /* Position the tooltip */\n  position: absolute;\n  z-index: 1;\n  bottom: 100%;\n  left: 50%;\n  margin-left: -60px;\n}\n.tooltip:hover .tooltiptext {\n  visibility: visible;\n}\n.product-photo-container {\n  position: relative;\n}\n.product-photo {\n  opacity: 1;\n  display: block;\n  transition: .5s ease;\n  -webkit-backface-visibility: hidden;\n          backface-visibility: hidden;\n}\n.product-middle {\n  transition: .5s ease;\n  opacity: 0;\n  position: absolute;\n  top: 40%;\n  left: 40%;\n  transform: translate(-50%, -50%);\n  -ms-transform: translate(-50%, -50%);\n  text-align: center;\n}\n.product-middle:hover {\n  opacity: 0.7;\n}\n.product-photo-container:hover .product-photo {\n  opacity: 0.3;\n}\n.product-photo-container:hover .product-photo {\n  opacity: 1;\n}\n.product-update-text {\n    background-color: #cfcfcf;\n    color: #000000;\n    font-size: 14px;\n    padding: 16px 32px;\n    cursor: pointer;\n}\n\n\n", ""]);
 
 // exports
 
@@ -41925,7 +41925,7 @@ var render = function() {
                 _vm._v(" "),
                 _vm._m(8),
                 _vm._v(" "),
-                _c("div", { staticClass: "form-row profile-photo-container" }, [
+                _c("div", { staticClass: "form-row product-photo-container" }, [
                   _c("input", {
                     ref: "file",
                     staticStyle: { display: "none" },
@@ -41934,7 +41934,7 @@ var render = function() {
                   }),
                   _vm._v(" "),
                   _c("img", {
-                    staticClass: "profile-photo",
+                    staticClass: "product-photo",
                     staticStyle: { height: "300px" },
                     attrs: {
                       id: "product-photo",
@@ -41943,11 +41943,11 @@ var render = function() {
                     }
                   }),
                   _vm._v(" "),
-                  _c("div", { staticClass: "profile-middle" }, [
+                  _c("div", { staticClass: "product-middle" }, [
                     _c(
                       "div",
                       {
-                        staticClass: "profile-update-text",
+                        staticClass: "product-update-text",
                         on: {
                           click: function($event) {
                             return _vm.$refs.file.click()
