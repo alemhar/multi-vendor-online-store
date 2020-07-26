@@ -31,7 +31,7 @@
                                                 v-for="product in cart"
                                                 :key="product.id"
                                             >
-                                                {{ product.product_name }} ({{ product.quantity }})
+                                                {{ product.product_name }} ({{ product.product_qty }})
                                             </li>
                                             </ul>
                                             <div class="row" style="justify-content: center;padding-bottom: 10px;">
@@ -327,25 +327,27 @@
             },
             addToCart(id,product_name,product_price,type = 'add'){
                     for (let i = 0; i < this.cart.length; i++) {
-                        if (this.cart[i].id === id) {
+                        if (this.cart[i].product_id === id) {
                             if (type === 'subtract') {
-                                if (this.cart[i].quantity !== 0) {
-                                    this.prodcartucts[i].quantity--;
+                                if (this.cart[i].product_qty !== 0) {
+                                    this.cart[i].product_qty--;
                                 }
                             } else {
-                                this.cart[i].quantity++;
+                                this.cart[i].product_qty++;
                             }
                             return;
                         }
                     }
 
-                    this.cart.push({ id: id,product_name: product_name,product_price: product_price, quantity: 1});
+                    this.cart.push({ user_id: this.user_id, product_id: id,product_name: product_name,product_model_no: product_model_no,product_price: product_price, product_qty: 1});
             },
             checkOut(){
                 if(this.check_out_name.length == 0 || this.check_out_contact_no.length == 0){
                     this.hasError = true;
                     return;
                 }
+
+                
                 axios.post("/checkout",
                     {
                         user_id: this.user_id,
@@ -381,13 +383,13 @@
         computed:{
             totalQuantity() {
                 return this.cart.reduce(
-                    (total, cart) => total + cart.quantity,
+                    (total, cart) => total + cart.product_qty,
                     0
                 );
             },
             totalAmount() {
                 return this.cart.reduce(
-                    (total, cart) => total + (cart.quantity*cart.product_price),
+                    (total, cart) => total + (cart.product_qty*cart.product_price),
                     0
                 );
             }

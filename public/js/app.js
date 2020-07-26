@@ -3078,13 +3078,13 @@ __webpack_require__.r(__webpack_exports__);
       var type = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : 'add';
 
       for (var i = 0; i < this.cart.length; i++) {
-        if (this.cart[i].id === id) {
+        if (this.cart[i].product_id === id) {
           if (type === 'subtract') {
-            if (this.cart[i].quantity !== 0) {
-              this.prodcartucts[i].quantity--;
+            if (this.cart[i].product_qty !== 0) {
+              this.cart[i].product_qty--;
             }
           } else {
-            this.cart[i].quantity++;
+            this.cart[i].product_qty++;
           }
 
           return;
@@ -3092,10 +3092,12 @@ __webpack_require__.r(__webpack_exports__);
       }
 
       this.cart.push({
-        id: id,
+        user_id: this.user_id,
+        product_id: id,
         product_name: product_name,
+        product_model_no: product_model_no,
         product_price: product_price,
-        quantity: 1
+        product_qty: 1
       });
     },
     checkOut: function checkOut() {
@@ -3130,12 +3132,12 @@ __webpack_require__.r(__webpack_exports__);
   computed: {
     totalQuantity: function totalQuantity() {
       return this.cart.reduce(function (total, cart) {
-        return total + cart.quantity;
+        return total + cart.product_qty;
       }, 0);
     },
     totalAmount: function totalAmount() {
       return this.cart.reduce(function (total, cart) {
-        return total + cart.quantity * cart.product_price;
+        return total + cart.product_qty * cart.product_price;
       }, 0);
     }
   },
@@ -42194,7 +42196,7 @@ var render = function() {
                                     "\n                                                " +
                                       _vm._s(product.product_name) +
                                       " (" +
-                                      _vm._s(product.quantity) +
+                                      _vm._s(product.product_qty) +
                                       ")\n                                            "
                                   )
                                 ])
