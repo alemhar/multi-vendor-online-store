@@ -312,7 +312,7 @@
 
 .fab{
   font-size: 3em;
-  padding: 4px 4px 0px 4px;
+  padding: 4px 7px 0px 6px;
   color: white;
 }
 </style>
