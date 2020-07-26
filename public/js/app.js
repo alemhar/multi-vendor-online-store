@@ -3043,6 +3043,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['public_id', 'store_name'],
   data: function data() {
@@ -42390,7 +42391,7 @@ var render = function() {
                   _vm._l(_vm.products.data, function(product) {
                     return _c(
                       "div",
-                      { key: product.id, staticClass: "col-md-3" },
+                      { key: product.id, staticClass: "col-md-6" },
                       [
                         _c("div", { staticClass: "card" }, [
                           _c("img", {
@@ -42458,18 +42459,18 @@ var render = function() {
                                 [_vm._v("+Cart")]
                               )
                             ]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "div",
-                            { staticClass: "card-text product-description" },
-                            [
-                              _vm._v("Details: "),
-                              _c("br"),
-                              _vm._v(_vm._s(product.product_description))
-                            ]
                           )
-                        ])
+                        ]),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          { staticClass: "card-text product-description" },
+                          [
+                            _vm._v("Details: "),
+                            _c("br"),
+                            _vm._v(_vm._s(product.product_description))
+                          ]
+                        )
                       ]
                     )
                   }),
