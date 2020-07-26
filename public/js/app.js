@@ -3044,6 +3044,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['public_id', 'store_name'],
   data: function data() {
@@ -42203,12 +42204,7 @@ var render = function() {
                                       _vm._s(product.product_name) +
                                       " (" +
                                       _vm._s(product.product_qty) +
-                                      ") = " +
-                                      _vm._s(
-                                        product.product_qty *
-                                          product.product_price
-                                      ) +
-                                      " "
+                                      ") "
                                   ),
                                   _c("b", [
                                     _c(
@@ -42252,6 +42248,16 @@ var render = function() {
                               }),
                               0
                             ),
+                            _vm._v(" "),
+                            _c("div", [
+                              _vm._v(
+                                " Qty: " +
+                                  _vm._s(_vm.product.totalQuantity) +
+                                  " Total: " +
+                                  _vm._s(_vm.product.totalAmount) +
+                                  " "
+                              )
+                            ]),
                             _vm._v(" "),
                             _c(
                               "div",
