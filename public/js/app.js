@@ -3074,8 +3074,8 @@ __webpack_require__.r(__webpack_exports__);
         //console.log( this.form.user_logo ? this.form.user_logo : 'img/your_logo_here.png');
       })["catch"](function () {}); //console.log(this.user_info);
     },
-    addToCart: function addToCart(id, product_name) {
-      var type = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 'add';
+    addToCart: function addToCart(id, product_name, product_price) {
+      var type = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : 'add';
 
       for (var i = 0; i < this.cart.length; i++) {
         if (this.cart[i].id === id) {
@@ -42361,6 +42361,7 @@ var render = function() {
                           _c("div", { staticClass: "card-body" }, [
                             _c("h5", { staticClass: "card-title" }, [
                               _vm._v(_vm._s(product.product_name) + " "),
+                              _c("br"),
                               _c("b", [
                                 _c("span", [_vm._v("₱")]),
                                 _vm._v(_vm._s(product.product_price))
@@ -42402,7 +42403,8 @@ var render = function() {
                                     click: function($event) {
                                       return _vm.addToCart(
                                         product.id,
-                                        product.product_name
+                                        product.product_name,
+                                        product.product_price
                                       )
                                     }
                                   }

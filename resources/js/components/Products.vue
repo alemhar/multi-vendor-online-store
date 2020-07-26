@@ -56,12 +56,12 @@
                                     <div class="card">
                                             <img class="card-img-top img-fluid" :src="product.product_photo ? '/img/products/'+product.product_photo : '/img/products/'+product_photo" alt="Card image cap">
                                         <div class="card-body">
-                                            <h5 class="card-title">{{ product.product_name }} <b><span>&#8369;</span>{{ product.product_price }}</b></h5>
+                                            <h5 class="card-title">{{ product.product_name }} <br><b><span>&#8369;</span>{{ product.product_price }}</b></h5>
                                         </div>
                                         <div class="card-footer" style="text-align: end;">
                                             <button type="button" class="btn btn-outline-dark">Photos<!-- i class="fas fa-eye"></i --></button>
                                             <button type="button" class="btn btn-outline-dark">Buy<!-- i class="fas fa-cash-register"></i --></button>
-                                            <button type="button" class="btn btn-outline-dark" @click="addToCart(product.id,product.product_name)">+Cart<!-- i class="fas fa-cart-plus"></i --></button>
+                                            <button type="button" class="btn btn-outline-dark" @click="addToCart(product.id,product.product_name,product.product_price)">+Cart<!-- i class="fas fa-cart-plus"></i --></button>
                                         </div>
                                     </div>
                                 </div>
@@ -325,7 +325,7 @@
                 });
                 //console.log(this.user_info);
             },
-            addToCart(id,product_name,type = 'add'){
+            addToCart(id,product_name,product_price,type = 'add'){
                     for (let i = 0; i < this.cart.length; i++) {
                         if (this.cart[i].id === id) {
                             if (type === 'subtract') {
