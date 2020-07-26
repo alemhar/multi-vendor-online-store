@@ -2279,6 +2279,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
     console.log('Component mounted.');
@@ -44942,9 +44943,11 @@ var staticRenderFns = [
             ]),
             _vm._v(" "),
             _c("div", { staticClass: "card-body" }, [
-              _c("h2", [
+              _c("h3", [_vm._v("Welcome to your dashboard.")]),
+              _vm._v(" "),
+              _c("h4", [
                 _vm._v(
-                  "Welcome to you dashboard. You may contact us at support@onlinestoreko.com to report bugs, queries or support."
+                  "You may contact us at support@onlinestoreko.com to report bugs, queries or support."
                 )
               ])
             ])
