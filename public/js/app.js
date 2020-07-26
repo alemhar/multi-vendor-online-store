@@ -2637,7 +2637,8 @@ __webpack_require__.r(__webpack_exports__);
         product_price: parseFloat(this.product_price.split(',').join('')),
         product_photo: this.product_photo,
         product_description: this.product_description,
-        brand: this.brand
+        brand: this.brand,
+        product_photo_base64: this.product_photo_base64
       }).then(function (response) {
         _this2.loadProducts(_this2.user_id);
 
@@ -2785,8 +2786,6 @@ $(document).ready(function () {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-//
-//
 //
 //
 //
@@ -45003,7 +45002,8 @@ var render = function() {
                       type: "button",
                       "data-dismiss": "modal",
                       "aria-label": "Close"
-                    }
+                    },
+                    on: { click: _vm.cancelProduct }
                   },
                   [
                     _c(
@@ -45409,19 +45409,18 @@ var render = function() {
             _c("div", { staticClass: "card-header" }, [
               _c("div", { staticClass: "row" }, [
                 _c("div", { staticClass: "col-8" }, [
-                  _c("div", { staticClass: "row" }, [
-                    _c("img", {
-                      staticClass: "img-fluid",
-                      attrs: {
-                        src: "/img/logo/" + this.seller.user_logo,
-                        alt: ""
-                      }
-                    }),
-                    _vm._v(" "),
-                    _c("h3", [_vm._v(_vm._s(_vm.store_name))]),
-                    _vm._v(" "),
-                    _c("p", [_vm._v("Product Page")])
-                  ])
+                  _c("img", {
+                    staticClass: "img-fluid",
+                    staticStyle: { height: "100px" },
+                    attrs: {
+                      src: "/img/logo/" + this.seller.user_logo,
+                      alt: ""
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("h3", [_vm._v(_vm._s(_vm.store_name))]),
+                  _vm._v(" "),
+                  _c("p", [_vm._v("Product Page")])
                 ]),
                 _vm._v(" "),
                 _c("div", { staticClass: "col-4" }, [

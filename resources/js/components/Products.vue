@@ -13,14 +13,12 @@
                     <div class="card-header">
                         <div class="row">
                             <div class="col-8">
-                                <div class="row">
-                                 
-                                    <img :src="'/img/logo/'+this.seller.user_logo" alt="" class="img-fluid">
+                                    
+                                    <img :src="'/img/logo/'+this.seller.user_logo" alt="" class="img-fluid" style="height:100px;">
                                     <h3>{{ store_name }}</h3> 
                                     <p>Product Page</p>
                                   
-                                </div>
-
+                                
                             </div>
                             <div class="col-4">
                                 <!-- button type="submit" @click="saveInfo" class="btn btn-primary float-right"><i class="fas fa-shopping-cart"></i></button -->

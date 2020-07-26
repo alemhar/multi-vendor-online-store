@@ -110,7 +110,7 @@
             <div class="modal-header">
               <h5 class="modal-title" v-show="!productEditMode" id="addNewLabel">Add Product</h5>
               <h5 class="modal-title" v-show="productEditMode" id="addNewLabel">Update Product</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close" @click="cancelProduct">
                 <span aria-hidden="true" @click="cancelProduct">&times;</span>
               </button>
             </div>
@@ -388,7 +388,8 @@
                     product_price: parseFloat(this.product_price.split(',').join('')),
                     product_photo: this.product_photo,
                     product_description: this.product_description,
-                    brand: this.brand
+                    brand: this.brand,
+                    product_photo_base64: this.product_photo_base64
                 })
                 .then((response)=>{
 
