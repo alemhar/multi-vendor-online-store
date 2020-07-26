@@ -166,8 +166,8 @@
                 <div class="input-group-prepend">
                   <span class="input-group-text inputGroup-sizing-default">Price</span>
                 </div>
-                  <input v-model="product_price" name="product_price" id="product_price"
-                  class="form-control" aria-describedby="inputGroup-sizing-default" onfocus="this.select()">
+                  <input v-model.lazy="product_price" v-money="money" name="product_price"  id="product_price"
+                  class="form-control" aria-describedby="inputGroup-sizing-default" onfocus="this.select()"> {{product_price}}
               </div>
 
               <div class="input-group mb-2">
@@ -327,7 +327,15 @@
                 product_description: '',
                 product_photo: '226x180.svg',
                 product_photo_base64: '',
-                current_product_photo: 'img/products/226x180.svg'
+                current_product_photo: 'img/products/226x180.svg',
+                money: {
+                  decimal: '.',
+                  thousands: ',',
+                  prefix: '',
+                  suffix: '',
+                  precision: 2,
+                  masked: false /* doesn't work with directive */
+                }
 
             }
         },

@@ -5,10 +5,11 @@ import VueRouter from 'vue-router';
 import Vuex from 'vuex';
 import {routes} from './routes'; 
 import {Form, HasError, AlertError} from 'vform';
-
+import money from './v-money';
 
 Vue.use(VueRouter);
 Vue.use(Vuex);
+Vue.use(money, {precision: 2})
 //Vue.use(Form, {components: true})
 
 window.Vue = require('vue');
