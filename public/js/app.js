@@ -3074,7 +3074,7 @@ __webpack_require__.r(__webpack_exports__);
         //console.log( this.form.user_logo ? this.form.user_logo : 'img/your_logo_here.png');
       })["catch"](function () {}); //console.log(this.user_info);
     },
-    addToCart: function addToCart(id, product_name, product_model_no, product_price) {
+    updateCart: function updateCart(id, product_name, product_model_no, product_price) {
       var type = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : 'add';
 
       for (var i = 0; i < this.cart.length; i++) {
@@ -42199,12 +42199,43 @@ var render = function() {
                                       _vm._s(product.product_qty) +
                                       ") "
                                   ),
-                                  _c("span", { staticClass: "btn" }, [
-                                    _vm._v("-")
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("span", { staticClass: "btn" }, [
-                                    _vm._v("+")
+                                  _c("b", [
+                                    _c(
+                                      "span",
+                                      {
+                                        staticClass: "btn",
+                                        on: {
+                                          click: function($event) {
+                                            return _vm.updateCart(
+                                              product.product_id,
+                                              product.product_name,
+                                              product.product_model_no,
+                                              product.product_price,
+                                              "subtract"
+                                            )
+                                          }
+                                        }
+                                      },
+                                      [_vm._v("-")]
+                                    ),
+                                    _vm._v(" "),
+                                    _c(
+                                      "span",
+                                      {
+                                        staticClass: "btn",
+                                        on: {
+                                          click: function($event) {
+                                            return _vm.updateCart(
+                                              product.product_id,
+                                              product.product_name,
+                                              product.product_model_no,
+                                              product.product_price
+                                            )
+                                          }
+                                        }
+                                      },
+                                      [_vm._v("+")]
+                                    )
                                   ])
                                 ])
                               }),
@@ -42410,7 +42441,7 @@ var render = function() {
                                   attrs: { type: "button" },
                                   on: {
                                     click: function($event) {
-                                      return _vm.addToCart(
+                                      return _vm.updateCart(
                                         product.id,
                                         product.product_name,
                                         product.product_model_no,

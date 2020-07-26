@@ -31,7 +31,7 @@
                                                 v-for="product in cart"
                                                 :key="product.id"
                                             >
-                                                {{ product.product_name }} ({{ product.product_qty }}) <span class="btn">-</span> <span class="btn">+</span>
+                                                {{ product.product_name }} ({{ product.product_qty }}) <b> <span @click="updateCart(product.product_id,product.product_name,product.product_model_no,product.product_price,'subtract')"class="btn">-</span> <span  @click="updateCart(product.product_id,product.product_name,product.product_model_no,product.product_price)" class="btn">+</span></b>
                                             </li>
                                             </ul>
                                             <div class="row" style="justify-content: center;padding-bottom: 10px;">
@@ -61,7 +61,7 @@
                                         <div class="card-footer" style="text-align: end;">
                                             <button type="button" class="btn btn-outline-dark">Photos<!-- i class="fas fa-eye"></i --></button>
                                             <button type="button" class="btn btn-outline-dark">Buy<!-- i class="fas fa-cash-register"></i --></button>
-                                            <button type="button" class="btn btn-outline-dark" @click="addToCart(product.id,product.product_name,product.product_model_no,product.product_price)">+Cart<!-- i class="fas fa-cart-plus"></i --></button>
+                                            <button type="button" class="btn btn-outline-dark" @click="updateCart(product.id,product.product_name,product.product_model_no,product.product_price)">+Cart<!-- i class="fas fa-cart-plus"></i --></button>
                                         </div>
                                     </div>
                                 </div>
@@ -325,7 +325,7 @@
                 });
                 //console.log(this.user_info);
             },
-            addToCart(id,product_name,product_model_no,product_price,type = 'add'){
+            updateCart(id,product_name,product_model_no,product_price,type = 'add'){
                     for (let i = 0; i < this.cart.length; i++) {
                         if (this.cart[i].product_id === id) {
                             if (type === 'subtract') {
