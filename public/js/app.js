@@ -3073,12 +3073,17 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['public_id', 'store_name'],
   data: function data() {
     return {
       products: {},
-      seller: {},
       cart: [],
       check_out_name: '',
       check_out_contact_no: '',
@@ -3093,7 +3098,8 @@ __webpack_require__.r(__webpack_exports__);
       product_photo: '226x180.svg',
       product_photo_base64: '',
       current_product_photo: '/img/products/226x180.svg',
-      hasError: false
+      hasError: false,
+      seller: {}
     };
   },
   methods: {
@@ -45398,13 +45404,23 @@ var render = function() {
           _c("div", { staticClass: "card" }, [
             _c("div", { staticClass: "card-header" }, [
               _c("div", { staticClass: "row" }, [
-                _c("div", { staticClass: "col-6" }, [
-                  _c("h3", [_vm._v(_vm._s(_vm.store_name))]),
-                  _vm._v(" "),
-                  _c("p", [_vm._v("Product Page")])
+                _c("div", { staticClass: "col-8" }, [
+                  _c("div", { staticClass: "row" }, [
+                    _c("img", {
+                      staticClass: "img-fluid",
+                      attrs: {
+                        src: "/img/logo/" + this.seller.user_logo,
+                        alt: ""
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c("h3", [_vm._v(_vm._s(_vm.store_name))]),
+                    _vm._v(" "),
+                    _c("p", [_vm._v("Product Page")])
+                  ])
                 ]),
                 _vm._v(" "),
-                _c("div", { staticClass: "col-6" }, [
+                _c("div", { staticClass: "col-4" }, [
                   _c("nav", { staticClass: "nav" }, [
                     _c("div", { staticClass: "nav__cart" }, [
                       _c(

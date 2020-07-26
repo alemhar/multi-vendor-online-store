@@ -12,11 +12,17 @@
                 <div class="card">
                     <div class="card-header">
                         <div class="row">
-                            <div class="col-6">
-                                <h3>{{ store_name }}</h3> 
-                                <p>Product Page</p>
+                            <div class="col-8">
+                                <div class="row">
+                                 
+                                    <img :src="'/img/logo/'+this.seller.user_logo" alt="" class="img-fluid">
+                                    <h3>{{ store_name }}</h3> 
+                                    <p>Product Page</p>
+                                  
+                                </div>
+
                             </div>
-                            <div class="col-6">
+                            <div class="col-4">
                                 <!-- button type="submit" @click="saveInfo" class="btn btn-primary float-right"><i class="fas fa-shopping-cart"></i></button -->
                                 <!-- button type="submit" @click="loadInfo" style="margin-right: 10px;" class="btn btn-outline-primary float-right">Contact Seller</button -->
                                 <nav class="nav">
@@ -293,7 +299,6 @@
         data() {
             return {
                 products:{},
-                seller:{},
                 cart: [],
                 check_out_name: '',
                 check_out_contact_no: '',
@@ -308,7 +313,9 @@
                 product_photo: '226x180.svg',
                 product_photo_base64: '',
                 current_product_photo: '/img/products/226x180.svg',
-                hasError: false
+                hasError: false,
+                seller:{}
+
 
             }
         },
