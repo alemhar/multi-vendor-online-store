@@ -63,11 +63,12 @@
                                             <button type="button" class="btn btn-outline-dark">Buy<!-- i class="fas fa-cash-register"></i --></button>
                                             <button type="button" class="btn btn-outline-dark" @click="updateCart(product.id,product.product_name,product.product_model_no,product.product_price)">+Cart<!-- i class="fas fa-cart-plus"></i --></button>
                                         </div>
+                                        <div class="card-text product-description">Details: <br>{{ product.product_description }}</div>
                                     </div>
                                 </div>
-                                <div class="col-md-9">
+                                <!-- div class="col-md-9">
                                         <p class="card-text product-description" style="">{{ product.product_description }}</p>
-                                </div>
+                                </div -->
                             </div>
 
                             
