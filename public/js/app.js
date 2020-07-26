@@ -3095,6 +3095,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['public_id', 'store_name'],
   data: function data() {
@@ -45480,7 +45486,9 @@ var render = function() {
                             : _vm._e()
                         ])
                       ])
-                    ])
+                    ]),
+                    _vm._v(" "),
+                    _vm._m(1)
                   ]),
                   _vm._v(" "),
                   _c("div", { staticClass: "col-4" }, [
@@ -45848,6 +45856,20 @@ var staticRenderFns = [
         },
         attrs: { src: "/img/osk_logo_sqr.png", alt: "" }
       })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "row" }, [
+      _c("i", { staticClass: "fab fa-facebook-square" }),
+      _vm._v(" "),
+      _c("i", { staticClass: "fab fa-twitter-square" }),
+      _vm._v(" "),
+      _c("i", { staticClass: "fab fa-instagram-square" }),
+      _vm._v(" "),
+      _c("i", { staticClass: "fab fa-linkedin" })
     ])
   }
 ]

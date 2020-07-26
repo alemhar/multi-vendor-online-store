@@ -34,6 +34,12 @@
                                       </div>
 
                                     </div>
+                                    <div class="row">
+                                      <i class="fab fa-facebook-square"></i>
+                                      <i class="fab fa-twitter-square"></i>
+                                      <i class="fab fa-instagram-square"></i>
+                                      <i class="fab fa-linkedin"></i>
+                                    </div>
                                 
                             </div>
                             <div class="col-4">
