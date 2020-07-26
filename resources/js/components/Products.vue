@@ -56,7 +56,7 @@
                                     <div class="card">
                                             <img class="card-img-top img-fluid" :src="product.product_photo ? '/img/products/'+product.product_photo : '/img/products/'+product_photo" alt="Card image cap">
                                         <div class="card-body">
-                                            <h5 class="card-title">{{ product.product_name }}</h5>
+                                            <h5 class="card-title">{{ product.product_name }} <b><span>&#8369;</span>{{ product.product_price }}</b></h5>
                                         </div>
                                         <div class="card-footer" style="text-align: end;">
                                             <button type="button" class="btn btn-outline-dark">Photos<!-- i class="fas fa-eye"></i --></button>
@@ -338,7 +338,8 @@
                             return;
                         }
                     }
-                    this.cart.push({ id: id,product_name: product_name, quantity: 1});
+
+                    this.cart.push({ id: id,product_name: product_name,product_price: product_price, quantity: 1});
             },
             checkOut(){
                 if(this.check_out_name.length == 0 || this.check_out_contact_no.length == 0){
@@ -348,9 +349,12 @@
                 axios.post("/checkout",
                     {
                         user_id: this.user_id,
+                        customer_id: '',
                         customer_name: this.check_out_name,
                         customer_contact_no: this.check_out_contact_no,
-                        products: this.cart
+                        products: this.cart,
+                        total_qty: this.totalQuantity,
+                        total: this.totalAmount
                     }
                 ).then((response)=>{
                     this.check_out_name = '';
@@ -378,6 +382,12 @@
             totalQuantity() {
                 return this.cart.reduce(
                     (total, cart) => total + cart.quantity,
+                    0
+                );
+            },
+            totalAmount() {
+                return this.cart.reduce(
+                    (total, cart) => total + (cart.quantity*cart.product_price),
                     0
                 );
             }

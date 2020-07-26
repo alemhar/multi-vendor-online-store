@@ -3094,6 +3094,7 @@ __webpack_require__.r(__webpack_exports__);
       this.cart.push({
         id: id,
         product_name: product_name,
+        product_price: product_price,
         quantity: 1
       });
     },
@@ -3107,9 +3108,12 @@ __webpack_require__.r(__webpack_exports__);
 
       axios.post("/checkout", {
         user_id: this.user_id,
+        customer_id: '',
         customer_name: this.check_out_name,
         customer_contact_no: this.check_out_contact_no,
-        products: this.cart
+        products: this.cart,
+        total_qty: this.totalQuantity,
+        total: this.totalAmount
       }).then(function (response) {
         _this2.check_out_name = '';
         _this2.check_out_contact_no = '';
@@ -3127,6 +3131,11 @@ __webpack_require__.r(__webpack_exports__);
     totalQuantity: function totalQuantity() {
       return this.cart.reduce(function (total, cart) {
         return total + cart.quantity;
+      }, 0);
+    },
+    totalAmount: function totalAmount() {
+      return this.cart.reduce(function (total, cart) {
+        return total + cart.quantity * cart.product_price;
       }, 0);
     }
   },
@@ -42351,7 +42360,11 @@ var render = function() {
                           _vm._v(" "),
                           _c("div", { staticClass: "card-body" }, [
                             _c("h5", { staticClass: "card-title" }, [
-                              _vm._v(_vm._s(product.product_name))
+                              _vm._v(_vm._s(product.product_name) + " "),
+                              _c("b", [
+                                _c("span", [_vm._v("₱")]),
+                                _vm._v(_vm._s(product.product_price))
+                              ])
                             ])
                           ]),
                           _vm._v(" "),

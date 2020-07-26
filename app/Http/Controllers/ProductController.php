@@ -115,17 +115,37 @@ class ProductController extends Controller
 
     public function checkout(Request $request)
     {
-       
+
+        
+            
         $user_id = $request['user_id'];
+        $customer_id = $request['customer_id'];
+        
         $customer_name = $request['customer_name'];
         $customer_contact_no = $request['customer_contact_no'];
+        $total = $request['total'];
+        $total_qty = $request['total_qty'];
+
         $products = $request['products'];
         $customer = ['name' => $customer_name, 'contact' => $customer_contact_no];
+        
         $user = User::where('id', $user_id)->get()->first();
         $to = $user->email;
-        Mail::to($to)->send(new NewOrder($customer, $products));
-        // Add Logging here
-        ---
+
+        $checkout = [ 
+            'user_id' => $user_id, 
+            'customer_id' => $user_id, 
+            'customer_name' => $user_id, 
+            'customer_contact' => $user_id, 
+            'total' => $user_id, 
+            'total_qty' => $user_id
+        ];
+        Checkout::insert($checkout);
+        
+        //CheckoutDetail::insert($products);
+
+        //Mail::to($to)->send(new NewOrder($customer, $products));
+       
         return $request;
 
         
