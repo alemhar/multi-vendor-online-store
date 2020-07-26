@@ -12,23 +12,23 @@
                 <div class="card">
                     <div class="card-header" style="background-color: #2980b9;color: black;">
                         <div class="row">
-                            <div class="col-8">
+                            <div class="col-8" style="padding-left: 30px;">
                                     <div class="row">
                                       
                                             
                                       <div class="float-left">
                                         
-                                        <img src="/img/osk_logo_sqr.png" alt="" class="img-fluid" style="height: 90px;padding: 2px;border: solid;border-color: aliceblue;background: white;">
+                                        <img src="/img/osk_logo_sqr.png" alt="" class="img-fluid" style="height: 90px;padding: 2px;border: solid;border-color: aliceblue;background: white;border-radius: 15px 0px 0px 15px;">
                                       </div>
                                       <div class="float-left">
                                         
-                                        <img :src="'/img/logo/'+this.seller.user_logo" alt="" class="img-fluid" style="height: 90px;padding: 2px;border: solid;border-color: aliceblue;    background: white;">
+                                        <img :src="'/img/logo/'+this.seller.user_logo" alt="" class="img-fluid" style="height: 90px;padding: 2px;border: solid;border-color: aliceblue;    background: white;border-radius: 0px 15px 15px 0px;">
                                       </div>
 
                                       <div class="col">
                                         <h4>{{ store_name }}</h4>
                                         <p> 
-                                        <span v-if="seller.user_tel">Tel: {{ this.seller.user_mobile }}</span><br> 
+                                        <span v-if="seller.user_tel">Tel: {{ this.seller.user_tel }}</span><br> 
                                         <span v-if="seller.user_mobile">Mobile: {{ this.seller.user_mobile }}</span><br> 
                                         <span v-if="seller.email">Email: {{ this.seller.email }}</span></p> 
                                       </div>
@@ -310,7 +310,11 @@
   margin: 0 1rem;
 }
 
-
+.fab{
+  font-size: 3em;
+  padding: 4px 4px 0px 4px;
+  color: white;
+}
 </style>
 
 <script>

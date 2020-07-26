@@ -3101,6 +3101,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['public_id', 'store_name'],
   data: function data() {
@@ -7719,7 +7723,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.tooltip {\n  position: relative;\n  display: inline-block;\n  border-bottom: 1px dotted gray;\n}\n.tooltip .tooltiptext {\n  visibility: hidden;\n  width: 120px;\n  background-color: gray;\n  color: #fff;\n  text-align: center;\n  border-radius: 6px;\n  padding: 5px 0;\n  \n  /* Position the tooltip */\n  position: absolute;\n  z-index: 1;\n  bottom: 100%;\n  left: 50%;\n  margin-left: -60px;\n}\n.tooltip:hover .tooltiptext {\n  visibility: visible;\n}\n.profile-photo-container {\n  position: relative;\n}\n.profile-photo {\n  opacity: 1;\n  display: block;\n  transition: .5s ease;\n  -webkit-backface-visibility: hidden;\n          backface-visibility: hidden;\n}\n.profile-middle {\n  transition: .5s ease;\n  opacity: 0;\n  position: absolute;\n  top: 40%;\n  left: 16%;\n  transform: translate(-50%, -50%);\n  -ms-transform: translate(-50%, -50%);\n  text-align: center;\n}\n.profile-middle:hover {\n  opacity: 0.7;\n}\n.profile-photo-container:hover .profile-photo {\n  opacity: 0.3;\n}\n.profile-photo-container:hover .profile-photo {\n  opacity: 1;\n}\n.profile-update-text {\n    background-color: #cfcfcf;\n    color: #000000;\n    font-size: 14px;\n    padding: 16px 32px;\n    cursor: pointer;\n}\n.product-description{\n    font-size: 1.2em;\n    font-size: 1.4em;\n    color: black;\n    font-family: sans-serif;\n}\n.nav {\n  /* -webkit-box-align: center; */\n  /* align-items: center; */\n  color: black;\n  display: flex;\n  justify-content: space-between;\n  padding: 1rem;\n  float: right;\n}\n.nav__header {\n  font-size: 2.5rem;\n}\n.nav__cart {\n  position: relative;\n}\n.nav__cart button {\n  background: none;\n  border: 0;\n  color: black;\n  cursor: pointer;\n}\n.nav__cart i {\n  font-size: 2rem;\n}\n.nav__cart .total-quantity {\n  align-items: center;\n  background: lightblue;\n  border-radius: 50%;\n  display: flex;\n  font-weight: bold;\n  height: 2rem;\n  justify-content: center;\n  padding: 0.5rem;\n  position: absolute;\n  right: -10px;\n  top: -10px;\n  width: 2rem;\n}\n.nav__cart .cart-dropdown {\n  background: white;\n  border: 1px solid lightgray;\n  border-radius: 10px;\n  box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);\n  color: #333;\n  font-size: 1.1rem;\n  overflow: auto;\n  padding: 0 1rem;\n  position: absolute;\n  right: 0;\n  width: 300px;\n  z-index: 99;\n}\n.nav__cart .cart-dropdown .cart-dropdown__list {\n  list-style: none;\n}\n.nav__cart .cart-dropdown .cart-dropdown__list li {\n  margin: 1rem 0;\n}\n.cart-dropdown__list {\n    border: 1px solid lightgray;\n    margin-top: 15px;\n    border-radius: 10px;\n    background: lightgray;\n}\n.check-out-info {\n    border-radius: 5px;\n    border: 1px solid lightgray;\n    width: 80%;\n}\n.products {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: center;\n}\n.products .product {\n  border: 1px solid lightgray;\n  border-radius: 10px;\n  margin: 2rem;\n  padding: 1rem;\n}\n.products .product__header {\n  font-size: 2rem;\n  text-align: center;\n}\n.products .product__image {\n  display: block;\n  margin: 1rem auto;\n}\n.products .product__description {\n  font-size: 1.3rem;\n  margin-top: 1rem;\n}\n.cart {\n  margin-top: 2rem;\n  text-align: center;\n}\n.cart__button {\n  background: lightblue;\n  border: 0;\n  color: white;\n  cursor: pointer;\n  font-size: 1.5rem;\n  font-weight: bold;\n  height: 2.5rem;\n  width: 2.5rem;\n}\n.cart__quantity {\n  font-size: 1.5rem;\n  margin: 0 1rem;\n}\n\n\n", ""]);
+exports.push([module.i, "\n.tooltip {\n  position: relative;\n  display: inline-block;\n  border-bottom: 1px dotted gray;\n}\n.tooltip .tooltiptext {\n  visibility: hidden;\n  width: 120px;\n  background-color: gray;\n  color: #fff;\n  text-align: center;\n  border-radius: 6px;\n  padding: 5px 0;\n  \n  /* Position the tooltip */\n  position: absolute;\n  z-index: 1;\n  bottom: 100%;\n  left: 50%;\n  margin-left: -60px;\n}\n.tooltip:hover .tooltiptext {\n  visibility: visible;\n}\n.profile-photo-container {\n  position: relative;\n}\n.profile-photo {\n  opacity: 1;\n  display: block;\n  transition: .5s ease;\n  -webkit-backface-visibility: hidden;\n          backface-visibility: hidden;\n}\n.profile-middle {\n  transition: .5s ease;\n  opacity: 0;\n  position: absolute;\n  top: 40%;\n  left: 16%;\n  transform: translate(-50%, -50%);\n  -ms-transform: translate(-50%, -50%);\n  text-align: center;\n}\n.profile-middle:hover {\n  opacity: 0.7;\n}\n.profile-photo-container:hover .profile-photo {\n  opacity: 0.3;\n}\n.profile-photo-container:hover .profile-photo {\n  opacity: 1;\n}\n.profile-update-text {\n    background-color: #cfcfcf;\n    color: #000000;\n    font-size: 14px;\n    padding: 16px 32px;\n    cursor: pointer;\n}\n.product-description{\n    font-size: 1.2em;\n    font-size: 1.4em;\n    color: black;\n    font-family: sans-serif;\n}\n.nav {\n  /* -webkit-box-align: center; */\n  /* align-items: center; */\n  color: black;\n  display: flex;\n  justify-content: space-between;\n  padding: 1rem;\n  float: right;\n}\n.nav__header {\n  font-size: 2.5rem;\n}\n.nav__cart {\n  position: relative;\n}\n.nav__cart button {\n  background: none;\n  border: 0;\n  color: black;\n  cursor: pointer;\n}\n.nav__cart i {\n  font-size: 2rem;\n}\n.nav__cart .total-quantity {\n  align-items: center;\n  background: lightblue;\n  border-radius: 50%;\n  display: flex;\n  font-weight: bold;\n  height: 2rem;\n  justify-content: center;\n  padding: 0.5rem;\n  position: absolute;\n  right: -10px;\n  top: -10px;\n  width: 2rem;\n}\n.nav__cart .cart-dropdown {\n  background: white;\n  border: 1px solid lightgray;\n  border-radius: 10px;\n  box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);\n  color: #333;\n  font-size: 1.1rem;\n  overflow: auto;\n  padding: 0 1rem;\n  position: absolute;\n  right: 0;\n  width: 300px;\n  z-index: 99;\n}\n.nav__cart .cart-dropdown .cart-dropdown__list {\n  list-style: none;\n}\n.nav__cart .cart-dropdown .cart-dropdown__list li {\n  margin: 1rem 0;\n}\n.cart-dropdown__list {\n    border: 1px solid lightgray;\n    margin-top: 15px;\n    border-radius: 10px;\n    background: lightgray;\n}\n.check-out-info {\n    border-radius: 5px;\n    border: 1px solid lightgray;\n    width: 80%;\n}\n.products {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: center;\n}\n.products .product {\n  border: 1px solid lightgray;\n  border-radius: 10px;\n  margin: 2rem;\n  padding: 1rem;\n}\n.products .product__header {\n  font-size: 2rem;\n  text-align: center;\n}\n.products .product__image {\n  display: block;\n  margin: 1rem auto;\n}\n.products .product__description {\n  font-size: 1.3rem;\n  margin-top: 1rem;\n}\n.cart {\n  margin-top: 2rem;\n  text-align: center;\n}\n.cart__button {\n  background: lightblue;\n  border: 0;\n  color: white;\n  cursor: pointer;\n  font-size: 1.5rem;\n  font-weight: bold;\n  height: 2.5rem;\n  width: 2.5rem;\n}\n.cart__quantity {\n  font-size: 1.5rem;\n  margin: 0 1rem;\n}\n.fab{\n  font-size: 3em;\n  padding: 4px 4px 0px 4px;\n  color: white;\n}\n", ""]);
 
 // exports
 
@@ -45436,60 +45440,66 @@ var render = function() {
               },
               [
                 _c("div", { staticClass: "row" }, [
-                  _c("div", { staticClass: "col-8" }, [
-                    _c("div", { staticClass: "row" }, [
-                      _vm._m(0),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "float-left" }, [
-                        _c("img", {
-                          staticClass: "img-fluid",
-                          staticStyle: {
-                            height: "90px",
-                            padding: "2px",
-                            border: "solid",
-                            "border-color": "aliceblue",
-                            background: "white"
-                          },
-                          attrs: {
-                            src: "/img/logo/" + this.seller.user_logo,
-                            alt: ""
-                          }
-                        })
+                  _c(
+                    "div",
+                    {
+                      staticClass: "col-8",
+                      staticStyle: { "padding-left": "30px" }
+                    },
+                    [
+                      _c("div", { staticClass: "row" }, [
+                        _vm._m(0),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "float-left" }, [
+                          _c("img", {
+                            staticClass: "img-fluid",
+                            staticStyle: {
+                              height: "90px",
+                              padding: "2px",
+                              border: "solid",
+                              "border-color": "aliceblue",
+                              background: "white",
+                              "border-radius": "0px 15px 15px 0px"
+                            },
+                            attrs: {
+                              src: "/img/logo/" + this.seller.user_logo,
+                              alt: ""
+                            }
+                          })
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "col" }, [
+                          _c("h4", [_vm._v(_vm._s(_vm.store_name))]),
+                          _vm._v(" "),
+                          _c("p", [
+                            _vm.seller.user_tel
+                              ? _c("span", [
+                                  _vm._v("Tel: " + _vm._s(this.seller.user_tel))
+                                ])
+                              : _vm._e(),
+                            _c("br"),
+                            _vm._v(" "),
+                            _vm.seller.user_mobile
+                              ? _c("span", [
+                                  _vm._v(
+                                    "Mobile: " + _vm._s(this.seller.user_mobile)
+                                  )
+                                ])
+                              : _vm._e(),
+                            _c("br"),
+                            _vm._v(" "),
+                            _vm.seller.email
+                              ? _c("span", [
+                                  _vm._v("Email: " + _vm._s(this.seller.email))
+                                ])
+                              : _vm._e()
+                          ])
+                        ])
                       ]),
                       _vm._v(" "),
-                      _c("div", { staticClass: "col" }, [
-                        _c("h4", [_vm._v(_vm._s(_vm.store_name))]),
-                        _vm._v(" "),
-                        _c("p", [
-                          _vm.seller.user_tel
-                            ? _c("span", [
-                                _vm._v(
-                                  "Tel: " + _vm._s(this.seller.user_mobile)
-                                )
-                              ])
-                            : _vm._e(),
-                          _c("br"),
-                          _vm._v(" "),
-                          _vm.seller.user_mobile
-                            ? _c("span", [
-                                _vm._v(
-                                  "Mobile: " + _vm._s(this.seller.user_mobile)
-                                )
-                              ])
-                            : _vm._e(),
-                          _c("br"),
-                          _vm._v(" "),
-                          _vm.seller.email
-                            ? _c("span", [
-                                _vm._v("Email: " + _vm._s(this.seller.email))
-                              ])
-                            : _vm._e()
-                        ])
-                      ])
-                    ]),
-                    _vm._v(" "),
-                    _vm._m(1)
-                  ]),
+                      _vm._m(1)
+                    ]
+                  ),
                   _vm._v(" "),
                   _c("div", { staticClass: "col-4" }, [
                     _c("nav", { staticClass: "nav" }, [
@@ -45852,7 +45862,8 @@ var staticRenderFns = [
           padding: "2px",
           border: "solid",
           "border-color": "aliceblue",
-          background: "white"
+          background: "white",
+          "border-radius": "15px 0px 0px 15px"
         },
         attrs: { src: "/img/osk_logo_sqr.png", alt: "" }
       })
