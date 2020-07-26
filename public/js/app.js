@@ -45833,7 +45833,7 @@ var staticRenderFns = [
       _c("img", {
         staticClass: "img-fluid",
         staticStyle: {
-          height: "80px",
+          height: "90px",
           padding: "2px",
           border: "solid",
           "border-color": "aliceblue",
