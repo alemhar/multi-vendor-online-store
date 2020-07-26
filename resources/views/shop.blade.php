@@ -76,13 +76,13 @@
         </div>
     </div>
     <div class="wrapper container-fluid">    
-    <footer class="main-footer">
+    <footer class="main-footer" style="height: 50px;padding-top: 15px;padding-left: 20px;padding-right: 20px;">
     <!-- To the right -->
     <div class="float-right d-none d-sm-inline">
-      "OSK" Ang online store mo.
+      "OSK" <i>Ang online store mo.</i>
     </div>
     <!-- Default to the left -->
-    <strong>Copyright &copy; 2010-2019 <a href="onlinestoreko.com">onlinestoreko.com</a>.</strong> support@onlinestoreko.com
+    <strong>Copyright &copy; <a href="onlinestoreko.com">onlinestoreko.com</a>.</strong> support@onlinestoreko.com
    </footer>
     </div>
 
