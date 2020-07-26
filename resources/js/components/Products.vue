@@ -293,6 +293,7 @@
         data() {
             return {
                 products:{},
+                seller:{},
                 cart: [],
                 check_out_name: '',
                 check_out_contact_no: '',
@@ -318,10 +319,21 @@
 
                     this.products = response.data;
                     this.user_id = this.products.data[0].user_id;
+                    this.getSellerInfo();
                     //this.public_address = window.location.hostname + '/main/' + this.form.public_id;
                   
                   //console.log( this.form.user_logo ? this.form.user_logo : 'img/your_logo_here.png');
                     
+                })
+                .catch(()=>{
+                    
+                });
+                //console.log(this.user_info);
+            },
+            getSellerInfo(){
+                axios.get("/seller/"+this.public_id)
+                .then((response)=>{
+                    this.seller = response.data;
                 })
                 .catch(()=>{
                     

@@ -26,8 +26,8 @@ Route::get('/userdetail/{public_id}', function ($public_id) {
 // Public Landing Page
 Route::get('/shop/{public_id}', 'ProductController@shop')->name('shop');
 Route::get('/public_list/{public_id}', 'ProductController@public_list')->name('public_list');
-
 Route::post('/checkout' , 'ProductController@checkout')->name('checkout');
+Route::get('/seller/{id}' , 'ProductController@getseller')->name('getseller');
 
 Auth::routes();
 

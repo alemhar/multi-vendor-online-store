@@ -3078,6 +3078,7 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       products: {},
+      seller: {},
       cart: [],
       check_out_name: '',
       check_out_contact_no: '',
@@ -3101,8 +3102,18 @@ __webpack_require__.r(__webpack_exports__);
 
       axios.get("/public_list/" + this.public_id).then(function (response) {
         _this.products = response.data;
-        _this.user_id = _this.products.data[0].user_id; //this.public_address = window.location.hostname + '/main/' + this.form.public_id;
+        _this.user_id = _this.products.data[0].user_id;
+
+        _this.getSellerInfo(); //this.public_address = window.location.hostname + '/main/' + this.form.public_id;
         //console.log( this.form.user_logo ? this.form.user_logo : 'img/your_logo_here.png');
+
+      })["catch"](function () {}); //console.log(this.user_info);
+    },
+    getSellerInfo: function getSellerInfo() {
+      var _this2 = this;
+
+      axios.get("/seller/" + this.public_id).then(function (response) {
+        _this2.seller = response.data;
       })["catch"](function () {}); //console.log(this.user_info);
     },
     updateCart: function updateCart(id, product_name, product_model_no, product_price) {
@@ -3136,7 +3147,7 @@ __webpack_require__.r(__webpack_exports__);
       });
     },
     checkOut: function checkOut() {
-      var _this2 = this;
+      var _this3 = this;
 
       if (this.check_out_name.length == 0 || this.check_out_contact_no.length == 0) {
         this.hasError = true;
@@ -3152,10 +3163,10 @@ __webpack_require__.r(__webpack_exports__);
         total_qty: this.totalQuantity,
         total: this.totalAmount
       }).then(function (response) {
-        _this2.check_out_name = '';
-        _this2.check_out_contact_no = '';
-        _this2.showCart = false;
-        _this2.cart = [];
+        _this3.check_out_name = '';
+        _this3.check_out_contact_no = '';
+        _this3.showCart = false;
+        _this3.cart = [];
         swal.fire({
           position: 'top-end',
           icon: 'success',

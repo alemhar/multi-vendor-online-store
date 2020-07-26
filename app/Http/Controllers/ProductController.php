@@ -150,5 +150,11 @@ class ProductController extends Controller
 
         
     }
+    public function getseller($public_id)
+    {
+        $userDetail = UserDetail::where('public_id', $public_id)->get()->first(); 
+        return $userDetail;
+        
+    }
 
 }
