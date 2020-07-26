@@ -51,8 +51,8 @@
                     </div>
                     <div class="card-body">
                         <div class="form">
-                            <div class="row mb-3" v-for="product in products.data" :key="product.id">
-                                <div class="col-md-3">
+                            <div class="row mb-3">
+                                <div class="col-md-3"  v-for="product in products.data" :key="product.id">
                                     <div class="card">
                                             <img class="card-img-top img-fluid" :src="product.product_photo ? '/img/products/'+product.product_photo : '/img/products/'+product_photo" alt="Card image cap">
                                         <div class="card-body">
