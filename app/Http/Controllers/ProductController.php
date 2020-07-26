@@ -142,11 +142,9 @@ class ProductController extends Controller
             'total_qty' => $total_qty
         ];
         $newCheckout = Checkout::create($checkout);
-        
         $newCheckout->detail()->createMany($products);
-        //CheckoutDetail::insert($products);
 
-        //Mail::to($to)->send(new NewOrder($customer, $products));
+        Mail::to($to)->send(new NewOrder($customer, $products));
        
         return $request;
 
