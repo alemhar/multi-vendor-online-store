@@ -70,13 +70,12 @@
         </style>
     </head>
     <body>
-    <div class="wrapper">    
     <div id="app">
         <div class="container-fluid">
             <products public_id="{{ $user_info['public_id'] }}" store_name="{{ $user_info['store_name'] }}" ></products>
         </div>
     </div>
-
+    <div class="wrapper container-fluid">    
     <footer class="main-footer">
     <!-- To the right -->
     <div class="float-right d-none d-sm-inline">
