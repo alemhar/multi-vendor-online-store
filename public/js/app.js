@@ -44994,12 +44994,32 @@ var render = function() {
                   [_vm._v("Update Product")]
                 ),
                 _vm._v(" "),
-                _vm._m(2)
+                _c(
+                  "button",
+                  {
+                    staticClass: "close",
+                    attrs: {
+                      type: "button",
+                      "data-dismiss": "modal",
+                      "aria-label": "Close"
+                    }
+                  },
+                  [
+                    _c(
+                      "span",
+                      {
+                        attrs: { "aria-hidden": "true" },
+                        on: { click: _vm.cancelProduct }
+                      },
+                      [_vm._v("×")]
+                    )
+                  ]
+                )
               ]),
               _vm._v(" "),
               _c("div", { staticClass: "modal-body" }, [
                 _c("div", { staticClass: "input-group mb-2" }, [
-                  _vm._m(3),
+                  _vm._m(2),
                   _vm._v(" "),
                   _c("input", {
                     directives: [
@@ -45032,7 +45052,7 @@ var render = function() {
                 _c("div", { staticClass: "input-group mb-2" }),
                 _vm._v(" "),
                 _c("div", { staticClass: "input-group mb-2" }, [
-                  _vm._m(4),
+                  _vm._m(3),
                   _vm._v(" "),
                   _c("input", {
                     directives: [
@@ -45065,7 +45085,7 @@ var render = function() {
                 _c("div", { staticClass: "input-group mb-2" }),
                 _vm._v(" "),
                 _c("div", { staticClass: "input-group mb-2" }, [
-                  _vm._m(5),
+                  _vm._m(4),
                   _vm._v(" "),
                   _c("input", {
                     directives: [
@@ -45098,7 +45118,7 @@ var render = function() {
                 _c("div", { staticClass: "input-group mb-2" }),
                 _vm._v(" "),
                 _c("div", { staticClass: "input-group mb-2" }, [
-                  _vm._m(6),
+                  _vm._m(5),
                   _vm._v(" "),
                   _c("input", {
                     directives: [
@@ -45135,7 +45155,7 @@ var render = function() {
                 _c("div", { staticClass: "input-group mb-2" }),
                 _vm._v(" "),
                 _c("div", { staticClass: "input-group mb-2" }, [
-                  _vm._m(7),
+                  _vm._m(6),
                   _vm._v(" "),
                   _c("textarea", {
                     directives: [
@@ -45168,7 +45188,7 @@ var render = function() {
                 _vm._v(" "),
                 _c("div", { staticClass: "input-group mb-2" }),
                 _vm._v(" "),
-                _vm._m(8),
+                _vm._m(7),
                 _vm._v(" "),
                 _c("div", { staticClass: "form-row product-photo-container" }, [
                   _c("input", {
@@ -45289,23 +45309,6 @@ var staticRenderFns = [
         _c("td", [_vm._v("Option")])
       ])
     ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "button",
-      {
-        staticClass: "close",
-        attrs: {
-          type: "button",
-          "data-dismiss": "modal",
-          "aria-label": "Close"
-        }
-      },
-      [_c("span", { attrs: { "aria-hidden": "true" } }, [_vm._v("×")])]
-    )
   },
   function() {
     var _vm = this
