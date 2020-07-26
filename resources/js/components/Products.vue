@@ -15,7 +15,7 @@
                             <div class="col-8">
                                     <div class="row">
                                       <div class="float-left">
-                                        <img :src="'/img/logo/'+this.seller.user_logo" alt="" class="img-fluid" style="height:100px;">
+                                        <img :src="'/img/logo/'+this.seller.user_logo" alt="" class="img-fluid" style="height: 80px;padding: 2px;border: solid;">
                                       </div>
                                       <div class="col">
                                         <h4>{{ store_name }}</h4>

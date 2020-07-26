@@ -45421,7 +45421,11 @@ var render = function() {
                     _c("div", { staticClass: "float-left" }, [
                       _c("img", {
                         staticClass: "img-fluid",
-                        staticStyle: { height: "100px" },
+                        staticStyle: {
+                          height: "80px",
+                          padding: "2px",
+                          border: "solid"
+                        },
                         attrs: {
                           src: "/img/logo/" + this.seller.user_logo,
                           alt: ""
