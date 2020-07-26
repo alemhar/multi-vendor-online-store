@@ -2112,6 +2112,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -7607,7 +7608,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.tooltip {\n  position: relative;\n  display: inline-block;\n  border-bottom: 1px dotted gray;\n}\n.tooltip .tooltiptext {\n  visibility: hidden;\n  width: 120px;\n  background-color: gray;\n  color: #fff;\n  text-align: center;\n  border-radius: 6px;\n  padding: 5px 0;\n  \n  /* Position the tooltip */\n  position: absolute;\n  z-index: 1;\n  bottom: 100%;\n  left: 50%;\n  margin-left: -60px;\n}\n.tooltip:hover .tooltiptext {\n  visibility: visible;\n}\n.profile-photo-container {\n  position: relative;\n}\n.profile-photo {\n  opacity: 1;\n  display: block;\n  transition: .5s ease;\n  -webkit-backface-visibility: hidden;\n          backface-visibility: hidden;\n}\n.profile-middle {\n  transition: .5s ease;\n  opacity: 0;\n  position: absolute;\n  top: 40%;\n  left: 16%;\n  transform: translate(-50%, -50%);\n  -ms-transform: translate(-50%, -50%);\n  text-align: center;\n}\n.profile-middle:hover {\n  opacity: 0.7;\n}\n.profile-photo-container:hover .profile-photo {\n  opacity: 0.3;\n}\n.profile-photo-container:hover .profile-photo {\n  opacity: 1;\n}\n.profile-update-text {\n    background-color: #cfcfcf;\n    color: #000000;\n    font-size: 14px;\n    padding: 16px 32px;\n    cursor: pointer;\n}\n\n", ""]);
+exports.push([module.i, "\n.tooltip {\n  position: relative;\n  display: inline-block;\n  border-bottom: 1px dotted gray;\n}\n.tooltip .tooltiptext {\n  visibility: hidden;\n  width: 120px;\n  background-color: gray;\n  color: #fff;\n  text-align: center;\n  border-radius: 6px;\n  padding: 5px 0;\n  \n  /* Position the tooltip */\n  position: absolute;\n  z-index: 1;\n  bottom: 100%;\n  left: 50%;\n  margin-left: -60px;\n}\n.tooltip:hover .tooltiptext {\n  visibility: visible;\n}\n.profile-photo-container {\n  position: relative;\n}\n.profile-photo {\n  opacity: 1;\n  display: block;\n  transition: .5s ease;\n  -webkit-backface-visibility: hidden;\n          backface-visibility: hidden;\n}\n.profile-middle {\n  transition: .5s ease;\n  opacity: 0;\n  position: absolute;\n  top: 40%;\n  left: 16% !important;\n  transform: translate(-50%, -50%);\n  -ms-transform: translate(-50%, -50%);\n  text-align: center;\n}\n.profile-middle:hover {\n  opacity: 0.7;\n}\n.profile-photo-container:hover .profile-photo {\n  opacity: 0.3;\n}\n.profile-photo-container:hover .profile-photo {\n  opacity: 1;\n}\n.profile-update-text {\n    background-color: #cfcfcf;\n    color: #000000;\n    font-size: 14px;\n    padding: 16px 32px;\n    cursor: pointer;\n}\n\n", ""]);
 
 // exports
 
