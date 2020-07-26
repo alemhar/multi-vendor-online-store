@@ -3082,6 +3082,10 @@ __webpack_require__.r(__webpack_exports__);
           if (type === 'subtract') {
             if (this.cart[i].product_qty !== 0) {
               this.cart[i].product_qty--;
+
+              if (this.cart[i].product_qty == 0) {
+                this.cart.splice(i, 1);
+              }
             }
           } else {
             this.cart[i].product_qty++;
