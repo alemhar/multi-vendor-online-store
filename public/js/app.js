@@ -45853,15 +45853,15 @@ var render = function() {
                 staticStyle: { "margin-top": "50px" }
               },
               [
-                _c(
-                  "div",
-                  { staticClass: "form" },
-                  _vm._l(_vm.products.data, function(product) {
-                    return _c(
-                      "div",
-                      { key: product.id, staticClass: "row mb-3 bg-default" },
-                      [
-                        _c("div", { staticClass: "col-md-3" }, [
+                _c("div", { staticClass: "form" }, [
+                  _c(
+                    "div",
+                    { staticClass: "row mb-3 bg-default" },
+                    _vm._l(_vm.products.data, function(product) {
+                      return _c(
+                        "div",
+                        { key: product.id, staticClass: "col-md-3" },
+                        [
                           _c("div", { staticClass: "card" }, [
                             _c("img", {
                               staticClass: "card-img-top img-fluid",
@@ -45931,12 +45931,12 @@ var render = function() {
                                 )
                               : _vm._e()
                           ])
-                        ])
-                      ]
-                    )
-                  }),
-                  0
-                )
+                        ]
+                      )
+                    }),
+                    0
+                  )
+                ])
               ]
             )
           ])
