@@ -3149,7 +3149,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['public_id', 'store_name'],
   data: function data() {
@@ -45931,11 +45930,15 @@ var render = function() {
                             staticStyle: { "background-color": "lightgray" }
                           },
                           [
-                            _c(
-                              "p",
-                              { staticClass: "card-text product-description" },
-                              [_vm._v(_vm._s(product.product_description))]
-                            )
+                            product.product_description
+                              ? _c(
+                                  "p",
+                                  {
+                                    staticClass: "card-text product-description"
+                                  },
+                                  [_vm._v(_vm._s(product.product_description))]
+                                )
+                              : _vm._e()
                           ]
                         )
                       ]

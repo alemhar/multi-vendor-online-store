@@ -95,10 +95,9 @@
                                         </div>
                                     
                                     </div>
-                                        
                                 </div>
                                 <div class="col-md-8" style="background-color: lightgray;">
-                                        <p class="card-text product-description" style="">{{ product.product_description }}</p>
+                                        <p v-if="product.product_description" class="card-text product-description" style="">{{ product.product_description }}</p>
                                 </div>
                             </div>
 
