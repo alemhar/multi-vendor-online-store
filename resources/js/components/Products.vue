@@ -82,7 +82,7 @@
                     <div class="card-body" style="margin-top: 50px;">
                         <div class="form">
                             <div class="row mb-3 bg-default" v-for="product in products.data" :key="product.id">
-                                <div class="col-md-4">
+                                <div class="col-md-3">
                                     <div class="card">
                                             <img class="card-img-top img-fluid" :src="product.product_photo ? '/img/products/'+product.product_photo : '/img/products/'+product_photo" alt="Card image cap">
                                         <div class="card-body">
@@ -93,12 +93,12 @@
                                             <!-- button type="button" class="btn btn-outline-dark">Buy<i class="fas fa-cash-register"></i></button -->
                                             <button type="button" class="btn btn-outline-dark" @click="updateCart(product.id,product.product_name,product.product_model_no,product.product_price)">Add to Cart<!-- i class="fas fa-cart-plus"></i --></button>
                                         </div>
-                                    
+                                        <div v-if="product.product_description" class="card-text product-description" style="">{{ product.product_description }}</div>
                                     </div>
                                 </div>
-                                <div class="col-md-8" style="background-color: lightgray;">
-                                        <p v-if="product.product_description" class="card-text product-description" style="">{{ product.product_description }}</p>
-                                </div>
+                                <!-- div class="col-md-8" style="background-color: lightgray;">
+                                        
+                                </div -->
                             </div>
 
                             
