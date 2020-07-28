@@ -45861,7 +45861,7 @@ var render = function() {
                     _vm._l(_vm.products.data, function(product) {
                       return _c(
                         "div",
-                        { key: product.id, staticClass: "col-md-3" },
+                        { key: product.id, staticClass: "col-md-3 mb-4" },
                         [
                           _c("div", { staticClass: "card" }, [
                             _c("img", {
