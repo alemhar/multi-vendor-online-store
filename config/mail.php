@@ -84,7 +84,7 @@ return [
     |
     */
 
-    'username' => 'support@onlinestoreko.com',
+    'username' => 'XXXXX',
 
     'password' => 'XXXXX',
 
