@@ -86,7 +86,7 @@ return [
 
     'username' => 'support@onlinestoreko.com',
 
-    'password' => '3tcsbin3',
+    'password' => 'XXXXX',
 
     /*
     |--------------------------------------------------------------------------
